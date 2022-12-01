@@ -5,6 +5,11 @@ public abstract class Atributos {
 	
 	public String name;
 	public int maxHp, hp, xp, pocao, nivel, mp;
+	
+	public Atributos(String name, int hp) {
+		this.name = name;	
+		this.hp = hp;
+	}
 
 	public Atributos(String name, int maxHp, int xp, int hp, int pocao, int nivel, int mp) {
 		this.name = name;	
