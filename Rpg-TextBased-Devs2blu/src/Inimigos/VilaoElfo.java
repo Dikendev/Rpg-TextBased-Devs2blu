@@ -2,9 +2,9 @@ package Inimigos;
 
 import FantasyOne.Atributos;
 
-public class Minotauro extends Atributos {
-
-	public Minotauro(String name, int hp) {
+public class VilaoElfo extends Atributos{
+	
+	public VilaoElfo(String name, int hp) {
 		super(name, hp);
 		// TODO Auto-generated constructor stub
 	}
@@ -38,5 +38,6 @@ public class Minotauro extends Atributos {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
 
 }
