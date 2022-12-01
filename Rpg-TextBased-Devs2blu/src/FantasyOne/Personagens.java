@@ -2,6 +2,7 @@ package FantasyOne;
 
 public abstract class Personagens {
 	//variaveis //para todos os personagens
+	
 	public String name;
 	public int maxHp, hp, xp;
 

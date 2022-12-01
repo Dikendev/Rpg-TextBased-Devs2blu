@@ -3,17 +3,17 @@ package FantasyOne;
 public class Jogador extends Personagens {
 
 	
-	public int heroiEspecialGuerreiro, heroiEspecialMago;
+	public int heroiGuerreiro, heroiMago;
 	
 	// Classes no jogo caminho
-	
-	public String[] skillsEspecialGuerreiro = {"Bombarda", "Bombarda Maxima"};
-	public String[] skillsEspecialMago = {"Lacarnum Inflamarae", "Aguamenti"};
+	// Harry potter skills haha
+	public String[] skillsEspecialGuerreiro = {"Guerreiro"};
+	public String[] skillsEspecialMago = {"Mago"};
 	
 	public Jogador(String name, int maxHp, int xp) {
 		super(name, 100, 0);
-		this.heroiEspecialGuerreiro = 0;
-		this.heroiEspecialMago = 0;
+		this.heroiGuerreiro = 0;
+		this.heroiMago = 0;
 		escolhaHeroi();
 	}
 
@@ -41,18 +41,18 @@ public class Jogador extends Personagens {
 	public void escolhaHeroi() {
 		GameLogic.clearConsole();
 		GameLogic.printHeading("Escolha seu Heroi: ");
-		System.out.println("(1) " + skillsEspecialGuerreiro[heroiEspecialGuerreiro]);
-		System.out.println("(2) " + skillsEspecialMago[heroiEspecialMago]);
+		System.out.println("(1) " + skillsEspecialGuerreiro[heroiGuerreiro]);
+		System.out.println("(2) " + skillsEspecialMago[heroiMago]);
 		
 		int input = GameLogic.escolhaInt("-> ", 2);
 		GameLogic.clearConsole();
 		
-		if(input ==1) {
-			GameLogic.printHeading("Voce escolheu: " + skillsEspecialGuerreiro[heroiEspecialGuerreiro] + "!");
-			heroiEspecialGuerreiro++;
+		if(input == 1) {
+			GameLogic.printHeading("Voce escolheu: " + skillsEspecialGuerreiro[heroiGuerreiro] + "!");
+			heroiGuerreiro++;
 		}else {
-			GameLogic.printHeading("Voce escolheu: " + skillsEspecialMago[heroiEspecialMago] + "!");
-			heroiEspecialMago++;
+			GameLogic.printHeading("Voce escolheu: " + skillsEspecialMago[heroiMago] + "!");
+			heroiMago++;
 		}
 		GameLogic.continueOption();
 		
