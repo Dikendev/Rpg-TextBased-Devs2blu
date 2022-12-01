@@ -3,8 +3,8 @@ import FantasyOne.Atributos;
 
 public class Eladrin extends Atributos {
 	
-	public Eladrin(String name, int maxHp, int xp, int hp, int pocao, int nivel, int mp) {
-		super(name, maxHp, xp, hp, pocao, nivel, mp);
+	public Eladrin(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
+		super(nome, maxVida, xp, vida, pocao, nivel, mp);
 	}	
 	
 	@Override

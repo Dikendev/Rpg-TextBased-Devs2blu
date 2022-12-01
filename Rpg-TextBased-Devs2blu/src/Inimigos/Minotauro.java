@@ -4,8 +4,8 @@ import FantasyOne.Atributos;
 
 public class Minotauro extends Atributos {
 
-	public Minotauro(String name, int hp) {
-		super(name, hp);
+	public Minotauro(String nome, int vida) {
+		super(nome, vida);
 		// TODO Auto-generated constructor stub
 	}
 

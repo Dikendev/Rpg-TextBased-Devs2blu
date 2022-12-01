@@ -4,8 +4,8 @@ import FantasyOne.Atributos;
 
 public class DragaoDuasCabecas extends Atributos {
 
-	public DragaoDuasCabecas(String name, int hp) {
-		super(name, hp);
+	public DragaoDuasCabecas(String nome, int vida) {
+		super(nome, vida);
 		// TODO Auto-generated constructor stub
 	}
 

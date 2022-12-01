@@ -2,9 +2,9 @@ package Inimigos;
 
 import FantasyOne.Atributos;
 
-public class vilaoOrcGuerreiro extends Atributos{
+public class VilaoOrcGuerreiro extends Atributos{
 	
-	public vilaoOrcGuerreiro(String name, int hp) {
+	public VilaoOrcGuerreiro(String name, int hp) {
 		super(name, hp);
 		// TODO Auto-generated constructor stub
 	}

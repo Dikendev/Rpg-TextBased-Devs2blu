@@ -3,8 +3,8 @@ import FantasyOne.Atributos;
 
 public class VilaoDuergar extends Atributos{
 	
-	public VilaoDuergar(String name, int maxHp, int xp, int hp, int pocao, int nivel, int mp) {
-		super(name, maxHp, xp, hp, pocao, nivel, mp);
+	public VilaoDuergar(String nome, int vida) {
+		super(nome, vida);
 		// TODO Auto-generated constructor stub
 	}
 
