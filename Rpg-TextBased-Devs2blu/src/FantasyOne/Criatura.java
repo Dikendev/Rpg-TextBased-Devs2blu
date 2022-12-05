@@ -1,17 +1,17 @@
 	package FantasyOne;
 
-public abstract class Atributos {
+public abstract class Criatura {
 	//variaveis //para todos os personagens
 	
 	private String nome;
 	private int maxVida, vida, xp, pocao, nivel, mp;
 	
-	public Atributos(String nome, int vida) {
+	public Criatura(String nome, int vida) {
 		this.nome = nome;	
 		this.vida = vida;
 	}
 
-	public Atributos(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
+	public Criatura(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		this.nome = nome;	
 		this.maxVida = maxVida;
 		this.xp = xp;

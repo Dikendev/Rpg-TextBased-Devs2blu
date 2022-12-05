@@ -1,7 +1,7 @@
 package Herois;
-import FantasyOne.Atributos;
+import FantasyOne.Criatura;
 
-public class Eladrin extends Atributos {
+public class Eladrin extends Criatura {
 	
 	public Eladrin(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
@@ -25,7 +25,7 @@ public class Eladrin extends Atributos {
 	public int ataqueEspecial() {
 		System.out.println("Eladrin usa SEIVA DE VIDA");
 		this.mp = this.mp -1;
-		this.vida = this.vida + 20;
+		this.vida += 20;
 		System.out.println("Seu personagem usou poder de cura, sua vida agora é de: " + this.vida);
 		return vida;
 	}
