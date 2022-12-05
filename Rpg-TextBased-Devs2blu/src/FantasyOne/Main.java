@@ -10,6 +10,7 @@ import Herois.Sacerdote;
 public class Main {
 
 	public static void main(String[] args) {
+		GameLogic.startGame();
 
 		Scanner scan = new Scanner(System.in);
 
@@ -44,8 +45,5 @@ public class Main {
 		default:
 			System.out.println("Valor Inválido!");
 		}
-
-		//começar história inicial e logo em seguida primeira luta
 	}
-
 }
