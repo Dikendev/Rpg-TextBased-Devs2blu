@@ -2,39 +2,45 @@ package Inimigos;
 
 import FantasyOne.Atributos;
 
-public class vilaoOrcGuerreiro extends Atributos{
-	
-	public vilaoOrcGuerreiro(String name, int hp) {
-		super(name, hp);
+public class VilaoDragaoDuasCabecas extends Atributos {
+
+	public VilaoDragaoDuasCabecas(String name, int maxHp, int xp, int hp, int pocao, int nivel, int mp) {
+		super(name, maxHp, xp, hp, pocao, nivel, mp);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public int ataqueBasico() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Ataque Bola de Fogo: " );
+		return vida - 5;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 8;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 20;
 	}
 
 	@Override
 	public int defesa() {
+		// TODO Auto-generated method stub
+		return 10;
+	}
+
+	@Override
+	public int recebeDano() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

@@ -4,8 +4,8 @@ import FantasyOne.Atributos;
 
 public class BruxoCacador extends Atributos{
 	
-	public BruxoCacador(String name, int maxHp, int xp, int hp, int pocao, int nivel, int mp) {
-		super(name, maxHp, xp, hp, pocao, nivel, mp);
+	public BruxoCacador(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
+		super(nome, maxVida, xp, vida, pocao, nivel, mp);
 		// TODO Auto-generated constructor stub
 	}
 

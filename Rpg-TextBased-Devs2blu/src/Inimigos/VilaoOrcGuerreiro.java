@@ -2,13 +2,13 @@ package Inimigos;
 
 import FantasyOne.Atributos;
 
-public class chefaoRagnaros extends Atributos{
-
-	public chefaoRagnaros(String name, int hp) {
-		super(name, hp);
+public class VilaoOrcGuerreiro extends Atributos{
+	
+	public VilaoOrcGuerreiro(String nome, int vida) {
+		super(nome, vida);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	public int ataqueBasico() {
 		// TODO Auto-generated method stub
