@@ -1,11 +1,10 @@
-package Herois;
-
+package Inimigos;
 import FantasyOne.Atributos;
 
-public class MagoCinzento extends Atributos{
-
-	public MagoCinzento(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
-		super(nome, maxVida, xp, vida, pocao, nivel, mp);
+public class VilaoDuergar extends Atributos{
+	
+	public VilaoDuergar(String nome, int vida) {
+		super(nome, vida);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -38,7 +37,5 @@ public class MagoCinzento extends Atributos{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	
 
 }

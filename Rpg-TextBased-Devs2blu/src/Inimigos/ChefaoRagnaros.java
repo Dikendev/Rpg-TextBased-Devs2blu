@@ -1,14 +1,14 @@
-package Herois;
+package Inimigos;
 
 import FantasyOne.Atributos;
 
-public class MagoCinzento extends Atributos{
+public class ChefaoRagnaros extends Atributos{
 
-	public MagoCinzento(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
-		super(nome, maxVida, xp, vida, pocao, nivel, mp);
+	public ChefaoRagnaros(String nome, int vida) {
+		super(nome, vida);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	@Override
 	public int ataqueBasico() {
 		// TODO Auto-generated method stub
@@ -38,7 +38,5 @@ public class MagoCinzento extends Atributos{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	
 
 }

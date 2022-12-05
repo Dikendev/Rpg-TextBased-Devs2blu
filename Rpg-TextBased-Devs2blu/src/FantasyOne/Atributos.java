@@ -3,14 +3,19 @@ package FantasyOne;
 public abstract class Atributos {
 	//variaveis //para todos os personagens
 	
-	public String name;
-	public int maxHp, hp, xp, pocao, nivel, mp;
+	public String nome;
+	public int maxVida, vida, xp, pocao, nivel, mp;
+	
+	public Atributos(String nome, int vida) {
+		this.nome = nome;	
+		this.vida = vida;
+	}
 
-	public Atributos(String name, int maxHp, int xp, int hp, int pocao, int nivel, int mp) {
-		this.name = name;	
-		this.maxHp = maxHp;
+	public Atributos(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
+		this.nome = nome;	
+		this.maxVida = maxVida;
 		this.xp = xp;
-		this.hp = hp;
+		this.vida = vida;
 		this.pocao = pocao;
 		this.nivel = nivel;
 		this.mp = mp;
@@ -22,4 +27,5 @@ public abstract class Atributos {
 	public abstract int ataqueEspecial();
 	public abstract int ataqueEspecial2();
 	public abstract int defesa();
+	public abstract int recebeDano();
 }
