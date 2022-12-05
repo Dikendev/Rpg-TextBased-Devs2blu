@@ -12,7 +12,7 @@ public class VilaoDragaoDuasCabecas extends Atributos {
 	@Override
 	public int ataqueBasico() {
 		System.out.println("Ataque Bola de Fogo: " );
-		return hp - 5;
+		return vida - 5;
 	}
 
 	@Override
@@ -37,6 +37,12 @@ public class VilaoDragaoDuasCabecas extends Atributos {
 	public int defesa() {
 		// TODO Auto-generated method stub
 		return 10;
+	}
+
+	@Override
+	public int recebeDano() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
