@@ -1,4 +1,4 @@
-package FantasyOne;
+	package FantasyOne;
 
 public abstract class Atributos {
 	//variaveis //para todos os personagens
