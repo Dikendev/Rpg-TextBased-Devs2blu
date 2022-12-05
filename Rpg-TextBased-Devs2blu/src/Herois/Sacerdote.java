@@ -29,14 +29,26 @@ public class Sacerdote extends Atributos {
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.println("Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo, causando 20 de dano!");
-		return 20;
+		if(this.mp > 0) {
+			System.out.println("Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo, causando 20 de dano!");
+			this.mp = (this.mp - 1);
+			return 20;			
+		} else {
+			System.out.println("Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
+			return 0;
+		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.println("Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano!");
-		return 25;
+		if(this.mp > 0) {
+			System.out.println("Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano!");
+			this.mp = (this.mp - 1);			
+			return 25;
+		} else {
+			System.out.println("Você tenta, mas não possui mana suficiente para Penitência Divína!");
+			return 0;
+		}
 	}
 
 	@Override
@@ -44,20 +56,23 @@ public class Sacerdote extends Atributos {
 		System.out.println("Você usa a oração celestial e cura 10 pontos de vida!");
 		return 10;
 	}
-	
-	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
-    }
-	
-	
 
 	@Override
 	public int recebeDano(int dano) {
 		this.vida = this.vida - dano;
 		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
+		return vida;
+	}
+	
+	@Override
+	public int usarPocao() {
+		if(this.pocao > 0) {
+			this.pocao = (this.pocao - 1);			
+			this.vida = (this.vida + 20);
+		} else {
+			System.out.println("Você não possui Poções de Cura!");
+		}
+		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.vida);
 		return vida;
 	}
 

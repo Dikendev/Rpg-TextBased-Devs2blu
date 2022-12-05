@@ -42,7 +42,7 @@ public class VilaoOrcGuerreiro extends Atributos{
 	@Override
 	public int recebeDano(int dano) {
 		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
+		System.out.println("O Orc recebeu dano, a vida dele agora é: " + this.vida);
 		return vida;
 	}
 
