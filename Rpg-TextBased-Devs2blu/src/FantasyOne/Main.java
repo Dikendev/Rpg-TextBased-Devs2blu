@@ -6,6 +6,8 @@ import Herois.BruxoCacador;
 import Herois.Eladrin;
 import Herois.MagoCinzento;
 import Herois.Sacerdote;
+import Inimigos.VilaoDragaoDuasCabecas;
+
 
 public class Main {
 
@@ -44,6 +46,9 @@ public class Main {
 		default:
 			System.out.println("Valor Inválido!");
 		}
+		
+	
+		
 
 		//começar história inicial e logo em seguida primeira luta
 	}

@@ -41,7 +41,7 @@ public class MagoCinzento extends Atributos{
 
 	@Override
 	public int recebeDano() {
-		// TODO Auto-generated method stub
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de:" );
 		return 0;
 	}
 	
