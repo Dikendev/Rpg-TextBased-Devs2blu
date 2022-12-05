@@ -11,8 +11,9 @@ public class ChefaoQuimera extends Atributos{
 
 	@Override
 	public int ataqueBasico() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Bola de fogo");
+		System.out.println("Dano: 40");
+		return 40;
 	}
 
 	@Override
@@ -40,9 +41,10 @@ public class ChefaoQuimera extends Atributos{
 	}
 
 	@Override
-	public int recebeDano() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int recebeDano(int dano) {
+		this.vida = this.vida - dano;
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
+		return vida;
 	}
 	
 
