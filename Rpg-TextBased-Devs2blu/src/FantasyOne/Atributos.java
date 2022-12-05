@@ -1,4 +1,4 @@
-package FantasyOne;
+	package FantasyOne;
 
 public abstract class Atributos {
 	//variaveis //para todos os personagens
@@ -28,5 +28,5 @@ public abstract class Atributos {
 	public abstract int ataqueEspecial();
 	public abstract int ataqueEspecial2();
 	public abstract int defesa();
-	public abstract int recebeDano();
+	public abstract int recebeDano(int dano);
 }

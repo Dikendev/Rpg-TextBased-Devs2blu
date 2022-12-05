@@ -40,9 +40,10 @@ public class MagoCinzento extends Atributos{
 	}
 
 	@Override
-	public int recebeDano() {
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de:" );
-		return 0;
+	public int recebeDano(int dano) {
+		this.vida = this.vida - dano;
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
+		return vida;
 	}
 	
 	

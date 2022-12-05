@@ -38,6 +38,13 @@ public class VilaoElfo extends Atributos{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public int recebeDano(int dano) {
+		this.vida = this.vida - dano;
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
+		return vida;
+	}
 	
 
 }
