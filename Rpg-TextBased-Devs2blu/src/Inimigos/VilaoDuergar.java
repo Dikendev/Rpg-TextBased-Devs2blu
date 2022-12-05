@@ -38,4 +38,10 @@ public class VilaoDuergar extends Atributos{
 		return 0;
 	}
 
+	@Override
+	public int recebeDano() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
