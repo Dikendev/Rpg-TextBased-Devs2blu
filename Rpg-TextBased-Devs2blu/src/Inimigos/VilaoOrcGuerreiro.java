@@ -6,7 +6,8 @@ public class VilaoOrcGuerreiro extends Atributos{
 	
 	public VilaoOrcGuerreiro(String nome, int vida) {
 		super(nome, vida);
-		// TODO Auto-generated constructor stub
+		setNome("Orc Guerreiro");
+		setVida(100);
 	}
 
 	@Override
@@ -40,10 +41,9 @@ public class VilaoOrcGuerreiro extends Atributos{
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("O Orc recebeu dano, a vida dele agora é: " + this.vida);
-		return vida;
+	public void recebeDano(int dano) {
+		setVida(getVida() - dano);
+		System.out.println("O Orc recebeu dano, a vida dele agora é: " + getVida());
 	}
 
 }

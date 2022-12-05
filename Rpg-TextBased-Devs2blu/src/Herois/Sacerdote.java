@@ -6,13 +6,13 @@ public class Sacerdote extends Atributos {
 
 	public Sacerdote(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
-		this.nome = nome;
-		this.maxVida = maxVida;
-		this.xp = xp;
-		this.vida = vida;
-		this.pocao = pocao;
-		this.nivel = nivel;
-		this.mp = mp;
+		setNome(nome);
+		setMaxVida(maxVida);
+		setXp(xp);
+		setVida(vida);
+		setPocao(pocao);
+		setNivel(nivel);
+		setMp(mp);
 	}
 
 	@Override
@@ -29,9 +29,9 @@ public class Sacerdote extends Atributos {
 
 	@Override
 	public int ataqueEspecial() {
-		if(this.mp > 0) {
+		if(getMp() > 0) {
 			System.out.println("Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo, causando 20 de dano!");
-			this.mp = (this.mp - 1);
+			setMp(getMp() - 1);
 			return 20;			
 		} else {
 			System.out.println("Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
@@ -41,9 +41,9 @@ public class Sacerdote extends Atributos {
 
 	@Override
 	public int ataqueEspecial2() {
-		if(this.mp > 0) {
+		if(getMp() > 0) {
 			System.out.println("Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano!");
-			this.mp = (this.mp - 1);			
+			setMp(getMp() - 1);			
 			return 25;
 		} else {
 			System.out.println("Você tenta, mas não possui mana suficiente para Penitência Divína!");
@@ -58,22 +58,20 @@ public class Sacerdote extends Atributos {
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+	public void recebeDano(int dano) {
+		setVida(getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
 	}
 	
 	@Override
-	public int usarPocao() {
-		if(this.pocao > 0) {
-			this.pocao = (this.pocao - 1);			
-			this.vida = (this.vida + 20);
+	public void usarPocao() {
+		if(getPocao() > 0) {
+			setPocao(getPocao() - 1);			
+			setVida(getVida() + 20);
 		} else {
 			System.out.println("Você não possui Poções de Cura!");
 		}
-		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.vida);
-		return vida;
+		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());
 	}
 
 }

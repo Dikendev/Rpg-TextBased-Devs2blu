@@ -3,8 +3,8 @@
 public abstract class Atributos {
 	//variaveis //para todos os personagens
 	
-	public String nome;
-	public int maxVida, vida, xp, pocao, nivel, mp;
+	private String nome;
+	private int maxVida, vida, xp, pocao, nivel, mp;
 	
 	public Atributos(String nome, int vida) {
 		this.nome = nome;	
@@ -28,6 +28,67 @@ public abstract class Atributos {
 	public abstract int ataqueEspecial();
 	public abstract int ataqueEspecial2();
 	public abstract int defesa();
-	public abstract int recebeDano(int dano);
-	public abstract int usarPocao();
+	public abstract void recebeDano(int dano);
+	public abstract void usarPocao();
+
+	
+	//Getters e Setters
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getMaxVida() {
+		return maxVida;
+	}
+
+	public void setMaxVida(int maxVida) {
+		this.maxVida = maxVida;
+	}
+
+	public int getVida() {
+		return vida;
+	}
+
+	public void setVida(int vida) {
+		this.vida = vida;
+	}
+
+	public int getXp() {
+		return xp;
+	}
+
+	public void setXp(int xp) {
+		this.xp = xp;
+	}
+
+	public int getPocao() {
+		return pocao;
+	}
+
+	public void setPocao(int pocao) {
+		this.pocao = pocao;
+	}
+
+	public int getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
+	}
+
+	public int getMp() {
+		return mp;
+	}
+
+	public void setMp(int mp) {
+		this.mp = mp;
+	}
+	
+	
+	
 }

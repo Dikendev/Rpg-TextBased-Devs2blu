@@ -6,7 +6,8 @@ public class ChefaoRagnaros extends Atributos{
 
 	public ChefaoRagnaros(String nome, int vida) {
 		super(nome, vida);
-		// TODO Auto-generated constructor stub
+		setNome("Ragnaros");
+		setVida(300);
 	}
 	
 	@Override
@@ -40,10 +41,9 @@ public class ChefaoRagnaros extends Atributos{
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Ragnaros recebeu dano, a vida dele agora é: " + this.vida);
-		return vida;
+	public void recebeDano(int dano) {
+		setVida(getVida() - dano);
+		System.out.println("Ragnaros recebeu dano, a vida dele agora é: " + getVida());
 	}
 
 }
