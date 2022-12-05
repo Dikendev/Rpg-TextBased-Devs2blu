@@ -21,6 +21,7 @@ public abstract class Atributos {
 		this.mp = mp;
 	}
 	
+
 	//metodos
 	public abstract int ataqueBasico();
 	public abstract int ataqueBasico2();

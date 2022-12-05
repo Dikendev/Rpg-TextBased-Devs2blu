@@ -11,20 +11,21 @@ public class VilaoDragaoDuasCabecas extends Atributos {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.println("Ataque Bola de Fogo: " );
-		return vida - 5;
+		System.out.println("Dragão de Duas Cabeça ataca com o Bola de Fogo: " );
+		System.out.println("Dano de 15");
+		return 15;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		// TODO Auto-generated method stub
-		return 8;
+		return 20;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		// TODO Auto-generated method stub
-		return 15;
+		return 30;
 	}
 
 	@Override
