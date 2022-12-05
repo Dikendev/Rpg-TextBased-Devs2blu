@@ -9,26 +9,32 @@ public class Eladrin extends Atributos {
 	
 	@Override
 	public int ataqueBasico() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Eladrin ataca com SOPRO DE GELO");
+		System.out.println("Dano de 10");
+		return recebeDano(10);
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Eladrin ataca com BOLA DE FOGO");
+		System.out.println("Dano de 15");
+		return recebeDano(15);
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Eladrin usa SEIVA DE VIDA");
+		this.mp = this.mp -1;
+		this.vida = this.vida + 20;
+		System.out.println("Seu personagem usou poder de cura, sua vida agora é de: " + this.vida);
+		return vida;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Eladrin usa DRENO DE VIDA");
+		System.out.println("Dano de 35");
+		return recebeDano(35);
 	}
 
 	@Override
@@ -43,6 +49,14 @@ public class Eladrin extends Atributos {
 		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
 		return vida;
 	}
+	
+	@Override
+    public int usarPocao() {
+        this.pocao = (this.pocao - 1);
+        this.vida = (this.vida + 20);
+        System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.vida);
+        return vida;
+    }
 	
 	
 }
