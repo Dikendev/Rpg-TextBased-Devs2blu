@@ -3,6 +3,7 @@ package FantasyOne;
 import java.util.Scanner;
 
 import Herois.BruxoCacador;
+import Herois.DeathKnight;
 import Herois.Eladrin;
 import Herois.MagoCinzento;
 import Herois.Sacerdote;
@@ -22,7 +23,7 @@ public class Main {
 
 		switch (escolha) {
 		case 1:
-			System.out.println("Escolha um personagem: \n1- Bruxo Caçador \n2- Eladrin \n3- Mago Cinzento \n4- Sacerdote \n5- ...");
+			System.out.println("Escolha um personagem: \n1- Bruxo Caçador \n2- Eladrin \n3- Mago Cinzento \n4- Sacerdote \n5- Death Knight");
 			escolha = scan.nextInt();
 
 			System.out.println("Digite o nome do seu personagem: ");
@@ -37,7 +38,7 @@ public class Main {
 			} else if (escolha == 4) {
 				Sacerdote personagem = new Sacerdote(nome, 100, 0, 100, 2, 1, 3);
 			} else if (escolha == 5) {
-
+				DeathKnight personagem = new DeathKnight(nome, 100, 0, 100, 2, 1, 3);
 			} else {
 				System.out.println("Escolha inválida!");
 			}

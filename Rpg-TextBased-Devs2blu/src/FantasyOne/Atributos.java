@@ -1,7 +1,6 @@
 	package FantasyOne;
 
 public abstract class Atributos {
-	//variaveis //para todos os personagens
 	
 	private String nome;
 	private int maxVida, vida, xp, pocao, nivel, mp;
