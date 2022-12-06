@@ -44,9 +44,9 @@ public class Eladrin extends Criatura {
 
 	@Override
 	public int ataqueEspecial2() {
-		if(getMp() > 0) {
+		if(this.getMp() > 0) {
 			System.out.println("Eladrin usa DRENO DE VIDA");
-			setMp(getMp() - 1);
+			this.setMp(this.getMp() - 1);
 			System.out.println("Dano de 35");
 			return recebeDano(35);
 		} else {
@@ -62,10 +62,9 @@ public class Eladrin extends Criatura {
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		setVida(getVida() - dano);
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
-		return getVida();
+	public void recebeDano(int dano) {
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
 	}
 	
 	@Override

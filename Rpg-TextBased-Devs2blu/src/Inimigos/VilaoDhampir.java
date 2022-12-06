@@ -5,7 +5,8 @@ public class VilaoDhampir extends Criatura {
 	
 	public VilaoDhampir(String nome, int vida) {
 		super(nome, vida);
-		// TODO Auto-generated constructor stub
+		setNome("Dhampir");
+		setVida(100);
 	}
 
 	@Override
@@ -43,10 +44,9 @@ public class VilaoDhampir extends Criatura {
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		setVida(getVida() - dano);
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
-		return getVida();
+	public void recebeDano(int dano) {
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
 	}
 
 	@Override
