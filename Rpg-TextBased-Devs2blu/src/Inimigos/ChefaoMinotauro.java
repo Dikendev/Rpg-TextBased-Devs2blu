@@ -11,39 +11,64 @@ public class ChefaoMinotauro extends Atributos {
 
 	@Override
 	public int ataqueBasico() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Minotauro ataca com Chifres! " );
+		System.out.println("Dano de 20");
+		return 20;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Minotauro ataca com Golpe Rápido! " );
+		System.out.println("Dano de 23");
+		return 23;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(this.getMp() > 0) {
+			this.setMp(this.getMp() - 1);
+			System.out.println("Minotauro usa o ataque especial Relâmpago! " );
+			System.out.println("Dano de 30");
+			return 30;
+		} else {
+			System.out.println("O Ataque falhou, o Minotauro não possui mana suficiente para utilizar o ataque especial.");
+			return 0;
+		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(this.getMp() > 0) {
+			this.setMp(this.getMp() - 1);
+			System.out.println("Minotauro usa o ataque especial Fúria do Submundo! " );
+			System.out.println("Dano de 40");
+			return 40;
+		} else {
+			System.out.println("O Ataque falhou, o Minotauro não possui mana suficiente para utilizar o ataque especial.");
+			return 0;
+		}
 	}
 
 	@Override
 	public int defesa() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Minotauro usou Defesa do Submundo.");
+		System.out.println("Aumenta sua própria vida em 20.");
+		this.setVida(this.getVida()+20);
+		System.out.println("Minotauro possui: " + this.getVida() + "de vida");
+		return this.getVida();
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+	public void recebeDano(int dano) {
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+		
+	}
+
+	@Override
+	public void usarPocao() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
