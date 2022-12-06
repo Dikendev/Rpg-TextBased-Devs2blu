@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
 	
-	public static FantasyOne.Jogador Jogador;
 	
 	public static int escolhaInt(String prompt, int escolhasUsuario) {
 		int input;
@@ -81,7 +80,6 @@ public class GameLogic {
 			
 		} while(!nameSet);
 		
-		Jogador  = new Jogador(name, 0, 0);
 	}
 	
 	

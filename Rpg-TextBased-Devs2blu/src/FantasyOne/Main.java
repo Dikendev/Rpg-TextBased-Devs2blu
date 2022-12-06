@@ -3,6 +3,7 @@ package FantasyOne;
 import java.util.Scanner;
 
 import Herois.BruxoCacador;
+import Herois.DeathKnight;
 import Herois.Eladrin;
 import Herois.MagoCinzento;
 import Herois.Sacerdote;
