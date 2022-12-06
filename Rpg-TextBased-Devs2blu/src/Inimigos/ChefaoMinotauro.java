@@ -19,7 +19,7 @@ public class ChefaoMinotauro extends Atributos {
 	public int ataqueBasico2() {
 		// TODO Auto-generated method stub
 		return 0;
-	}s
+	}
 
 	@Override
 	public int ataqueEspecial() {
@@ -40,10 +40,15 @@ public class ChefaoMinotauro extends Atributos {
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return this.vida;
+	public void recebeDano(int dano) {
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+	}
+
+	@Override
+	public void usarPocao() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

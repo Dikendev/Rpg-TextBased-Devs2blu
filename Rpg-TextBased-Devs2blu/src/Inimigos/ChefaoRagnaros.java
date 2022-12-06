@@ -42,8 +42,14 @@ public class ChefaoRagnaros extends Atributos{
 
 	@Override
 	public void recebeDano(int dano) {
-		setVida(getVida() - dano);
-		System.out.println("Ragnaros recebeu dano, a vida dele agora é: " + getVida());
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+	}
+
+	@Override
+	public void usarPocao() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

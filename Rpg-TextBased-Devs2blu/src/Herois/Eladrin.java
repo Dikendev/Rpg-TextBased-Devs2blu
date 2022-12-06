@@ -11,30 +11,30 @@ public class Eladrin extends Atributos {
 	public int ataqueBasico() {
 		System.out.println("Eladrin ataca com SOPRO DE GELO");
 		System.out.println("Dano de 10");
-		return recebeDano(10);
+		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.println("Eladrin ataca com BOLA DE FOGO");
 		System.out.println("Dano de 15");
-		return recebeDano(15);
+		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		System.out.println("Eladrin usa SEIVA DE VIDA");
-		this.mp = this.mp -1;
-		this.vida = this.vida + 20;
-		System.out.println("Seu personagem usou poder de cura, sua vida agora é de: " + this.vida);
-		return vida;
+		this.setMp(this.getMp() - 1);
+		this.setVida(this.getVida() + 20);
+		System.out.println("Seu personagem usou poder de cura, sua vida agora é de: " + this.getVida());
+		return this.getVida();
 	}
 
 	@Override
 	public int ataqueEspecial2() {
 		System.out.println("Eladrin usa DRENO DE VIDA");
 		System.out.println("Dano de 35");
-		return recebeDano(35);
+		return 35;
 	}
 
 	@Override
@@ -44,18 +44,16 @@ public class Eladrin extends Atributos {
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+	public void recebeDano(int dano) {
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
 	}
 	
 	@Override
-    public int usarPocao() {
-        this.pocao = (this.pocao - 1);
-        this.vida = (this.vida + 20);
-        System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.vida);
-        return vida;
+    public void usarPocao() {
+        this.setPocao(this.getPocao() - 1);
+        this.setVida(this.getVida() + 20);
+        System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
     }
 	
 	
