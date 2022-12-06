@@ -27,44 +27,38 @@ public class GameLogic {
 	}
 
 	// Simular outra tela
-	public static void clearConsole() {
+	public static void limparConsole() {
 		for (int i = 0; i < 40; i++)
 			System.out.println();
 
 	}
 
 	// apenas a tela do jogo grafica
-	public static void telaDots(int n) {
+	public static void telaPontilhada(int n) {
 		for (int i = 0; i < n; i++)
 			System.out.print("-");
 		System.out.println();
 	}
 
-	public static void printHeading(String titulo) {
-		telaDots(100);
+	public static void imprimirCabecalho(String titulo) {
+		telaPontilhada(100);
 		System.out.println(titulo);
-		telaDots(100);
+		telaPontilhada(100);
 
 	}
-
-	public static void continueOption() {
-		System.out.print("\n Pressione qualquer tecla para continuar...");
-		scanner.next();
-	}
-
+	
 	// comecar o jogo
-
-	public static void startGame() {
-		boolean nameSet = false;
+	public static void comecaJogo() {
+		boolean nomeSet = false;
 		String nome;
-		clearConsole();
+		limparConsole();
 
-		telaDots(100);
-		telaDots(100);
+		telaPontilhada(100);
+		telaPontilhada(100);
 		System.out.println("----------Bem vindo ao Fantasy One!----------\n");
 		System.out.println("---------------------------------------------\n");
-		telaDots(100);
-		telaDots(100);
+		telaPontilhada(100);
+		telaPontilhada(100);
 		System.out.println("Precione: \n1-Começar Jogo \n2-Sair");
 		int escolha = scanner.nextInt();
 
@@ -75,21 +69,22 @@ public class GameLogic {
 			escolha = scanner.nextInt();
 
 			do {
-				clearConsole();
-				printHeading("Qual o nome do seu Heroi? ");
+				limparConsole();
+				imprimirCabecalho("Qual o nome do seu Heroi? ");
 				nome = scanner.next();
 
 				// trocar o nome
-				clearConsole();
+				limparConsole();
 
-				printHeading("Nome será: " + nome + ".\n Correto?");
+				imprimirCabecalho("Nome será: " + nome + ".\n Correto?");
 				System.out.println("1- Sim! \n2- Não, quero trocar o nome do meu heroi.");
 				int input = escolhaInt("-> ", 2);
 				if (input == 1)
-					nameSet = true;
+					nomeSet = true;
 
-			} while (!nameSet);
+			} while (!nomeSet);
 
+			//Escolha do personagem e criação do objeto;
 			if (escolha == 1) {
 				BruxoCacador personagem = new BruxoCacador(nome, 100, 0, 100, 2, 1, 3);
 			} else if (escolha == 2) {
@@ -111,6 +106,7 @@ public class GameLogic {
 		default:
 			System.out.println("Valor Inválido!");
 		}
+		telaPontilhada(100);
 
 
 	}
