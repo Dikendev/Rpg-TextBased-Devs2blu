@@ -30,23 +30,20 @@ public class Eladrin extends Criatura {
 
 	@Override
 	public int ataqueEspecial() {
-
 		if(getMp() > 0) {
 			System.out.println("Eladrin usa SEIVA DE VIDA");
 			this.setMp(this.getMp() - 1);
 			this.setVida(this.getVida() + 20);
 			System.out.println("Seu personagem usou poder de cura, sua vida agora é de: " + this.getVida());
-			return getVida();
+			return this.getVida();
 		} else {
 			System.out.println("Você não possui mana suficiente para usar SEIVA DE VIDA.");
 			return 0;
 		}
-
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-
 		if(this.getMp() > 0) {
 			System.out.println("Eladrin usa DRENO DE VIDA");
 			this.setMp(this.getMp() - 1);
@@ -56,7 +53,6 @@ public class Eladrin extends Criatura {
 			System.out.println("Você não possui mana suficiente para usar DRENO DE VIDA.");
 			return 0;
 		}
-
 	}
 
 	@Override
@@ -72,7 +68,6 @@ public class Eladrin extends Criatura {
 	}
 	
 	@Override
-
     public void usarPocao() {
 		if(this.getPocao() > 0) {
 			this.setPocao(this.getPocao() - 1);
