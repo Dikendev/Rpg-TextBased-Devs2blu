@@ -13,14 +13,14 @@ public class VilaoDhampir extends Criatura {
 	public int ataqueBasico() {
 		System.out.println("O Dhampir ataca com SOCO");
 		System.out.println("Dano de 10");
-		return recebeDano(10);
+		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.println("O Dhampir ataca com ADAGA");
 		System.out.println("Dano de 20");
-		return recebeDano(10);
+		return 20;
 	}
 
 	@Override
@@ -28,7 +28,7 @@ public class VilaoDhampir extends Criatura {
 		System.out.println("O Dhampir ataca com MORDIDA");
 		System.out.println("Dano de 30");
 		setVida(getVida() + 5);
-		return recebeDano(30);
+		return 30;
 	}
 
 	@Override
