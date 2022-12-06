@@ -11,40 +11,62 @@ public class VilaoDragaoDuasCabecas extends Criatura {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.println("Dragão de Duas Cabeça ataca com o Bola de Fogo: " );
+		System.out.println("Dragão de Duas Cabeças ataca com Bola de Fogo: " );
 		System.out.println("Dano de 15");
 		return 15;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		// TODO Auto-generated method stub
-		return 20;
+		System.out.println("Dragão de Duas Cabeças ataca com Lança Chamas: " );
+		System.out.println("Dano de 18");
+		return 18;
 	}
 
-	@Override
 	public int ataqueEspecial() {
-		// TODO Auto-generated method stub
-		return 30;
+		if(this.getMp() > 0) {
+			this.setMp(this.getMp() - 1);
+			System.out.println("Dragão de Duas Cabeças usa o ataque especial Insinerar! " );
+			System.out.println("Dano de 25");
+			return 25;
+		} else {
+			System.out.println("O Ataque falhou, o Dragão de Duas Cabeças não possui mana suficiente para utilizar o ataque especial.");
+			return 0;
+		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		// TODO Auto-generated method stub
-		return 20;
+		if(this.getMp() > 0) {
+			this.setMp(this.getMp() - 1);
+			System.out.println("Dragão de Duas Cabeças usa o ataque especial Chamas do Sol! " );
+			System.out.println("Dano de 23");
+			return 23;
+		} else {
+			System.out.println("O Ataque falhou, o Dragão de Duas Cabeças não possui mana suficiente para utilizar o ataque especial.");
+			return 0;
+		}
 	}
-
+	
 	@Override
 	public int defesa() {
-		// TODO Auto-generated method stub
-		return 10;
+		System.out.println("Dragão de Duas Cabeças usou Defesa do Fogo.");
+		System.out.println("Aumenta sua própria vida em 15.");
+		this.setVida(this.getVida()+15);
+		System.out.println("Dragão de Duas Cabeças possui: " + this.getVida() + "de vida");
+		return this.getVida();
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+	public void recebeDano(int dano) {
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+	}
+
+	@Override
+	public void usarPocao() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

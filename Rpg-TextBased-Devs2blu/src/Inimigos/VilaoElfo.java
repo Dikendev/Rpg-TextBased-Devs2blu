@@ -40,10 +40,15 @@ public class VilaoElfo extends Criatura{
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+	public void recebeDano(int dano) {
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+	}
+
+	@Override
+	public void usarPocao() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 
