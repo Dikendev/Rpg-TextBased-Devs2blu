@@ -11,31 +11,47 @@ public class VilaoElfo extends Criatura{
 
 	@Override
 	public int ataqueBasico() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Elfo utilizou seu arco e flecha, causando 10 de dano!");
+		System.out.println("Dano: 10");
+		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Elfo utilizou sua espada, causando 15 de dano!");
+		System.out.println("Dano: 15");
+		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(this.getMp()>0) {
+			System.out.println("Elfo usou luminocese, causando 25 de dano!");
+			System.out.println("Dano: 25");
+			return 25;
+		}else {
+			System.out.println("Mana insuficiente!");
+			return 0;
+		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(this.getMp()>0) {
+			System.out.println("Elfo usou magia de luz, causando 35 de dano!");
+			System.out.println("Dano: 35");
+			return 35;
+		}else {
+			System.out.println("Mana insuficiente!");
+			return 0;
+		}
 	}
 
 	@Override
 	public int defesa() {
-		// TODO Auto-generated method stub
+		System.out.println("Elfo utilizou sua Aura de Cura, aumentando seu HP em 20!");
+		this.setVida(this.getVida() + 10);
+		System.out.println();
 		return 0;
 	}
 
@@ -47,9 +63,13 @@ public class VilaoElfo extends Criatura{
 
 	@Override
 	public void usarPocao() {
-		// TODO Auto-generated method stub
-		
+		if(this.getPocao() > 0) {
+			this.setPocao(this.getPocao() - 1);			
+			this.setVida(this.getVida() + 20);
+		} else {
+			System.out.println("Você não possui Poções de Cura!");
+		}
+		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());				
 	}
 	
-
 }

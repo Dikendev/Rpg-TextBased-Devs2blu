@@ -11,31 +11,35 @@ public class BruxoCacador extends Criatura{
 
 	@Override
 	public int ataqueBasico() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Bruxo caçador aplicou um golpe com sua espada, causando 15 de dano!");
+		System.out.println("Dano: 15");
+		return 15;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Bruxo caçador utilizou seu arco e flecha com veneno, causando 20 de dano!");
+		System.out.println("Dano: 20");
+		return 20;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Bruxo caçador utilizou bola de fogo, causando 30 de dano!");
+		System.out.println("Dano: 30");
+		return 30;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("Bruxo caçador utilizou relâmpago, causando 35 de dano!");
+		System.out.println("Dano: 35");
+		return 35;
 	}
 
 	@Override
 	public int defesa() {
-		// TODO Auto-generated method stub
+		System.out.println("Bruxo caçador se regenerou, aumentando seu HP em 20!");
 		return 0;
 	}
 
@@ -47,8 +51,13 @@ public class BruxoCacador extends Criatura{
 
 	@Override
 	public void usarPocao() {
-		// TODO Auto-generated method stub
+		if(this.getPocao() > 0) {
+			this.setPocao(this.getPocao() - 1);			
+			this.setVida(this.getVida() + 20);
+		} else {
+			System.out.println("Você não possui Poções de Cura!");
+		}
+		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());				
 	}
-	
 
 }
