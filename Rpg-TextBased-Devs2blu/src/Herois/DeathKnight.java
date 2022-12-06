@@ -1,7 +1,7 @@
 package Herois;
-import FantasyOne.Atributos;
+import FantasyOne.Criatura;
 
-public class DeathKnight extends Atributos {
+public class DeathKnight extends Criatura{
 		public DeathKnight(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 			super(nome, maxVida, xp, vida, pocao, nivel, mp);
 			setNome(nome);

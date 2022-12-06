@@ -13,14 +13,14 @@ public class VilaoDuergar extends Criatura{
 	public int ataqueBasico() {
 		System.out.println("O Duergar ataca com CHUTE");
 		System.out.println("Dano de 10");
-		return recebeDano(10);
+		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.println("O Duergar ataca com MACHADADA");
 		System.out.println("Dano de 15");
-		return recebeDano(15);
+		return 15;
 	}
 
 	@Override

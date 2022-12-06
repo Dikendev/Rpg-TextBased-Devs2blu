@@ -30,12 +30,7 @@ public class Eladrin extends Criatura {
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.println("Eladrin usa SEIVA DE VIDA");
-		this.setMp(this.getMp() - 1);
-		this.setVida(this.getVida() + 20);
-		System.out.println("Seu personagem usou poder de cura, sua vida agora é de: " + this.getVida());
-		return this.getVida();
-		if(this.getMp() > 0) {
+		if(getMp() > 0) {
 			System.out.println("Eladrin usa SEIVA DE VIDA");
 			this.setMp(this.getMp() - 1);
 			this.setVida(this.getVida() + 20);
@@ -49,9 +44,6 @@ public class Eladrin extends Criatura {
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.println("Eladrin usa DRENO DE VIDA");
-		System.out.println("Dano de 35");
-		return 35;
 		if(this.getMp() > 0) {
 			System.out.println("Eladrin usa DRENO DE VIDA");
 			this.setMp(this.getMp() - 1);
@@ -77,9 +69,13 @@ public class Eladrin extends Criatura {
 	
 	@Override
     public void usarPocao() {
-        this.setPocao(this.getPocao() - 1);
-        this.setVida(this.getVida() + 20);
-        System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
+		if(this.getPocao() > 0) {
+			this.setPocao(this.getPocao() - 1);
+	        this.setVida(this.getVida() + 20);
+			System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
+		} else {
+			System.out.println("Você não possui Poções de Cura!");
+		}
     }
 	
 	
