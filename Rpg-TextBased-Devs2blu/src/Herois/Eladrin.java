@@ -1,10 +1,17 @@
 package Herois;
-import FantasyOne.Atributos;
+import FantasyOne.Criatura;
 
-public class Eladrin extends Atributos {
+public class Eladrin extends Criatura {
 	
 	public Eladrin(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
+		setNome(nome);
+		setMaxVida(maxVida);
+		setXp(xp);
+		setVida(vida);
+		setPocao(pocao);
+		setNivel(0);
+		setMp(mp);
 	}	
 	
 	@Override
@@ -23,18 +30,29 @@ public class Eladrin extends Atributos {
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.println("Eladrin usa SEIVA DE VIDA");
-		this.mp = this.mp -1;
-		this.vida = this.vida + 20;
-		System.out.println("Seu personagem usou poder de cura, sua vida agora é de: " + this.vida);
-		return vida;
+		if(getMp() > 0) {
+			System.out.println("Eladrin usa SEIVA DE VIDA");
+			setMp(getMp() - 1);
+			setVida(getVida() + 20);
+			System.out.println("Seu personagem usou poder de cura, sua vida agora é de: " + getVida());
+			return getVida();
+		} else {
+			System.out.println("Você não possui mana suficiente para usar SEIVA DE VIDA.");
+			return 0;
+		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.println("Eladrin usa DRENO DE VIDA");
-		System.out.println("Dano de 35");
-		return recebeDano(35);
+		if(getMp() > 0) {
+			System.out.println("Eladrin usa DRENO DE VIDA");
+			setMp(getMp() - 1);
+			System.out.println("Dano de 35");
+			return recebeDano(35);
+		} else {
+			System.out.println("Você não possui mana suficiente para usar DRENO DE VIDA.");
+			return 0;
+		}
 	}
 
 	@Override
@@ -45,17 +63,17 @@ public class Eladrin extends Atributos {
 
 	@Override
 	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+		setVida(getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
+		return getVida();
 	}
 	
 	@Override
     public int usarPocao() {
-        this.pocao = (this.pocao - 1);
-        this.vida = (this.vida + 20);
-        System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.vida);
-        return vida;
+        setPocao(getPocao() - 1);
+        setVida(getVida() + 20);
+        System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());
+        return getVida();
     }
 	
 	

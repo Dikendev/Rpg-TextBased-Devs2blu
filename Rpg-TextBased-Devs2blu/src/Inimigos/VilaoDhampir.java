@@ -1,7 +1,7 @@
 package Inimigos;
-import FantasyOne.Atributos;
+import FantasyOne.Criatura;
 
-public class VilaoDhampir extends Atributos {
+public class VilaoDhampir extends Criatura {
 	
 	public VilaoDhampir(String nome, int vida) {
 		super(nome, vida);
@@ -10,20 +10,24 @@ public class VilaoDhampir extends Atributos {
 
 	@Override
 	public int ataqueBasico() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("O Dhampir ataca com SOCO");
+		System.out.println("Dano de 10");
+		return recebeDano(10);
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("O Dhampir ataca com ADAGA");
+		System.out.println("Dano de 20");
+		return recebeDano(10);
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("O Dhampir ataca com MORDIDA");
+		System.out.println("Dano de 30");
+		setVida(getVida() + 5);
+		return recebeDano(30);
 	}
 
 	@Override
@@ -40,9 +44,15 @@ public class VilaoDhampir extends Atributos {
 
 	@Override
 	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+		setVida(getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
+		return getVida();
+	}
+
+	@Override
+	public void usarPocao() {
+		// TODO Auto-generated method stub
+		
 	}
 
 
