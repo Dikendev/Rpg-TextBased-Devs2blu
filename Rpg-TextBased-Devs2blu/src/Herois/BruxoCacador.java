@@ -1,8 +1,8 @@
 package Herois;
 
-import FantasyOne.Atributos;
+import FantasyOne.Criatura;
 
-public class BruxoCacador extends Atributos{
+public class BruxoCacador extends Criatura{
 	
 	public BruxoCacador(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
@@ -40,10 +40,14 @@ public class BruxoCacador extends Atributos{
 	}
 
 	@Override
-	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+	public void recebeDano(int dano) {
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+	}
+
+	@Override
+	public void usarPocao() {
+		// TODO Auto-generated method stub
 	}
 	
 

@@ -1,8 +1,8 @@
 package Herois;
 
-import FantasyOne.Atributos;
+import FantasyOne.Criatura;
 
-public class MagoCinzento extends Atributos{
+public class MagoCinzento extends Criatura{
 
 	public MagoCinzento(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
@@ -80,6 +80,7 @@ public class MagoCinzento extends Atributos{
 			}
 			System.out.println("Você usou uma Poção de Cura, a vida atual do seu personagem passou para: " + this.getVida());
 	}
+	
 }
 
 
