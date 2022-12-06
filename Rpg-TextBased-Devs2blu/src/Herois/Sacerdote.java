@@ -29,10 +29,10 @@ public class Sacerdote extends Criatura {
 
 	@Override
 	public int ataqueEspecial() {
-		if(getMp() > 0) {
+		if (getMp() > 0) {
 			System.out.println("Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo, causando 20 de dano!");
 			setMp(getMp() - 1);
-			return 20;			
+			return 20;
 		} else {
 			System.out.println("Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
 			return 0;
@@ -41,9 +41,9 @@ public class Sacerdote extends Criatura {
 
 	@Override
 	public int ataqueEspecial2() {
-		if(getMp() > 0) {
+		if (getMp() > 0) {
 			System.out.println("Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano!");
-			setMp(getMp() - 1);			
+			setMp(getMp() - 1);
 			return 25;
 		} else {
 			System.out.println("Você tenta, mas não possui mana suficiente para Penitência Divína!");
@@ -59,14 +59,14 @@ public class Sacerdote extends Criatura {
 
 	@Override
 	public void recebeDano(int dano) {
-		setVida(getVida() - dano);
+		this.setVida(getVida() - dano);
 		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
 	}
-	
+
 	@Override
 	public void usarPocao() {
-		if(getPocao() > 0) {
-			setPocao(getPocao() - 1);			
+		if (getPocao() > 0) {
+			setPocao(getPocao() - 1);
 			setVida(getVida() + 20);
 		} else {
 			System.out.println("Você não possui Poções de Cura!");
