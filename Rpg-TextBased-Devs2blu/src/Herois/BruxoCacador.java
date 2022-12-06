@@ -45,6 +45,12 @@ public class BruxoCacador extends Criatura{
 		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
 		return vida;
 	}
+
+	@Override
+	public int usarPocao() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 
 }

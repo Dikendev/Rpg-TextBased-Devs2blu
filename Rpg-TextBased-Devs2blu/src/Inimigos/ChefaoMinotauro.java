@@ -19,7 +19,7 @@ public class ChefaoMinotauro extends Criatura {
 	public int ataqueBasico2() {
 		// TODO Auto-generated method stub
 		return 0;
-	}
+	}s
 
 	@Override
 	public int ataqueEspecial() {
@@ -43,7 +43,7 @@ public class ChefaoMinotauro extends Criatura {
 	public int recebeDano(int dano) {
 		this.vida = this.vida - dano;
 		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+		return this.vida;
 	}
 
 }
