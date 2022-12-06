@@ -10,14 +10,16 @@ public class VilaoDuergar extends Criatura{
 
 	@Override
 	public int ataqueBasico() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("O Duergar ataca com CHUTE");
+		System.out.println("Dano de 10");
+		return recebeDano(10);
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		// TODO Auto-generated method stub
-		return 0;
+		System.out.println("O Duergar ataca com MACHADADA");
+		System.out.println("Dano de 15");
+		return recebeDano(15);
 	}
 
 	@Override
@@ -40,9 +42,15 @@ public class VilaoDuergar extends Criatura{
 
 	@Override
 	public int recebeDano(int dano) {
-		this.vida = this.vida - dano;
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.vida);
-		return vida;
+		setVida(getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
+		return getVida();
+	}
+
+	@Override
+	public void usarPocao() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

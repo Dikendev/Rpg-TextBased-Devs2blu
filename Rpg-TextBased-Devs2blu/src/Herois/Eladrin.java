@@ -10,7 +10,7 @@ public class Eladrin extends Criatura {
 		setXp(xp);
 		setVida(vida);
 		setPocao(pocao);
-		setNivel(nivel);
+		setNivel(0);
 		setMp(mp);
 	}	
 	
