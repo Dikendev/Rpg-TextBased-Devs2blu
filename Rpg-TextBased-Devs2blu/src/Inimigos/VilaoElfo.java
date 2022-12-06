@@ -1,8 +1,8 @@
 package Inimigos;
 
-import FantasyOne.Atributos;
+import FantasyOne.Criatura;
 
-public class VilaoElfo extends Atributos{
+public class VilaoElfo extends Criatura{
 	
 	public VilaoElfo(String nome, int vida) {
 		super(nome, vida);
