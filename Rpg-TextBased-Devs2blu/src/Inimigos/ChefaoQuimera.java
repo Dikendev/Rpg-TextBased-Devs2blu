@@ -6,7 +6,8 @@ public class ChefaoQuimera extends Criatura{
 	
 	public ChefaoQuimera(String nome, int vida) {
 		super(nome, vida);
-		// TODO Auto-generated constructor stub
+		this.setNome("Quimera");
+		this.setVida(100);	
 	}
 
 	@Override

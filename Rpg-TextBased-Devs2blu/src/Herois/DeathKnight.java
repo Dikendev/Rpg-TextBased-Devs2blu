@@ -4,13 +4,13 @@ import FantasyOne.Criatura;
 public class DeathKnight extends Criatura{
 		public DeathKnight(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 			super(nome, maxVida, xp, vida, pocao, nivel, mp);
-			setNome(nome);
-			setMaxVida(maxVida);
-			setXp(xp);
-			setVida(vida);
-			setPocao(pocao);
-			setNivel(nivel);
-			setMp(mp);
+			this.setNome(nome);
+			this.setMaxVida(maxVida);
+			this.setXp(xp);
+			this.setVida(vida);
+			this.setPocao(pocao);
+			this.setNivel(nivel);
+			this.setMp(mp);
 		}
 		
 		@Override
@@ -27,9 +27,9 @@ public class DeathKnight extends Criatura{
 
 		@Override
 		public int ataqueEspecial() {
-			if(getMp() > 0) {
+			if(this.getMp() > 0) {
 				System.out.println("Invocou os servos das trevas, causando 20 de dano!");
-				setMp(getMp() - 1);
+				this.setMp(this.getMp() - 1);
 				return 20;			
 			} else {
 				System.out.println("Sem mana suficiente para os servos das trevas");
@@ -41,7 +41,7 @@ public class DeathKnight extends Criatura{
 		public int ataqueEspecial2() {
 			if(getMp() > 0) {
 				System.out.println("Você usou Exorcizar para expurgar seu inimigo, causando 25 de dano!");
-				setMp(getMp() - 1);			
+				this.setMp(this.getMp() - 1);			
 				return 25;
 			} else {
 				System.out.println("Você tenta, mas não possui mana suficiente para Exorcizar!");
@@ -52,24 +52,25 @@ public class DeathKnight extends Criatura{
 		@Override
 		public int defesa() {
 			System.out.println("Você usa a Troca sanguinea e cura 10 pontos de vida!");
+			this.setVida(this.getVida() + 20);
 			return 10;
 		}
 
 		@Override
 		public void recebeDano(int dano) {
-			setVida(getVida() - dano);
-			System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
+			this.setVida(this.getVida() - dano);
+			System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
 		}
 		
 		@Override
 		public void usarPocao() {
-			if(getPocao() > 0) {
-				setPocao(getPocao() - 1);			
-				setVida(getVida() + 20);
+			if(this.getPocao() > 0) {
+				this.setPocao(this.getPocao() - 1);			
+				this.setVida(this.getVida() + 20);
 			} else {
 				System.out.println("Você não possui Poções de Cura!");
 			}
-			System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());
+			System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
 		}
 
 	}

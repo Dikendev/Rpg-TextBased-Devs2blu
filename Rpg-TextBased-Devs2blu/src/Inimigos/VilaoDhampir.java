@@ -5,8 +5,8 @@ public class VilaoDhampir extends Criatura {
 	
 	public VilaoDhampir(String nome, int vida) {
 		super(nome, vida);
-		setNome("Dhampir");
-		setVida(100);
+		this.setNome("Dhampir");
+		this.setVida(100);
 	}
 
 	@Override
