@@ -121,9 +121,6 @@ public class GameLogic {
 
 	}
 	
-<<<<<<< HEAD
-    
-=======
 	public static void MenuGame() {
         limparConsole();
         imprimirCabecalho("Menu");
@@ -133,7 +130,6 @@ public class GameLogic {
         System.out.println("(2) Infor Jogador: ");
         System.out.println("(3) Sair: ");
     }
->>>>>>> 4f897c0796d867d75384ffcd39a94dad9605b672
 
 	
 

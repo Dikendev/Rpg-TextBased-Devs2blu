@@ -36,9 +36,8 @@ public class VilaoCapivaraZumbi extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("SE esconde e recebe apenas!");
-		return 10;
 	}
 
 	@Override

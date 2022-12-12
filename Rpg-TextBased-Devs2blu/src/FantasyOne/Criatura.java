@@ -1,4 +1,4 @@
-	package FantasyOne;
+package FantasyOne;
 
 public abstract class Criatura {
 	
@@ -20,13 +20,12 @@ public abstract class Criatura {
 		this.mp = mp;
 	}
 	
-
 	//metodos
 	public abstract int ataqueBasico();
 	public abstract int ataqueBasico2();
 	public abstract int ataqueEspecial();
 	public abstract int ataqueEspecial2();
-	public abstract int defesa();
+	public abstract void defesa();
 	public abstract void recebeDano(int dano);
 	public abstract void usarPocao();
 	

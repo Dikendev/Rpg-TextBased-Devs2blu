@@ -35,9 +35,8 @@ public class VilaoOrcGuerreiro extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("O Orc levanta seu escudo, absorvendo 10 de dano!");
-		return 10;
 	}
 
 	@Override

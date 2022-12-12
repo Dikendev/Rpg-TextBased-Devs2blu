@@ -50,10 +50,9 @@ public class DeathKnight extends Criatura{
 		}
 
 		@Override
-		public int defesa() {
+		public void defesa() {
 			System.out.println("Você usa a Troca sanguinea e cura 10 pontos de vida!");
 			this.setVida(this.getVida() + 20);
-			return 10;
 		}
 
 		@Override

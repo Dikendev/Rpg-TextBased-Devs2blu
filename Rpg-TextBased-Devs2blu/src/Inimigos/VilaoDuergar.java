@@ -36,9 +36,8 @@ public class VilaoDuergar extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		// TODO Auto-generated method stub
-		return 0;
 	}
 
 	@Override

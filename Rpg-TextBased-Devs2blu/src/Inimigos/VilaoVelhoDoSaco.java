@@ -36,9 +36,8 @@ public class VilaoVelhoDoSaco extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("USA UM ESCUDO!");
-		return 10;
 	}
 
 	@Override
@@ -49,7 +48,6 @@ public class VilaoVelhoDoSaco extends Criatura{
 
 	@Override
 	public void usarPocao() {
-		// TODO Auto-generated method stub
 		
 	}
 

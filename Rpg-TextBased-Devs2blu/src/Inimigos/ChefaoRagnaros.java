@@ -35,9 +35,8 @@ public class ChefaoRagnaros extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("Ragnaros invoca elementais de pedra e os absorve, recuperando 20 de vida!");
-		return 20;
 	}
 
 	@Override

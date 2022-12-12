@@ -43,11 +43,6 @@ public class Main {
 		inimigos.add(velhoDoSaco);
 		inimigos.add(capivaraZumbi);
 		inimigos.add(ragnaros);
-	
-		
-		
->>>>>>> 4f897c0796d867d75384ffcd39a94dad9605b672
-
 		//começar história inicial e logo em seguida primeira luta
 		
 	}

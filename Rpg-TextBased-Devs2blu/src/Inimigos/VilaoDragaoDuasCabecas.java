@@ -50,12 +50,11 @@ public class VilaoDragaoDuasCabecas extends Criatura {
 	}
 	
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("Dragão de Duas Cabeças usou Defesa do Fogo.");
 		System.out.println("Aumenta sua própria vida em 15.");
 		this.setVida(this.getVida()+15);
 		System.out.println("Dragão de Duas Cabeças possui: " + this.getVida() + "de vida");
-		return this.getVida();
 	}
 
 	@Override

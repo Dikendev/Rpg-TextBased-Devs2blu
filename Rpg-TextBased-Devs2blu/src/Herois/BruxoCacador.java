@@ -54,14 +54,13 @@ public class BruxoCacador extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		if(this.getMp() >= 2) {
 			System.out.println("Bruxo caçador se regenerou, aumentando seu HP em 20!");
 			this.setVida(this.getVida() + 20);
 		}else {
 			System.out.println("Sem mana suficiente para recuperar vida!");
 		}
-		return 0;
 	}
 
 	@Override

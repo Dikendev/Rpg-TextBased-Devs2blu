@@ -49,9 +49,8 @@ public class ChefaoQuimera extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("Quimera usou proteção de asas! Seu ataque foi anulado.");
-		return 0;
 	}
 
 	@Override
