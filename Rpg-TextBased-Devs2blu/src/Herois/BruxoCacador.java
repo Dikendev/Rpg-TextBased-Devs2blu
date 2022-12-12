@@ -31,23 +31,36 @@ public class BruxoCacador extends Criatura{
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.println("Bruxo caçador utilizou bola de fogo, causando 30 de dano!");
-		System.out.println("Dano: 30");
-		return 30;
+		if(this.getMp() >= 3) {
+			System.out.println("Bruxo caçador utilizou bola de fogo, causando 30 de dano!");
+			System.out.println("Dano: 30");
+			return 30;
+		}else {
+			System.out.println("Sem mana suficiente para bola de fogo!");
+			return 30;
+		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.println("Bruxo caçador utilizou relâmpago, causando 35 de dano!");
-		System.out.println("Dano: 35");
-		return 35;
+		if(this.getMp() >= 3) {
+			System.out.println("Bruxo caçador utilizou relâmpago, causando 35 de dano!");
+			System.out.println("Dano: 35");
+			return 35;
+		}else {
+			System.out.println("Sem mana suficiente para relâmpago!");
+			return 0;
+		}
 	}
 
 	@Override
-	public int defesa() {
-		System.out.println("Bruxo caçador se regenerou, aumentando seu HP em 20!");
-		this.setVida(getVida() + 20);
-		return 0;
+	public void defesa() {
+		if(this.getMp() >= 2) {
+			System.out.println("Bruxo caçador se regenerou, aumentando seu HP em 20!");
+			this.setVida(this.getVida() + 20);
+		}else {
+			System.out.println("Sem mana suficiente para recuperar vida!");
+		}
 	}
 
 	@Override
@@ -64,7 +77,7 @@ public class BruxoCacador extends Criatura{
 		} else {
 			System.out.println("Você não possui Poções de Cura!");
 		}
-		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());				
+		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());				
 	}
 
 }

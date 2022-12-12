@@ -23,14 +23,16 @@ public class Sacerdote extends Criatura {
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.println("Você canaliza um raio de luz ofuscante diretamente ao seu inimigo, causando 12 de dano! \nDano: 12");
+		System.out.println(
+				"Você canaliza um raio de luz ofuscante diretamente ao seu inimigo, causando 12 de dano! \nDano: 12");
 		return 12;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		if (getMp() > 0) {
-			System.out.println("Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo, causando 20 de dano! \nDano: 20");
+			System.out.println(
+					"Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo, causando 20 de dano! \nDano: 20");
 			setMp(getMp() - 1);
 			return 20;
 		} else {
@@ -42,7 +44,8 @@ public class Sacerdote extends Criatura {
 	@Override
 	public int ataqueEspecial2() {
 		if (getMp() > 0) {
-			System.out.println("Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano! \nDano: 25");
+			System.out
+					.println("Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano! \nDano: 25");
 			setMp(getMp() - 1);
 			return 25;
 		} else {
@@ -52,10 +55,13 @@ public class Sacerdote extends Criatura {
 	}
 
 	@Override
-	public int defesa() {
-		System.out.println("Você usa a oração celestial e cura 15 pontos de vida!");
-		this.setVida(getVida() + 15);
-		return 0;
+	public void defesa() {
+		if (this.getMp() >= 2) {
+			System.out.println("Você usa a oração celestial e cura 15 pontos de vida!");
+			this.setVida(getVida() + 15);
+		} else {
+			System.out.println("Sem mana suficiente para recuperar vida!");
+		}
 	}
 
 	@Override
@@ -74,8 +80,5 @@ public class Sacerdote extends Criatura {
 		}
 		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
 	}
-	      
 
 }
-
-

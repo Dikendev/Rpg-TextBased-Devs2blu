@@ -14,11 +14,9 @@ import Inimigos.VilaoElfo;
 import Inimigos.VilaoOrcGuerreiro;
 import Inimigos.VilaoVelhoDoSaco;
 
-
 public class Main {
 
 	public static void main(String[] args) {
-		//GameLogic.comecaJogo();
 
 		Scanner scan = new Scanner(System.in);
 
@@ -45,10 +43,7 @@ public class Main {
 		inimigos.add(velhoDoSaco);
 		inimigos.add(capivaraZumbi);
 		inimigos.add(ragnaros);
-	
-		
-		
-
 		//começar história inicial e logo em seguida primeira luta
+		
 	}
 }

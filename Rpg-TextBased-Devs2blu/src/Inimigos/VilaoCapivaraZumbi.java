@@ -5,8 +5,8 @@ public class VilaoCapivaraZumbi extends Criatura{
 	
 	public VilaoCapivaraZumbi(String nome, int vida) {
 		super(nome, vida);
-		setNome("Capivara Zumbi");
-		setVida(100);
+		this.setNome(nome);
+		this.setVida(vida);
 	}
 
 	@Override
@@ -36,9 +36,8 @@ public class VilaoCapivaraZumbi extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("SE esconde e recebe apenas!");
-		return 10;
 	}
 
 	@Override

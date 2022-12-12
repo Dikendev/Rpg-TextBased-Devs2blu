@@ -6,7 +6,8 @@ public class VilaoElfo extends Criatura{
 	
 	public VilaoElfo(String nome, int vida) {
 		super(nome, vida);
-		// TODO Auto-generated constructor stub
+		this.setNome(nome);
+		this.setVida(vida);
 	}
 
 	@Override
@@ -48,11 +49,13 @@ public class VilaoElfo extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
-		System.out.println("Elfo utilizou sua Aura de Cura, aumentando seu HP em 20!");
-		this.setVida(this.getVida() + 10);
-		System.out.println();
-		return 0;
+	public void defesa() {
+		if(this.getMp() >= 2) {
+			System.out.println("Elfo utilizou sua Aura de Cura, aumentando seu HP em 20!");
+			this.setVida(this.getVida() + 20);
+		}else {
+			System.out.println("Sem mana suficiente para recuperar vida!");
+		}
 	}
 
 	@Override

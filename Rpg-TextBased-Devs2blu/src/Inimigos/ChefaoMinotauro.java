@@ -51,12 +51,11 @@ public class ChefaoMinotauro extends Criatura {
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("Minotauro usou Defesa do Submundo.");
 		System.out.println("Aumenta sua própria vida em 20.");
 		this.setVida(this.getVida()+20);
 		System.out.println("Minotauro possui: " + this.getVida() + "de vida");
-		return this.getVida();
 	}
 
 	@Override

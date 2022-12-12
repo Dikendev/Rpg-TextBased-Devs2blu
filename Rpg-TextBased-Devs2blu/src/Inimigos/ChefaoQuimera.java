@@ -6,8 +6,8 @@ public class ChefaoQuimera extends Criatura{
 	
 	public ChefaoQuimera(String nome, int vida) {
 		super(nome, vida);
-		this.setNome("Quimera");
-		this.setVida(100);	
+		this.setNome(nome);
+		this.setVida(vida);	
 	}
 
 	@Override
@@ -49,9 +49,8 @@ public class ChefaoQuimera extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("Quimera usou proteção de asas! Seu ataque foi anulado.");
-		return 0;
 	}
 
 	@Override
@@ -68,7 +67,11 @@ public class ChefaoQuimera extends Criatura{
 		} else {
 			System.out.println("Você não possui Poções de Cura!");
 		}
-		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());		
+		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());		
+	}
+	
+	public void combate() {
+		
 	}
 
 }
