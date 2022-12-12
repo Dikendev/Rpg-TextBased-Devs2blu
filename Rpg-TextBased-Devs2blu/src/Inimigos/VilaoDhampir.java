@@ -11,35 +11,37 @@ public class VilaoDhampir extends Criatura {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.println("O Dhampir ataca com SOCO");
-		System.out.println("Dano de 10");
+		System.out.println("O Dhampir ataca com GOLPE NO ESTÔMAGO");
+		System.out.println("Dano: 10");
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.println("O Dhampir ataca com ADAGA");
-		System.out.println("Dano de 20");
+		System.out.println("O Dhampir ataca com CHUTE FRONTAL DUPLO");
+		System.out.println("Dano: 15");
 		return 20;
 	}
 
 	@Override
 	public int ataqueEspecial() {
+		System.out.println("O Dhampir ataca com ADAGA");
+		System.out.println("Dano: 20");
+		return 20;
+	}
+
+	@Override
+	public int ataqueEspecial2() {
 		System.out.println("O Dhampir ataca com MORDIDA");
-		System.out.println("Dano de 30");
+		System.out.println("Dano: 30");
 		setVida(getVida() + 5);
 		return 30;
 	}
 
 	@Override
-	public int ataqueEspecial2() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public int defesa() {
-		// TODO Auto-generated method stub
+		System.out.println("Dhampir se regenerou, aumentando seu HP em 25!");
+		this.setVida(getVida() + 25);
 		return 0;
 	}
 
