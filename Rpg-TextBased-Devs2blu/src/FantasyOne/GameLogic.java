@@ -20,7 +20,7 @@ public class GameLogic {
 				input = Integer.parseInt(scanner.next());
 			} catch (Exception e) {
 				input = -1;
-				System.out.println("Escolha um numero valido jogador!");
+				System.out.println("Escolha um numero válido:");
 			}
 		} while (input < 1 || input > escolhasUsuario);
 		return input;
@@ -55,10 +55,10 @@ public class GameLogic {
 
 		telaPontilhada(100);
 		telaPontilhada(100);
-		System.out.println("                                     Bem vindo ao Fantasy One!");
+		System.out.println("                                     Bem-vindo ao Fantasy One!");
 		telaPontilhada(100);
 		telaPontilhada(100);
-		System.out.println("Precione: \n1-Começar Jogo \n2-Sair");
+		System.out.println("Pressione: \n1-Começar Jogo \n2-Sair");
 		int escolha = scanner.nextInt();
 
 		switch (escolha) {
@@ -75,8 +75,8 @@ public class GameLogic {
 				// trocar o nome
 				
 
-				imprimirCabecalho("Nome será: " + nome + ".\n Correto?");
-				System.out.println("1- Sim! \n2- Não, quero trocar o nome do meu heroi.");
+				imprimirCabecalho("Seu nome é: " + nome + ".\n Está correto?");
+				System.out.println("1- Sim! \n2- Não, quero mudar o nome.");
 				int input = escolhaInt("-> ", 2);
 				if (input == 1)
 					nomeSet = true;
@@ -103,7 +103,7 @@ public class GameLogic {
 			break;
 			
 		default:
-			System.out.println("Valor Inválido!");
+			System.out.println("Valor inválido!");
 		}
 		telaPontilhada(100);
 
