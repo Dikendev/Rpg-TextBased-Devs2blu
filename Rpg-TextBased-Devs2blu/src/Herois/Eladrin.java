@@ -5,13 +5,13 @@ public class Eladrin extends Criatura {
 	
 	public Eladrin(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
-		setNome(nome);
-		setMaxVida(maxVida);
-		setXp(xp);
-		setVida(vida);
-		setPocao(pocao);
-		setNivel(0);
-		setMp(mp);
+		this.setNome(nome);
+		this.setMaxVida(maxVida);
+		this.setXp(xp);
+		this.setVida(vida);
+		this.setPocao(pocao);
+		this.setNivel(0);
+		this.setMp(mp);
 	}	
 	
 	@Override

@@ -6,7 +6,13 @@ public class MagoCinzento extends Criatura{
 
 	public MagoCinzento(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
-		// TODO Auto-generated constructor stub
+		this.setNome(nome);
+		this.setMaxVida(maxVida);
+		this.setXp(xp);
+		this.setVida(vida);
+		this.setPocao(pocao);
+		this.setNivel(nivel);
+		this.setMp(mp);
 	}
 
 	@Override
