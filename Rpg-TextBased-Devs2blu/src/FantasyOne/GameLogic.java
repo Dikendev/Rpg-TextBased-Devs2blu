@@ -1,5 +1,6 @@
 package FantasyOne;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import Herois.BruxoCacador;
@@ -7,6 +8,13 @@ import Herois.DeathKnight;
 import Herois.Eladrin;
 import Herois.MagoCinzento;
 import Herois.Sacerdote;
+import Inimigos.VilaoCapivaraZumbi;
+import Inimigos.VilaoDhampir;
+import Inimigos.VilaoDragaoDuasCabecas;
+import Inimigos.VilaoDuergar;
+import Inimigos.VilaoElfo;
+import Inimigos.VilaoOrcGuerreiro;
+import Inimigos.VilaoVelhoDoSaco;
 
 public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
@@ -75,15 +83,11 @@ public class GameLogic {
 				
 				// trocar o nome
 				
-<<<<<<< HEAD
-				limparConsole();
-				imprimirCabecalho("Nome será: " + nome + ".\n Correto?");
-				System.out.println("1- Sim! \n2- Não, quero trocar o nome do meu heroi.");
-=======
 
+				limparConsole();
 				imprimirCabecalho("Seu nome é: " + nome + ".\n Está correto?");
 				System.out.println("1- Sim! \n2- Não, quero mudar o nome.");
->>>>>>> 1a90647a4e7daed43e99c02fbe15578fbf85c429
+
 				int input = escolhaInt("-> ", 2);
 				if (input == 1)
 					nomeSet = true;
@@ -112,9 +116,60 @@ public class GameLogic {
 		default:
 			System.out.println("Valor inválido!");
 		}
-		telaPontilhada(100);
+		telaPontilhada(100);		
 
 
 	}
+	
+	public static void MenuGame() {
+        limparConsole();
+        imprimirCabecalho("Menu");
+        System.out.println("Escolha uma opçao");
+        telaPontilhada(20);
+        System.out.println("(1) Continuar: ");
+        System.out.println("(2) Infor Jogador: ");
+        System.out.println("(3) Sair: ");
+    }
 
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

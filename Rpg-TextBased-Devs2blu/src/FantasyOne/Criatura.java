@@ -29,6 +29,7 @@ public abstract class Criatura {
 	public abstract int defesa();
 	public abstract void recebeDano(int dano);
 	public abstract void usarPocao();
+	public abstract void combate();
 
 	
 	//Getters e Setters
@@ -87,6 +88,7 @@ public abstract class Criatura {
 	public void setMp(int mp) {
 		this.mp = mp;
 	}
+	
 	
 	
 	
