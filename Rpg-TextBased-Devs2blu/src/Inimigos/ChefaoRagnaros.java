@@ -12,32 +12,33 @@ public class ChefaoRagnaros extends Criatura{
 	
 	@Override
 	public int ataqueBasico() {
-		System.out.println("Ragnaros bate seu Martelo de Fogo no chão, dispersando uma onda de fogo que causa 15 de dano!");
+		System.out.println("Ragnaros bate seu Martelo de Fogo no chão, dispersando uma onda de fogo que causa 15 de dano! \nDano: 15");
 		return 15;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.println("Ragnaros sopra seu Fogo Infernal na sua direção, causando 20 de dano!");
+		System.out.println("Ragnaros sopra seu Fogo Infernal na sua direção, causando 20 de dano! \nDano: 20");
 		return 20;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.println("Ragnaros invoca elementais de fogo, que atiram-se em sua direção causando 35 de dano!");
+		System.out.println("Ragnaros invoca elementais de fogo, que atiram-se em sua direção causando 35 de dano! \nDano: 35");
 		return 35;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.println("Ragnaros causa um Tsunami de Lava, causando 40 de dano!");
+		System.out.println("Ragnaros causa um Tsunami de Lava, causando 40 de dano! \nDano: 40");
 		return 40;
 	}
 
 	@Override
 	public int defesa() {
-		System.out.println("Ragnaros invoca elementais de pedra e os absorve, recuperando 20 de vida!");
-		return 20;
+		System.out.println("Ragnaros invoca elementais de pedra e os absorve, recuperando 20 de vida! \nDano: 20");
+		this.setVida(getVida() + 20);
+		return 0;
 	}
 
 	@Override

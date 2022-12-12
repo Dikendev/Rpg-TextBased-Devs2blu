@@ -17,20 +17,20 @@ public class Sacerdote extends Criatura {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.println("Você lança três arcos de luz, causando 10 de dano!");
+		System.out.println("Você lança três arcos de luz, causando 10 de dano! \nDano: 10");
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.println("Você canaliza um raio de luz ofuscante diretamente ao seu inimigo, causando 12 de dano!");
+		System.out.println("Você canaliza um raio de luz ofuscante diretamente ao seu inimigo, causando 12 de dano! \nDano: 12");
 		return 12;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		if (getMp() > 0) {
-			System.out.println("Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo, causando 20 de dano!");
+			System.out.println("Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo, causando 20 de dano! \nDano: 20");
 			setMp(getMp() - 1);
 			return 20;
 		} else {
@@ -42,7 +42,7 @@ public class Sacerdote extends Criatura {
 	@Override
 	public int ataqueEspecial2() {
 		if (getMp() > 0) {
-			System.out.println("Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano!");
+			System.out.println("Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano! \nDano: 25");
 			setMp(getMp() - 1);
 			return 25;
 		} else {
@@ -53,47 +53,29 @@ public class Sacerdote extends Criatura {
 
 	@Override
 	public int defesa() {
-		System.out.println("Você usa a oração celestial e cura 10 pontos de vida!");
-		return 10;
+		System.out.println("Você usa a oração celestial e cura 15 pontos de vida!");
+		this.setVida(getVida() + 15);
+		return 0;
 	}
 
 	@Override
 	public void recebeDano(int dano) {
-		this.setVida(getVida() - dano);
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + getVida());
+		this.setVida(this.getVida() - dano);
+		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
 	}
 
 	@Override
 	public void usarPocao() {
-		if (getPocao() > 0) {
-			setPocao(getPocao() - 1);
-			setVida(getVida() + 20);
+		if (this.getPocao() > 0) {
+			this.setPocao(this.getPocao() - 1);
+			this.setVida(this.getVida() + 20);
 		} else {
 			System.out.println("Você não possui Poções de Cura!");
 		}
-		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());
+		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
 	}
-	
-	public void combate() {
-
-        switch (escolha) {
-
-        case 1:
-            ataqueBasico();
-            break;
-        case 2:
-            ataqueBasico2();
-            break;
-        case 3: 
-             ataqueEspecial();
-             break;
-        case 4:
-            ataqueEspecial2();
-            break;
-        case 5:
-            defesa();
-            break;
-        }
-    }
+	      
 
 }
+
+
