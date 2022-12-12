@@ -5,8 +5,8 @@ public class VilaoDhampir extends Criatura {
 	
 	public VilaoDhampir(String nome, int vida) {
 		super(nome, vida);
-		this.setNome("Dhampir");
-		this.setVida(100);
+		this.setNome(nome);
+		this.setVida(vida);
 	}
 
 	@Override
@@ -20,7 +20,7 @@ public class VilaoDhampir extends Criatura {
 	public int ataqueBasico2() {
 		System.out.println("O Dhampir ataca com CHUTE FRONTAL DUPLO");
 		System.out.println("Dano: 15");
-		return 20;
+		return 15;
 	}
 
 	@Override
@@ -39,11 +39,11 @@ public class VilaoDhampir extends Criatura {
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("Dhampir se regenerou, aumentando seu HP em 25!");
 		this.setVida(getVida() + 25);
-		return 0;
 	}
+
 
 	@Override
 	public void recebeDano(int dano) {

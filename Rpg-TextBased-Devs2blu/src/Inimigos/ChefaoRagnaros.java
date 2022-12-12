@@ -6,8 +6,8 @@ public class ChefaoRagnaros extends Criatura{
 
 	public ChefaoRagnaros(String nome, int vida) {
 		super(nome, vida);
-		this.setNome("Ragnaros");
-		this.setVida(100);
+		this.setNome(nome);
+		this.setVida(vida);
 	}
 	
 	@Override
@@ -35,9 +35,8 @@ public class ChefaoRagnaros extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("Ragnaros invoca elementais de pedra e os absorve, recuperando 20 de vida!");
-		return 20;
 	}
 
 	@Override

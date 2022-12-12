@@ -60,12 +60,11 @@ public class MagoCinzento extends Criatura{
 	}
 
 	@Override
-	public int defesa() {
+	public void defesa() {
 		System.out.println("Mago Cinzento usou defesa da Lua.");
 		System.out.println("Aumenta sua própria vida em 15.");
 		this.setVida(this.getVida()+15);
 		System.out.println("Mago Cinzento possui: " + this.getVida() + "de vida");
-		return this.getVida();
 	}
 	
 

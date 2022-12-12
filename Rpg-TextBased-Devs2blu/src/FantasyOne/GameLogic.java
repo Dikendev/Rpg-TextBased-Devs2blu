@@ -57,6 +57,7 @@ public class GameLogic {
 	
 	// comecar o jogo
 	public static void comecaJogo() {
+		
 		boolean nomeSet = false;
 		String nome;
 		
@@ -117,7 +118,6 @@ public class GameLogic {
 			System.out.println("Valor inválido!");
 		}
 		telaPontilhada(100);		
-
 
 	}
 	
