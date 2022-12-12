@@ -28,7 +28,7 @@ public class GameLogic {
 
 	// Simular outra tela
 	public static void limparConsole() {
-		for (int i = 0; i < 60; i++)
+		for (int i = 0; i < 30; i++)
 			System.out.println();
 
 	}
@@ -52,7 +52,7 @@ public class GameLogic {
 		boolean nomeSet = false;
 		String nome;
 		
-
+		limparConsole();
 		telaPontilhada(100);
 		telaPontilhada(100);
 		System.out.println("                                     Bem vindo ao Fantasy One!");
@@ -60,21 +60,22 @@ public class GameLogic {
 		telaPontilhada(100);
 		System.out.println("Precione: \n1-Começar Jogo \n2-Sair");
 		int escolha = scanner.nextInt();
-
+		
 		switch (escolha) {
 		case 1:
-			System.out.println(
+			limparConsole();
+			imprimirCabecalho(
 					"Escolha um personagem: \n1- Bruxo Caçador \n2- Eladrin \n3- Mago Cinzento \n4- Sacerdote \n5- Death Knight");
 			escolha = scanner.nextInt();
-
+			
 			do {
-				
+				limparConsole();
 				imprimirCabecalho("Qual o nome do Jogador? ");
 				nome = scanner.next();
-
+				
 				// trocar o nome
 				
-
+				limparConsole();
 				imprimirCabecalho("Nome será: " + nome + ".\n Correto?");
 				System.out.println("1- Sim! \n2- Não, quero trocar o nome do meu heroi.");
 				int input = escolhaInt("-> ", 2);
