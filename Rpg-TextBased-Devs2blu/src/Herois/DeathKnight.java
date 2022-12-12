@@ -16,12 +16,14 @@ public class DeathKnight extends Criatura{
 		@Override
 		public int ataqueBasico() {
 			System.out.println("Dk aplicou o soco da morte, causando 10 de dano!");
+			System.out.println("Dano: 10");
 			return 10;
 		}
 
 		@Override
 		public int ataqueBasico2() {
 			System.out.println("Dk usou a espada do rei , causando 12 de dano!");
+			System.out.println("Dano: 12");
 			return 12;
 		}
 
@@ -29,6 +31,7 @@ public class DeathKnight extends Criatura{
 		public int ataqueEspecial() {
 			if(this.getMp() > 0) {
 				System.out.println("Invocou os servos das trevas, causando 20 de dano!");
+				System.out.println("Dano: 20");
 				this.setMp(this.getMp() - 1);
 				return 20;			
 			} else {
@@ -41,6 +44,7 @@ public class DeathKnight extends Criatura{
 		public int ataqueEspecial2() {
 			if(getMp() > 0) {
 				System.out.println("Você usou Exorcizar para expurgar seu inimigo, causando 25 de dano!");
+				System.out.println("Dano: 25");
 				this.setMp(this.getMp() - 1);			
 				return 25;
 			} else {
