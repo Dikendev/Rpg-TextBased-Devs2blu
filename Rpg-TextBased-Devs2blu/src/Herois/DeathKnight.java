@@ -39,7 +39,7 @@ public class DeathKnight extends Criatura{
 
 		@Override
 		public int ataqueEspecial2() {
-			if(getMp() > 0) {
+			if(this.getMp() > 0) {
 				System.out.println("Você usou Exorcizar para expurgar seu inimigo, causando 25 de dano!");
 				this.setMp(this.getMp() - 1);			
 				return 25;

@@ -4,8 +4,8 @@ import FantasyOne.Criatura;
 
 public class VilaoDragaoDuasCabecas extends Criatura {
 
-	public VilaoDragaoDuasCabecas(String name, int maxHp, int xp, int hp, int pocao, int nivel, int mp) {
-		super(name, maxHp, xp, hp, pocao, nivel, mp);
+	public VilaoDragaoDuasCabecas(String name, int hp) {
+		super(name, hp);
 		// TODO Auto-generated constructor stub
 	}
 

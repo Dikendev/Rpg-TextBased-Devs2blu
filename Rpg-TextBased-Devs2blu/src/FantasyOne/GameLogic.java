@@ -1,5 +1,6 @@
 package FantasyOne;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import Herois.BruxoCacador;
@@ -7,6 +8,13 @@ import Herois.DeathKnight;
 import Herois.Eladrin;
 import Herois.MagoCinzento;
 import Herois.Sacerdote;
+import Inimigos.VilaoCapivaraZumbi;
+import Inimigos.VilaoDhampir;
+import Inimigos.VilaoDragaoDuasCabecas;
+import Inimigos.VilaoDuergar;
+import Inimigos.VilaoElfo;
+import Inimigos.VilaoOrcGuerreiro;
+import Inimigos.VilaoVelhoDoSaco;
 
 public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
@@ -49,6 +57,7 @@ public class GameLogic {
 	
 	// comecar o jogo
 	public static void comecaJogo() {
+		
 		boolean nomeSet = false;
 		String nome;
 		
@@ -114,7 +123,8 @@ public class GameLogic {
 		}
 		telaPontilhada(100);
 
-
 	}
+	
+    
 
 }

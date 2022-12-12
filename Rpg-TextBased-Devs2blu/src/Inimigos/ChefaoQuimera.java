@@ -68,7 +68,11 @@ public class ChefaoQuimera extends Criatura{
 		} else {
 			System.out.println("Você não possui Poções de Cura!");
 		}
-		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());		
+		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());		
+	}
+	
+	public void combate() {
+		
 	}
 
 }
