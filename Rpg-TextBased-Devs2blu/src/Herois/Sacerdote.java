@@ -73,5 +73,27 @@ public class Sacerdote extends Criatura {
 		}
 		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + getVida());
 	}
+	
+	public void combate() {
+
+        switch (escolha) {
+
+        case 1:
+            ataqueBasico();
+            break;
+        case 2:
+            ataqueBasico2();
+            break;
+        case 3: 
+             ataqueEspecial();
+             break;
+        case 4:
+            ataqueEspecial2();
+            break;
+        case 5:
+            defesa();
+            break;
+        }
+    }
 
 }

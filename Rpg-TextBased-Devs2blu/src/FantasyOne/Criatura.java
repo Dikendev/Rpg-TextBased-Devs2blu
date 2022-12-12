@@ -29,7 +29,6 @@ public abstract class Criatura {
 	public abstract int defesa();
 	public abstract void recebeDano(int dano);
 	public abstract void usarPocao();
-
 	
 	//Getters e Setters
 	public String getNome() {
@@ -87,6 +86,7 @@ public abstract class Criatura {
 	public void setMp(int mp) {
 		this.mp = mp;
 	}
+	
 	
 	
 	

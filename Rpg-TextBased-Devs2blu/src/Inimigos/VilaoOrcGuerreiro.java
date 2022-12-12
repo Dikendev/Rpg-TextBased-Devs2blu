@@ -6,8 +6,8 @@ public class VilaoOrcGuerreiro extends Criatura{
 	
 	public VilaoOrcGuerreiro(String nome, int vida) {
 		super(nome, vida);
-		setNome("Orc Guerreiro");
-		setVida(100);
+		this.setNome(nome);
+		this.setVida(vida);
 	}
 
 	@Override

@@ -4,9 +4,10 @@ import FantasyOne.Criatura;
 
 public class VilaoDragaoDuasCabecas extends Criatura {
 
-	public VilaoDragaoDuasCabecas(String name, int hp) {
-		super(name, hp);
-		// TODO Auto-generated constructor stub
+	public VilaoDragaoDuasCabecas(String nome, int vida) {
+		super(nome, vida);
+		this.setNome(nome);
+		this.setVida(vida);
 	}
 
 	@Override

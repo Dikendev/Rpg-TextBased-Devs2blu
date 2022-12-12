@@ -6,8 +6,8 @@ public class ChefaoQuimera extends Criatura{
 	
 	public ChefaoQuimera(String nome, int vida) {
 		super(nome, vida);
-		this.setNome("Quimera");
-		this.setVida(100);	
+		this.setNome(nome);
+		this.setVida(vida);	
 	}
 
 	@Override

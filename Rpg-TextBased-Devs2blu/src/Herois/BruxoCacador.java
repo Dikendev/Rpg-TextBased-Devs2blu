@@ -1,7 +1,5 @@
 package Herois;
 
-import java.util.Scanner;
-
 import FantasyOne.Criatura;
 
 public class BruxoCacador extends Criatura{

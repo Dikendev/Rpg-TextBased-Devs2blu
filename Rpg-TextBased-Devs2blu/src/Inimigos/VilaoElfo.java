@@ -6,7 +6,8 @@ public class VilaoElfo extends Criatura{
 	
 	public VilaoElfo(String nome, int vida) {
 		super(nome, vida);
-		// TODO Auto-generated constructor stub
+		this.setNome(nome);
+		this.setVida(vida);
 	}
 
 	@Override

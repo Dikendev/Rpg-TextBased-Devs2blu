@@ -5,8 +5,8 @@ public class VilaoVelhoDoSaco extends Criatura{
 	
 	public VilaoVelhoDoSaco(String nome, int vida) {
 		super(nome, vida);
-		setNome("O velho do saco");
-		setVida(100);
+		this.setNome(nome);
+		this.setVida(vida);
 	}
 
 	@Override
