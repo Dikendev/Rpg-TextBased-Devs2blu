@@ -46,4 +46,6 @@ public class Main {
 		//começar história inicial e logo em seguida primeira luta
 		GameLogic.comecaJogo();
 	}
+	    
+	    
 }

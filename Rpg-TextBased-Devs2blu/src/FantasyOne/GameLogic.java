@@ -15,10 +15,11 @@ import Inimigos.VilaoDuergar;
 import Inimigos.VilaoElfo;
 import Inimigos.VilaoOrcGuerreiro;
 import Inimigos.VilaoVelhoDoSaco;
-import rpggame.main.Player;
+//import rpggame.main.Player;
 
 public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
+	public static String jogador;
 	
 	//Mótodo para gerar um loop no jogo
 		public static boolean isRunning;
@@ -83,12 +84,12 @@ public class GameLogic {
 		do {
 			limparConsole();
 			imprimirCabecalho("Qual o nome do Jogador? ");
-			nome = scanner.next();
+			String nomeJogador = scanner.next();
 			limparConsole();
 				
 			// trocar o nome
 				
-			imprimirCabecalho("Seu nome é: " + nome + ".\n Está correto?");
+			imprimirCabecalho("Seu nome é: " + nomeJogador + ".\n Está correto?");
 			System.out.println("1- Sim! \n2- Não, quero mudar o nome.");
 			
 			int input = escolhaUser("-> ", 100);
@@ -97,7 +98,7 @@ public class GameLogic {
 			} while (!nomeSet);
 		limparConsole();
 		imprimirCabecalho(
-				"Escolha um personagem: \n1- Bruxo Caçador \n2- Eladrin \n3- Mago Cinzento \n4- Sacerdote \n5- Death Knight");
+				"Escolha um personagem: \n1- Bruxo Caçador \n2- Eladrin \n3- Mago Cinzento \n4- Sacerdote \n5- DeathKnight");
 			
 				
 			
@@ -105,36 +106,38 @@ public class GameLogic {
 			//Escolha do personagem e criação do objeto;
 			if (input == 1) {
 				limparConsole();
-				BruxoCacador personagem = new BruxoCacador(nome, 100, 0, 100, 2, 1, 3);
-				imprimirCabecalho("voce escolheu a classe Bruxo Cacador");
-				
+				BruxoCacador personagem = new BruxoCacador(BruxoCacador.getNome(), 100, 0, 100, 2, 1, 3);
+				jogador = "Bruxo Caçador";
+				imprimirCabecalho("voce escolheu o Bruxo Caçador");
 				Historia.cacador();
 				
 			} else if (input == 2) {
 				limparConsole();
-				Eladrin personagem = new Eladrin(nome, 100, 0, 100, 2, 1, 3);
-				imprimirCabecalho("voce escolheu a classe Eladrin");
+				Eladrin personagem = new Eladrin(Eladrin.getNome(), 80, 0, 100, 2, 1, 3);
+				imprimirCabecalho("voce escolheu a Eladrin");
+				jogador = "Eladrin";
 				Historia.eladrin();
 			} else if (input == 3) {
 				limparConsole();
-				MagoCinzento personagem = new MagoCinzento(nome, 100, 0, 100, 2, 1, 3);
-				imprimirCabecalho("voce escolheu a classe MagoCinzento");
+				MagoCinzento personagem = new MagoCinzento(MagoCinzento.getNome(), 100, 0, 100, 2, 1, 3);
+				imprimirCabecalho("voce escolheu o MagoCinzento");
+				jogador = "Mago Cinzento";
 			} else if (input == 4) {
 				limparConsole();
-				Sacerdote personagem = new Sacerdote(nome, 100, 0, 100, 2, 1, 3);
-				imprimirCabecalho("voce escolheu a classe Sacerdote");
+				Sacerdote personagem = new Sacerdote(Sacerdote.getNome(), 100, 0, 100, 2, 1, 3);
+				imprimirCabecalho("voce escolheu o Sacerdote");
+				jogador = "Sacerdote";
 			} else if (input == 5) {
 				limparConsole();
-				DeathKnight personagem = new DeathKnight(nome, 100, 0, 100, 2, 1, 3);
-				imprimirCabecalho("voce escolheu a classe DeathKnight");
+				DeathKnight personagem = new DeathKnight(DeathKnight.getNome(), 100, 0, 100, 2, 1, 3);
+				imprimirCabecalho("voce escolheu o DeathKnight");
+				jogador = "DeathKnight";
 			} else {
 				limparConsole();
 				imprimirCabecalho("Escolha uma classe válida!");
-				
 			}
 			
 			isRunning = true;
-			
 			gameLoop();
 			
 		telaPontilhada(100);		
@@ -161,6 +164,50 @@ public class GameLogic {
 			else
 				isRunning = false;
 		}	
+	}
+	
+// Método para mostrar informações do personagem
+	public static void infoPersonagem() {
+		limparConsole();
+		imprimirCabecalho("Informações do personagem:");
+		
+		switch (jogador) {
+		
+		case "Bruxo Caçador": 
+			System.out.println("Nome: " + BruxoCacador.getNome());
+			System.out.println("Vida: " + BruxoCacador.getVida() + "/" + BruxoCacador.getMaxVida());
+			System.out.println("XP: " + BruxoCacador.getXp());
+			System.out.println("Mana:" + BruxoCacador.getMp());
+			System.out.println("Qauntidade de Poções: " + BruxoCacador.getPocao());
+			System.out.println("Nível:" + BruxoCacador.getNivel());
+	    break;
+		case "Eladrin": 
+			System.out.println("Nome: " + Eladrin.getNome());
+			System.out.println("Vida: " + Eladrin.getVida() + "/" + BruxoCacador.getMaxVida());
+			System.out.println("XP: " + Eladrin.getXp());
+			System.out.println("Mana:" + Eladrin.getMp());
+			System.out.println("Qauntidade de Poções: " + Eladrin.getPocao());
+			System.out.println("Nível:" + Eladrin.getNivel());
+		break;
+		case "Sacerdote": 
+			System.out.println("Nome: " + Sacerdote.getNome());
+			System.out.println("Vida: " + Sacerdote.getVida() + "/" + BruxoCacador.getMaxVida());
+			System.out.println("XP: " + Sacerdote.getXp());
+			System.out.println("Mana:" + Sacerdote.getMp());
+			System.out.println("Qauntidade de Poções: " + Sacerdote.getPocao());
+			System.out.println("Nível:" + Sacerdote.getNivel());
+		break;
+		case "DeathKnight": 
+			System.out.println("Nome: " + DeathKnight.getNome());
+			System.out.println("Vida: " + DeathKnight.getVida() + "/" + BruxoCacador.getMaxVida());
+			System.out.println("XP: " + DeathKnight.getXp());
+			System.out.println("Mana:" + DeathKnight.getMp());
+			System.out.println("Qauntidade de Poções: " + DeathKnight.getPocao());
+			System.out.println("Nível:" + DeathKnight.getNivel());
+		break;
+		}
+		
+		
 	}
 	
 	
