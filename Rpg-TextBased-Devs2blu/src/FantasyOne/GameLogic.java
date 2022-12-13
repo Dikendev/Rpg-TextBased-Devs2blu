@@ -15,11 +15,16 @@ import Inimigos.VilaoDuergar;
 import Inimigos.VilaoElfo;
 import Inimigos.VilaoOrcGuerreiro;
 import Inimigos.VilaoVelhoDoSaco;
+import rpggame.main.Player;
 
 public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
+	
+	//metodo para gerar um loop no game.
+		public static boolean isRunning;
 
-	public static int escolhaInt(String prompt, int escolhasUsuario) {
+	// escolha do usuario
+	public static int escolhaUser(String prompt, int escolhasUsuario) {
 		int input;
 
 		do {
@@ -41,6 +46,11 @@ public class GameLogic {
 
 	}
 
+	public static void precioneUmaTecla() {
+		System.out.println("\nPrecione qualquer tecla para continuar...");
+		scanner.next();
+	}
+	
 	// apenas a tela do jogo grafica
 	public static void telaPontilhada(int n) {
 		for (int i = 0; i < n; i++)
@@ -67,72 +77,90 @@ public class GameLogic {
 		System.out.println("                                     Bem-vindo ao Fantasy One!");
 		telaPontilhada(100);
 		telaPontilhada(100);
-		System.out.println("Pressione: \n1-Começar Jogo \n2-Sair");
-		int escolha = scanner.nextInt();
+		precioneUmaTecla();
 		
-		switch (escolha) {
-		case 1:
+		do {
 			limparConsole();
-			imprimirCabecalho(
-					"Escolha um personagem: \n1- Bruxo Caçador \n2- Eladrin \n3- Mago Cinzento \n4- Sacerdote \n5- Death Knight");
-			escolha = scanner.nextInt();
+			imprimirCabecalho("Qual o nome do Jogador? ");
+			nome = scanner.next();
+			limparConsole();
+				
+			// trocar o nome
+				
+			imprimirCabecalho("Seu nome é: " + nome + ".\n Está correto?");
+			System.out.println("1- Sim! \n2- Não, quero mudar o nome.");
 			
-			do {
-				limparConsole();
-				imprimirCabecalho("Qual o nome do Jogador? ");
-				nome = scanner.next();
-				
-				// trocar o nome
-				
-
-				limparConsole();
-				imprimirCabecalho("Seu nome é: " + nome + ".\n Está correto?");
-				System.out.println("1- Sim! \n2- Não, quero mudar o nome.");
-
-				int input = escolhaInt("-> ", 2);
-				if (input == 1)
-					nomeSet = true;
-
+			int input = escolhaUser("-> ", 100);
+			if (input == 1)
+				nomeSet = true;
 			} while (!nomeSet);
-
+		limparConsole();
+		imprimirCabecalho(
+				"Escolha um personagem: \n1- Bruxo Caçador \n2- Eladrin \n3- Mago Cinzento \n4- Sacerdote \n5- Death Knight");
+			
+				
+			
+			int input = escolhaUser("->",50);
 			//Escolha do personagem e criação do objeto;
-			if (escolha == 1) {
+			if (input == 1) {
+				limparConsole();
 				BruxoCacador personagem = new BruxoCacador(nome, 100, 0, 100, 2, 1, 3);
-			} else if (escolha == 2) {
+				imprimirCabecalho("voce escolheu a classe Bruxo Cacador");
+				
+				Historia.cacador();
+				
+			} else if (input == 2) {
+				limparConsole();
 				Eladrin personagem = new Eladrin(nome, 100, 0, 100, 2, 1, 3);
-			} else if (escolha == 3) {
+				imprimirCabecalho("voce escolheu a classe Eladrin");
+				Historia.eladrin();
+			} else if (input == 3) {
+				limparConsole();
 				MagoCinzento personagem = new MagoCinzento(nome, 100, 0, 100, 2, 1, 3);
-			} else if (escolha == 4) {
+				imprimirCabecalho("voce escolheu a classe MagoCinzento");
+			} else if (input == 4) {
+				limparConsole();
 				Sacerdote personagem = new Sacerdote(nome, 100, 0, 100, 2, 1, 3);
-			} else if (escolha == 5) {
+				imprimirCabecalho("voce escolheu a classe Sacerdote");
+			} else if (input == 5) {
+				limparConsole();
 				DeathKnight personagem = new DeathKnight(nome, 100, 0, 100, 2, 1, 3);
+				imprimirCabecalho("voce escolheu a classe DeathKnight");
 			} else {
-				System.out.println("Escolha inválida!");
+				limparConsole();
+				imprimirCabecalho("Escolha uma classe válida!");
+				
 			}
 			
-		case 2:
-			System.out.println("Obrigado por jogar Fantasy One!");
-			break;
+			isRunning = true;
 			
-		default:
-			System.out.println("Valor inválido!");
-		}
+			gameLoop();
+			
 		telaPontilhada(100);		
 
 	}
 	
-	public static void MenuGame() {
+// MENU DO JOGO
+	public static void menuGame() {
         limparConsole();
         imprimirCabecalho("Menu");
         System.out.println("Escolha uma opçao");
         telaPontilhada(20);
         System.out.println("(1) Continuar: ");
-        System.out.println("(2) Infor Jogador: ");
         System.out.println("(3) Sair: ");
     }
-
 	
-
+// LOOP DO JOGO
+	public static void gameLoop() {
+		while(isRunning) {
+			menuGame();
+			int input = escolhaUser("->", 3);
+			if(input == 1)
+				isRunning = true;
+			else
+				isRunning = false;
+		}	
+	}
 	
 	
 	

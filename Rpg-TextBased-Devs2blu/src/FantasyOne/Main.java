@@ -44,6 +44,6 @@ public class Main {
 		inimigos.add(capivaraZumbi);
 		inimigos.add(ragnaros);
 		//começar história inicial e logo em seguida primeira luta
-		
+		GameLogic.comecaJogo();
 	}
 }
