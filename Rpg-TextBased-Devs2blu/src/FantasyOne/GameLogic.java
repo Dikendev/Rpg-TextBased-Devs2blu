@@ -19,6 +19,9 @@ import Inimigos.VilaoVelhoDoSaco;
 public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
+	public static Criatura personagem;
+	
+	
 	
 	//Mótodo para gerar um loop no jogo
 		public static boolean isRunning;
@@ -96,8 +99,7 @@ public class GameLogic {
 				nomeSet = true;
 			} while (!nomeSet);
 		limparConsole();
-		imprimirCabecalho(
-				"Escolha um personagem: \n1- Bruxo Caçador \n2- Eladrin \n3- Mago Cinzento \n4- Sacerdote \n5- DeathKnight");
+		
 			
 				
 			
@@ -105,7 +107,7 @@ public class GameLogic {
 			//Escolha do personagem e criação do objeto;
 			if (input == 1) {
 				limparConsole();
-				BruxoCacador personagem = new BruxoCacador(BruxoCacador.getNome(), 100, 0, 100, 2, 1, 3);
+				personagem = new BruxoCacador("Bruxo Caçador", 100, 0, 100, 2, 1, 3);
 				jogador = "Bruxo Caçador";
 				imprimirCabecalho("voce escolheu o Bruxo Caçador");
 				Historia.cacador();

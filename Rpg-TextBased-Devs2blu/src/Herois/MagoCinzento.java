@@ -2,10 +2,10 @@ package Herois;
 
 import FantasyOne.Criatura;
 
-public class MagoCinzento extends Criatura{
+public class MagoCinzento extends Personagem{
 
 	public MagoCinzento(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
-		super(nome, maxVida, xp, vida, pocao, nivel, mp);
+		super(nome, vida);
 		this.setNome(nome);
 		this.setMaxVida(maxVida);
 		this.setXp(xp);

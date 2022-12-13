@@ -40,8 +40,8 @@ public class Historia {
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
 		System.out.println("Mago Cinzento");
-		System.out.println("É um personagem místico, ele veio da Lua com o intuito de proteger o Vilarejo Untirade."
-				+ "Seus ataques são fortes e os ataques especiais irão acabar com seus oponentes."
+		System.out.println("É um personagem místico, ele veio da Lua com o intuito de proteger o Vilarejo Untirade.\n"
+				+ "Seus ataques são fortes e os ataques especiais irão acabar com seus oponentes.\n"
 				+ "O Mago está pronto para iniciar a batalha.");
 
 		GameLogic.pressioneUmaTecla();
