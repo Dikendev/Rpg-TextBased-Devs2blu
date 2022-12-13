@@ -205,6 +205,7 @@ public class GameLogic {
 			System.out.println("Qauntidade de Poções: " + DeathKnight.getPocao());
 			System.out.println("Nível:" + DeathKnight.getNivel());
 		break;
+		pressioneUmaTecla();
 		}
 		
 		
