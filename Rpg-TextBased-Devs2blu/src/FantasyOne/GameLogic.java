@@ -78,7 +78,7 @@ public class GameLogic {
 		System.out.println("                                     Bem-vindo ao Fantasy One!");
 		telaPontilhada(100);
 		telaPontilhada(100);
-		precioneUmaTecla();
+		pressioneUmaTecla();
 		
 		do {
 			limparConsole();

@@ -10,7 +10,7 @@ public class Historia {
 		System.out.println("Podemos criar qualquer coisa");
 		System.out.println("a historia lorem do joho");
 
-		GameLogic.precioneUmaTecla();
+		GameLogic.pressioneUmaTecla();
 	}
 	public static void cacador() {
 		GameLogic.limparConsole();
@@ -20,7 +20,7 @@ public class Historia {
 		System.out.println("Ai sim");
 		System.out.println("Criem suas historias");
 
-		GameLogic.precioneUmaTecla();
+		GameLogic.pressioneUmaTecla();
 	}
 	
 	public static void eladrin() {
@@ -31,7 +31,7 @@ public class Historia {
 		System.out.println("è lindo nao é");
 		System.out.println("poois e");
 
-		GameLogic.precioneUmaTecla();
+		GameLogic.pressioneUmaTecla();
 	}
 	public static void mago() {
 		GameLogic.limparConsole();
@@ -41,7 +41,7 @@ public class Historia {
 		System.out.println("Ai sim");
 		System.out.println("Criem suas historias");
 
-		GameLogic.precioneUmaTecla();
+		GameLogic.pressioneUmaTecla();
 	}
 	public static void sacerdote() {
 		GameLogic.limparConsole();
@@ -51,7 +51,7 @@ public class Historia {
 		System.out.println("Ai sim");
 		System.out.println("Criem suas historias");
 
-		GameLogic.precioneUmaTecla();
+		GameLogic.pressioneUmaTecla();
 	}
 	public static void death() {
 		GameLogic.limparConsole();
@@ -61,7 +61,7 @@ public class Historia {
 		System.out.println("Ai sim");
 		System.out.println("Criem suas historias");
 
-		GameLogic.precioneUmaTecla();
+		GameLogic.pressioneUmaTecla();
 	}
 
 }
