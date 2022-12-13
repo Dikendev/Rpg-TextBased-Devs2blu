@@ -13,6 +13,7 @@ public class Historia {
 		GameLogic.precioneUmaTecla();
 	}
 	public static void cacador() {
+		GameLogic.limparConsole();
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
@@ -23,6 +24,7 @@ public class Historia {
 	}
 	
 	public static void eladrin() {
+		GameLogic.limparConsole();
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
@@ -32,6 +34,7 @@ public class Historia {
 		GameLogic.precioneUmaTecla();
 	}
 	public static void mago() {
+		GameLogic.limparConsole();
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
@@ -41,6 +44,7 @@ public class Historia {
 		GameLogic.precioneUmaTecla();
 	}
 	public static void sacerdote() {
+		GameLogic.limparConsole();
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
@@ -50,6 +54,7 @@ public class Historia {
 		GameLogic.precioneUmaTecla();
 	}
 	public static void death() {
+		GameLogic.limparConsole();
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
