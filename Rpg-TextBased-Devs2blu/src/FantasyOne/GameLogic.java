@@ -2,8 +2,6 @@ package FantasyOne;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import Fungi.FungiEspecie;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
 import Herois.Eladrin;
