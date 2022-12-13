@@ -20,10 +20,10 @@ import rpggame.main.Player;
 public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
 	
-	//metodo para gerar um loop no game.
+	//Mótodo para gerar um loop no jogo
 		public static boolean isRunning;
 
-	// escolha do usuario
+	// Método para usuário escolher opção
 	public static int escolhaUser(String prompt, int escolhasUsuario) {
 		int input;
 
@@ -39,19 +39,20 @@ public class GameLogic {
 		return input;
 	}
 
-	// Simular outra tela
+	// Mótodo para simular nova tela
 	public static void limparConsole() {
 		for (int i = 0; i < 30; i++)
 			System.out.println();
 
 	}
 
-	public static void precioneUmaTecla() {
-		System.out.println("\nPrecione qualquer tecla para continuar...");
+	// Mótodo pressione qualquer tecla
+    public static void pressioneUmaTecla() {
+		System.out.println("\nPressione qualquer tecla para continuar...");
 		scanner.next();
 	}
 	
-	// apenas a tela do jogo grafica
+	// Exibe apenas a tela do jogo
 	public static void telaPontilhada(int n) {
 		for (int i = 0; i < n; i++)
 			System.out.print("-");
@@ -65,7 +66,7 @@ public class GameLogic {
 
 	}
 	
-	// comecar o jogo
+	// Método para comecar o jogo
 	public static void comecaJogo() {
 		
 		boolean nomeSet = false;
