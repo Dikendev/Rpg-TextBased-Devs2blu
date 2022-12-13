@@ -80,4 +80,6 @@ public class BruxoCacador extends Criatura{
 		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());				
 	}
 
+	
+
 }

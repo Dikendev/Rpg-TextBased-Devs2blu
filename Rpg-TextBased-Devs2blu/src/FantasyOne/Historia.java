@@ -38,8 +38,10 @@ public class Historia {
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
-		System.out.println("Ai sim");
-		System.out.println("Criem suas historias");
+		System.out.println("Mago Cinzento");
+		System.out.println("É um personagem místico, ele veio da Lua com o intuito de proteger o Vilareijo Untirade."
+				+ "Seus ataques são fortes e os ataques especiais irão acabar com seus oponentes."
+				+ "O Mago está pronto para iniciar a batalha.");
 
 		GameLogic.pressioneUmaTecla();
 	}
