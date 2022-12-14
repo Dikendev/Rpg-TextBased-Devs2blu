@@ -1,5 +1,7 @@
 package Herois;
 
+import FantasyOne.GameLogic;
+
 public class BruxoCacador extends Personagem{
 	public BruxoCacador(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
@@ -77,6 +79,16 @@ public class BruxoCacador extends Personagem{
 		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());				
 	}
 
-	
+	@Override
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println("Historia");
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Nosso Herói começa sua jornada na pacata vila de Untirade, um pequeno povoado numa clareira não muito próxima ao Boca do Diabo, um grande vulcão adormecido, lar do maligno Senhor do Fogo Ragnaros que recentemente despertou de seu aprisionamento e agora jura vingança a todos os povos e raças.\r\n"
+						+ "Com a ameaça iminente a vida de todos, e guiado por sua honrosa índole, nosso Herói agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado de Ragnaros.\r\n");
+
+		GameLogic.pressioneUmaTecla();
+	}
 
 }

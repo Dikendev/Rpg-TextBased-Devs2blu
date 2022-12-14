@@ -1,8 +1,8 @@
 package Inimigos;
 
-import FantasyOne.Criatura;
+import FantasyOne.GameLogic;
 
-public class ChefaoRagnaros extends Criatura{
+public class ChefaoRagnaros extends Vilao{
 
 	public ChefaoRagnaros(String nome, int vida) {
 		super(nome, vida);
@@ -48,9 +48,13 @@ public class ChefaoRagnaros extends Criatura{
 	}
 
 	@Override
-	public void usarPocao() {
-		// TODO Auto-generated method stub
-		
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Ao entrar no covil, nosso herói se depara com uma grande porta de pedra, ao abrir ele avista ao fundo do grande salão um gigantesco Elemental de fogo, com Armadura e adornos em obsidiana e portando um enorme martelo incandescente. O calor era absurdo, esse é Ragnaros, o Senhor do Fogo. Como quem já esperava a visita ele pede que nosso Herói se aproxime e o reverencie.  Em um ato premeditado, o herói se aproxima e no momento de reverenciar ele rapidamente o ataca. Lute!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();		
 	}
 
 }

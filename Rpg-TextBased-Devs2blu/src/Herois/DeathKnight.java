@@ -1,5 +1,7 @@
 package Herois;
 
+import FantasyOne.GameLogic;
+
 public class DeathKnight extends Personagem{
 		public DeathKnight(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 			super(nome, maxVida, xp, vida, pocao, nivel, mp);
@@ -73,6 +75,17 @@ public class DeathKnight extends Personagem{
 				System.out.println("Você não possui Poções de Cura!");
 			}
 			System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
+		}
+		
+		@Override
+		public void historia() {
+			GameLogic.telaPontilhada(50);
+			System.out.println("Historia");
+			GameLogic.telaPontilhada(50);
+			System.out.println("Ai sim");
+			System.out.println("Criem suas historias");
+
+			GameLogic.pressioneUmaTecla();
 		}
 
 	}

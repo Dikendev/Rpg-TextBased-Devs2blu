@@ -1,7 +1,8 @@
 package Inimigos;
-import FantasyOne.Criatura;
 
-public class VilaoDhampir extends Criatura {
+import FantasyOne.GameLogic;
+
+public class VilaoDhampir extends Vilao {
 	
 	public VilaoDhampir(String nome, int vida) {
 		super(nome, vida);
@@ -52,9 +53,13 @@ public class VilaoDhampir extends Criatura {
 	}
 
 	@Override
-	public void usarPocao() {
-		// TODO Auto-generated method stub
-		
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Ao anoitecer, nosso herói busca abrigo em uma caverna, ao entrar mais fundo ele percebe que não está sozinho, ouve alguns passos leves e um vulto em direção a escuridão. Ao se aproximar, surge das sombras um Dhampir, com sua pele pálida e capa preta ele avança em direção ao nosso herói pronto para provar de seu sangue. Batalhe por sua vida!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();		
 	}
 
 

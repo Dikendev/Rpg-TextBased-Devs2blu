@@ -48,4 +48,36 @@ public class Personagem extends Criatura{
 		
 	}
 
+	public int ganhoXpViloes() {
+	    this.setXp((this.getXp()+50));
+        return this.getXp();
+
+	public int ganhoXpChefoes() {
+		this.setXp((this.getXp()+100));
+        return this.getXp();
+	}
+	
+	public void subirNivel() {
+		
+			if(this.getXp() >= 100 && this.getXp() < 200 ) {
+				this.setNivel(this.getNivel()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel()); 
+			}else if(this.getXp() >= 200 && this.getXp() < 300) {
+				this.setNivel(this.getNivel()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}else if(this.getXp() >= 300 && this.getXp() < 400) {
+				this.setNivel(this.getNivel()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}else if(this.getXp() >= 400 && this.getXp() < 500) {
+				this.setNivel(this.getNivel()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}else if(this.getXp() >= 500 && this.getXp() < 600) {
+				this.setNivel(this.getNivel()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}else{
+				this.setNivel(this.getNivel()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}
+	}
 }
+

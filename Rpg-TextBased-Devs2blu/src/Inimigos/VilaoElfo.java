@@ -1,8 +1,8 @@
 package Inimigos;
 
-import FantasyOne.Criatura;
+import FantasyOne.GameLogic;
 
-public class VilaoElfo extends Criatura{
+public class VilaoElfo extends Vilao{
 	
 	public VilaoElfo(String nome, int vida) {
 		super(nome, vida);
@@ -65,14 +65,12 @@ public class VilaoElfo extends Criatura{
 	}
 
 	@Override
-	public void usarPocao() {
-		if(this.getPocao() > 0) {
-			this.setPocao(this.getPocao() - 1);			
-			this.setVida(this.getVida() + 20);
-		} else {
-			System.out.println("Você não possui Poções de Cura!");
-		}
-		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());				
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Conforme nosso herói começava a se aproximar da subida do vulcão, ele percebeu a presença de um capanga Elfo, com um longo cabelo negro e orelhas pontudas, ele porta uma espada e um cajado, e em suas costas havia um arco. Nosso herói aproxima-se furtivamente e inicia o confronto. Ataque!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();
 	}
-	
 }

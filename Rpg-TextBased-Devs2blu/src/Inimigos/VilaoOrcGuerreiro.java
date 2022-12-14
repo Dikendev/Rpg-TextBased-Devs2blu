@@ -1,8 +1,8 @@
 package Inimigos;
 
-import FantasyOne.Criatura;
+import FantasyOne.GameLogic;
 
-public class VilaoOrcGuerreiro extends Criatura{
+public class VilaoOrcGuerreiro extends Vilao{
 	
 	public VilaoOrcGuerreiro(String nome, int vida) {
 		super(nome, vida);
@@ -46,9 +46,13 @@ public class VilaoOrcGuerreiro extends Criatura{
 	}
 
 	@Override
-	public void usarPocao() {
-		// TODO Auto-generated method stub
-		
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Logo no inicio do seu longo trajeto, nosso herói ouve um barulho estranho vindo de um arbusto. Ao se aproximar para verificar, um gigante Orc Guerreiro salta em sua direção empunhando sua espada e escudo, pronto para batalhar!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();
 	}
 
 }
