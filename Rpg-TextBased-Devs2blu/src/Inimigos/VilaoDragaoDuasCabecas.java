@@ -72,5 +72,6 @@ public class VilaoDragaoDuasCabecas extends Vilao {
 
 		GameLogic.pressioneUmaTecla();		
 	}
+	
 
 }

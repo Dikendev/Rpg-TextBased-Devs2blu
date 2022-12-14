@@ -98,6 +98,7 @@ public class MagoCinzento extends Personagem{
 		GameLogic.pressioneUmaTecla();
 	}
 	
+
 }
 
 
