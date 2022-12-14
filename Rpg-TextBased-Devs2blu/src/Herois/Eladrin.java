@@ -1,5 +1,7 @@
 package Herois;
 
+import FantasyOne.GameLogic;
+
 public class Eladrin extends Personagem {
 	public Eladrin(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
@@ -75,5 +77,17 @@ public class Eladrin extends Personagem {
 		}
     }
 	
+	@Override
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println("História");
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"A Eladrin é uma espécie de elfo que adquire seus poderes da natureza e os modifca de acordo com as estações do ano.");
+		System.out.println("Todos os seus ataques buscam o poder nas estações");
+		System.out.println("Eladrin está pronta para iniciar a batalha.");
+		
+		GameLogic.pressioneUmaTecla();
+	}
 	
 }

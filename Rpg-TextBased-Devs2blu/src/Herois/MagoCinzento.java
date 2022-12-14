@@ -1,5 +1,7 @@
 package Herois;
 
+import FantasyOne.GameLogic;
+
 public class MagoCinzento extends Personagem{
 
 	public MagoCinzento(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
@@ -82,6 +84,18 @@ public class MagoCinzento extends Personagem{
 				System.out.println("Você não possui Poções de Cura!");
 			}
 			System.out.println("Você usou uma Poção de Cura, a vida atual do seu personagem passou para: " + this.getVida());
+	}
+	
+	@Override
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println("Historia");
+		GameLogic.telaPontilhada(50);
+		System.out.println("É um personagem místico, ele veio da Lua com o intuito de proteger o Vilarejo Untirade.\n"
+				+ "Seus ataques são fortes e os ataques especiais irão acabar com seus oponentes.\n"
+				+ "O Mago está pronto para iniciar a batalha.");
+		
+		GameLogic.pressioneUmaTecla();
 	}
 	
 }

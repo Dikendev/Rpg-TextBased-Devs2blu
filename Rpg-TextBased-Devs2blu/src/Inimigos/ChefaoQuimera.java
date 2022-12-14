@@ -1,8 +1,8 @@
 package Inimigos;
 
-import FantasyOne.Criatura;
+import FantasyOne.GameLogic;
 
-public class ChefaoQuimera extends Criatura{
+public class ChefaoQuimera extends Vilao{
 	
 	public ChefaoQuimera(String nome, int vida) {
 		super(nome, vida);
@@ -58,20 +58,15 @@ public class ChefaoQuimera extends Criatura{
 		this.setVida(this.getVida() - dano);
 		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
 	}
-
-	@Override
-	public void usarPocao() {
-		if(this.getPocao() > 0) {
-			this.setPocao(this.getPocao() - 1);			
-			this.setVida(this.getVida() + 20);
-		} else {
-			System.out.println("Você não possui Poções de Cura!");
-		}
-		System.out.println("Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());		
-	}
 	
-	public void combate() {
-		
+	@Override
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Pela manhã, enquanto caçava, nosso herói percebe a movimentação desesperada dos animais da floresta, como se um predador gigante estivesse se aproximando. Então ouve-se um grande rugido de leão e logo nosso herói se prepara para o confronto. Mas o que ele não esperava era que o predador viria de cima. Com asas de dragão, cabeça de leão e calda de serpente, uma Quimera pairava em sua direção, pronto para ter sua refeição. Defenda-se herói e lute por sua vida!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();
 	}
 
 }
