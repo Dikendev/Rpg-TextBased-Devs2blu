@@ -1,7 +1,8 @@
 package Inimigos;
-import FantasyOne.Criatura;
 
-public class VilaoCapivaraZumbi extends Criatura{
+import FantasyOne.GameLogic;
+
+public class VilaoCapivaraZumbi extends Vilao{
 	
 	public VilaoCapivaraZumbi(String nome, int vida) {
 		super(nome, vida);
@@ -47,9 +48,13 @@ public class VilaoCapivaraZumbi extends Criatura{
 	}
 
 	@Override
-	public void usarPocao() {
-		// TODO Auto-generated method stub
-		
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Ao passar pela última ponte antes da entrada do vulcão, nosso herói avista próximo a um arbusto um animal comendo, parecia muito com uma capivara. Ao se aproximar do supostamente inofensivo animal, ele percebe que na verdade ela estava comenda outra capivara. Em um salto para trás, nosso herói percebe que na verdade se tratava de uma grande capivara zumbi que corre em sua direção. Lute por sua vida!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();		
 	}
 
 }

@@ -1,7 +1,8 @@
 package Inimigos;
-import FantasyOne.Criatura;
 
-public class VilaoVelhoDoSaco extends Criatura{
+import FantasyOne.GameLogic;
+
+public class VilaoVelhoDoSaco extends Vilao{
 	
 	public VilaoVelhoDoSaco(String nome, int vida) {
 		super(nome, vida);
@@ -47,8 +48,13 @@ public class VilaoVelhoDoSaco extends Criatura{
 	}
 
 	@Override
-	public void usarPocao() {
-		
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Na entrada do vulcão, nosso herói avista um senhor de idade avançada e corcunda, que carregava nas costas um grande saco preto que parecia muito pesado. Ele balbuciava algumas palavras, parecia uma cantiga de criança. Ao se aproximar, nosso herói notou que o Velho do Saco possuía em seu olhar uma magia vil e poderosa, tomado pela fúria da magia ele parte pra cima do herói. Defenda-se e lute!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();
 	}
 
 }

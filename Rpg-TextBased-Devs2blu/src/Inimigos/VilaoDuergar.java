@@ -1,7 +1,8 @@
 package Inimigos;
-import FantasyOne.Criatura;
 
-public class VilaoDuergar extends Criatura{
+import FantasyOne.GameLogic;
+
+public class VilaoDuergar extends Vilao{
 	
 	public VilaoDuergar(String nome, int vida) {
 		super(nome, vida);
@@ -51,9 +52,13 @@ public class VilaoDuergar extends Criatura{
 	}
 
 	@Override
-	public void usarPocao() {
-		// TODO Auto-generated method stub
-		
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Devido a um deslizamento, nosso herói é obrigado a usar uma velha trilha, mal cuidada e pouco sinalizada. Guiado apenas pela luz do luar nosso herói avista um vulto junto a um barulho metálico, e surge de trás de uma árvore um Duergar, vestindo uma pesada armadura de metal e empunhando seu grande Martelo, com muita raiva em seu olhar, não resta outra opção a não ser lutar!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();
 	}
 
 }
