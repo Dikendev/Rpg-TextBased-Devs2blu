@@ -85,8 +85,7 @@ public abstract class Criatura {
 	public void setMp(int mp) {
 		this.mp = mp;
 	}
-	
-	
+		
 	
 	
 }
