@@ -83,9 +83,9 @@ public class GameLogic {
 
 		System.out.println("Ótimo " + nome + ", vamos agora escolher seu herói!");
 		System.out.println("Antes, vamos te apresentar melhor a história do nosso universo mágico!");
-		System.out.println(
-				"Nosso Herói começa sua jornada na pacata vila de Untirade, um pequeno povoado numa clareira não muito próxima ao Boca do Diabo, um grande vulcão adormecido, lar do maligno Senhor do Fogo Ragnaros que recentemente despertou de seu aprisionamento e agora jura vingança a todos os povos e raças.\r\n"
-						+ "Com a ameaça iminente a vida de todos, e guiado por sua honrosa índole, nosso Herói agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado de Ragnaros.");
+		System.out.println("Na pacata vila de Untirade, existe um pequeno povoado numa clareira não muito distante do Boca do Diabo, um grande vulcão adormecido e lar do maligno Senhor do Fogo, Ragnaros.\r\n"
+						+"Recentemente Ragnaros despertou de seu aprisionamento e agora jura vingança a todos os povos e raças.\r\n"
+						+ "Com a ameaça iminente à vida de todos, e guiado por suas honrosas índoles, um grupo de heróis agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado do Senhor de Fogo.");
 		GameLogic.pressioneUmaTecla();
 
 		limparConsole();
