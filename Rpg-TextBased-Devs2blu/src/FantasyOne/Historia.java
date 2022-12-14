@@ -7,8 +7,9 @@ public class Historia {
 		System.out.println("História");
 		GameLogic.telaPontilhada(50);
 		System.out.println(
-				"Nosso Herói começa sua jornada na pacata vila de Untirade, um pequeno povoado numa clareira não muito próxima ao Boca do Diabo, um grande vulcão adormecido, lar do maligno Senhor do Fogo Ragnaros que recentemente despertou de seu aprisionamento e agora jura vingança a todos os povos e raças.\r\n"
-						+ "Com a ameaça iminente a vida de todos, e guiado por sua honrosa índole, nosso Herói agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado de Ragnaros.");
+				"Na pacata vila de Untirade, existe um pequeno povoado numa clareira não muito distante do Boca do Diabo, um grande vulcão adormecido e lar do maligno Senhor do Fogo, Ragnaros.\r\n"
+						+"Recentemente Ragnaros despertou de seu aprisionamento e agora jura vingança a todos os povos e raças.\r\n"
+						+ "Com a ameaça iminente à vida de todos, e guiado por suas honrosas índoles, um grupo de heróis agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado do Senhor de Fogo.");
 
 		GameLogic.pressioneUmaTecla();
 	}
@@ -29,9 +30,7 @@ public class Historia {
 		System.out.println("História");
 		GameLogic.telaPontilhada(50);
 		System.out.println(
-				"A Eladrin é uma espécie de elfo que adquire seus poderes da natureza e os modifca de acordo com as estações do ano.");
-		System.out.println("Todos os seus ataques buscam o poder nas estações");
-		System.out.println("Eladrin está pronta para iniciar a batalha.");
+				"A Eladrin é uma espécie de elfo fortemente vinculo com a natureza, que modifca seus poderes de acordo com as estações do ano.");
 		
 		GameLogic.pressioneUmaTecla();
 	}

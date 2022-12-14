@@ -133,7 +133,7 @@ public class GameLogic {
 		
 	}
 	
-//Método para mostrar informações do personagem
+// Método para mostrar informações do personagem
 	public static void infoPersonagem() {
 			limparConsole();
 			imprimirCabecalho("Informações gerais:");
@@ -167,5 +167,6 @@ public class GameLogic {
 				isRunning = false;
 		}
 	}
-		
+
+	
 	}	
