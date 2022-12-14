@@ -1,7 +1,6 @@
 package Herois;
 
 public class BruxoCacador extends Personagem{
-	
 	public BruxoCacador(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
 		this.setNome(nome);

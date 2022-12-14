@@ -17,13 +17,12 @@ public class Historia {
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
-		System.out.println("Ai sim");
-		System.out.println("Criem suas historias");
+		System.out.println("Podemos criar qualquer coisa");
+		System.out.println("a historia lorem do joho");
 
 		GameLogic.pressioneUmaTecla();
-
 	}
-
+	
 	public static void eladrin() {
 		GameLogic.telaPontilhada(50);
 		System.out.println("História");
@@ -46,7 +45,7 @@ public class Historia {
 		
 		GameLogic.pressioneUmaTecla();
 	}
-
+	
 	public static void sacerdote() {
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");

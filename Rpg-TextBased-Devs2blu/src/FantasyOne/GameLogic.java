@@ -1,5 +1,5 @@
 package FantasyOne;
-
+import java.util.ArrayList;
 import java.util.Scanner;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
@@ -7,9 +7,13 @@ import Herois.Eladrin;
 import Herois.MagoCinzento;
 import Herois.Personagem;
 import Herois.Sacerdote;
-
-//import rpggame.main.Player;
-
+import Inimigos.VilaoCapivaraZumbi;
+import Inimigos.VilaoDhampir;
+import Inimigos.VilaoDragaoDuasCabecas;
+import Inimigos.VilaoDuergar;
+import Inimigos.VilaoElfo;
+import Inimigos.VilaoOrcGuerreiro;
+import Inimigos.VilaoVelhoDoSaco;
 public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
@@ -17,7 +21,7 @@ public class GameLogic {
 
 	// Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
-
+	
 	// Método para usuário escolher opção
 	public static int escolhaUser(String prompt, int escolhasUsuario) {
 		int input;
@@ -47,7 +51,7 @@ public class GameLogic {
 		scanner.next();
 		limparConsole();
 	}
-
+	
 	// Exibe apenas a tela do jogo
 	public static void telaPontilhada(int n) {
 		for (int i = 0; i < n; i++)
@@ -122,7 +126,7 @@ public class GameLogic {
 			imprimirCabecalho("Escolha uma classe válida!");
 		}
 
-		
+		System.out.println(personagem.getNome());
 		
 	}
 
