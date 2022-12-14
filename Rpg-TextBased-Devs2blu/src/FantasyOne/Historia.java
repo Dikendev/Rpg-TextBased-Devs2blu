@@ -51,8 +51,7 @@ public class Historia {
 		GameLogic.telaPontilhada(50);
 		System.out.println("Historia");
 		GameLogic.telaPontilhada(50);
-		System.out.println("Ai sim");
-		System.out.println("Criem suas historias");
+		System.out.println("Com sua tunica branca e seu cajado adornado em prata e ouro, o Sacerdote usa sua fé e o poder divino para subjulgar seus inimigos. \nUsando orações ele é capaz de causar grande dano ou curar a sí mesmo. \nO Sacerdote está pronto para iniciar a batalha");
 
 		GameLogic.pressioneUmaTecla();
 	}
