@@ -47,12 +47,11 @@ public class Personagem extends Criatura{
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	public int ganhoXpViloes() {
 	    this.setXp((this.getXp()+50));
         return this.getXp();
-}
-	
+
 	public int ganhoXpChefoes() {
 		this.setXp((this.getXp()+100));
         return this.getXp();

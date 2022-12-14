@@ -1,8 +1,8 @@
 package Inimigos;
 
-import FantasyOne.Criatura;
+import FantasyOne.GameLogic;
 
-public class VilaoDragaoDuasCabecas extends Criatura {
+public class VilaoDragaoDuasCabecas extends Vilao {
 
 	public VilaoDragaoDuasCabecas(String nome, int vida) {
 		super(nome, vida);
@@ -64,9 +64,13 @@ public class VilaoDragaoDuasCabecas extends Criatura {
 	}
 
 	@Override
-	public void usarPocao() {
-		// TODO Auto-generated method stub
-		
+	public void historia() {
+		GameLogic.telaPontilhada(50);
+		System.out.println(
+				"Após atravessar uma velha ponte de pedras, dois grandes rugidos tomam conta do cenário e chamam a atenção do nosso herói, que instintivamente olha para cima e se depara com um dragão, mas não um comum, um jovem e faminto Dragão de Duas Cabeças. Num rasante ele pousa em frente ao herói pronto para o ataque. Lute por sua vida!");
+		GameLogic.telaPontilhada(50);
+
+		GameLogic.pressioneUmaTecla();		
 	}
 	
 
