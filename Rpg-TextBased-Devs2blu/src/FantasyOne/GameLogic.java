@@ -22,6 +22,8 @@ public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
 	public static Personagem personagem;
+	
+	Personagem bruxoCacador = new BruxoCacador("Bruxo Caçador", 100, 20, 100, 0, 1, 100);
 
 	// Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
@@ -196,8 +198,20 @@ public class GameLogic {
 			
 		}
 		
-		
 	}
+	
+//Método para mostrar informações do personagem
+	public static void infoPersonagem() {
+			limparConsole();
+			imprimirCabecalho("Informações gerais:");
+			
+				System.out.println("Nome: " + personagem.getNome());
+				System.out.println("Vida: " + personagem.getVida() + "/" + personagem.getMaxVida());
+				System.out.println("XP: " + personagem.getXp());
+				System.out.println("Mana:" + personagem.getMp());
+				System.out.println("Quantidade de Poções: " + personagem.getPocao());
+				System.out.println("Nível:" + personagem.getNivel());
+			}
 
 // MENU DO JOGO
 	public static void menuGame() {
@@ -220,51 +234,5 @@ public class GameLogic {
 				isRunning = false;
 		}
 	}
-
-// Método para mostrar informações do personagem
-//	public static void infoPersonagem(Object jogador) {
-//		limparConsole();
-//		imprimirCabecalho("Informações do personagem:");
-//		
-//		switch (jogador) {
-//		
-//		case "Bruxo Caçador": 
-//			System.out.println("Nome: " + );
-//			System.out.println("Vida: " + BruxoCacador.getVida() + "/" + BruxoCacador.getMaxVida());
-//			System.out.println("XP: " + BruxoCacador.getXp());
-//			System.out.println("Mana:" + BruxoCacador.getMp());
-//			System.out.println("Qauntidade de Poções: " + BruxoCacador.getPocao());
-//			System.out.println("Nível:" + BruxoCacador.getNivel());
-//	    break;
-//		case "Eladrin": 
-//			System.out.println("Nome: " + Eladrin.getNome());
-//			System.out.println("Vida: " + Eladrin.getVida() + "/" + BruxoCacador.getMaxVida());
-//			System.out.println("XP: " + Eladrin.getXp());
-//			System.out.println("Mana:" + Eladrin.getMp());
-//			System.out.println("Qauntidade de Poções: " + Eladrin.getPocao());
-//			System.out.println("Nível:" + Eladrin.getNivel());
-//		break;
-//		case "Sacerdote": 
-//			System.out.println("Nome: " + Sacerdote.getNome());
-//			System.out.println("Vida: " + Sacerdote.getVida() + "/" + BruxoCacador.getMaxVida());
-//			System.out.println("XP: " + Sacerdote.getXp());
-//			System.out.println("Mana:" + Sacerdote.getMp());
-//			System.out.println("Qauntidade de Poções: " + Sacerdote.getPocao());
-//			System.out.println("Nível:" + Sacerdote.getNivel());
-//		break;
-//		case "DeathKnight": 
-//			System.out.println("Nome: " + DeathKnight.getNome());
-//			System.out.println("Vida: " + DeathKnight.getVida() + "/" + BruxoCacador.getMaxVida());
-//			System.out.println("XP: " + DeathKnight.getXp());
-//			System.out.println("Mana:" + DeathKnight.getMp());
-//			System.out.println("Qauntidade de Poções: " + DeathKnight.getPocao());
-//			System.out.println("Nível:" + DeathKnight.getNivel());
-//		break;
-//		pressioneUmaTecla();
-//		}
-//		
-//		
-//	}
-//	
-
-}
+		
+	}	
