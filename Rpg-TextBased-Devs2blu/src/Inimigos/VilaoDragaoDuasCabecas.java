@@ -68,5 +68,6 @@ public class VilaoDragaoDuasCabecas extends Criatura {
 		// TODO Auto-generated method stub
 		
 	}
+	
 
 }

@@ -83,7 +83,7 @@ public class MagoCinzento extends Personagem{
 			}
 			System.out.println("Você usou uma Poção de Cura, a vida atual do seu personagem passou para: " + this.getVida());
 	}
-	
+		
 }
 
 
