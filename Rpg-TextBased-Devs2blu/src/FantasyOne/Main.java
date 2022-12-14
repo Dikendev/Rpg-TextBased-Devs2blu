@@ -3,6 +3,7 @@ package FantasyOne;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Herois.BruxoCacador;
 import Inimigos.ChefaoMinotauro;
 import Inimigos.ChefaoQuimera;
 import Inimigos.ChefaoRagnaros;
@@ -39,8 +40,8 @@ public class Main {
 		inimigos.add(dhampir);
 		inimigos.add(quimera);
 		inimigos.add(vilaoElfo);
-		inimigos.add(velhoDoSaco);
 		inimigos.add(capivaraZumbi);
+		inimigos.add(velhoDoSaco);
 		inimigos.add(ragnaros);
 		//começar história inicial e logo em seguida primeira luta
 		
