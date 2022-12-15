@@ -51,6 +51,7 @@ public class Personagem extends Criatura{
 	public int ganhoXpViloes() {
 	    this.setXp((this.getXp()+50));
         return this.getXp();
+	}
 
 	public int ganhoXpChefoes() {
 		this.setXp((this.getXp()+100));
@@ -78,6 +79,11 @@ public class Personagem extends Criatura{
 				this.setNivel(this.getNivel()+1);
 			System.out.println("Parabéns você chegou no nível " + this.getNivel());
 			}
+	}
+	@Override
+	public void historia() {
+		// TODO Auto-generated method stub
+		
 	}
 }
 

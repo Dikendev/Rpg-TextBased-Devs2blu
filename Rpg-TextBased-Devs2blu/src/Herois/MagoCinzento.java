@@ -17,15 +17,15 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.println("Mago Cinzento ataca com a Magia da Noite! " );
-		System.out.println("Dano de 10");
+		System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
+		System.out.printf("|%-80s|%n", "Dano de 10");
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.println("Mago Cinzento ataca com a Magia dos Druidas! " );
-		System.out.println("Dano de 10");
+		System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
+		System.out.printf("|%-80s|%n", "Dano de 10");
 		return 10;
 	}
 
@@ -33,13 +33,14 @@ public class MagoCinzento extends Personagem{
 	public int ataqueEspecial() {
 		if(this.getMp() > 0) {
 			this.setMp(this.getMp() - 1);
-			System.out.println("Mago Cinzento ataca com a Magia Paralizante! " );
-			System.out.println("Dano de 5 seu oponente está paralizado por uma rodada. ");
-			System.out.println("Mago Cinzento ataca com Magia celestial! " );
-			System.out.println("Dano de 15");
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
+			System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+			System.out.printf("|%-80s|%n", "Dano de 15");
 			return 20;
 		} else {
-			System.out.println("O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial.");
+			System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar");
+			System.out.printf("|%-80s|%n", "o ataque especial.");
 			return 0;
 		}
 	}
@@ -49,29 +50,29 @@ public class MagoCinzento extends Personagem{
 	public int ataqueEspecial2() {
 		if(this.getMp() > 0) {
 			this.setMp(this.getMp() - 1);
-			System.out.println("Mago Cinzento utiliza a Magia da Cura! " );
-			System.out.println("Aumenta sua própria vida em 30.");
+			System.out.printf("|%-80s|%n", "Mago Cinzento utiliza a Magia da Cura! " );
+			System.out.printf("|%-80s|%n", "Aumenta sua própria vida em 30.");
 			this.setVida(this.getVida()+30);
 			return this.getVida();
 		} else {
-			System.out.println("O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial.");
+			System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para o ataque especial.");
 			return 0;
 		}
 	}
 
 	@Override
 	public void defesa() {
-		System.out.println("Mago Cinzento usou defesa da Lua.");
-		System.out.println("Aumenta sua própria vida em 15.");
+		System.out.printf("|%-80s|%n", "Mago Cinzento usou defesa da Lua.");
+		System.out.printf("|%-80s|%n", "Aumenta sua própria vida em 15.");
 		this.setVida(this.getVida()+15);
-		System.out.println("Mago Cinzento possui: " + this.getVida() + "de vida");
+		System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + this.getVida() + "de vida");
 	}
 	
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+		System.out.printf("|%-80s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
 		
 	}
 
@@ -81,19 +82,19 @@ public class MagoCinzento extends Personagem{
 				this.setPocao(this.getPocao() - 1);			
 				this.setVida(this.getVida() + 50);
 			} else {
-				System.out.println("Você não possui Poções de Cura!");
+				System.out.printf("|%-80s|%n", "Você não possui Poções de Cura!");
 			}
-			System.out.println("Você usou uma Poção de Cura, a vida atual do seu personagem passou para: " + this.getVida());
+			System.out.printf("|%-80s|%n", "Você usou uma Poção de Cura, a vida atual do seu personagem passou para: " + this.getVida());
 	}
 	
 	@Override
 	public void historia() {
-		GameLogic.telaPontilhada(50);
+		GameLogic.linhaPontilhada();
 		System.out.println("Historia");
-		GameLogic.telaPontilhada(50);
-		System.out.println("É um personagem místico, ele veio da Lua com o intuito de proteger o Vilarejo Untirade.\n"
-				+ "Seus ataques são fortes e os ataques especiais irão acabar com seus oponentes.\n"
-				+ "O Mago está pronto para iniciar a batalha.");
+		GameLogic.linhaPontilhada();
+		System.out.printf("|%-80s|%n", "É um personagem místico, ele veio da Lua com o intuito de proteger o");
+		System.out.printf("|%-80s|%n", "Vilarejo Untirade.");
+		System.out.printf("|%-80s|%n", "Seus ataques são fortes e os ataques especiais irão acabar com seus oponentes.");
 		
 		GameLogic.pressioneUmaTecla();
 	}

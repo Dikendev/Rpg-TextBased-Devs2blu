@@ -12,26 +12,26 @@ public class ChefaoQuimera extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.println("Quimera aplicou uma mordida, causando 10 de dano!");
-		System.out.println("Dano: 10");
+		System.out.printf("|%-80s|%n", "Quimera aplicou uma mordida, causando 10 de dano!");
+		System.out.printf("|%-80s|%n", "Dano: 10");
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.println("Quimera aplicou um corte com suas garras, causando 10 de dano!");
-		System.out.println("Dano: 15");
+		System.out.printf("|%-80s|%n", "Quimera aplicou um corte com suas garras, causando 10 de dano!");
+		System.out.printf("|%-80s|%n", "Dano: 15");
 		return 12;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		if(this.getMp()>0) {
-			System.out.println("Quimera usou presas venenosas, causando 25 de dano!");
-			System.out.println("Dano: 25");
+			System.out.printf("|%-80s|%n", "Quimera usou presas venenosas, causando 25 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 25");
 			return 25;
 		}else {
-			System.out.println("Mana insuficiente!");
+			System.out.printf("|%-80s|%n", "Mana insuficiente!");
 			return 0;
 		}
 	}
@@ -39,32 +39,36 @@ public class ChefaoQuimera extends Vilao{
 	@Override
 	public int ataqueEspecial2() {
 		if(this.getMp()>0) {
-			System.out.println("Quimera usou sopro de fogo, causando 25 de dano!");
-			System.out.println("Dano: 35");
+			System.out.printf("|%-80s|%n", "Quimera usou sopro de fogo, causando 25 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 35");
 			return 35;
 		}else {
-			System.out.println("Mana insuficiente!");
+			System.out.printf("|%-80s|%n", "Mana insuficiente!");
 			return 0;
 		}
 	}
 
 	@Override
 	public void defesa() {
-		System.out.println("Quimera usou proteção de asas! Seu ataque foi anulado.");
+		System.out.printf("|%-80s|%n", "Quimera usou proteção de asas! Seu ataque foi anulado.");
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+		System.out.printf("|%-80s|%n", "Quimera recebeu dano, a vida dela é: " + this.getVida());
 	}
 	
 	@Override
 	public void historia() {
-		GameLogic.telaPontilhada(50);
-		System.out.println(
-				"Pela manhã, enquanto caçava, nosso herói percebe a movimentação desesperada dos animais da floresta, como se um predador gigante estivesse se aproximando. Então ouve-se um grande rugido de leão e logo nosso herói se prepara para o confronto. Mas o que ele não esperava era que o predador viria de cima. Com asas de dragão, cabeça de leão e calda de serpente, uma Quimera pairava em sua direção, pronto para ter sua refeição. Defenda-se herói e lute por sua vida!");
-		GameLogic.telaPontilhada(50);
+		GameLogic.linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Pela manhã, enquanto caçava, nosso herói percebe a movimentação desesperada dos");
+		System.out.printf("|%-80s|%n", "animais da floresta, como se um predador gigante estivesse se aproximando. Então");
+		System.out.printf("|%-80s|%n", "ouve-se um grande rugido de leão e logo nosso herói se prepara para o confronto.");
+		System.out.printf("|%-80s|%n", "Mas o que ele não esperava era que o predador viria de cima. Com asas de dragão,");
+		System.out.printf("|%-80s|%n", "cabeça de leão e calda de serpente, uma Quimera pairava em sua direção, pronto");
+		System.out.printf("|%-80s|%n", "para ter sua refeição. Defenda-se herói e lute por sua vida!");
+		GameLogic.linhaPontilhada();
 
 		GameLogic.pressioneUmaTecla();
 	}
