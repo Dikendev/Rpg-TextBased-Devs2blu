@@ -204,19 +204,33 @@ public class GameLogic {
 				ataque = scanner.nextInt();
 				
 				switch(ataque) {
-				case 1: inimigos.get(i).recebeDano(personagem.ataqueBasico());
+				case 1:
+					limparConsole();
+					inimigos.get(i).recebeDano(personagem.ataqueBasico());
 				break;
-				case 2: inimigos.get(i).recebeDano(personagem.ataqueBasico2());
+				case 2:
+					limparConsole();
+					inimigos.get(i).recebeDano(personagem.ataqueBasico2());
 				break;
-				case 3: inimigos.get(i).recebeDano(personagem.ataqueEspecial());
+				case 3: 
+					limparConsole();
+					inimigos.get(i).recebeDano(personagem.ataqueEspecial());
 				break;
-				case 4: inimigos.get(i).recebeDano(personagem.ataqueEspecial());
+				case 4: 
+					limparConsole();
+					inimigos.get(i).recebeDano(personagem.ataqueEspecial());
 				break;
-				case 5: personagem.defesa();
+				case 5: 
+					limparConsole();
+					personagem.defesa();
 				break;
-				case 6: personagem.usarPocao();
+				case 6:
+					limparConsole();
+					personagem.usarPocao();
 				break;
-				case 7: infoPersonagem();
+				case 7: 
+					limparConsole();
+					infoPersonagem();
 				}
 				
 				linhaPontilhada();
