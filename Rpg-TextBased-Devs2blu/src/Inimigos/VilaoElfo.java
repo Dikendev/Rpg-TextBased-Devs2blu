@@ -68,7 +68,7 @@ public class VilaoElfo extends Vilao{
 	public void historia() {
 		GameLogic.linhaPontilhada();
 		System.out.printf("|%-80s|%n", "Conforme nosso herói começava a se aproximar da subida do vulcão, ele percebeu ");
-		System.out.printf("|%-80s|%n", "a presença de um capanga Elfo, com um longo cabelo negro e orelhas pontudas, ele");
+		System.out.printf("|%-89s|%n", "a presença de um capanga " + GameLogic.VermelhoFun + "Elfo" + GameLogic.Reseta + ", com um longo cabelo negro e orelhas pontudas, ele");
 		System.out.printf("|%-80s|%n", "porta uma espada e um cajado, e em suas costas havia um arco. Nosso herói ");
 		System.out.printf("|%-80s|%n", "aproxima-se furtivamente e inicia o confronto. Ataque!");
 		GameLogic.linhaPontilhada();

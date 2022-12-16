@@ -69,7 +69,7 @@ public class GameLogic {
 
 	public static void imprimirCabecalho(String titulo) {
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n",(titulo));
+		System.out.printf("|%-91s|%n",(titulo));
 		linhaPontilhada();
 
 	}
@@ -83,9 +83,9 @@ public class GameLogic {
 		frame.setVisible(true);
 	// Inicia o jogo	
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "                                 FANTASY-ONE");
+		System.out.printf("|%-91s|%n", ("                                  " + CianoSub + "Fantasy-One" + Reseta));
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "                     Primeiramente, digite seu nome: ");
+		System.out.printf("|%-80s|%n", "                        Primeiramente, digite seu nome: ");
 		linhaPontilhada();
 		nome = scanner.next();
 		pressioneUmaTecla();
@@ -103,54 +103,55 @@ public class GameLogic {
 		limparConsole();
 
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", nome + ", agora vamos escolher seu herói! Temos diversos heróis disponíveis, confira a ");
-		System.out.printf("|%-80s|%n", "história de cada um a seguir e escolha o que você achar mais interessante!");
+		System.out.printf("|%-91s|%n", BrancoSub + nome + Reseta + ", agora vamos escolher seu herói! Temos diversos heróis");
+		System.out.printf("|%-80s|%n", "disponíveis, confira a história de cada um a seguir e escolha o que você ");
+		System.out.printf("|%-80s|%n", "achar mais interessante!");
 		linhaPontilhada();
 		descricaoPersonagens();
 		
 		
 		do {
-			System.out.printf("|%-80s|%n", "Escolha seu herói!");
-			System.out.printf("|%-80s|%n","1 - Bruxo Caçador");
-			System.out.printf("|%-80s|%n","2 - Eladrin");
-			System.out.printf("|%-80s|%n","3 - Mago Cinzento");
-			System.out.printf("|%-80s|%n","4 - Sacerdote");
-			System.out.printf("|%-80s|%n","5 - Death Knight");
+			System.out.printf("|%-91s|%n", BrancoSub + "Escolha seu herói!" + Reseta);
+			System.out.printf("|%-80s|%n", "1 - Bruxo Caçador");
+			System.out.printf("|%-80s|%n", "2 - Eladrin");
+			System.out.printf("|%-80s|%n", "3 - Mago Cinzento");
+			System.out.printf("|%-80s|%n", "4 - Sacerdote");
+			System.out.printf("|%-80s|%n", "5 - Death Knight");
 			opcao = scanner.nextInt();
 			
 			if (opcao == 1) {
 				limparConsole();
 				personagem = new BruxoCacador("Bruxo Caçador", 100, 0, 100, 2, 1, 3);
 				jogador = "Bruxo Caçador";
-				imprimirCabecalho("Você escolheu o Bruxo Caçador!");
+				imprimirCabecalho("Você escolheu o " + AmareloSub + "Bruxo Caçador!" + Reseta);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 2) {
 				limparConsole();
 				personagem = new Eladrin("Eladrin", 80, 0, 100, 2, 1, 3);
 				jogador = "Eladrin";
-				imprimirCabecalho("Você escolheu a Eladrin!");
+				imprimirCabecalho("Você escolheu a" + VerdeSub + "Eladrin!" + Reseta);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 3) {
 				limparConsole();
 				personagem = new MagoCinzento("Mago Cinzento", 100, 0, 100, 2, 1, 3);
 				jogador = "Mago Cinzento";
-				imprimirCabecalho("Você escolheu o MagoCinzento!");
+				imprimirCabecalho("Você escolheu o " + RoxoSub + "MagoCinzento!" + Reseta);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 4) {
 				limparConsole();
 				personagem = new Sacerdote("Sacerdote", 100, 0, 100, 2, 1, 3);
 				jogador = "Sacerdote";
-				imprimirCabecalho("Você escolheu o Sacerdote!");
+				imprimirCabecalho("Você escolheu o " + CianoClaroSub + "Sacerdote!" + Reseta);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 5) {
 				limparConsole();
 				personagem = new DeathKnight("Death Knight", 100, 0, 100, 2, 1, 3);
 				jogador = "Death Knight";
-				imprimirCabecalho("Você escolheu o DeathKnight!");
+				imprimirCabecalho("Você escolheu o " + VermelhoSub + "DeathKnight!" + Reseta);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else {
@@ -192,13 +193,13 @@ public class GameLogic {
 			do {
 				linhaPontilhada();
 				System.out.printf("|%-80s|%n", "O turno é seu, selecione um ataque!");
-				System.out.printf("|%-80s|%n", "1 - Ataque básico");
-				System.out.printf("|%-80s|%n", "2 - Ataque rápido");
-				System.out.printf("|%-80s|%n", "3 - Ataque Especial");
-				System.out.printf("|%-80s|%n", "4 - Ataque Poderoso");
-				System.out.printf("|%-80s|%n", "5 - Defender");
-				System.out.printf("|%-80s|%n", "6 - Usar Poção");
-				System.out.printf("|%-80s|%n", "7 - Status do Personagem");
+				System.out.printf("|%-91s|%n", VermelhoClaro + "1" + Reseta + " - Ataque básico");
+				System.out.printf("|%-91s|%n", VermelhoClaro + "2" + Reseta + " - Ataque rápido");
+				System.out.printf("|%-91s|%n", VermelhoClaro + "3" + Reseta + " - Ataque Especial");
+				System.out.printf("|%-91s|%n", VermelhoClaro + "4" + Reseta + " - Ataque Poderoso");
+				System.out.printf("|%-91s|%n", VerdeClaro + "5" + Reseta + " - Defender");
+				System.out.printf("|%-91s|%n", VerdeClaro + "6" + Reseta + " - Usar Poção");
+				System.out.printf("|%-91s|%n", BrancoSub + "7" + Reseta + " - Status do Personagem");
 				linhaPontilhada();
 				int ataque;
 				ataque = scanner.nextInt();
@@ -300,7 +301,7 @@ public class GameLogic {
 
 	public static void introducaoJogo() {
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Historia");
+		System.out.printf("|%-91s|%n", Ciano + "Historia" + Reseta);
 		linhaPontilhada();
 		System.out.printf("|%-80s|%n", "Nosso Herói começa sua jornada na pacata vila de Untirade, um pequeno povoado");
 		System.out.printf("|%-80s|%n", "numa clareira não muito próxima ao Boca do Diabo, um grande vulcão adormecido,");
@@ -312,23 +313,41 @@ public class GameLogic {
 	}
 	
 	public static void descricaoPersonagens() {
-		System.out.printf("|%-80s|%n", "Bruxo Caçador, pipipi popopo");
+		System.out.printf("|%-91s|%n", AmareloSub + "Bruxo Caçador" + Reseta + ", pipipi popopo");
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Eladrin é uma espécie de elfo que adquire seus poderes da natureza e os ");
+		System.out.printf("|%-91s|%n", VerdeSub + "Eladrin" + Reseta + " é uma espécie de elfo que adquire seus poderes da natureza e os ");
 		System.out.printf("|%-80s|%n", "modifca de acordo com as estações do ano.");
 		System.out.printf("|%-80s|%n", "Todos os seus ataques buscam o poder nas estações");
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Mago Cinzento é um personagem místico, ele veio da Lua com o intuito de proteger");
+		System.out.printf("|%-91s|%n", RoxoSub + "Mago Cinzento" + Reseta + " é um personagem místico, ele veio da Lua com o intuito de proteger");
 		System.out.printf("|%-80s|%n", "o Vilarejo Untirade. Seus ataques são fortes e os ataques especiais irão acabar ");
 		System.out.printf("|%-80s|%n", "seus oponentes.");
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Sacerdote com sua tunica branca e seu cajado adornado em prata e ouro, usa sua ");
+		System.out.printf("|%-91s|%n", CianoClaroSub + "Sacerdote" + Reseta + " com sua tunica branca e seu cajado adornado em prata e ouro, usa sua ");
 		System.out.printf("|%-80s|%n", "fé com e o poder divino para subjulgar seus inimigos. Usando orações ele é capaz");
 		System.out.printf("|%-80s|%n", "de causar grande dano ou curar a sí mesmo.");
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Death Knight, pipipi popopo");
+		System.out.printf("|%-91s|%n", VermelhoSub + "Death Knight" + Reseta + ", pipipi popopo");
 		linhaPontilhada();
 	}
 	
+	//Cores para o Console
+	public static final String Reseta = "\033[0m";
+	public static final String Ciano = "\033[0;36m";
+	public static final String CianoSub = "\033[4;36m";
+	public static final String BrancoSub = "\033[4;37m";
+	public static final String Roxo = "\033[0;35m";
+	public static final String RoxoSub = "\033[4;35m";
+	public static final String Verde = "\033[0;32m";
+	public static final String VerdeSub = "\033[4;32m";
+	public static final String VerdeClaro = "\033[0;92m";
+	public static final String Amarelo = "\033[0;33m";
+	public static final String AmareloSub = "\033[4;33m";
+	public static final String CianoClaro = "\033[0;96m";
+	public static final String CianoClaroSub = "\033[4;96m";
+	public static final String Vermelho = "\033[0;31m";
+	public static final String VermelhoSub = "\033[4;31m";
+	public static final String VermelhoFun= "\033[41m";
+	public static final String VermelhoClaro = "\033[0;91m";
 	
 	}	

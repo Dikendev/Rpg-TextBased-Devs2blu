@@ -17,16 +17,16 @@ public class Sacerdote extends Personagem {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-		System.out.printf("|%-80s|%n", "Dano: 10");
+		System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando" + GameLogic.VermelhoClaro + " 10 de dano!" + GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho + "Dano: 10" + GameLogic.Reseta);
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-		System.out.printf("|%-80s|%n", "causando 12 de dano!");
-		System.out.printf("|%-80s|%n", "Dano: 12");
+		System.out.printf("|%-91s|%n", "causando" + GameLogic.VermelhoClaro + " 12 de dano!" + GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho + "Dano: 12" + GameLogic.Reseta);
 		return 12;
 	}
 
@@ -34,8 +34,8 @@ public class Sacerdote extends Personagem {
 	public int ataqueEspecial() {
 		if (getMp() > 0) {
 			System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-			System.out.printf("|%-80s|%n", "causando 20 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 20");
+			System.out.printf("|%-91s|%n", "causando" + GameLogic.VermelhoClaro + " 20 de dano!" + GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho + "Dano: 20" + GameLogic.Reseta);
 			setMp(getMp() - 1);
 			return 20;
 		} else {
@@ -47,8 +47,8 @@ public class Sacerdote extends Personagem {
 	@Override
 	public int ataqueEspecial2() {
 		if (getMp() > 0) {
-			System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 25");
+			System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando" + GameLogic.VermelhoClaro + " 25 de dano!" + GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho + "Dano: 25" + GameLogic.Reseta);
 			setMp(getMp() - 1);
 			return 25;
 		} else {
@@ -60,7 +60,7 @@ public class Sacerdote extends Personagem {
 	@Override
 	public void defesa() {
 		if (this.getMp() >= 2) {
-			System.out.printf("|%-80s|%n", "Você usa a oração celestial e cura 15 pontos de vida!");
+			System.out.printf("|%-91s|%n", "Você usa a oração celestial e" + GameLogic.VerdeClaro +" cura 15 pontos de vida!" + GameLogic.Reseta);
 			this.setVida(getVida() + 15);
 		} else {
 			System.out.printf("|%-80s|%n", "Sem mana suficiente para recuperar vida!");
@@ -70,7 +70,7 @@ public class Sacerdote extends Personagem {
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 
 	@Override
@@ -81,7 +81,7 @@ public class Sacerdote extends Personagem {
 		} else {
 			System.out.printf("|%-80s|%n", "Você não possui Poções de Cura!");
 		}
-		System.out.printf("|%-80s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 	
 	@Override

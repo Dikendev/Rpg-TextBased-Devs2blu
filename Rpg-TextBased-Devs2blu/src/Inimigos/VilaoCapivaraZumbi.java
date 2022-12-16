@@ -54,7 +54,7 @@ public class VilaoCapivaraZumbi extends Vilao{
 		System.out.printf("|%-80s|%n", "próximo a um arbusto um animal comendo, parecia muito com uma capivara. Ao se ");
 		System.out.printf("|%-80s|%n", "aproximar do supostamente inofensivo animal, ele percebe que na verdade ela ");
 		System.out.printf("|%-80s|%n", "estava comenda outra capivara. Em um salto para trás, nosso herói percebe que na");
-		System.out.printf("|%-80s|%n", "verdade se tratava de uma grande capivara zumbi que corre em sua direção. ");
+		System.out.printf("|%-89s|%n", "verdade se tratava de uma grande " + GameLogic.VermelhoFun + "Capivara Zumbi" + GameLogic.Reseta + "que corre em sua direção. ");
 		System.out.printf("|%-80s|%n", "Lute por sua vida!");
 		GameLogic.linhaPontilhada();
 

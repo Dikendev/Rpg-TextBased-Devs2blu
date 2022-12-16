@@ -56,7 +56,7 @@ public class VilaoDuergar extends Vilao{
 		GameLogic.linhaPontilhada();
 		System.out.printf("|%-80s|%n", "Devido a um deslizamento, nosso herói é obrigado a usar uma velha trilha, mal ");
 		System.out.printf("|%-80s|%n", "cuidada e pouco sinalizada. Guiado apenas pela luz do luar nosso herói avista um");
-		System.out.printf("|%-80s|%n", "vulto junto a um barulho metálico, e surge de trás de uma árvore um Duergar,");
+		System.out.printf("|%-89s|%n", "vulto junto a um barulho metálico, e surge de trás de uma árvore um " + GameLogic.VermelhoFun + "Duergar," + GameLogic.Reseta);
 		System.out.printf("|%-80s|%n", "vestindo uma pesada armadura de metal e empunhando seu grande Martelo, com muita");
 		System.out.printf("|%-80s|%n", "raiva em seu olhar, não resta outra opção a não ser lutar!");
 		GameLogic.linhaPontilhada();
