@@ -235,9 +235,18 @@ public class GameLogic {
 				//System.out.println(personagem.getVida());
 				//System.out.println(inimigos.get(i).getVida());
 				
-			}while(personagem.getVida() != 0 && inimigos.get(i).getVida() != 0);	
-			
+			}while(personagem.getVida() >= 0 && inimigos.get(i).getVida() >= 0);
+			if(inimigos.get(i).getVida()<=0) {
+				personagem.ganhoXpViloes();
+				personagem.subirNivel();
+				personagem.setVida(personagem.getMaxVida());
+			}
+			else if(personagem.getVida() <= 0) {	
+			System.out.println("Game Over, pressione uma tecla para recomeçar!");
+			comecaJogo();
+			}
 		}
+		
 		
 	}
 	
