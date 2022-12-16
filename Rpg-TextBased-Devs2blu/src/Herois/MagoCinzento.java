@@ -17,32 +17,157 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
-		System.out.printf("|%-80s|%n", "Dano de 10");
-		return 10;
+		if(this.getNivel() == 1) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
+			System.out.printf("|%-80s|%n", "Dano de 10");
+			return 10;
+		}else if(this.getNivel() == 2) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
+			System.out.printf("|%-80s|%n", "Dano de 15");
+			return 15;
+		}else if(this.getNivel() == 3) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
+			System.out.printf("|%-80s|%n", "Dano de 20");
+			return 20;
+		}else if(this.getNivel() == 4) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
+			System.out.printf("|%-80s|%n", "Dano de 25");
+			return 25;
+		}else if(this.getNivel() == 5) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
+			System.out.printf("|%-80s|%n", "Dano de 30");
+			return 30;
+		}else if(this.getNivel() == 6) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
+			System.out.printf("|%-80s|%n", "Dano de 35");
+			return 35;
+		}else if(this.getNivel() == 7) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia da Noite! " );
+			System.out.printf("|%-80s|%n", "Dano de 40");
+			return 40;
+		}else return 0;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
-		System.out.printf("|%-80s|%n", "Dano de 10");
-		return 10;
+		if(this.getNivel() == 1) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
+			System.out.printf("|%-80s|%n", "Dano de 15");
+			return 15;
+		}else if(this.getVida() == 2) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
+			System.out.printf("|%-80s|%n", "Dano de 20");
+			return 20;
+		}else if(this.getVida() == 3) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
+			System.out.printf("|%-80s|%n", "Dano de 25");
+			return 25;
+		}else if(this.getVida() == 4) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
+			System.out.printf("|%-80s|%n", "Dano de 30");
+			return 30;
+		}else if(this.getVida() == 5) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
+			System.out.printf("|%-80s|%n", "Dano de 35");
+			return 35;
+		}else if(this.getVida() == 6) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
+			System.out.printf("|%-80s|%n", "Dano de 40");
+			return 40;
+		}else if(this.getVida() == 7) {
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia dos Druidas! " );
+			System.out.printf("|%-80s|%n", "Dano de 45");
+			return 45;
+		}else return 0;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		if(this.getMp() > 0) {
-			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
-			System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
-			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-			System.out.printf("|%-80s|%n", "Dano de 15");
-			return 20;
-		} else {
-			System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar");
-			System.out.printf("|%-80s|%n", "o ataque especial.");
-			return 0;
-		}
+		if(this.getNivel() == 1) {
+			if(this.getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
+				System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+				System.out.printf("|%-80s|%n", "Dano de 15");
+				return 15;
+			} else {
+				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 2) {
+			if(this.getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
+				System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+				System.out.printf("|%-80s|%n", "Dano de 20");
+				return 20;
+			} else {
+				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 3) {
+			if(this.getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
+				System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+				System.out.printf("|%-80s|%n", "Dano de 25");
+				return 25;
+			} else {
+				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 4) {
+			if(this.getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
+				System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+				System.out.printf("|%-80s|%n", "Dano de 30");
+				return 30;
+			} else {
+				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 5) {
+			if(this.getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
+				System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+				System.out.printf("|%-80s|%n", "Dano de 35");
+				return 35;
+			} else {
+				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 6) {
+			if(this.getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
+				System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+				System.out.printf("|%-80s|%n", "Dano de 40");
+				return 40;
+			} else {
+				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 7) {
+			if(this.getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com a Magia Paralizante! " );
+				System.out.printf("|%-80s|%n", "Dano de 5 seu oponente está paralizado por uma rodada. ");
+				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+				System.out.printf("|%-80s|%n", "Dano de 45");
+				return 45;
+			} else {
+				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
+				return 0;
+			}
+		}else return 0;
 	}
 		
 

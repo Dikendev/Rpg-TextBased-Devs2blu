@@ -16,42 +16,218 @@ public class DeathKnight extends Personagem{
 		
 		@Override
 		public int ataqueBasico() {
-			System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 10 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 10");
-			return 10;
+			if(this.getNivel() == 1) {
+				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 10 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 10");
+				return 10;
+			}else if(this.getNivel() == 2) {
+				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 15 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 15");
+				return 15;
+			}else if(this.getNivel() == 3) {
+				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 20 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 20");
+				return 20;
+			}else if(this.getNivel() == 4) {
+				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 25 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 25");
+				return 25;
+			}else if(this.getNivel() == 5) {
+				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 30 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 30");
+				return 30;
+			}else if(this.getNivel() == 6) {
+				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 35");
+				return 35;
+			}else if(this.getNivel() == 7) {
+				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 40 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 40");
+				return 40;
+			}else return 0;
 		}
 
 		@Override
 		public int ataqueBasico2() {
-			System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 12 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 12");
-			return 12;
+			if(this.getNivel() == 1) {
+				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 15 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 15");
+				return 15;
+			}else if(this.getNivel() == 2) {
+				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 20 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 20");
+				return 20;
+			}else if(this.getNivel() == 3) {
+				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 25 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 25");
+				return 25;
+			}else if(this.getNivel() == 4) {
+				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 30 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 30");
+				return 30;
+			}else if(this.getNivel() == 5) {
+				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 35");
+				return 35;
+			}else if(this.getNivel() == 6) {
+				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 40 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 40");
+				return 40;
+			}else if(this.getNivel() == 7) {
+				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 45 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 45");
+				return 45;
+			}else return 0;
 		}
 
 		@Override
 		public int ataqueEspecial() {
-			if(this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 20 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 20");
-				this.setMp(this.getMp() - 1);
-				return 20;			
-			} else {
-				System.out.printf("|%-80s|%n", "Sem mana suficiente para os servos das trevas");
-				return 0;
-			}
+			if(this.getNivel() == 1) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 30 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 30");
+					this.setMp(this.getMp() - 1);
+					return 30;			
+				} else {
+					System.out.printf("|%-80s|%n", "Sem mana suficiente para os servos das trevas");
+					return 0;
+				}
+			}else if(this.getNivel() == 2) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 35 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 35");
+					this.setMp(this.getMp() - 1);
+					return 35;			
+				} else {
+					System.out.printf("|%-80s|%n", "Sem mana suficiente para os servos das trevas");
+					return 0;
+				}
+			}else if(this.getNivel() == 3) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 40 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 40");
+					this.setMp(this.getMp() - 1);
+					return 40;			
+				} else {
+					System.out.printf("|%-80s|%n", "Sem mana suficiente para os servos das trevas");
+					return 0;
+				}
+			}else if(this.getNivel() == 4) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 45 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 45");
+					this.setMp(this.getMp() - 1);
+					return 45;			
+				} else {
+					System.out.printf("|%-80s|%n", "Sem mana suficiente para os servos das trevas");
+					return 0;
+				}
+			}else if(this.getNivel() == 5) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 50 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 50");
+					this.setMp(this.getMp() - 1);
+					return 50;			
+				} else {
+					System.out.printf("|%-80s|%n", "Sem mana suficiente para os servos das trevas");
+					return 0;
+				}
+			}else if(this.getNivel() == 6) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 55 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 55");
+					this.setMp(this.getMp() - 1);
+					return 55;			
+				} else {
+					System.out.printf("|%-80s|%n", "Sem mana suficiente para os servos das trevas");
+					return 0;
+				}
+			}else if(this.getNivel() == 7) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 60 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 60");
+					this.setMp(this.getMp() - 1);
+					return 60;			
+				} else {
+					System.out.printf("|%-80s|%n", "Sem mana suficiente para os servos das trevas");
+					return 0;
+				}
+			}else return 0;
 		}
 
 		@Override
 		public int ataqueEspecial2() {
-			if(this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 25 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 25");
-				this.setMp(this.getMp() - 1);			
-				return 25;
-			} else {
-				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Exorcizar!");
-				return 0;
-			}
+			if(this.getNivel() == 1) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 30 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 30");
+					this.setMp(this.getMp() - 1);			
+					return 30;			
+				} else {
+					System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Exorcizar!");
+					return 0;
+				}
+			}else if(this.getNivel() == 2) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 35 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 35");
+					this.setMp(this.getMp() - 1);			
+					return 35;		
+				} else {
+					System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Exorcizar!");
+					return 0;
+				}
+			}else if(this.getNivel() == 3) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 40 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 40");
+					this.setMp(this.getMp() - 1);			
+					return 40;		
+				} else {
+					System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Exorcizar!");
+					return 0;
+				}
+			}else if(this.getNivel() == 4) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 45 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 45");
+					this.setMp(this.getMp() - 1);			
+					return 45;		
+				} else {
+					System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Exorcizar!");
+					return 0;
+				}
+			}else if(this.getNivel() == 5) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 50 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 50");
+					this.setMp(this.getMp() - 1);			
+					return 50;		
+				} else {
+					System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Exorcizar!");
+					return 0;
+				}
+			}else if(this.getNivel() == 6) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 55 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 55");
+					this.setMp(this.getMp() - 1);			
+					return 55;		
+				} else {
+					System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Exorcizar!");
+					return 0;
+				}
+			}else if(this.getNivel() == 7) {
+				if(this.getMp() > 0) {
+					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 60 de dano!");
+					System.out.printf("|%-80s|%n", "Dano: 60");
+					this.setMp(this.getMp() - 1);			
+					return 60;		
+				} else {
+					System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Exorcizar!");
+					return 0;
+				}
+			}else return 0;
 		}
 
 		@Override

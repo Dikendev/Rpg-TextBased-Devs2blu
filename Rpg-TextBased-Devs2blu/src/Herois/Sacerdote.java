@@ -17,44 +17,218 @@ public class Sacerdote extends Personagem {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-		System.out.printf("|%-80s|%n", "Dano: 10");
-		return 10;
+		if(this.getNivel() == 1) {
+			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 15");
+			return 15;
+		}else if(this.getNivel() == 2) {
+			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 20");
+			return 20;
+		}else if(this.getNivel() == 3) {
+			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 25");
+			return 25;
+		}else if(this.getNivel() == 4) {
+			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 30");
+			return 30;
+		}else if(this.getNivel() == 5) {
+			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 35");
+			return 35;
+		}else if(this.getNivel() == 6) {
+			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 40");
+			return 40;
+		}else if(this.getNivel() == 7) {
+			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 45");
+			return 45;
+		}else return 0;	
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-		System.out.printf("|%-80s|%n", "causando 12 de dano!");
-		System.out.printf("|%-80s|%n", "Dano: 12");
-		return 12;
+		if(this.getNivel() == 1) {
+			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
+			System.out.printf("|%-80s|%n", "Dano: 20");
+			return 20;
+		}else if(this.getNivel() == 2) {
+			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
+			System.out.printf("|%-80s|%n", "Dano: 25");
+			return 25;
+		}else if(this.getNivel() == 3) {
+			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
+			System.out.printf("|%-80s|%n", "Dano: 30");
+			return 30;
+		}else if(this.getNivel() == 4) {
+			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
+			System.out.printf("|%-80s|%n", "Dano: 35");
+			return 35;
+		}else if(this.getNivel() == 5) {
+			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
+			System.out.printf("|%-80s|%n", "Dano: 40");
+			return 40;
+		}else if(this.getNivel() == 6) {
+			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
+			System.out.printf("|%-80s|%n", "Dano: 45");
+			return 45;
+		}else if(this.getNivel() == 7) {
+			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
+			System.out.printf("|%-80s|%n", "Dano: 50");
+			return 50;
+		}else return 0;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		if (getMp() > 0) {
-			System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-			System.out.printf("|%-80s|%n", "causando 20 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 20");
-			setMp(getMp() - 1);
-			return 20;
-		} else {
-			System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
-			return 0;
-		}
+		if(this.getNivel() == 1) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
+				System.out.printf("|%-80s|%n", "Dano: 30");
+				this.setMp(this.getMp() - 1);
+				return 30;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 2) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
+				System.out.printf("|%-80s|%n", "Dano: 35");
+				this.setMp(this.getMp() - 1);
+				return 35;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 3) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
+				System.out.printf("|%-80s|%n", "Dano: 40");
+				this.setMp(this.getMp() - 1);
+				return 40;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 4) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
+				System.out.printf("|%-80s|%n", "Dano: 45");
+				this.setMp(this.getMp() - 1);
+				return 45;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 5) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
+				System.out.printf("|%-80s|%n", "Dano: 50");
+				this.setMp(this.getMp() - 1);
+				return 50;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 6) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
+				System.out.printf("|%-80s|%n", "Dano: 55");
+				this.setMp(this.getMp() - 1);
+				return 55;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
+				return 0;
+			}
+		}else if(this.getNivel() == 7) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
+				System.out.printf("|%-80s|%n", "Dano: 60");
+				this.setMp(this.getMp() - 1);
+				return 60;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para o Fogo Penitencial!");
+				return 0;
+			}
+		}else return 0;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		if (getMp() > 0) {
-			System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 25 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 25");
-			setMp(getMp() - 1);
-			return 25;
-		} else {
-			System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
-			return 0;
-		}
+		if(this.getNivel() == 1) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 35");
+				this.setMp(this.getMp() - 1);
+				return 35;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
+				return 0;
+			}
+		}else if(this.getNivel() == 2) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 40");
+				this.setMp(this.getMp() - 1);
+				return 40;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
+				return 0;
+			}
+		}else if(this.getNivel() == 3) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 45");
+				this.setMp(this.getMp() - 1);
+				return 45;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
+				return 0;
+			}
+		}else if(this.getNivel() == 4) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 50");
+				this.setMp(this.getMp() - 1);
+				return 50;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
+				return 0;
+			}
+		}else if(this.getNivel() == 5) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 55");
+				this.setMp(this.getMp() - 1);
+				return 55;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
+				return 0;
+			}
+		}else if(this.getNivel() == 6) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 60");
+				this.setMp(this.getMp() - 1);
+				return 60;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
+				return 0;
+			}
+		}else if(this.getNivel() == 7) {
+			if (this.getMp() > 0) {
+				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
+				System.out.printf("|%-80s|%n", "Dano: 65");
+				this.setMp(this.getMp() - 1);
+				return 65;
+			} else {
+				System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
+				return 0;
+			}
+		}else return 0;
 	}
 
 	@Override
