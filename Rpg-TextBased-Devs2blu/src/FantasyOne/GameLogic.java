@@ -2,8 +2,8 @@ package FantasyOne;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
+import Frames.FrameAto1;
+import Frames.FrameBoasVindas;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
 import Herois.Eladrin;
@@ -25,8 +25,7 @@ public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
 	public static Personagem personagem;
-	
-	Personagem bruxoCacador = new BruxoCacador("Bruxo Caçador", 100, 20, 100, 0, 1, 100);
+	public static String nome;
 
 	// Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
@@ -79,20 +78,20 @@ public class GameLogic {
 	public static void comecaJogo() {
 
 		int opcao;
+	// Chama o primeiro frame
+		FrameBoasVindas frame = new FrameBoasVindas();
+		frame.setVisible(true);
+	// Inicia o jogo	
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "                           Bem vindo ao Fantasy-One!");
+		System.out.printf("|%-80s|%n", "                                 FANTASY-ONE");
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "                     Antes de começarmos, digite seu nome: ");
+		System.out.printf("|%-80s|%n", "                     Primeiramente, digite seu nome: ");
 		linhaPontilhada();
-		String nome = scanner.next();
+		nome = scanner.next();
 		pressioneUmaTecla();
-
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Vamos te apresentar melhor a história do nosso universo mágico!");
-		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Na pacata vila de Untirade, existe um pequeno povoado numa clareira não muito");
-		System.out.printf("|%-80s|%n", "distante do Boca do Diabo, um grande vulcão adormecido e lar do maligno Senhor");
-		System.out.printf("|%-80s|%n", "do Fogo, Ragnaros.");
+		FrameAto1 frame2 = new FrameAto1();
+		frame2.setVisible(true);
 		System.out.printf("|%-80s|%n", "Recentemente Ragnaros despertou de seu aprisionamento e agora jura vingança a");
 		System.out.printf("|%-80s|%n", "todos os povos e raças.");
 		System.out.printf("|%-80s|%n", "Com a ameaça iminente à vida de todos, e guiado por suas honrosas índoles, um");
