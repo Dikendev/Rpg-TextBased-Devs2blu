@@ -2,7 +2,7 @@ package FantasyOne;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.apache.commons.lang3.StringUtils;
+
 
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
@@ -80,9 +80,9 @@ public class GameLogic {
 
 		int opcao;
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", StringUtils.center("Bem vindo ao Fantasy-One!", 80));
+		System.out.printf("|%-80s|%n", "                           Bem vindo ao Fantasy-One!");
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", StringUtils.center("Antes de começarmos, digite seu nome: ", 80));
+		System.out.printf("|%-80s|%n", "                     Antes de começarmos, digite seu nome: ");
 		linhaPontilhada();
 		String nome = scanner.next();
 		pressioneUmaTecla();
