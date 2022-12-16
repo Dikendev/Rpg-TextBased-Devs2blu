@@ -234,7 +234,7 @@ public class Sacerdote extends Personagem {
 	@Override
 	public void defesa() {
 		if (this.getMp() >= 2) {
-			System.out.printf("|%-80s|%n", "Você usa a oração celestial e cura 15 pontos de vida!");
+			System.out.printf("|%-91s|%n", "Você usa a oração celestial e" + GameLogic.VerdeClaro +" cura 15 pontos de vida!" + GameLogic.Reseta);
 			this.setVida(getVida() + 15);
 		} else {
 			System.out.printf("|%-80s|%n", "Sem mana suficiente para recuperar vida!");
@@ -244,7 +244,7 @@ public class Sacerdote extends Personagem {
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 
 	@Override
@@ -255,7 +255,7 @@ public class Sacerdote extends Personagem {
 		} else {
 			System.out.printf("|%-80s|%n", "Você não possui Poções de Cura!");
 		}
-		System.out.printf("|%-80s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 	
 	@Override

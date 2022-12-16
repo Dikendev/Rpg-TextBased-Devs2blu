@@ -70,7 +70,7 @@ public class VilaoDragaoDuasCabecas extends Vilao {
 		GameLogic.linhaPontilhada();
 		System.out.printf("|%-80s|%n", "Após atravessar uma velha ponte de pedras, dois grandes rugidos tomam conta do");
 		System.out.printf("|%-80s|%n", "cenário e chamam a atenção do nosso herói, que instintivamente olha para cima e");
-		System.out.printf("|%-80s|%n", "se depara com um dragão, mas não um comum, um jovem e faminto Dragão de Duas ");
+		System.out.printf("|%-89s|%n", "se depara com um dragão, mas não um comum, um jovem e faminto " + GameLogic.VermelhoFun + "Dragão de Duas Cabeças" + GameLogic.Reseta);
 		System.out.printf("|%-80s|%n", "Cabeças. Num rasante ele pousa em frente ao herói pronto para o ataque. ");
 		System.out.printf("|%-80s|%n", "Lute por sua vida!");
 		GameLogic.linhaPontilhada();

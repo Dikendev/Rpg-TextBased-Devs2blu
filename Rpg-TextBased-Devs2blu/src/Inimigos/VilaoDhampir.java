@@ -57,7 +57,7 @@ public class VilaoDhampir extends Vilao {
 		GameLogic.linhaPontilhada();
 		System.out.printf("|%-80s|%n", "Ao anoitecer, nosso herói busca abrigo em uma caverna, ao entrar mais fundo ele ");
 		System.out.printf("|%-80s|%n", "percebe que não está sozinho, ouve alguns passos leves e um vulto em direção a");
-		System.out.printf("|%-80s|%n", "escuridão. Ao se aproximar, surge das sombras um Dhampir, com sua pele pálida e");
+		System.out.printf("|%-89s|%n", "escuridão. Ao se aproximar, surge das sombras um " + GameLogic.VermelhoFun + "Dhampir" + GameLogic.Reseta + ", com sua pele pálida e");
 		System.out.printf("|%-80s|%n", "capa preta ele avança em direção ao nosso herói pronto para provar de seu sangue.");
 		System.out.printf("|%-80s|%n", "Batalhe por sua vida!");
 		GameLogic.linhaPontilhada();
