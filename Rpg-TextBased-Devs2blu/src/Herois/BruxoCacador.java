@@ -33,6 +33,7 @@ public class BruxoCacador extends Personagem{
 		if(this.getMp() >= 3) {
 			System.out.println("Bruxo caçador utilizou bola de fogo, causando 30 de dano!");
 			System.out.println("Dano: 30");
+			this.setMp(getMp() - 1);
 			return 30;
 		}else {
 			System.out.println("Sem mana suficiente para bola de fogo!");
@@ -45,6 +46,7 @@ public class BruxoCacador extends Personagem{
 		if(this.getMp() >= 3) {
 			System.out.println("Bruxo caçador utilizou relâmpago, causando 35 de dano!");
 			System.out.println("Dano: 35");
+			this.setMp(getMp() - 1);
 			return 35;
 		}else {
 			System.out.println("Sem mana suficiente para relâmpago!");
