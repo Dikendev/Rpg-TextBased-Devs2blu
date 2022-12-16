@@ -1,6 +1,9 @@
 package FantasyOne;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import Frames.FrameAto1;
+import Frames.FrameBoasVindas;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
 import Herois.Eladrin;
@@ -22,14 +25,13 @@ public class GameLogic {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
 	public static Personagem personagem;
-	
-	Personagem bruxoCacador = new BruxoCacador("Bruxo Caçador", 100, 20, 100, 0, 1, 100);
+	public static String nome;
 
 	// Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
 	
 	// Método para usuário escolher opção
-	public static int escolhaUser(String prompt, int escolhasUsuario) {
+	public static int escolhaUsuario(String prompt, int escolhasUsuario) {
 		int input;
 
 		do {
@@ -38,7 +40,7 @@ public class GameLogic {
 				input = Integer.parseInt(scanner.next());
 			} catch (Exception e) {
 				input = -1;
-				System.out.println("Escolha um numero válido:");
+				System.out.printf("|%-80s|%n", "Escolha um numero válido:");
 			}
 		} while (input < 1 || input > escolhasUsuario);
 		return input;
@@ -47,28 +49,28 @@ public class GameLogic {
 	// Mótodo para simular nova tela
 	public static void limparConsole() {
 		for (int i = 0; i < 30; i++)
-			System.out.println();
+			System.out.printf("|%-80s|%n", "");
 		
 	}
 
 	// Mótodo pressione qualquer tecla
 	public static void pressioneUmaTecla() {
-		System.out.println("\nPressione qualquer tecla para continuar...");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Pressione qualquer tecla para continuar...");
+		linhaPontilhada();
 		scanner.next();
 		limparConsole();
 	}
 	
 	// Exibe apenas a tela do jogo
-	public static void telaPontilhada(int n) {
-		for (int i = 0; i < n; i++)
-			System.out.print("-");
-		System.out.println();
+	public static void linhaPontilhada() {
+		System.out.printf("|--------------------------------------------------------------------------------|%n");
 	}
 
 	public static void imprimirCabecalho(String titulo) {
-		telaPontilhada(100);
-		System.out.println(titulo);
-		telaPontilhada(100);
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n",(titulo));
+		linhaPontilhada();
 
 	}
 
@@ -76,25 +78,44 @@ public class GameLogic {
 	public static void comecaJogo() {
 
 		int opcao;
-		System.out.println("Bem vindo ao Fantasy-One!");
-		System.out.println("Antes de começarmos, digite seu nome: ");
-		String nome = scanner.next();
+	// Chama o primeiro frame
+		FrameBoasVindas frame = new FrameBoasVindas();
+		frame.setVisible(true);
+	// Inicia o jogo	
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "                                 FANTASY-ONE");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "                     Primeiramente, digite seu nome: ");
+		linhaPontilhada();
+		nome = scanner.next();
 		pressioneUmaTecla();
-
-		System.out.println("Ótimo " + nome + ", vamos agora escolher seu herói!");
-		System.out.println("Antes, vamos te apresentar melhor a história do nosso universo mágico!");
-		System.out.println(
-				"Nosso Herói começa sua jornada na pacata vila de Untirade, um pequeno povoado numa clareira não muito próxima ao Boca do Diabo, um grande vulcão adormecido, lar do maligno Senhor do Fogo Ragnaros que recentemente despertou de seu aprisionamento e agora jura vingança a todos os povos e raças.\r\n"
-						+ "Com a ameaça iminente a vida de todos, e guiado por sua honrosa índole, nosso Herói agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado de Ragnaros.");
+		linhaPontilhada();
+		FrameAto1 frame2 = new FrameAto1();
+		frame2.setVisible(true);
+		System.out.printf("|%-80s|%n", "Recentemente Ragnaros despertou de seu aprisionamento e agora jura vingança a");
+		System.out.printf("|%-80s|%n", "todos os povos e raças.");
+		System.out.printf("|%-80s|%n", "Com a ameaça iminente à vida de todos, e guiado por suas honrosas índoles, um");
+		System.out.printf("|%-80s|%n", "grupo de heróis agora caminha em direção a Boca do Diabo para dar fim ao");
+		System.out.printf("|%-80s|%n", "impiedoso legado do Senhor de Fogo.");
+		linhaPontilhada();
 		GameLogic.pressioneUmaTecla();
 
 		limparConsole();
 
-		System.out.println(
-				"Agora vamos escolher seu herói! Temos diversos heróis disponíveis, confira a seguir cada um deles e escolha o que você achar mais interessante!");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", nome + ", agora vamos escolher seu herói! Temos diversos heróis disponíveis, confira a ");
+		System.out.printf("|%-80s|%n", "história de cada um a seguir e escolha o que você achar mais interessante!");
+		linhaPontilhada();
+		descricaoPersonagens();
+		
 		
 		do {
-			System.out.println("Escolha seu herói! \n1 - Bruxo Caçador \n2-Eladrin \n3-Mago Cinzento \n4- Sacerdote \n5- Death Knight");
+			System.out.printf("|%-80s|%n", "Escolha seu herói!");
+			System.out.printf("|%-80s|%n","1 - Bruxo Caçador");
+			System.out.printf("|%-80s|%n","2 - Eladrin");
+			System.out.printf("|%-80s|%n","3 - Mago Cinzento");
+			System.out.printf("|%-80s|%n","4 - Sacerdote");
+			System.out.printf("|%-80s|%n","5 - Death Knight");
 			opcao = scanner.nextInt();
 			
 			if (opcao == 1) {
@@ -102,30 +123,35 @@ public class GameLogic {
 				personagem = new BruxoCacador("Bruxo Caçador", 100, 0, 100, 2, 1, 3);
 				jogador = "Bruxo Caçador";
 				imprimirCabecalho("Você escolheu o Bruxo Caçador!");
+				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 2) {
 				limparConsole();
 				personagem = new Eladrin("Eladrin", 80, 0, 100, 2, 1, 3);
-				imprimirCabecalho("Você escolheu a Eladrin!");
 				jogador = "Eladrin";
+				imprimirCabecalho("Você escolheu a Eladrin!");
+				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 3) {
 				limparConsole();
 				personagem = new MagoCinzento("Mago Cinzento", 100, 0, 100, 2, 1, 3);
-				imprimirCabecalho("Você escolheu o MagoCinzento!");
 				jogador = "Mago Cinzento";
+				imprimirCabecalho("Você escolheu o MagoCinzento!");
+				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 4) {
 				limparConsole();
 				personagem = new Sacerdote("Sacerdote", 100, 0, 100, 2, 1, 3);
-				imprimirCabecalho("Você escolheu o Sacerdote!");
 				jogador = "Sacerdote";
+				imprimirCabecalho("Você escolheu o Sacerdote!");
+				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 5) {
 				limparConsole();
 				personagem = new DeathKnight("Death Knight", 100, 0, 100, 2, 1, 3);
-				imprimirCabecalho("Você escolheu o DeathKnight!");
 				jogador = "Death Knight";
+				imprimirCabecalho("Você escolheu o DeathKnight!");
+				introducaoJogo();
 				pressioneUmaTecla();
 			} else {
 				imprimirCabecalho("Escolha uma classe válida!");
@@ -159,12 +185,21 @@ public class GameLogic {
 		for(int i = 0; i<inimigos.size(); i++) {
 			
 			inimigos.get(i).historia();
-			
-			System.out.println("Início do combate!");
+			linhaPontilhada();
+			System.out.printf("|%-80s|%n", "Início do combate!");
+			linhaPontilhada();
 			
 			do {
-				System.out.println("O turno é seu, selecione um ataque!");
-				System.out.println("1- Ataque básico \n2- Ataque rápido \n3- Ataque Especial \n4- Ataque Poderoso");
+				linhaPontilhada();
+				System.out.printf("|%-80s|%n", "O turno é seu, selecione um ataque!");
+				System.out.printf("|%-80s|%n", "1 - Ataque básico");
+				System.out.printf("|%-80s|%n", "2 - Ataque rápido");
+				System.out.printf("|%-80s|%n", "3 - Ataque Especial");
+				System.out.printf("|%-80s|%n", "4 - Ataque Poderoso");
+				System.out.printf("|%-80s|%n", "5 - Defender");
+				System.out.printf("|%-80s|%n", "6 - Usar Poção");
+				System.out.printf("|%-80s|%n", "7 - Status do Personagem");
+				linhaPontilhada();
 				int ataque;
 				ataque = scanner.nextInt();
 				
@@ -177,10 +212,16 @@ public class GameLogic {
 				break;
 				case 4: inimigos.get(i).recebeDano(personagem.ataqueEspecial());
 				break;
+				case 5: personagem.defesa();
+				break;
+				case 6: personagem.usarPocao();
+				break;
+				case 7: infoPersonagem();
 				}
 				
-				System.out.println("Agora é o turno do oponente!");
-				switch((int)Math.floor(Math.random() * 6)) {
+				linhaPontilhada();
+				System.out.printf("|%-80s|%n", "Agora é o turno do oponente!");
+				switch((int)Math.floor(Math.random() * 5) + 1) {
 				case 1: personagem.recebeDano(inimigos.get(i).ataqueBasico());
 				break;
 				case 2: personagem.recebeDano(inimigos.get(i).ataqueBasico2());
@@ -191,48 +232,89 @@ public class GameLogic {
 				break;
 				}
 				
-				System.out.println(personagem.getVida());
-				System.out.println(inimigos.get(i).getVida());
+				//System.out.println(personagem.getVida());
+				//System.out.println(inimigos.get(i).getVida());
 				
-			}while(personagem.getVida() != 0 && inimigos.get(i).getVida() != 0);	
-			
+			}while(personagem.getVida() >= 0 && inimigos.get(i).getVida() >= 0);
+			if(inimigos.get(i).getVida()<=0) {
+				personagem.ganhoXpViloes();
+				personagem.subirNivel();
+				personagem.setVida(personagem.getMaxVida());
+			}
+			else if(personagem.getVida() <= 0) {	
+			System.out.println("Game Over, pressione uma tecla para recomeçar!");
+			comecaJogo();
+			}
 		}
+		
 		
 	}
 	
-//Método para mostrar informações do personagem
+// Método para mostrar informações do personagem
 	public static void infoPersonagem() {
-			limparConsole();
 			imprimirCabecalho("Informações gerais:");
 			
-				System.out.println("Nome: " + personagem.getNome());
-				System.out.println("Vida: " + personagem.getVida() + "/" + personagem.getMaxVida());
-				System.out.println("XP: " + personagem.getXp());
-				System.out.println("Mana:" + personagem.getMp());
-				System.out.println("Quantidade de Poções: " + personagem.getPocao());
-				System.out.println("Nível:" + personagem.getNivel());
+			    System.out.printf("|%-80s|%n", "Nome: " + personagem.getNome());
+			    System.out.printf("|%-80s|%n", "Vida: " + personagem.getVida() + "/" + personagem.getMaxVida());
+			    System.out.printf("|%-80s|%n", "XP: " + personagem.getXp());
+			    System.out.printf("|%-80s|%n", "Mana:" + personagem.getMp());
+			    System.out.printf("|%-80s|%n", "Quantidade de Poções: " + personagem.getPocao());
+			    System.out.printf("|%-80s|%n", "Nível:" + personagem.getNivel());
 			}
 
 // MENU DO JOGO
-	public static void menuGame() {
+	public static void menuJogo() {
 		limparConsole();
 		imprimirCabecalho("Menu");
-		System.out.println("Escolha uma opçao");
-		telaPontilhada(20);
-		System.out.println("(1) Continuar: ");
-		System.out.println("(3) Sair: ");
+		System.out.printf("|%-80s|%n", "Escolha uma opçao");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "(1) Continuar: ");
+		System.out.printf("|%-80s|%n", "(3) Sair: ");
 	}
 
 // LOOP DO JOGO
-	public static void gameLoop() {
+	public static void cicloJogo() {
 		while (isRunning) {
-			menuGame();
-			int input = escolhaUser("->", 3);
+			menuJogo();
+			int input = escolhaUsuario("->", 3);
 			if (input == 1)
 				isRunning = true;
 			else
 				isRunning = false;
 		}
 	}
-		
+
+	public static void introducaoJogo() {
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Historia");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Nosso Herói começa sua jornada na pacata vila de Untirade, um pequeno povoado");
+		System.out.printf("|%-80s|%n", "numa clareira não muito próxima ao Boca do Diabo, um grande vulcão adormecido,");
+		System.out.printf("|%-80s|%n", "lar do maligno Senhor do Fogo Ragnaros que recentemente despertou de seu");
+		System.out.printf("|%-80s|%n", "aprisionamento e agora jura vingança a todos os povos e raças.");
+		System.out.printf("|%-80s|%n", "Com a ameaça iminente a vida de todos, e guiado por sua honrosa índole, nosso");
+		System.out.printf("|%-80s|%n", "Herói agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado");
+		System.out.printf("|%-80s|%n", "de Ragnaros.");
+	}
+	
+	public static void descricaoPersonagens() {
+		System.out.printf("|%-80s|%n", "Bruxo Caçador, pipipi popopo");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Eladrin é uma espécie de elfo que adquire seus poderes da natureza e os ");
+		System.out.printf("|%-80s|%n", "modifca de acordo com as estações do ano.");
+		System.out.printf("|%-80s|%n", "Todos os seus ataques buscam o poder nas estações");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Mago Cinzento é um personagem místico, ele veio da Lua com o intuito de proteger");
+		System.out.printf("|%-80s|%n", "o Vilarejo Untirade. Seus ataques são fortes e os ataques especiais irão acabar ");
+		System.out.printf("|%-80s|%n", "seus oponentes.");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Sacerdote com sua tunica branca e seu cajado adornado em prata e ouro, usa sua ");
+		System.out.printf("|%-80s|%n", "fé com e o poder divino para subjulgar seus inimigos. Usando orações ele é capaz");
+		System.out.printf("|%-80s|%n", "de causar grande dano ou curar a sí mesmo.");
+		linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Death Knight, pipipi popopo");
+		linhaPontilhada();
+	}
+	
+	
 	}	

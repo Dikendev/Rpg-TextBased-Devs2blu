@@ -47,10 +47,57 @@ public class Personagem extends Criatura{
 		// TODO Auto-generated method stub
 		
 	}
+
+	public int ganhoXpViloes() {
+	    this.setXp((this.getXp()+50));
+        return this.getXp();
+	}
+
+	public int ganhoXpChefoes() {
+		this.setXp((this.getXp()+100));
+        return this.getXp();
+	}
+	
+	public void subirNivel() {
+		
+			if(this.getXp() >= 100 && this.getXp() < 200 ) {
+				this.setNivel(this.getNivel()+1);
+				this.setMaxVida(getMaxVida()+10);
+				this.setMp(getMp()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel()); 
+			}else if(this.getXp() >= 200 && this.getXp() < 300) {
+				this.setNivel(this.getNivel()+1);
+				this.setMaxVida(getMaxVida()+12);
+				this.setMp(getMp()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}else if(this.getXp() >= 300 && this.getXp() < 400) {
+				this.setNivel(this.getNivel()+1);
+				this.setMaxVida(getMaxVida()+15);
+				this.setMp(getMp()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}else if(this.getXp() >= 400 && this.getXp() < 500) {
+				this.setNivel(this.getNivel()+1);
+				this.setMaxVida(getMaxVida()+18);
+				this.setMp(getMp()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}else if(this.getXp() >= 500 && this.getXp() < 600) {
+				this.setNivel(this.getNivel()+1);
+				this.setMaxVida(getMaxVida()+20);
+				this.setMp(getMp()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}else{
+				this.setNivel(this.getNivel()+1);
+				this.setMaxVida(getMaxVida()+25);
+				this.setMp(getMp()+1);
+			System.out.println("Parabéns você chegou no nível " + this.getNivel());
+			}
+	}
+	
+		
 	@Override
 	public void historia() {
 		// TODO Auto-generated method stub
 		
 	}
-
 }
+

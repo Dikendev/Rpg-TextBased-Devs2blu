@@ -12,26 +12,26 @@ public class VilaoElfo extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.println("Elfo utilizou seu arco e flecha, causando 10 de dano!");
-		System.out.println("Dano: 10");
+		System.out.printf("|%-80s|%n", "Elfo utilizou seu arco e flecha, causando 10 de dano!");
+		System.out.printf("|%-80s|%n", "Dano: 10");
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.println("Elfo utilizou sua espada, causando 15 de dano!");
-		System.out.println("Dano: 15");
+		System.out.printf("|%-80s|%n", "Elfo utilizou sua espada, causando 15 de dano!");
+		System.out.printf("|%-80s|%n", "Dano: 15");
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		if(this.getMp()>0) {
-			System.out.println("Elfo usou luminocese, causando 25 de dano!");
-			System.out.println("Dano: 25");
+			System.out.printf("|%-80s|%n", "Elfo usou luminocese, causando 25 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 25");
 			return 25;
 		}else {
-			System.out.println("Mana insuficiente!");
+			System.out.printf("|%-80s|%n", "Mana insuficiente!");
 			return 0;
 		}
 	}
@@ -39,11 +39,11 @@ public class VilaoElfo extends Vilao{
 	@Override
 	public int ataqueEspecial2() {
 		if(this.getMp()>0) {
-			System.out.println("Elfo usou magia de luz, causando 35 de dano!");
-			System.out.println("Dano: 35");
+			System.out.printf("|%-80s|%n", "Elfo usou magia de luz, causando 35 de dano!");
+			System.out.printf("|%-80s|%n", "Dano: 35");
 			return 35;
 		}else {
-			System.out.println("Mana insuficiente!");
+			System.out.printf("|%-80s|%n", "Mana insuficiente!");
 			return 0;
 		}
 	}
@@ -51,25 +51,27 @@ public class VilaoElfo extends Vilao{
 	@Override
 	public void defesa() {
 		if(this.getMp() >= 2) {
-			System.out.println("Elfo utilizou sua Aura de Cura, aumentando seu HP em 20!");
+			System.out.printf("|%-80s|%n", "Elfo utilizou sua Aura de Cura, aumentando seu HP em 20!");
 			this.setVida(this.getVida() + 20);
 		}else {
-			System.out.println("Sem mana suficiente para recuperar vida!");
+			System.out.printf("|%-80s|%n", "Sem mana suficiente para recuperar vida!");
 		}
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.println("Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+		System.out.printf("|%-80s|%n", "Elfo recebeu dano, a vida dele é: " + this.getVida());
 	}
 
 	@Override
 	public void historia() {
-		GameLogic.telaPontilhada(50);
-		System.out.println(
-				"Conforme nosso herói começava a se aproximar da subida do vulcão, ele percebeu a presença de um capanga Elfo, com um longo cabelo negro e orelhas pontudas, ele porta uma espada e um cajado, e em suas costas havia um arco. Nosso herói aproxima-se furtivamente e inicia o confronto. Ataque!");
-		GameLogic.telaPontilhada(50);
+		GameLogic.linhaPontilhada();
+		System.out.printf("|%-80s|%n", "Conforme nosso herói começava a se aproximar da subida do vulcão, ele percebeu ");
+		System.out.printf("|%-80s|%n", "a presença de um capanga Elfo, com um longo cabelo negro e orelhas pontudas, ele");
+		System.out.printf("|%-80s|%n", "porta uma espada e um cajado, e em suas costas havia um arco. Nosso herói ");
+		System.out.printf("|%-80s|%n", "aproxima-se furtivamente e inicia o confronto. Ataque!");
+		GameLogic.linhaPontilhada();
 
 		GameLogic.pressioneUmaTecla();
 	}
