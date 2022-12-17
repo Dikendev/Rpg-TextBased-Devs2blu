@@ -12,56 +12,42 @@ public class VilaoElfo extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Elfo utilizou seu arco e flecha, causando 10 de dano!");
-		System.out.printf("|%-80s|%n", "Dano: 10");
+		System.out.printf("|%-91s|%n", "Elfo utilizou seu arco e flecha, causando "+GameLogic.VermelhoClaro+"10 de dano!"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 10"+GameLogic.Reseta);
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Elfo utilizou sua espada, causando 15 de dano!");
-		System.out.printf("|%-80s|%n", "Dano: 15");
+		System.out.printf("|%-91s|%n", "Elfo utilizou sua espada, causando "+GameLogic.VermelhoClaro+"15 de dano!"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 15"+GameLogic.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		if(this.getMp()>0) {
-			System.out.printf("|%-80s|%n", "Elfo usou luminocese, causando 25 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 25");
+			System.out.printf("|%-91s|%n", "Elfo usou luminocese, causando "+GameLogic.VermelhoClaro+"25 de dano!"+GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 25"+GameLogic.Reseta);
 			return 25;
-		}else {
-			System.out.printf("|%-80s|%n", "Mana insuficiente!");
-			return 0;
-		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		if(this.getMp()>0) {
-			System.out.printf("|%-80s|%n", "Elfo usou magia de luz, causando 35 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 35");
+			System.out.printf("|%-91s|%n", "Elfo usou magia de luz, causando "+GameLogic.VermelhoClaro+"35 de dano!"+GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 35"+GameLogic.Reseta);
 			return 35;
-		}else {
-			System.out.printf("|%-80s|%n", "Mana insuficiente!");
-			return 0;
-		}
 	}
 
 	@Override
 	public void defesa() {
-		if(this.getMp() >= 2) {
-			System.out.printf("|%-80s|%n", "Elfo utilizou sua Aura de Cura, aumentando seu HP em 20!");
-			this.setVida(this.getVida() + 20);
-		}else {
-			System.out.printf("|%-80s|%n", "Sem mana suficiente para recuperar vida!");
-		}
+			System.out.printf("|%-91s|%n", "Elfo utilizou sua Aura de Cura, aumentando sua "+GameLogic.VerdeClaro+"Vida em 20!"+GameLogic.Reseta);
+			this.setVida(this.getVida() + 20);		
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Elfo recebeu dano, a vida dele é: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Elfo recebeu dano, a vida dele é: " + GameLogic.Verde + this.getVida() +GameLogic.Reseta);
 	}
 
 	@Override

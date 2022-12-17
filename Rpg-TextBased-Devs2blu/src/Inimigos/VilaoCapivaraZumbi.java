@@ -12,27 +12,29 @@ public class VilaoCapivaraZumbi extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Ataque CHUTE");
-		System.out.printf("|%-80s|%n", "Dano de 8");
+		System.out.printf("|%-91s|%n", "Ataque "+GameLogic.VermelhoClaro+"CHUTE"+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Dano de 8"+ GameLogic.Reseta);
 		return 8;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Ataque com MORDIDA");
-		System.out.printf("|%-80s|%n", "Dano de 12");
+		System.out.printf("|%-91s|%n", "Ataque com "+GameLogic.VermelhoClaro+"MORDIDA"+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Dano de 12"+ GameLogic.Reseta);
 		return 12;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.printf("|%-80s|%n", "Grande mordida!");
+		System.out.printf("|%-91s|%n", GameLogic.VermelhoClaro+"Grande mordida!"+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Dano de 15"+ GameLogic.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.printf("|%-80s|%n", "MORDIDA COM O VIRUS DA RAIVA!");
+		System.out.printf("|%-91s|%n", GameLogic.VermelhoClaro+"MORDIDA COM O VIRUS DA RAIVA!"+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Dano de 12"+ GameLogic.Reseta);
 		return 12;
 	}
 
@@ -44,7 +46,7 @@ public class VilaoCapivaraZumbi extends Vilao{
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Capivara recebeu dano, a vida dela é: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Capivara recebeu dano, a vida dela é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 
 	@Override

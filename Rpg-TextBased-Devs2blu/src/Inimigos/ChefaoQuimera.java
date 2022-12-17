@@ -12,40 +12,30 @@ public class ChefaoQuimera extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Quimera aplicou uma mordida, causando 10 de dano!");
-		System.out.printf("|%-80s|%n", "Dano: 10");
+		System.out.printf("|%-91s|%n", "Quimera aplicou uma mordida, causando "+GameLogic.VermelhoClaro+"10 de dano!"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 10"+GameLogic.Reseta);
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Quimera aplicou um corte com suas garras, causando 10 de dano!");
-		System.out.printf("|%-80s|%n", "Dano: 15");
+		System.out.printf("|%-91s|%n", "Quimera aplicou um corte com suas garras, causando "+GameLogic.VermelhoClaro+"10 de dano!"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 15"+GameLogic.Reseta);
 		return 12;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		if(this.getMp()>0) {
-			System.out.printf("|%-80s|%n", "Quimera usou presas venenosas, causando 25 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 25");
+			System.out.printf("|%-91s|%n", "Quimera usou presas venenosas, causando "+GameLogic.VermelhoClaro+"25 de dano!"+GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 25"+GameLogic.Reseta);
 			return 25;
-		}else {
-			System.out.printf("|%-80s|%n", "Mana insuficiente!");
-			return 0;
-		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		if(this.getMp()>0) {
-			System.out.printf("|%-80s|%n", "Quimera usou sopro de fogo, causando 25 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 35");
+			System.out.printf("|%-91s|%n", "Quimera usou sopro de fogo, causando "+GameLogic.VermelhoClaro+"25 de dano!"+GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 35"+GameLogic.Reseta);
 			return 35;
-		}else {
-			System.out.printf("|%-80s|%n", "Mana insuficiente!");
-			return 0;
-		}
 	}
 
 	@Override
@@ -56,7 +46,7 @@ public class ChefaoQuimera extends Vilao{
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Quimera recebeu dano, a vida dela é: " + this.getVida());
+		System.out.printf("|%-80s|%n", "Quimera recebeu dano, a vida dela é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 	
 	@Override

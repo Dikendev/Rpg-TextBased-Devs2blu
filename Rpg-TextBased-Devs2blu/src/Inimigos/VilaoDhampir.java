@@ -12,36 +12,36 @@ public class VilaoDhampir extends Vilao {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "O Dhampir ataca com GOLPE NO ESTÔMAGO");
-		System.out.printf("|%-80s|%n", "Dano: 10");
+		System.out.printf("|%-91s|%n", "O Dhampir ataca com "+GameLogic.VermelhoClaro+"GOLPE NO ESTÔMAGO"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 10"+GameLogic.Reseta);
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "O Dhampir ataca com CHUTE FRONTAL DUPLO");
-		System.out.printf("|%-80s|%n", "Dano: 15");
+		System.out.printf("|%-91s|%n", "O Dhampir ataca com "+GameLogic.VermelhoClaro+"CHUTE FRONTAL DUPLO"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 15"+GameLogic.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.printf("|%-80s|%n", "O Dhampir ataca com ADAGA");
-		System.out.printf("|%-80s|%n", "Dano: 20");
+		System.out.printf("|%-91s|%n", "O Dhampir ataca com "+GameLogic.VermelhoClaro+"ADAGA"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 20"+GameLogic.Reseta);
 		return 20;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.printf("|%-80s|%n", "O Dhampir ataca com MORDIDA");
-		System.out.printf("|%-80s|%n", "Dano: 30");
-		setVida(getVida() + 5);
+		System.out.printf("|%-91s|%n", "O Dhampir ataca com "+GameLogic.VermelhoClaro+"MORDIDA"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 30"+GameLogic.Reseta);
+		setVida(this.getVida() + 5);
 		return 30;
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", "Dhampir se regenerou, aumentando seu HP em 25!");
+		System.out.printf("|%-91s|%n", "Dhampir se regenerou, aumentando sua "+GameLogic.VerdeClaro+"Vida em 25!"+GameLogic.Reseta);
 		this.setVida(getVida() + 25);
 	}
 
@@ -49,7 +49,7 @@ public class VilaoDhampir extends Vilao {
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Dhampir recebeu dano, a vida dele é: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Dhampir recebeu dano, a vida dele é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 
 	@Override

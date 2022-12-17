@@ -12,35 +12,35 @@ public class VilaoDuergar extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "O Duergar ataca com CHUTE");
-		System.out.printf("|%-80s|%n", "Dano: 10");
+		System.out.printf("|%-91s|%n", "O Duergar ataca com "+GameLogic.VermelhoClaro+"CHUTE"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 10"+GameLogic.Reseta);
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "O Duergar ataca com SOCO");
-		System.out.printf("|%-80s|%n", "Dano: 8");
+		System.out.printf("|%-91s|%n", "O Duergar ataca com "+GameLogic.VermelhoClaro+"SOCO"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 8"+GameLogic.Reseta);
 		return 8;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.printf("|%-80s|%n", "O Duergar ataca com ATAQUE FURTIVO");
-		System.out.printf("|%-80s|%n", "Dano: 12");
+		System.out.printf("|%-91s|%n", "O Duergar ataca com "+GameLogic.VermelhoClaro+"ATAQUE FURTIVO"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 12"+GameLogic.Reseta);
 		return 12;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.printf("|%-80s|%n", "O Duergar ataca com MACHADADA");
-		System.out.printf("|%-80s|%n", "Dano: 15");
+		System.out.printf("|%-91s|%n", "O Duergar ataca com "+GameLogic.VermelhoClaro+"MACHADADA"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 15"+GameLogic.Reseta);
 		return 15;
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", "Duergar se regenerou, aumentando seu HP em 15!");
+		System.out.printf("|%-91s|%n", "Duergar se regenerou, aumentando sua "+GameLogic.Verde+"Vida em 15!"+ GameLogic.Reseta);
 		this.setVida(getVida() + 15);
 	}
 
@@ -48,7 +48,7 @@ public class VilaoDuergar extends Vilao{
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Duergar recebeu dano, a vida dele é: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Duergar recebeu dano, a vida dele é: " + GameLogic.Verde+ this.getVida()+ GameLogic.Reseta);
 	}
 
 	@Override

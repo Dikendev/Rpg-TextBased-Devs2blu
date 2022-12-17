@@ -18,32 +18,32 @@ public class Sacerdote extends Personagem {
 	@Override
 	public int ataqueBasico() {
 		if(this.getNivel() == 1) {
-			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 15");
+			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ GameLogic.VermelhoClaro+"15 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 15"+ GameLogic.Reseta);
 			return 15;
 		}else if(this.getNivel() == 2) {
-			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 20");
+			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ GameLogic.VermelhoClaro+"20 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 20"+ GameLogic.Reseta);
 			return 20;
 		}else if(this.getNivel() == 3) {
-			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 25");
+			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ GameLogic.VermelhoClaro+"25 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 25"+ GameLogic.Reseta);
 			return 25;
 		}else if(this.getNivel() == 4) {
-			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 30");
+			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ GameLogic.VermelhoClaro+"30 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 30"+ GameLogic.Reseta);
 			return 30;
 		}else if(this.getNivel() == 5) {
-			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 35");
+			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ GameLogic.VermelhoClaro+"35 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 35"+ GameLogic.Reseta);
 			return 35;
 		}else if(this.getNivel() == 6) {
-			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 40");
+			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ GameLogic.VermelhoClaro+"40 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 40"+ GameLogic.Reseta);
 			return 40;
 		}else if(this.getNivel() == 7) {
-			System.out.printf("|%-80s|%n", "Você lança três arcos de luz, causando 10 de dano!");
-			System.out.printf("|%-80s|%n", "Dano: 45");
+			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ GameLogic.VermelhoClaro+"45 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 45"+ GameLogic.Reseta);
 			return 45;
 		}else return 0;	
 	}
@@ -52,31 +52,38 @@ public class Sacerdote extends Personagem {
 	public int ataqueBasico2() {
 		if(this.getNivel() == 1) {
 			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-			System.out.printf("|%-80s|%n", "Dano: 20");
+			System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"20 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 20"+ GameLogic.Reseta);
 			return 20;
 		}else if(this.getNivel() == 2) {
 			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-			System.out.printf("|%-80s|%n", "Dano: 25");
+			System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"25 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 25"+ GameLogic.Reseta);
 			return 25;
 		}else if(this.getNivel() == 3) {
 			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-			System.out.printf("|%-80s|%n", "Dano: 30");
+			System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"30 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 30"+ GameLogic.Reseta);
 			return 30;
 		}else if(this.getNivel() == 4) {
 			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-			System.out.printf("|%-80s|%n", "Dano: 35");
+			System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"35 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 35"+ GameLogic.Reseta);
 			return 35;
 		}else if(this.getNivel() == 5) {
 			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-			System.out.printf("|%-80s|%n", "Dano: 40");
+			System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"40 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 40"+ GameLogic.Reseta);
 			return 40;
 		}else if(this.getNivel() == 6) {
 			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-			System.out.printf("|%-80s|%n", "Dano: 45");
+			System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"45 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 45"+ GameLogic.Reseta);
 			return 45;
 		}else if(this.getNivel() == 7) {
 			System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
-			System.out.printf("|%-80s|%n", "Dano: 50");
+			System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"50 de dano!"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 50"+ GameLogic.Reseta);
 			return 50;
 		}else return 0;
 	}
@@ -86,7 +93,8 @@ public class Sacerdote extends Personagem {
 		if(this.getNivel() == 1) {
 			if (this.getMp() > 0) {
 				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-				System.out.printf("|%-80s|%n", "Dano: 30");
+				System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"30 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 30"+ GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 30;
 			} else {
@@ -96,7 +104,8 @@ public class Sacerdote extends Personagem {
 		}else if(this.getNivel() == 2) {
 			if (this.getMp() > 0) {
 				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-				System.out.printf("|%-80s|%n", "Dano: 35");
+				System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"35 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 35"+ GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 35;
 			} else {
@@ -106,7 +115,8 @@ public class Sacerdote extends Personagem {
 		}else if(this.getNivel() == 3) {
 			if (this.getMp() > 0) {
 				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-				System.out.printf("|%-80s|%n", "Dano: 40");
+				System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"40 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 40"+ GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 40;
 			} else {
@@ -116,7 +126,8 @@ public class Sacerdote extends Personagem {
 		}else if(this.getNivel() == 4) {
 			if (this.getMp() > 0) {
 				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-				System.out.printf("|%-80s|%n", "Dano: 45");
+				System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"45 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 45"+ GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 45;
 			} else {
@@ -126,7 +137,8 @@ public class Sacerdote extends Personagem {
 		}else if(this.getNivel() == 5) {
 			if (this.getMp() > 0) {
 				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-				System.out.printf("|%-80s|%n", "Dano: 50");
+				System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"50 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 50"+ GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 50;
 			} else {
@@ -136,7 +148,8 @@ public class Sacerdote extends Personagem {
 		}else if(this.getNivel() == 6) {
 			if (this.getMp() > 0) {
 				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-				System.out.printf("|%-80s|%n", "Dano: 55");
+				System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"55 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 55"+ GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 55;
 			} else {
@@ -146,7 +159,8 @@ public class Sacerdote extends Personagem {
 		}else if(this.getNivel() == 7) {
 			if (this.getMp() > 0) {
 				System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
-				System.out.printf("|%-80s|%n", "Dano: 60");
+				System.out.printf("|%-91s|%n", "causando "+ GameLogic.VermelhoClaro+"60 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 60"+ GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 60;
 			} else {
@@ -160,8 +174,8 @@ public class Sacerdote extends Personagem {
 	public int ataqueEspecial2() {
 		if(this.getNivel() == 1) {
 			if (this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 35");
+				System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ GameLogic.VermelhoClaro+"35 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 35"+GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 35;
 			} else {
@@ -170,8 +184,8 @@ public class Sacerdote extends Personagem {
 			}
 		}else if(this.getNivel() == 2) {
 			if (this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 40");
+				System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ GameLogic.VermelhoClaro+"40 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 40"+GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 40;
 			} else {
@@ -180,8 +194,8 @@ public class Sacerdote extends Personagem {
 			}
 		}else if(this.getNivel() == 3) {
 			if (this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 45");
+				System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ GameLogic.VermelhoClaro+"45 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 45"+GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 45;
 			} else {
@@ -190,8 +204,8 @@ public class Sacerdote extends Personagem {
 			}
 		}else if(this.getNivel() == 4) {
 			if (this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 50");
+				System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ GameLogic.VermelhoClaro+"50 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 50"+GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 50;
 			} else {
@@ -200,8 +214,8 @@ public class Sacerdote extends Personagem {
 			}
 		}else if(this.getNivel() == 5) {
 			if (this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 55");
+				System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ GameLogic.VermelhoClaro+"55 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 55"+GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 55;
 			} else {
@@ -210,8 +224,8 @@ public class Sacerdote extends Personagem {
 			}
 		}else if(this.getNivel() == 6) {
 			if (this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 60");
+				System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ GameLogic.VermelhoClaro+"60 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 60"+GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 60;
 			} else {
@@ -220,8 +234,8 @@ public class Sacerdote extends Personagem {
 			}
 		}else if(this.getNivel() == 7) {
 			if (this.getMp() > 0) {
-				System.out.printf("|%-80s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 65");
+				System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ GameLogic.VermelhoClaro+"65 de dano!"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 65"+GameLogic.Reseta);
 				this.setMp(this.getMp() - 1);
 				return 65;
 			} else {
@@ -237,7 +251,7 @@ public class Sacerdote extends Personagem {
 			System.out.printf("|%-91s|%n", "Você usa a oração celestial e" + GameLogic.VerdeClaro +" cura 15 pontos de vida!" + GameLogic.Reseta);
 			this.setVida(getVida() + 15);
 		} else {
-			System.out.printf("|%-80s|%n", "Sem mana suficiente para recuperar vida!");
+			System.out.printf("|%-80s|%n", "Sem "+GameLogic.CianoClaro+"mana"+GameLogic.Reseta+" suficiente para recuperar vida!");
 		}
 	}
 
@@ -253,7 +267,7 @@ public class Sacerdote extends Personagem {
 			this.setPocao(this.getPocao() - 1);
 			this.setVida(this.getVida() + 20);
 		} else {
-			System.out.printf("|%-80s|%n", "Você não possui Poções de Cura!");
+			System.out.printf("|%-80s|%n", "Você não possui "+GameLogic.VerdeClaro+"Poções de Cura!"+GameLogic.Reseta);
 		}
 		System.out.printf("|%-91s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}

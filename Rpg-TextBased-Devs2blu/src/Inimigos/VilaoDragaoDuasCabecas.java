@@ -12,57 +12,43 @@ public class VilaoDragaoDuasCabecas extends Vilao {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Dragão de Duas Cabeças ataca com Bola de Fogo: " );
-		System.out.printf("|%-80s|%n", "Dano de 15");
+		System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças ataca com "+GameLogic.VermelhoClaro+"Bola de Fogo:"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 15"+GameLogic.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Dragão de Duas Cabeças ataca com Lança Chamas: " );
-		System.out.printf("|%-80s|%n", "Dano de 18");
+		System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças ataca com "+GameLogic.VermelhoClaro+"Lança Chamas:"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 18"+GameLogic.Reseta);
 		return 18;
 	}
 
 	public int ataqueEspecial() {
-		if(this.getMp() > 0) {
-			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-80s|%n", "Dragão de Duas Cabeças usa o ataque especial Insinerar! " );
-			System.out.printf("|%-80s|%n", "Dano de 25");
+			System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças usa o ataque especial "+GameLogic.VermelhoClaro+"Insinerar!"+GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 25"+GameLogic.Reseta);
 			return 25;
-		} else {
-			System.out.printf("|%-80s|%n", "O Ataque falhou, o Dragão de Duas Cabeças não possui mana suficiente para");
-			System.out.printf("|%-80s|%n", "utilizar o ataque especial.");
-			return 0;
-		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		if(this.getMp() > 0) {
-			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-80s|%n", "Dragão de Duas Cabeças usa o ataque especial Chamas do Sol! " );
-			System.out.printf("|%-80s|%n", "Dano de 23");
+			System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças usa o ataque especial "+GameLogic.VermelhoClaro+"Chamas do Sol!"+GameLogic.Reseta );
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 23"+GameLogic.Reseta);
 			return 23;
-		} else {
-			System.out.printf("|%-80s|%n", "O Ataque falhou, o Dragão de Duas Cabeças não possui mana suficiente para");
-			System.out.printf("|%-80s|%n", "utilizar o ataque especial.");
-			return 0;
-		}
 	}
 	
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", "Dragão de Duas Cabeças usou Defesa do Fogo.");
-		System.out.printf("|%-80s|%n", "Aumenta sua própria vida em 15.");
+		System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças usou "+GameLogic.VerdeClaro+"Defesa do Fogo."+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Aumenta sua própria vida em "+GameLogic.Verde+"15."+GameLogic.Reseta);
 		this.setVida(this.getVida()+15);
-		System.out.printf("|%-80s|%n", "Dragão de Duas Cabeças possui: " + this.getVida() + "de vida");
+		System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças possui: " + GameLogic.Verde + this.getVida()+ GameLogic.Reseta + "de vida");
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Dragão de Duas Cabeças recebeu dano, a vida dele é: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças recebeu dano, a vida dele é: " + GameLogic.Verde + this.getVida()+ GameLogic.Reseta);
 	}
 
 	@Override

@@ -12,58 +12,44 @@ public class ChefaoMinotauro extends Vilao {
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Minotauro ataca com Chifres! " );
-		System.out.printf("|%-80s|%n", "Dano de 20");
+		System.out.printf("|%-91s|%n", "Minotauro ataca com "+GameLogic.VermelhoClaro+"Chifres!"+GameLogic.Reseta );
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 20"+GameLogic.Reseta);
 		return 20;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Minotauro ataca com Golpe Rápido! " );
-		System.out.printf("|%-80s|%n", "Dano de 23");
+		System.out.printf("|%-91s|%n", "Minotauro ataca com "+GameLogic.VermelhoClaro+"Golpe Rápido!"+GameLogic.Reseta );
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 23"+GameLogic.Reseta);
 		return 23;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		if(this.getMp() > 0) {
-			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-80s|%n", "Minotauro usa o ataque especial Relâmpago! " );
-			System.out.printf("|%-80s|%n", "Dano de 30");
+			System.out.printf("|%-91s|%n", "Minotauro usa o ataque especial"+GameLogic.VermelhoClaro+" Relâmpago!"+GameLogic.Reseta );
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 30"+GameLogic.Reseta);
 			return 30;
-		} else {
-			System.out.printf("|%-80s|%n", "O Ataque falhou, o Minotauro não possui mana suficiente para utilizar o");
-			System.out.printf("|%-80s|%n", "ataque especial.");
-			return 0;
-		}
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		if(this.getMp() > 0) {
-			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-80s|%n", "Minotauro usa o ataque especial Fúria do Submundo!");
-			System.out.printf("|%-80s|%n", "Dano de 40");
+			System.out.printf("|%-91s|%n", "Minotauro usa o ataque especial "+GameLogic.VermelhoClaro+"Fúria do Submundo!"+GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 40"+GameLogic.Reseta);
 			return 40;
-		} else {
-			System.out.printf("|%-80s|%n", "O Ataque falhou, o Minotauro não possui mana suficiente para utilizar o ");
-			System.out.printf("|%-80s|%n", "ataque especial.");
-			return 0;
-		}
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", "Minotauro usou Defesa do Submundo.");
-		System.out.printf("|%-80s|%n", "Aumenta sua própria vida em 20.");
+		System.out.printf("|%-91s|%n", "Minotauro usou "+GameLogic.VerdeClaro+"Defesa do Submundo."+GameLogic.Reseta);
+		System.out.printf("|%-80s|%n", "Aumenta sua própria vida em "+GameLogic.Verde+"20."+GameLogic.Reseta);
 		this.setVida(this.getVida()+20);
-		System.out.printf("|%-80s|%n", "Minotauro possui: " + this.getVida() + "de vida");
+		System.out.printf("|%-80s|%n", "Minotauro possui: " +GameLogic.Verde+ this.getVida()+ "de vida"+GameLogic.Reseta);
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Minotauro recebeu dano, a vida dele é: " + this.getVida());
+		System.out.printf("|%-80s|%n", "Minotauro recebeu dano, a vida dele é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 	
 	@Override

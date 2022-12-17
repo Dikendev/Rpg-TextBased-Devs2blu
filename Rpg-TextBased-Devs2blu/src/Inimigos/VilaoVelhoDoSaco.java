@@ -12,39 +12,41 @@ public class VilaoVelhoDoSaco extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Ataque com muita RAIVA");
-		System.out.printf("|%-80s|%n", "Dano de 8");
+		System.out.printf("|%-91s|%n", "Ataque com muita "+ GameLogic.VermelhoClaro+"RAIVA"+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 8"+ GameLogic.Reseta);
 		return 8;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Ataque FACADA");
-		System.out.printf("|%-80s|%n", "Dano de 15");
+		System.out.printf("|%-91s|%n", "Ataque "+ GameLogic.VermelhoClaro+"FACADA"+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 15"+ GameLogic.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.printf("|%-80s|%n", "Grande SACO DA MORTE! ");
+		System.out.printf("|%-91s|%n", "Grande "+ GameLogic.VermelhoClaro+"SACO DA MORTE!"+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 15"+ GameLogic.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.printf("|%-80s|%n", "ATAQUE COM FACAO !");
+		System.out.printf("|%-91s|%n", GameLogic.VermelhoClaro+"ATAQUE COM FACAO!"+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 12"+ GameLogic.Reseta);
 		return 12;
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", "USA UM ESCUDO!");
+		System.out.printf("|%-80s|%n", GameLogic.VerdeClaro+"USA UM ESCUDO!"+GameLogic.Reseta);
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Velho do Saco recebeu dano, a vida dele é: " + this.getVida());
+		System.out.printf("|%-80s|%n", "Velho do Saco recebeu dano, a vida dele é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
 	}
 
 	@Override
