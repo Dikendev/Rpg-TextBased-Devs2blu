@@ -4,10 +4,11 @@ import FantasyOne.LogicaJogo;
 
 public class VilaoVelhoDoSaco extends Vilao{
 	
-	public VilaoVelhoDoSaco(String nome, int vida) {
-		super(nome, vida);
+	public VilaoVelhoDoSaco(String nome, int vida, String tipo) {
+		super(nome, vida, tipo);
 		this.setNome(nome);
 		this.setVida(vida);
+		this.setTipo(tipo);
 	}
 
 	@Override
@@ -40,13 +41,14 @@ public class VilaoVelhoDoSaco extends Vilao{
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", LogicaJogo.VerdeClaro+"USA UM ESCUDO!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"USA UM ESCUDO, ganhando 20 de vida!"+LogicaJogo.Reseta);
+		this.setVida(this.getVida()+20);
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Velho do Saco recebeu dano, a vida dele é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "Velho do Saco recebeu dano, a vida dele é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 	}
 
 	@Override

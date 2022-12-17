@@ -4,10 +4,11 @@ import FantasyOne.LogicaJogo;
 
 public class ChefaoQuimera extends Vilao{
 	
-	public ChefaoQuimera(String nome, int vida) {
-		super(nome, vida);
+	public ChefaoQuimera(String nome, int vida, String tipo) {
+		super(nome, vida, tipo);
 		this.setNome(nome);
 		this.setVida(vida);	
+		this.setTipo(tipo);
 	}
 
 	@Override
@@ -40,7 +41,8 @@ public class ChefaoQuimera extends Vilao{
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", "Quimera usou proteção de asas! Seu ataque foi anulado.");
+		System.out.printf("|%-80s|%n", "Quimera usou proteção de asas! Gerando um escudo de "+LogicaJogo.VerdeClaro+"20 de vida!"+LogicaJogo.Reseta);
+		this.setVida(this.getVida()+20);
 	}
 
 	@Override

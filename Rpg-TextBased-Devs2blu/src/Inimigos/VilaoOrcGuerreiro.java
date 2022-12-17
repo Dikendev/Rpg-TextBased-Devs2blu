@@ -4,10 +4,11 @@ import FantasyOne.LogicaJogo;
 
 public class VilaoOrcGuerreiro extends Vilao{
 	
-	public VilaoOrcGuerreiro(String nome, int vida) {
-		super(nome, vida);
+	public VilaoOrcGuerreiro(String nome, int vida, String tipo) {
+		super(nome, vida, tipo);
 		this.setNome(nome);
 		this.setVida(vida);
+		this.setTipo(tipo);
 	}
 
 	@Override
@@ -20,16 +21,16 @@ public class VilaoOrcGuerreiro extends Vilao{
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-80s|%n", "Com seu escudo, o Orc avança em sua direção tentando lhe derrubar,");
-		System.out.printf("|%-91s|%n", "causando " + LogicaJogo.VermelhoClaro + "12 de dano!" + LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 12" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "causando " + LogicaJogo.VermelhoClaro + "10 de dano!" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 10" + LogicaJogo.Reseta);
 		return 12;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		System.out.printf("|%-80s|%n", "Em um frenesí, o Orc pula em sua direção e deferi um golpe poderoso,");
-		System.out.printf("|%-91s|%n", "causando " + LogicaJogo.VermelhoClaro + "20 de dano!" + LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n",  LogicaJogo.Vermelho + "Dano: 20" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "causando " + LogicaJogo.VermelhoClaro + "13 de dano!" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n",  LogicaJogo.Vermelho + "Dano: 13" + LogicaJogo.Reseta);
 		return 20;
 	}
 
@@ -37,13 +38,14 @@ public class VilaoOrcGuerreiro extends Vilao{
 	public int ataqueEspecial2() {
 		System.out.printf("|%-80s|%n", "Tomado por uma furia implacável, o Orc rapidamente puxa seu machado atira em sua");
 		System.out.printf("|%-91s|%n", "direção, acertando sua perna e causando" + LogicaJogo.VermelhoClaro + " 23 de dano!" + LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 23" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 14" + LogicaJogo.Reseta);
 		return 23;
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-91s|%n", "O Orc levanta seu escudo, absorvendo" + LogicaJogo.VerdeClaro + " 10 de dano!" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "O Orc levanta seu escudo, absorvendo" + LogicaJogo.VerdeClaro + " 20 de dano!" + LogicaJogo.Reseta);
+		this.setVida(this.getVida()+20);
 	}
 
 	@Override

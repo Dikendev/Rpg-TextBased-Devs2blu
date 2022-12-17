@@ -65,32 +65,34 @@ public class Personagem extends Criatura{
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 10);
 			this.setMp(getMp() + 1);
-			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + this.getNivel());
+			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 		} else if (this.getXp() >= 200 && this.getXp() < 300) {
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 12);
 			this.setMp(getMp() + 1);
-			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + this.getNivel());
+			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 		} else if (this.getXp() >= 300 && this.getXp() < 400) {
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 15);
 			this.setMp(getMp() + 1);
-			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + this.getNivel());
+			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 		} else if (this.getXp() >= 400 && this.getXp() < 500) {
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 18);
 			this.setMp(getMp() + 1);
-			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + this.getNivel());
+			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 		} else if (this.getXp() >= 500 && this.getXp() < 600) {
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 20);
 			this.setMp(getMp() + 1);
-			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + this.getNivel());
-		} else {
+			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
+		} else if(this.getXp() >=600){
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 25);
 			this.setMp(getMp() + 1);
-			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + this.getNivel());
+			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
+		} else {
+			LogicaJogo.infoPersonagem();
 		}
 	}
 	

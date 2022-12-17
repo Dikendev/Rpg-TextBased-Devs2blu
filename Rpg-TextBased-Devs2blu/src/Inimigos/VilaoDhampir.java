@@ -4,10 +4,11 @@ import FantasyOne.LogicaJogo;
 
 public class VilaoDhampir extends Vilao {
 	
-	public VilaoDhampir(String nome, int vida) {
-		super(nome, vida);
+	public VilaoDhampir(String nome, int vida, String tipo) {
+		super(nome, vida, tipo);
 		this.setNome(nome);
 		this.setVida(vida);
+		this.setTipo(tipo);
 	}
 
 	@Override
@@ -35,7 +36,8 @@ public class VilaoDhampir extends Vilao {
 	public int ataqueEspecial2() {
 		System.out.printf("|%-91s|%n", "O Dhampir ataca com "+LogicaJogo.VermelhoClaro+"MORDIDA"+LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 30"+LogicaJogo.Reseta);
-		setVida(this.getVida() + 5);
+		System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"Cura: 10"+LogicaJogo.Reseta);
+		setVida(this.getVida() + 10);
 		return 30;
 	}
 

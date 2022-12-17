@@ -67,9 +67,9 @@ public class LogicaJogo {
 		System.out.printf("|--------------------------------------------------------------------------------|%n");
 	}
 
-	public static void imprimirCabecalho(String titulo) {
+	public static void imprimirCabecalho(String titulo, int espacamento) {
 		linhaPontilhada();
-		System.out.printf("|%-91s|%n",(titulo));
+		System.out.printf("|%-"+espacamento+"s|%n",(titulo));
 		linhaPontilhada();
 
 	}
@@ -123,52 +123,52 @@ public class LogicaJogo {
 				limparConsole();
 				personagem = new BruxoCacador("Bruxo Caçador", 100, 0, 100, 2, 1, 3);
 				jogador = "Bruxo Caçador";
-				imprimirCabecalho("Você escolheu o " + AmareloSub + "Bruxo Caçador!" + Reseta);
+				imprimirCabecalho("Você escolheu o " + AmareloSub + "Bruxo Caçador!" + Reseta, 91);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 2) {
 				limparConsole();
 				personagem = new Eladrin("Eladrin", 80, 0, 100, 2, 1, 3);
 				jogador = "Eladrin";
-				imprimirCabecalho("Você escolheu a" + VerdeSub + "Eladrin!" + Reseta);
+				imprimirCabecalho("Você escolheu a" + VerdeSub + "Eladrin!" + Reseta, 91);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 3) {
 				limparConsole();
 				personagem = new MagoCinzento("Mago Cinzento", 100, 0, 100, 2, 1, 3);
 				jogador = "Mago Cinzento";
-				imprimirCabecalho("Você escolheu o " + RoxoSub + "MagoCinzento!" + Reseta);
+				imprimirCabecalho("Você escolheu o " + RoxoSub + "MagoCinzento!" + Reseta, 91);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 4) {
 				limparConsole();
 				personagem = new Sacerdote("Sacerdote", 100, 0, 100, 2, 1, 3);
 				jogador = "Sacerdote";
-				imprimirCabecalho("Você escolheu o " + CianoClaroSub + "Sacerdote!" + Reseta);
+				imprimirCabecalho("Você escolheu o " + CianoClaroSub + "Sacerdote!" + Reseta, 91);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 5) {
 				limparConsole();
 				personagem = new DeathKnight("Death Knight", 100, 0, 100, 2, 1, 3);
 				jogador = "Death Knight";
-				imprimirCabecalho("Você escolheu o " + VermelhoSub + "DeathKnight!" + Reseta);
+				imprimirCabecalho("Você escolheu o " + VermelhoSub + "DeathKnight!" + Reseta, 91);
 				introducaoJogo();
 				pressioneUmaTecla();
 			} else {
-				imprimirCabecalho("Escolha uma classe válida!");
+				imprimirCabecalho("Escolha uma classe válida!", 80);
 			}
 		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5);
 		
-		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100);
-		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 100);
-		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 100);
-		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 100);
-		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 100);
-		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 100);
-		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 100);
-		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 100);
-		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 100);
-		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 100);
+		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
+		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 100, "Vilao");
+		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 100, "Vilao");
+		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 100, "Vilao");
+		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 100, "Vilao");
+		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 100, "Vilao");
+		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 100, "Vilao");
+		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 100, "Chefe");
+		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 100, "Chefe");
+		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 100, "Chefe");
 				
 		
 		ArrayList<Vilao> inimigos = new ArrayList<Vilao>();
@@ -192,14 +192,7 @@ public class LogicaJogo {
 			
 			do {
 				linhaPontilhada();
-				System.out.printf("|%-80s|%n", "O turno é seu, selecione um ataque!");
-				System.out.printf("|%-91s|%n", VermelhoClaro + "1" + Reseta + " - Ataque básico");
-				System.out.printf("|%-91s|%n", VermelhoClaro + "2" + Reseta + " - Ataque rápido");
-				System.out.printf("|%-91s|%n", VermelhoClaro + "3" + Reseta + " - Ataque Especial");
-				System.out.printf("|%-91s|%n", VermelhoClaro + "4" + Reseta + " - Ataque Poderoso");
-				System.out.printf("|%-91s|%n", VerdeClaro + "5" + Reseta + " - Defender");
-				System.out.printf("|%-91s|%n", VerdeClaro + "6" + Reseta + " - Usar Poção");
-				System.out.printf("|%-91s|%n", BrancoSub + "7" + Reseta + " - Status do Personagem");
+				menuAtaque();
 				linhaPontilhada();
 				int ataque;
 				ataque = scanner.nextInt();
@@ -232,11 +225,14 @@ public class LogicaJogo {
 				case 7: 
 					limparConsole();
 					infoPersonagem();
+					menuAtaque();
+					ataque = scanner.nextInt();
+					break;
 				}
 				
 				linhaPontilhada();
 				System.out.printf("|%-80s|%n", "Agora é o turno do oponente!");
-				switch((int)Math.floor(Math.random() * 5) + 1) {
+				switch((int)Math.floor(Math.random() * 4) + 1) {
 				case 1: personagem.recebeDano(inimigos.get(i).ataqueBasico());
 				break;
 				case 2: personagem.recebeDano(inimigos.get(i).ataqueBasico2());
@@ -245,21 +241,26 @@ public class LogicaJogo {
 				break;
 				case 4: personagem.recebeDano(inimigos.get(i).ataqueEspecial2());
 				break;
+				case 5: inimigos.get(i).defesa();
+				break;
 				}
 				
-				//System.out.println(personagem.getVida());
-				//System.out.println(inimigos.get(i).getVida());
-				
-			}while(personagem.getVida() >= 0 && inimigos.get(i).getVida() >= 0);
+			}while(personagem.getVida() > 0 && inimigos.get(i).getVida() > 0);
 			if(inimigos.get(i).getVida()<=0) {
+				if(inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {
+					personagem.ganhoXpChefoes();
+					personagem.subirNivel();
+					personagem.setVida(personagem.getMaxVida());
+				} else {
 				personagem.ganhoXpViloes();
 				personagem.subirNivel();
 				personagem.setVida(personagem.getMaxVida());
-			}
+			}}
 			else if(personagem.getVida() <= 0) {	
 			System.out.println("Game Over, pressione uma tecla para recomeçar!");
 			comecaJogo();
 			}
+			
 		}
 		
 		
@@ -267,7 +268,7 @@ public class LogicaJogo {
 	
 // Método para mostrar informações do personagem
 	public static void infoPersonagem() {
-			imprimirCabecalho("Informações gerais:");
+			imprimirCabecalho("Informações gerais:", 80);
 			
 			    System.out.printf("|%-80s|%n", "Nome: " + personagem.getNome());
 			    System.out.printf("|%-80s|%n", "Vida: " + personagem.getVida() + "/" + personagem.getMaxVida());
@@ -276,11 +277,23 @@ public class LogicaJogo {
 			    System.out.printf("|%-80s|%n", "Quantidade de Poções: " + personagem.getPocao());
 			    System.out.printf("|%-80s|%n", "Nível:" + personagem.getNivel());
 			}
+	
+// Método para impressao do menu de ataque
+	public static void menuAtaque() {
+		System.out.printf("|%-80s|%n", "O turno é seu, selecione um ataque!");
+		System.out.printf("|%-91s|%n", VermelhoClaro + "1" + Reseta + " - Ataque básico");
+		System.out.printf("|%-91s|%n", VermelhoClaro + "2" + Reseta + " - Ataque rápido");
+		System.out.printf("|%-91s|%n", VermelhoClaro + "3" + Reseta + " - Ataque Especial");
+		System.out.printf("|%-91s|%n", VermelhoClaro + "4" + Reseta + " - Ataque Poderoso");
+		System.out.printf("|%-91s|%n", VerdeClaro + "5" + Reseta + " - Defender");
+		System.out.printf("|%-91s|%n", VerdeClaro + "6" + Reseta + " - Usar Poção");
+		System.out.printf("|%-91s|%n", BrancoSub + "7" + Reseta + " - Status do Personagem");
+	}
 
 // MENU DO JOGO
 	public static void menuJogo() {
 		limparConsole();
-		imprimirCabecalho("Menu");
+		imprimirCabecalho("Menu", 80);
 		System.out.printf("|%-80s|%n", "Escolha uma opçao");
 		linhaPontilhada();
 		System.out.printf("|%-80s|%n", "(1) Continuar: ");
@@ -299,6 +312,7 @@ public class LogicaJogo {
 		}
 	}
 
+// Método para impressão do texto introdutorio do jogo
 	public static void introducaoJogo() {
 		linhaPontilhada();
 		System.out.printf("|%-91s|%n", Ciano + "Historia" + Reseta);
@@ -312,6 +326,7 @@ public class LogicaJogo {
 		System.out.printf("|%-80s|%n", "de Ragnaros.");
 	}
 	
+// Método para impressão das descrições das classes
 	public static void descricaoPersonagens() {
 		System.out.printf("|%-91s|%n", AmareloSub + "Bruxo Caçador" + Reseta + ", pipipi popopo");
 		linhaPontilhada();

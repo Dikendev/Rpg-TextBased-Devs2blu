@@ -4,10 +4,11 @@ import FantasyOne.LogicaJogo;
 
 public class ChefaoRagnaros extends Vilao{
 
-	public ChefaoRagnaros(String nome, int vida) {
-		super(nome, vida);
+	public ChefaoRagnaros(String nome, int vida, String tipo) {
+		super(nome, vida, tipo);
 		this.setNome(nome);
 		this.setVida(vida);
+		this.setTipo(tipo);
 	}
 	
 	@Override
