@@ -1,6 +1,6 @@
 package Inimigos;
 
-import FantasyOne.GameLogic;
+import FantasyOne.LogicaJogo;
 
 public class ChefaoRagnaros extends Vilao{
 
@@ -12,35 +12,35 @@ public class ChefaoRagnaros extends Vilao{
 	
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-91s|%n", "Ragnaros bate seu Martelo de Fogo no chão, dispersando uma onda de fogo causando "+GameLogic.VermelhoClaro+"15 de dano!"+GameLogic.Reseta);
-		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 15"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Ragnaros bate seu Martelo de Fogo no chão, dispersando uma onda de fogo causando "+LogicaJogo.VermelhoClaro+"15 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 15"+LogicaJogo.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-91s|%n", "Ragnaros sopra seu Fogo Infernal na sua direção, causando "+GameLogic.VermelhoClaro+"20 de dano!"+GameLogic.Reseta);
-		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 20"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Ragnaros sopra seu Fogo Infernal na sua direção, causando "+LogicaJogo.VermelhoClaro+"20 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 20"+LogicaJogo.Reseta);
 		return 20;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.printf("|%-91s|%n", "Ragnaros invoca elementais de fogo, que atiram em sua direção causando "+GameLogic.VermelhoClaro+"35 de dano!"+GameLogic.Reseta);
-		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 35"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Ragnaros invoca elementais de fogo, que atiram em sua direção causando "+LogicaJogo.VermelhoClaro+"35 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 35"+LogicaJogo.Reseta);
 		return 35;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.printf("|%-91s|%n", "Ragnaros causa um Tsunami de Lava, causando "+GameLogic.VermelhoClaro+"40 de dano!"+GameLogic.Reseta);
-		System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano: 40"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Ragnaros causa um Tsunami de Lava, causando "+LogicaJogo.VermelhoClaro+"40 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 40"+LogicaJogo.Reseta);
 		return 40;
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-91s|%n", "Ragnaros invoca elementais de pedra e os absorve, recuperando "+GameLogic.VerdeClaro+"20 de vida!"+GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Ragnaros invoca elementais de pedra e os absorve, recuperando "+LogicaJogo.VerdeClaro+"20 de vida!"+LogicaJogo.Reseta);
 		this.setVida(getVida() + 20);
 	}
 	
@@ -48,22 +48,22 @@ public class ChefaoRagnaros extends Vilao{
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n","Ragnaros recebeu dano, a vida dele é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
+		System.out.printf("|%-80s|%n","Ragnaros recebeu dano, a vida dele é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 	}
 
 	@Override
 	public void historia() {
-		GameLogic.linhaPontilhada();
+		LogicaJogo.linhaPontilhada();
 		System.out.printf("|%-80s|%n", "Ao entrar no covil, nosso herói se depara com uma grande porta de pedra, ao ");
 		System.out.printf("|%-80s|%n", "abrir ele avista ao fundo do grande salão um gigantesco Elemental de fogo, com");
 		System.out.printf("|%-80s|%n", "Armadura e adornos em obsidiana e portando um enorme martelo incandescente. O ");
-		System.out.printf("|%-80s|%n", "calor era absurdo, esse é "+ GameLogic.VermelhoFun + "Ragnaros" + GameLogic.Reseta + ", o Senhor do Fogo. Como quem já esperava a");
+		System.out.printf("|%-80s|%n", "calor era absurdo, esse é "+ LogicaJogo.VermelhoFun + "Ragnaros" + LogicaJogo.Reseta + ", o Senhor do Fogo. Como quem já esperava a");
 		System.out.printf("|%-80s|%n", "visita ele pede que nosso Herói se aproxime e o reverencie.  Em um ato");
 		System.out.printf("|%-80s|%n", "premeditado, o herói se aproxima e no momento de reverenciar ele rapidamente");
 		System.out.printf("|%-80s|%n", "o ataca. Lute!");
-		GameLogic.linhaPontilhada();
+		LogicaJogo.linhaPontilhada();
 
-		GameLogic.pressioneUmaTecla();		
+		LogicaJogo.pressioneUmaTecla();		
 	}
 
 }

@@ -21,7 +21,7 @@ import Inimigos.VilaoDuergar;
 import Inimigos.VilaoElfo;
 import Inimigos.VilaoOrcGuerreiro;
 import Inimigos.VilaoVelhoDoSaco;
-public class GameLogic {
+public class LogicaJogo {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
 	public static Personagem personagem;
@@ -98,7 +98,7 @@ public class GameLogic {
 		System.out.printf("|%-80s|%n", "grupo de heróis agora caminha em direção a Boca do Diabo para dar fim ao");
 		System.out.printf("|%-80s|%n", "impiedoso legado do Senhor de Fogo.");
 		linhaPontilhada();
-		GameLogic.pressioneUmaTecla();
+		LogicaJogo.pressioneUmaTecla();
 
 		limparConsole();
 

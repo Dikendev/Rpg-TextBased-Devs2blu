@@ -1,6 +1,6 @@
 package Herois;
 
-import FantasyOne.GameLogic;
+import FantasyOne.LogicaJogo;
 
 public class MagoCinzento extends Personagem{
 
@@ -18,32 +18,32 @@ public class MagoCinzento extends Personagem{
 	@Override
 	public int ataqueBasico() {
 		if(this.getNivel() == 1) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.VermelhoClaro+"Magia da Noite!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 10"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 10"+ LogicaJogo.Reseta);
 			return 10;
 		}else if(this.getNivel() == 2) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.VermelhoClaro+"Magia da Noite!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 15"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+ LogicaJogo.Reseta);
 			return 15;
 		}else if(this.getNivel() == 3) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.VermelhoClaro+"Magia da Noite!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 20"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+ LogicaJogo.Reseta);
 			return 20;
 		}else if(this.getNivel() == 4) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.VermelhoClaro+"Magia da Noite!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 25"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 25"+ LogicaJogo.Reseta);
 			return 25;
 		}else if(this.getNivel() == 5) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.VermelhoClaro+"Magia da Noite!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 30"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 30"+ LogicaJogo.Reseta);
 			return 30;
 		}else if(this.getNivel() == 6) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.VermelhoClaro+"Magia da Noite!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 35"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 35"+ LogicaJogo.Reseta);
 			return 35;
 		}else if(this.getNivel() == 7) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.VermelhoClaro+"Magia da Noite!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 40"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 40"+ LogicaJogo.Reseta);
 			return 40;
 		}else return 0;
 	}
@@ -51,32 +51,32 @@ public class MagoCinzento extends Personagem{
 	@Override
 	public int ataqueBasico2() {
 		if(this.getNivel() == 1) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho +"Magia dos Druidas!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 15"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+ LogicaJogo.Reseta);
 			return 15;
 		}else if(this.getVida() == 2) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho +"Magia dos Druidas!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 20"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+ LogicaJogo.Reseta);
 			return 20;
 		}else if(this.getVida() == 3) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho +"Magia dos Druidas!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 25"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 25"+ LogicaJogo.Reseta);
 			return 25;
 		}else if(this.getVida() == 4) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho +"Magia dos Druidas!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 30"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 30"+ LogicaJogo.Reseta);
 			return 30;
 		}else if(this.getVida() == 5) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho +"Magia dos Druidas!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 35"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 35"+ LogicaJogo.Reseta);
 			return 35;
 		}else if(this.getVida() == 6) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho +"Magia dos Druidas!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 40"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 40"+ LogicaJogo.Reseta);
 			return 40;
 		}else if(this.getVida() == 7) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho +"Magia dos Druidas!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 45"+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 45"+ LogicaJogo.Reseta);
 			return 45;
 		}else return 0;
 	}
@@ -86,10 +86,10 @@ public class MagoCinzento extends Personagem{
 		if(this.getNivel() == 1) {
 			if(this.getMp() > 0) {
 				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho+"Magia Paralizante!" );
-				System.out.printf("|%-91s|%n", "Dano de 5"+ GameLogic.Reseta+" seu oponente está paralizado por uma rodada.");
+				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho+"Magia Paralizante!" );
+				System.out.printf("|%-91s|%n", "Dano de 5"+ LogicaJogo.Reseta+" seu oponente está paralizado por uma rodada.");
 				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 15"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+ LogicaJogo.Reseta);
 				return 15;
 			} else {
 				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
@@ -98,10 +98,10 @@ public class MagoCinzento extends Personagem{
 		}else if(this.getNivel() == 2) {
 			if(this.getMp() > 0) {
 				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho+"Magia Paralizante!" );
-				System.out.printf("|%-91s|%n", "Dano de 5"+ GameLogic.Reseta+" seu oponente está paralizado por uma rodada.");
+				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho+"Magia Paralizante!" );
+				System.out.printf("|%-91s|%n", "Dano de 5"+ LogicaJogo.Reseta+" seu oponente está paralizado por uma rodada.");
 				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 20"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+ LogicaJogo.Reseta);
 				return 20;
 			} else {
 				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
@@ -110,10 +110,10 @@ public class MagoCinzento extends Personagem{
 		}else if(this.getNivel() == 3) {
 			if(this.getMp() > 0) {
 				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho+"Magia Paralizante!" );
-				System.out.printf("|%-91s|%n", "Dano de 5"+ GameLogic.Reseta+" seu oponente está paralizado por uma rodada.");
+				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho+"Magia Paralizante!" );
+				System.out.printf("|%-91s|%n", "Dano de 5"+ LogicaJogo.Reseta+" seu oponente está paralizado por uma rodada.");
 				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 25"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 25"+ LogicaJogo.Reseta);
 				return 25;
 			} else {
 				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
@@ -122,10 +122,10 @@ public class MagoCinzento extends Personagem{
 		}else if(this.getNivel() == 4) {
 			if(this.getMp() > 0) {
 				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho+"Magia Paralizante!" );
-				System.out.printf("|%-91s|%n", "Dano de 5"+ GameLogic.Reseta+" seu oponente está paralizado por uma rodada.");
+				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho+"Magia Paralizante!" );
+				System.out.printf("|%-91s|%n", "Dano de 5"+ LogicaJogo.Reseta+" seu oponente está paralizado por uma rodada.");
 				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 30"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 30"+ LogicaJogo.Reseta);
 				return 30;
 			} else {
 				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
@@ -134,10 +134,10 @@ public class MagoCinzento extends Personagem{
 		}else if(this.getNivel() == 5) {
 			if(this.getMp() > 0) {
 				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho+"Magia Paralizante!" );
-				System.out.printf("|%-91s|%n", "Dano de 5"+ GameLogic.Reseta+" seu oponente está paralizado por uma rodada.");
+				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho+"Magia Paralizante!" );
+				System.out.printf("|%-91s|%n", "Dano de 5"+ LogicaJogo.Reseta+" seu oponente está paralizado por uma rodada.");
 				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 35"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 35"+ LogicaJogo.Reseta);
 				return 35;
 			} else {
 				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
@@ -146,10 +146,10 @@ public class MagoCinzento extends Personagem{
 		}else if(this.getNivel() == 6) {
 			if(this.getMp() > 0) {
 				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho+"Magia Paralizante!" );
-				System.out.printf("|%-91s|%n", "Dano de 5"+ GameLogic.Reseta+" seu oponente está paralizado por uma rodada.");
+				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho+"Magia Paralizante!" );
+				System.out.printf("|%-91s|%n", "Dano de 5"+ LogicaJogo.Reseta+" seu oponente está paralizado por uma rodada.");
 				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 40"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 40"+ LogicaJogo.Reseta);
 				return 40;
 			} else {
 				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
@@ -158,10 +158,10 @@ public class MagoCinzento extends Personagem{
 		}else if(this.getNivel() == 7) {
 			if(this.getMp() > 0) {
 				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ GameLogic.Vermelho+"Magia Paralizante!" );
-				System.out.printf("|%-91s|%n", "Dano de 5"+ GameLogic.Reseta+" seu oponente está paralizado por uma rodada.");
+				System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho+"Magia Paralizante!" );
+				System.out.printf("|%-91s|%n", "Dano de 5"+ LogicaJogo.Reseta+" seu oponente está paralizado por uma rodada.");
 				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", GameLogic.Vermelho+"Dano de 45"+ GameLogic.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 45"+ LogicaJogo.Reseta);
 				return 45;
 			} else {
 				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
@@ -175,8 +175,8 @@ public class MagoCinzento extends Personagem{
 	public int ataqueEspecial2() {
 		if(this.getMp() > 0) {
 			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-91s|%n", "Mago Cinzento utiliza a "+ GameLogic.VerdeClaro+"Magia da Cura!"+ GameLogic.Reseta );
-			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ GameLogic.Verde+"vida em 30."+ GameLogic.Reseta);
+			System.out.printf("|%-91s|%n", "Mago Cinzento utiliza a "+ LogicaJogo.VerdeClaro+"Magia da Cura!"+ LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 30."+ LogicaJogo.Reseta);
 			this.setVida(this.getVida()+30);
 			return this.getVida();
 		} else {
@@ -187,17 +187,17 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ GameLogic.VerdeClaro+"Defesa da Lua."+ GameLogic.Reseta);
-		System.out.printf("|%-91s|%n", "Aumenta sua própria "+ GameLogic.Verde+"vida em 15."+ GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 15."+ LogicaJogo.Reseta);
 		this.setVida(this.getVida()+15);
-		System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta + "de vida");
+		System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta + "de vida");
 	}
 	
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
+		System.out.printf("|%-80s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 		
 	}
 
@@ -209,19 +209,19 @@ public class MagoCinzento extends Personagem{
 			} else {
 				System.out.printf("|%-80s|%n", "Você não possui Poções de Cura!");
 			}
-			System.out.printf("|%-80s|%n", "Você usou uma Poção de Cura, a vida atual do seu personagem passou para: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
+			System.out.printf("|%-80s|%n", "Você usou uma Poção de Cura, a vida atual do seu personagem passou para: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 	}
 	
 	@Override
 	public void historia() {
-		GameLogic.linhaPontilhada();
+		LogicaJogo.linhaPontilhada();
 		System.out.println("Historia");
-		GameLogic.linhaPontilhada();
+		LogicaJogo.linhaPontilhada();
 		System.out.printf("|%-80s|%n", "É um personagem místico, ele veio da Lua com o intuito de proteger o");
 		System.out.printf("|%-80s|%n", "Vilarejo Untirade.");
 		System.out.printf("|%-80s|%n", "Seus ataques são fortes e os ataques especiais irão acabar com seus oponentes.");
 		
-		GameLogic.pressioneUmaTecla();
+		LogicaJogo.pressioneUmaTecla();
 	}
 	
 

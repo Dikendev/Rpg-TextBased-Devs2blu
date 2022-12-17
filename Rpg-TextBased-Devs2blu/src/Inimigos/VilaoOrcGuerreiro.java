@@ -1,6 +1,6 @@
 package Inimigos;
 
-import FantasyOne.GameLogic;
+import FantasyOne.LogicaJogo;
 
 public class VilaoOrcGuerreiro extends Vilao{
 	
@@ -12,55 +12,55 @@ public class VilaoOrcGuerreiro extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-91s|%n", "O Orc avança com sua espada e lhe golpeia, causando" + GameLogic.VermelhoClaro + " 8 de dano!" + GameLogic.Reseta);
-		System.out.printf("|%-91s|%n", GameLogic.Vermelho + "Dano: 8" + GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "O Orc avança com sua espada e lhe golpeia, causando" + LogicaJogo.VermelhoClaro + " 8 de dano!" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 8" + LogicaJogo.Reseta);
 		return 8;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-80s|%n", "Com seu escudo, o Orc avança em sua direção tentando lhe derrubar,");
-		System.out.printf("|%-91s|%n", "causando " + GameLogic.VermelhoClaro + "12 de dano!" + GameLogic.Reseta);
-		System.out.printf("|%-91s|%n", GameLogic.Vermelho + "Dano: 12" + GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "causando " + LogicaJogo.VermelhoClaro + "12 de dano!" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 12" + LogicaJogo.Reseta);
 		return 12;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		System.out.printf("|%-80s|%n", "Em um frenesí, o Orc pula em sua direção e deferi um golpe poderoso,");
-		System.out.printf("|%-91s|%n", "causando " + GameLogic.VermelhoClaro + "20 de dano!" + GameLogic.Reseta);
-		System.out.printf("|%-91s|%n",  GameLogic.Vermelho + "Dano: 20" + GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "causando " + LogicaJogo.VermelhoClaro + "20 de dano!" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n",  LogicaJogo.Vermelho + "Dano: 20" + LogicaJogo.Reseta);
 		return 20;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
 		System.out.printf("|%-80s|%n", "Tomado por uma furia implacável, o Orc rapidamente puxa seu machado atira em sua");
-		System.out.printf("|%-91s|%n", "direção, acertando sua perna e causando" + GameLogic.VermelhoClaro + " 23 de dano!" + GameLogic.Reseta);
-		System.out.printf("|%-91s|%n", GameLogic.Vermelho + "Dano: 23" + GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "direção, acertando sua perna e causando" + LogicaJogo.VermelhoClaro + " 23 de dano!" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 23" + LogicaJogo.Reseta);
 		return 23;
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-91s|%n", "O Orc levanta seu escudo, absorvendo" + GameLogic.VerdeClaro + " 10 de dano!" + GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "O Orc levanta seu escudo, absorvendo" + LogicaJogo.VerdeClaro + " 10 de dano!" + LogicaJogo.Reseta);
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-91s|%n", "Orc recebeu dano, a vida dele é: " + GameLogic.Verde + this.getVida() + GameLogic.Reseta);
+		System.out.printf("|%-91s|%n", "Orc recebeu dano, a vida dele é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 	}
 
 	@Override
 	public void historia() {
-		GameLogic.linhaPontilhada();
+		LogicaJogo.linhaPontilhada();
 		System.out.printf("|%-80s|%n", "Logo no inicio do seu longo trajeto, nosso herói ouve um barulho estranho vindo");
-		System.out.printf("|%-89s|%n", "de um arbusto. Ao se aproximar para verificar, um gigante " + GameLogic.VermelhoFun + "Orc Guerreiro" + GameLogic.Reseta + " salta");
+		System.out.printf("|%-89s|%n", "de um arbusto. Ao se aproximar para verificar, um gigante " + LogicaJogo.VermelhoFun + "Orc Guerreiro" + LogicaJogo.Reseta + " salta");
 		System.out.printf("|%-80s|%n", "em sua direção empunhando sua espada e escudo, pronto para batalhar!");
-		GameLogic.linhaPontilhada();
+		LogicaJogo.linhaPontilhada();
 
-		GameLogic.pressioneUmaTecla();
+		LogicaJogo.pressioneUmaTecla();
 	}
 
 }
