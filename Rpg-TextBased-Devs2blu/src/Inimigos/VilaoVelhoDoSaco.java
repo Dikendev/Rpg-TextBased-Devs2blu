@@ -14,28 +14,28 @@ public class VilaoVelhoDoSaco extends Vilao{
 	@Override
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "Ataque com muita "+ LogicaJogo.VermelhoClaro+"RAIVA"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 8"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 22"+ LogicaJogo.Reseta);
 		return 8;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-91s|%n", "Ataque "+ LogicaJogo.VermelhoClaro+"FACADA"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 26"+ LogicaJogo.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		System.out.printf("|%-91s|%n", "Grande "+ LogicaJogo.VermelhoClaro+"SACO DA MORTE!"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 34"+ LogicaJogo.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
 		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"ATAQUE COM FACAO!"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 12"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 38"+ LogicaJogo.Reseta);
 		return 12;
 	}
 

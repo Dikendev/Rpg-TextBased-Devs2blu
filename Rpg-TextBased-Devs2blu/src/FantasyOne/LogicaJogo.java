@@ -179,8 +179,8 @@ public class LogicaJogo {
 		inimigos.add(dhampir);
 		inimigos.add(quimera);
 		inimigos.add(vilaoElfo);
-		inimigos.add(velhoDoSaco);
 		inimigos.add(capivaraZumbi);
+		inimigos.add(velhoDoSaco);
 		inimigos.add(ragnaros);
 				
 		for(int i = 0; i<inimigos.size(); i++) {

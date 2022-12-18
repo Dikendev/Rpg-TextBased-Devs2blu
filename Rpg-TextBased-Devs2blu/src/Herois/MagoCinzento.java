@@ -187,10 +187,22 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 15."+ LogicaJogo.Reseta);
-		this.setVida(this.getVida()+15);
-		System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta + "de vida");
+		if(this.getNivel() == 1) {
+			System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 15."+ LogicaJogo.Reseta);
+			this.setVida(this.getVida()+15);
+			System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta + "de vida");
+		} else if(this.getNivel() >= 2 && this.getNivel() <= 4) {
+			System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 20."+ LogicaJogo.Reseta);
+			this.setVida(this.getVida()+20);
+			System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta + "de vida");
+		} else if(this.getNivel() >= 5 && this.getNivel() <= 7) {
+			System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 30."+ LogicaJogo.Reseta);
+			this.setVida(this.getVida()+30);
+			System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta + "de vida");			
+		}
 	}
 	
 

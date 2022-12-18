@@ -235,11 +235,18 @@ public class BruxoCacador extends Personagem {
 
 	@Override
 	public void defesa() {
-		if (this.getMp() >= 2) {
+		if (this.getNivel() == 1) {
+			System.out.printf("|%-91s|%n", "Bruxo caçador se regenerou, aumentando sua "+ LogicaJogo.VerdeClaro +"Vida em 15!" + LogicaJogo.Reseta);
+			this.setVida(this.getVida() + 15);
+			System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+		} else if(this.getNivel()>=2 && this.getNivel()<=4){
 			System.out.printf("|%-91s|%n", "Bruxo caçador se regenerou, aumentando sua "+ LogicaJogo.VerdeClaro +"Vida em 20!" + LogicaJogo.Reseta);
 			this.setVida(this.getVida() + 20);
-		} else {
-			System.out.printf("|%-80s|%n", "Sem mana suficiente para recuperar vida!");
+			System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+		} else if(this.getNivel()>=5 && this.getNivel()<=7){
+			System.out.printf("|%-91s|%n", "Bruxo caçador se regenerou, aumentando sua "+ LogicaJogo.VerdeClaro +"Vida em 30!" + LogicaJogo.Reseta);
+			this.setVida(this.getVida() + 30);
+			System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 		}
 	}
 

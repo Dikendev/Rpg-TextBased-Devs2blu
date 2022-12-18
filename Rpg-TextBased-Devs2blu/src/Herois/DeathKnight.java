@@ -232,8 +232,19 @@ public class DeathKnight extends Personagem{
 
 		@Override
 		public void defesa() {
-			System.out.printf("|%-91s|%n", "Você usa a Troca sanguinea e "+ LogicaJogo.VerdeClaro +"cura 10 pontos de vida!"+ LogicaJogo.Reseta);
-			this.setVida(this.getVida() + 20);
+			if(this.getNivel() == 1) {
+				System.out.printf("|%-91s|%n", "Você usa a Troca sanguinea e "+ LogicaJogo.VerdeClaro +"cura 15 pontos de vida!"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 15);	
+				System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+			} else if(this.getNivel() >= 2 && this.getNivel() <= 4) {
+				System.out.printf("|%-91s|%n", "Você usa a Troca sanguinea e "+ LogicaJogo.VerdeClaro +"cura 20 pontos de vida!"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 20);				
+				System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+			}else if(this.getNivel() >= 5 && this.getNivel() <= 7) {
+				System.out.printf("|%-91s|%n", "Você usa a Troca sanguinea e "+ LogicaJogo.VerdeClaro +"cura 30 pontos de vida!"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 30);		
+				System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+			}
 		}
 
 		@Override

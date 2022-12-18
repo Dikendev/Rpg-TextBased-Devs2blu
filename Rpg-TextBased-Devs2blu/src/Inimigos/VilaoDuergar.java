@@ -14,14 +14,14 @@ public class VilaoDuergar extends Vilao{
 	@Override
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "O Duergar ataca com "+LogicaJogo.VermelhoClaro+"CHUTE"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 10"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 8"+LogicaJogo.Reseta);
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-91s|%n", "O Duergar ataca com "+LogicaJogo.VermelhoClaro+"SOCO"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 8"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 10"+LogicaJogo.Reseta);
 		return 8;
 	}
 
