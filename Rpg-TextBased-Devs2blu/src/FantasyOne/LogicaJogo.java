@@ -2,8 +2,9 @@ package FantasyOne;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Frames.FrameAto1;
+import Frames.FrameAto101;
 import Frames.FrameBoasVindas;
+import Frames.FrameGameOver;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
 import Herois.Eladrin;
@@ -25,7 +26,7 @@ public class LogicaJogo {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
 	public static Personagem personagem;
-	public static String nome;
+	public static String nomeJogador;
 
 	// Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
@@ -33,7 +34,7 @@ public class LogicaJogo {
 	// Método para usuário escolher opção
 	public static int escolhaUsuario(String prompt, int escolhasUsuario) {
 		int input;
-
+		
 		do {
 			System.out.println(prompt);
 			try {
@@ -79,31 +80,19 @@ public class LogicaJogo {
 
 		int opcao;
 	// Chama o primeiro frame
-		FrameBoasVindas frame = new FrameBoasVindas();
-		frame.setVisible(true);
+		FrameBoasVindas frame00 = new FrameBoasVindas();
 	// Inicia o jogo	
 		linhaPontilhada();
 		System.out.printf("|%-91s|%n", ("                                  " + CianoSub + "Fantasy-One" + Reseta));
 		linhaPontilhada();
 		System.out.printf("|%-80s|%n", "                        Primeiramente, digite seu nome: ");
 		linhaPontilhada();
-		nome = scanner.next();
-		pressioneUmaTecla();
-		linhaPontilhada();
-		FrameAto1 frame2 = new FrameAto1();
-		frame2.setVisible(true);
-		System.out.printf("|%-80s|%n", "Recentemente Ragnaros despertou de seu aprisionamento e agora jura vingança a");
-		System.out.printf("|%-80s|%n", "todos os povos e raças.");
-		System.out.printf("|%-80s|%n", "Com a ameaça iminente à vida de todos, e guiado por suas honrosas índoles, um");
-		System.out.printf("|%-80s|%n", "grupo de heróis agora caminha em direção a Boca do Diabo para dar fim ao");
-		System.out.printf("|%-80s|%n", "impiedoso legado do Senhor de Fogo.");
-		linhaPontilhada();
-		LogicaJogo.pressioneUmaTecla();
+		nomeJogador = scanner.next();
+		FrameAto101 frame02 = new FrameAto101();
 
 		limparConsole();
-
 		linhaPontilhada();
-		System.out.printf("|%-91s|%n", BrancoSub + nome + Reseta + ", agora vamos escolher seu herói! Temos diversos heróis");
+		System.out.printf("|%-91s|%n", BrancoSub + nomeJogador + Reseta + ", agora vamos escolher seu herói! Temos diversos heróis");
 		System.out.printf("|%-80s|%n", "disponíveis, confira a história de cada um a seguir e escolha o que você ");
 		System.out.printf("|%-80s|%n", "achar mais interessante!");
 		linhaPontilhada();
@@ -257,8 +246,9 @@ public class LogicaJogo {
 				personagem.setVida(personagem.getMaxVida());
 			}}
 			else if(personagem.getVida() <= 0) {	
-			System.out.println("Game Over, pressione uma tecla para recomeçar!");
-			comecaJogo();
+			FrameGameOver frameOver = new FrameGameOver();
+//			System.out.println("Game Over, pressione uma tecla para recomeçar!");
+//			comecaJogo();
 			}
 			
 		}
