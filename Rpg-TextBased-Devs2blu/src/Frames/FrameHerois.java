@@ -8,7 +8,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
@@ -41,6 +43,7 @@ public class FrameHerois extends JFrame {
 	 * Create the frame.
 	 */
 	public FrameHerois() {
+		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setBounds(200, 100, 750, 500);
@@ -127,7 +130,11 @@ public class FrameHerois extends JFrame {
 		txtpnBruxoCacador.setBackground(new Color(240, 240, 240));
 		txtpnBruxoCacador.setText("O implacável caçador usar seus poderes mágicos para destruir seus inimigos.");
 		txtpnBruxoCacador.setBounds(39, 245, 110, 118);
-		contentPane.add(txtpnBruxoCacador);	
+		contentPane.add(txtpnBruxoCacador);
+		
+		StyledDocument textpBruxo = txtpnBruxoCacador.getStyledDocument();	
+		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+		textpBruxo.setParagraphAttributes(0, textpBruxo.getLength(), center, false);
 				
 		JTextPane txtpnEladrin = new JTextPane();
 		txtpnEladrin.setEditable(false);
@@ -136,6 +143,10 @@ public class FrameHerois extends JFrame {
 		txtpnEladrin.setBackground(SystemColor.menu);
 		txtpnEladrin.setBounds(173, 245, 110, 130);
 		contentPane.add(txtpnEladrin);
+
+		StyledDocument textoEladrin = txtpnEladrin.getStyledDocument();	
+		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+		textoEladrin.setParagraphAttributes(0, textoEladrin.getLength(), center, false);
 		
 		JTextPane txtpnSacerdote = new JTextPane();
 		txtpnSacerdote.setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -144,12 +155,20 @@ public class FrameHerois extends JFrame {
 		txtpnSacerdote.setBounds(456, 245, 110, 118);
 		contentPane.add(txtpnSacerdote);
 		
+		StyledDocument textoSacerdote = txtpnSacerdote.getStyledDocument();	
+		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+		textoSacerdote.setParagraphAttributes(0, textoSacerdote.getLength(), center, false);
+		
 		JTextPane txtpnDeathKnight = new JTextPane();
 		txtpnDeathKnight.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		txtpnDeathKnight.setText("O poderoso guerreiro possui uma armadura impenetrável e usa suas habilidades para se defender e destruir seus oponentes.");
 		txtpnDeathKnight.setBackground(SystemColor.menu);
 		txtpnDeathKnight.setBounds(595, 245, 110, 118);
 		contentPane.add(txtpnDeathKnight);
+		
+		StyledDocument textoDK = txtpnDeathKnight.getStyledDocument();	
+		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JButton btn = new JButton("ESCOLHER MEU HERÓI");
 		btn.setForeground(new Color(255, 255, 255));
@@ -171,5 +190,9 @@ public class FrameHerois extends JFrame {
 		txtpnPersonagemMsticoEle_1.setBackground(SystemColor.menu);
 		txtpnPersonagemMsticoEle_1.setBounds(312, 245, 110, 130);
 		contentPane.add(txtpnPersonagemMsticoEle_1);
+		
+		StyledDocument textoMago = txtpnPersonagemMsticoEle_1.getStyledDocument();	
+		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+		textoMago.setParagraphAttributes(0, textoMago.getLength(), center, false);
 	}
 }
