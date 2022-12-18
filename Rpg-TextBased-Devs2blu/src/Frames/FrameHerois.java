@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.StyleConstants;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
@@ -126,8 +127,8 @@ public class FrameHerois extends JFrame {
 		txtpnBruxoCacador.setBackground(new Color(240, 240, 240));
 		txtpnBruxoCacador.setText("O implacável caçador usar seus poderes mágicos para destruir seus inimigos.");
 		txtpnBruxoCacador.setBounds(39, 245, 110, 118);
-		contentPane.add(txtpnBruxoCacador);
-		
+		contentPane.add(txtpnBruxoCacador);	
+				
 		JTextPane txtpnEladrin = new JTextPane();
 		txtpnEladrin.setEditable(false);
 		txtpnEladrin.setFont(new Font("Tahoma", Font.PLAIN, 11));
