@@ -6,9 +6,15 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
+import FantasyOne.LogicaJogo;
+
 import javax.swing.JButton;
+
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Color;
 import java.awt.BorderLayout;
@@ -21,9 +27,10 @@ import javax.imageio.ImageIO;
 
 
 public class FrameBoasVindas extends JFrame {
-
+	
 	private JPanel contentPane;
-
+	private JTextField textField;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -65,18 +72,16 @@ public class FrameBoasVindas extends JFrame {
 		msgInstrucoes.setBounds(203, 85, 328, 23);
 		contentPane.add(msgInstrucoes);
 		
-		JButton btnNewButton = new JButton("COMEÇAR");
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(255, 0, 128));
-		btnNewButton.setVerticalAlignment(SwingConstants.TOP);
-		btnNewButton.setFont(new Font("Yu Gothic Medium", Font.BOLD, 12));
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				dispose();
-			}
-		});
-		btnNewButton.setBounds(299, 138, 136, 23);
-		contentPane.add(btnNewButton);
+//      Text field que pede o nome do jogador
+//		textField = new JTextField();
+//		contentPane.add(textField);
+//		textField.setColumns(10);
+//		textField.setBounds(200, 138, 136, 23);
+//		textField.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent evt) {
+//				setNome(textField.getText());
+//			}
+//		});
 		
 		JLabel msgVamosLa = new JLabel("Está preparado? Então vamos lá!");
 		msgVamosLa.setHorizontalAlignment(SwingConstants.CENTER);
@@ -84,10 +89,25 @@ public class FrameBoasVindas extends JFrame {
 		msgVamosLa.setBounds(203, 105, 328, 20);
 		contentPane.add(msgVamosLa);
 		
+		JButton btn = new JButton("COMEÇAR");
+		btn.setForeground(new Color(255, 255, 255));
+		btn.setBackground(new Color(255, 0, 128));
+		btn.setVerticalAlignment(SwingConstants.TOP);
+		btn.setFont(new Font("Yu Gothic Medium", Font.BOLD, 12));
+		btn.addActionListener(new ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				dispose();
+			}
+		});
+		btn.setBounds(299, 138, 136, 23);
+		contentPane.add(btn);
+		
 		JLabel lblNewLabel = new JLabel("Imagem");
 		lblNewLabel.setIcon(new ImageIcon(getClass().getResource("/Images/rpg-players.png")));
 		lblNewLabel.setBounds(187, 150, 360, 300);
 		contentPane.add(lblNewLabel);
-		
+		setVisible(true);
+	
 	}
+	
 }
