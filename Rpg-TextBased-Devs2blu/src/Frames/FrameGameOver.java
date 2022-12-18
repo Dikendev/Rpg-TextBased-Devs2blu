@@ -87,8 +87,8 @@ public class FrameGameOver extends JFrame implements ActionListener{
 @Override
 public void actionPerformed(ActionEvent evt) {
 	if(evt.getSource()==btn) {
-		LogicaJogo.comecaJogo();
 		dispose();
+		LogicaJogo.comecaJogo();
 	}
  }
 }
