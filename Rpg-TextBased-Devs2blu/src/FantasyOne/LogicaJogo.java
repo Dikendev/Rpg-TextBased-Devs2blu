@@ -2,7 +2,6 @@ package FantasyOne;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import Frames.FrameAto101;
 import Frames.FrameBoasVindas;
 import Frames.FrameGameOver;
