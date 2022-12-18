@@ -1,5 +1,6 @@
 package FantasyOne;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import Frames.FrameAto101;
@@ -38,12 +39,14 @@ public class LogicaJogo {
 		
 		do {
 			System.out.println(prompt);
+			
 			try {
 				input = Integer.parseInt(scanner.next());
 			} catch (Exception e) {
 				input = -1;
 				System.out.printf("|%-80s|%n", "Escolha um numero válido:");
 			}
+			
 		} while (input < 1 || input > escolhasUsuario);
 		return input;
 	}
@@ -58,7 +61,7 @@ public class LogicaJogo {
 	// Mótodo pressione qualquer tecla
 	public static void pressioneUmaTecla() {
 		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Pressione qualquer tecla para continuar...");
+		System.out.printf("|%-80s|%n", "Pressione qualquer tecla, em seguida pressione enter para continuar...");
 		linhaPontilhada();
 		scanner.next();
 		limparConsole();
@@ -79,7 +82,7 @@ public class LogicaJogo {
 	// Método para comecar o jogo
 	public static void comecaJogo() {
 
-		int opcao;
+		int opcao = 0;
 	// Chama o primeiro frame
 		FrameBoasVindas frame00 = new FrameBoasVindas();
 	// Inicia o jogo	
@@ -109,7 +112,11 @@ public class LogicaJogo {
 			System.out.printf("|%-80s|%n", "3 - Mago Cinzento");
 			System.out.printf("|%-80s|%n", "4 - Sacerdote");
 			System.out.printf("|%-80s|%n", "5 - Death Knight");
-			opcao = scanner.nextInt();	
+
+			Scanner sc = new Scanner(System.in);
+			
+			try {
+				opcao = sc.nextInt();	
 			
 			if (opcao == 1) {
 				limparConsole();
@@ -149,6 +156,10 @@ public class LogicaJogo {
 			} else {
 				imprimirCabecalho("Escolha uma classe válida!", 80);
 			}
+			}catch(InputMismatchException e) {
+                System.out.println("Por favor digite um número");
+                }
+			
 		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5);
 		
 		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
