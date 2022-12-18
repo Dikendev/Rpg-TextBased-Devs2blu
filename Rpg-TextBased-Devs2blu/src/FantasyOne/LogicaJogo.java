@@ -6,6 +6,7 @@ import java.util.Scanner;
 import Frames.FrameAto101;
 import Frames.FrameBoasVindas;
 import Frames.FrameGameOver;
+import Frames.FrameHerois;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
 import Herois.Eladrin;
@@ -83,6 +84,7 @@ public class LogicaJogo {
 
 		int opcao = 0;
 	// Chama o primeiro frame
+		FrameHerois frame = new FrameHerois();
 		FrameBoasVindas frame00 = new FrameBoasVindas();
 	// Inicia o jogo	
 		linhaPontilhada();
@@ -109,6 +111,7 @@ public class LogicaJogo {
 			System.out.printf("|%-80s|%n", "3 - Mago Cinzento");
 			System.out.printf("|%-80s|%n", "4 - Sacerdote");
 			System.out.printf("|%-80s|%n", "5 - Death Knight");
+
 			Scanner sc = new Scanner(System.in);
 			
 			try {
@@ -270,9 +273,11 @@ public class LogicaJogo {
 				if(inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {
 					personagem.ganhoXpChefoes();
 					personagem.subirNivel();
+					personagem.setVida(personagem.getMaxVida());
 				} else {
 				personagem.ganhoXpViloes();
 				personagem.subirNivel();
+				personagem.setVida(personagem.getMaxVida());
 			}}
 			else if(personagem.getVida() <= 0) {	
 			FrameGameOver frameOver = new FrameGameOver();

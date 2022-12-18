@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.StyleConstants;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
@@ -126,12 +127,12 @@ public class FrameHerois extends JFrame {
 		txtpnBruxoCacador.setBackground(new Color(240, 240, 240));
 		txtpnBruxoCacador.setText("O implacável caçador usar seus poderes mágicos para destruir seus inimigos.");
 		txtpnBruxoCacador.setBounds(39, 245, 110, 118);
-		contentPane.add(txtpnBruxoCacador);
-		
+		contentPane.add(txtpnBruxoCacador);	
+				
 		JTextPane txtpnEladrin = new JTextPane();
 		txtpnEladrin.setEditable(false);
 		txtpnEladrin.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		txtpnEladrin.setText("Espécie de elfo que adquire seus poderes da natureza e os modifca de acordo com as estações do ano, causando danos ao inimigo ou se curando.");
+		txtpnEladrin.setText("Espécie de elfo que adquire seus poderes da natureza e os modifica de acordo com as estações, causando danos no inimigo ou se curando.");
 		txtpnEladrin.setBackground(SystemColor.menu);
 		txtpnEladrin.setBounds(173, 245, 110, 130);
 		contentPane.add(txtpnEladrin);
@@ -163,14 +164,12 @@ public class FrameHerois extends JFrame {
 		btn.setBounds(272, 400, 189, 23);
 		contentPane.add(btn);
 		
-		JPanel panel = new JPanel();
-		FlowLayout flowLayout = (FlowLayout) panel.getLayout();
-		flowLayout.setAlignOnBaseline(true);
-		panel.setBounds(311, 245, 112, 157);
-		contentPane.add(panel);
-		
-		JTextPane txtpnPersonagemMsticoEle = new JTextPane();
-		txtpnPersonagemMsticoEle.setText("Personagem místico, ele veio da Lua com o intuito de proteger Untirade. Seus ataques são fortes e irão acabar seus oponentes.");
-		panel.add(txtpnPersonagemMsticoEle);
+		JTextPane txtpnPersonagemMsticoEle_1 = new JTextPane();
+		txtpnPersonagemMsticoEle_1.setText("Personagem místico, ele veio da Lua com o intuito de proteger Untirade. Seus ataques são fortes e irão acabar seus oponentes.");
+		txtpnPersonagemMsticoEle_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		txtpnPersonagemMsticoEle_1.setEditable(false);
+		txtpnPersonagemMsticoEle_1.setBackground(SystemColor.menu);
+		txtpnPersonagemMsticoEle_1.setBounds(312, 245, 110, 130);
+		contentPane.add(txtpnPersonagemMsticoEle_1);
 	}
 }
