@@ -23,7 +23,7 @@ public class VilaoOrcGuerreiro extends Vilao{
 		System.out.printf("|%-80s|%n", "Com seu escudo, o Orc avança em sua direção tentando lhe derrubar,");
 		System.out.printf("|%-91s|%n", "causando " + LogicaJogo.VermelhoClaro + "10 de dano!" + LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 10" + LogicaJogo.Reseta);
-		return 12;
+		return 10;
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class VilaoOrcGuerreiro extends Vilao{
 		System.out.printf("|%-80s|%n", "Em um frenesí, o Orc pula em sua direção e deferi um golpe poderoso,");
 		System.out.printf("|%-91s|%n", "causando " + LogicaJogo.VermelhoClaro + "13 de dano!" + LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n",  LogicaJogo.Vermelho + "Dano: 13" + LogicaJogo.Reseta);
-		return 20;
+		return 13;
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class VilaoOrcGuerreiro extends Vilao{
 		System.out.printf("|%-80s|%n", "Tomado por uma furia implacável, o Orc rapidamente puxa seu machado atira em sua");
 		System.out.printf("|%-91s|%n", "direção, acertando sua perna e causando" + LogicaJogo.VermelhoClaro + " 23 de dano!" + LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 14" + LogicaJogo.Reseta);
-		return 23;
+		return 14;
 	}
 
 	@Override

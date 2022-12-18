@@ -13,16 +13,16 @@ public class ChefaoRagnaros extends Vilao{
 	
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-91s|%n", "Ragnaros bate seu Martelo de Fogo no chão, dispersando uma onda de fogo causando "+LogicaJogo.VermelhoClaro+"15 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "Ragnaros bate seu Martelo de Fogo no chão, dispersando uma onda de fogo causando "+LogicaJogo.VermelhoClaro+"25 de dano!"+LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 15"+LogicaJogo.Reseta);
-		return 15;
+		return 25;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-91s|%n", "Ragnaros sopra seu Fogo Infernal na sua direção, causando "+LogicaJogo.VermelhoClaro+"20 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "Ragnaros sopra seu Fogo Infernal na sua direção, causando "+LogicaJogo.VermelhoClaro+"30 de dano!"+LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 20"+LogicaJogo.Reseta);
-		return 20;
+		return 30;
 	}
 
 	@Override

@@ -14,21 +14,21 @@ public class VilaoElfo extends Vilao{
 	@Override
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "Elfo utilizou seu arco e flecha, causando "+LogicaJogo.VermelhoClaro+"10 de dano!"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 20"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 10"+LogicaJogo.Reseta);
 		return 10;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-91s|%n", "Elfo utilizou sua espada, causando "+LogicaJogo.VermelhoClaro+"15 de dano!"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 23"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 15"+LogicaJogo.Reseta);
 		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 			System.out.printf("|%-91s|%n", "Elfo usou luminocese, causando "+LogicaJogo.VermelhoClaro+"25 de dano!"+LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 30"+LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 25"+LogicaJogo.Reseta);
 			return 25;
 	}
 

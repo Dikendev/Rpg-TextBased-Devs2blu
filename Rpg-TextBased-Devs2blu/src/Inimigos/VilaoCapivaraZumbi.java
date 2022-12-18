@@ -15,28 +15,28 @@ public class VilaoCapivaraZumbi extends Vilao{
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "Ataque "+LogicaJogo.VermelhoClaro+"CHUTE"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", "Dano de 21"+ LogicaJogo.Reseta);
-		return 8;
+		return 21;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-91s|%n", "Ataque com "+LogicaJogo.VermelhoClaro+"MORDIDA"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", "Dano de 23"+ LogicaJogo.Reseta);
-		return 12;
+		return 23;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"Grande mordida!"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", "Dano de 32"+ LogicaJogo.Reseta);
-		return 15;
+		return 32;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
 		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"MORDIDA COM O VIRUS DA RAIVA!"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", "Dano de 38"+ LogicaJogo.Reseta);
-		return 12;
+		return 38;
 	}
 
 	@Override
