@@ -103,16 +103,15 @@ public class LogicaJogo {
 		System.out.printf("|%-80s|%n", "achar mais interessante!");
 		linhaPontilhada();
 		FrameHerois frame03 = new FrameHerois();
-		//descricaoPersonagens();
 		
 		
 		do {
 			System.out.printf("|%-91s|%n", BrancoSub + "Escolha seu herói!" + Reseta);
-			System.out.printf("|%-80s|%n", "1 - Bruxo Caçador");
-			System.out.printf("|%-80s|%n", "2 - Eladrin");
-			System.out.printf("|%-80s|%n", "3 - Mago Cinzento");
-			System.out.printf("|%-80s|%n", "4 - Sacerdote");
-			System.out.printf("|%-80s|%n", "5 - Death Knight");
+			System.out.printf("|%-91s|%n", "1 -"+AmareloSub+" Bruxo Caçador"+Reseta);
+			System.out.printf("|%-91s|%n", "2 -"+VerdeSub+" Eladrin"+Reseta);
+			System.out.printf("|%-91s|%n", "3 -"+RoxoSub+" Mago Cinzento"+Reseta);
+			System.out.printf("|%-91s|%n", "4 -"+CianoClaroSub+" Sacerdote"+Reseta);
+			System.out.printf("|%-91s|%n", "5 -"+VermelhoSub+" Death Knight"+Reseta);
 
 			Scanner sc = new Scanner(System.in);
 			
@@ -124,41 +123,36 @@ public class LogicaJogo {
 				personagem = new BruxoCacador("Bruxo Caçador", 100, 0, 100, 2, 1, 3);
 				jogador = "Bruxo Caçador";
 				imprimirCabecalho("Você escolheu o " + AmareloSub + "Bruxo Caçador!" + Reseta, 91);
-				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 2) {
 				limparConsole();
 				personagem = new Eladrin("Eladrin", 80, 0, 100, 2, 1, 3);
 				jogador = "Eladrin";
 				imprimirCabecalho("Você escolheu a" + VerdeSub + "Eladrin!" + Reseta, 91);
-				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 3) {
 				limparConsole();
 				personagem = new MagoCinzento("Mago Cinzento", 100, 0, 100, 2, 1, 3);
 				jogador = "Mago Cinzento";
 				imprimirCabecalho("Você escolheu o " + RoxoSub + "MagoCinzento!" + Reseta, 91);
-				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 4) {
 				limparConsole();
 				personagem = new Sacerdote("Sacerdote", 100, 0, 100, 2, 1, 3);
 				jogador = "Sacerdote";
 				imprimirCabecalho("Você escolheu o " + CianoClaroSub + "Sacerdote!" + Reseta, 91);
-				introducaoJogo();
 				pressioneUmaTecla();
 			} else if (opcao == 5) {
 				limparConsole();
 				personagem = new DeathKnight("Death Knight", 100, 0, 100, 2, 1, 3);
 				jogador = "Death Knight";
 				imprimirCabecalho("Você escolheu o " + VermelhoSub + "DeathKnight!" + Reseta, 91);
-				introducaoJogo();
 				pressioneUmaTecla();
 			} else {
 				imprimirCabecalho("Escolha uma classe válida!", 80);
 			}
 			}catch(InputMismatchException e) {
-                System.out.println("Por favor digite um número");
+				System.out.printf("|%-80s|%n", "Por favor digite um número inteiro!");
                 }
 			
 		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5);
@@ -205,48 +199,74 @@ public class LogicaJogo {
 				case 1:
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueBasico());
-				break;
+					break;
 				case 2:
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueBasico2());
-				break;
-				case 3: 
+					break;
+				case 3:
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueEspecial());
-				break;
-				case 4: 
+					break;
+				case 4:
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueEspecial());
-				break;
-				case 5: 
+					break;
+				case 5:
 					limparConsole();
 					personagem.defesa();
-				break;
+					break;
 				case 6:
 					limparConsole();
 					personagem.usarPocao();
-				break;
-				case 7: 
+					break;
+				case 7:
 					limparConsole();
 					infoPersonagem();
 					menuAtaque();
 					ataque = scanner.nextInt();
-					if(ataque == 1) {
+					if (ataque == 1) {
 						limparConsole();
 						inimigos.get(i).recebeDano(personagem.ataqueBasico());
-					} else if(ataque == 2) {
+					} else if (ataque == 2) {
 						limparConsole();
 						inimigos.get(i).recebeDano(personagem.ataqueBasico2());
 					} else if (ataque == 3) {
 						limparConsole();
 						inimigos.get(i).recebeDano(personagem.ataqueEspecial());
-					} else if(ataque == 4) {
+					} else if (ataque == 4) {
 						limparConsole();
 						inimigos.get(i).recebeDano(personagem.ataqueEspecial());
-					} else if(ataque == 5) {
+					} else if (ataque == 5) {
 						limparConsole();
 						personagem.defesa();
-					} else if(ataque == 6) {
+					} else if (ataque == 6) {
+						limparConsole();
+						personagem.usarPocao();
+					} else {
+						break;
+					}
+					break;
+				default:
+					System.out.printf("|%-80s|%n", "Digite um número válido");
+					menuAtaque();
+					ataque = scanner.nextInt();
+					if (ataque == 1) {
+						limparConsole();
+						inimigos.get(i).recebeDano(personagem.ataqueBasico());
+					} else if (ataque == 2) {
+						limparConsole();
+						inimigos.get(i).recebeDano(personagem.ataqueBasico2());
+					} else if (ataque == 3) {
+						limparConsole();
+						inimigos.get(i).recebeDano(personagem.ataqueEspecial());
+					} else if (ataque == 4) {
+						limparConsole();
+						inimigos.get(i).recebeDano(personagem.ataqueEspecial());
+					} else if (ataque == 5) {
+						limparConsole();
+						personagem.defesa();
+					} else if (ataque == 6) {
 						limparConsole();
 						personagem.usarPocao();
 					} else {
@@ -341,45 +361,7 @@ public class LogicaJogo {
 				isRunning = false;
 		}
 	}
-
-// Método para impressão do texto introdutorio do jogo
-	public static void introducaoJogo() {
-		linhaPontilhada();
-		System.out.printf("|%-91s|%n", Ciano + "Historia" + Reseta);
-		linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Nosso Herói começa sua jornada na pacata vila de Untirade, um pequeno povoado");
-		System.out.printf("|%-80s|%n", "numa clareira não muito próxima ao Boca do Diabo, um grande vulcão adormecido,");
-		System.out.printf("|%-80s|%n", "lar do maligno Senhor do Fogo Ragnaros que recentemente despertou de seu");
-		System.out.printf("|%-80s|%n", "aprisionamento e agora jura vingança a todos os povos e raças.");
-		System.out.printf("|%-80s|%n", "Com a ameaça iminente a vida de todos, e guiado por sua honrosa índole, nosso");
-		System.out.printf("|%-80s|%n", "Herói agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado");
-		System.out.printf("|%-80s|%n", "de Ragnaros.");
-	}
 	
-// Método para impressão das descrições das classes
-	/*
-	 * public static void descricaoPersonagens() { System.out.printf("|%-91s|%n",
-	 * AmareloSub + "Bruxo Caçador" + Reseta + ", pipipi popopo");
-	 * linhaPontilhada(); System.out.printf("|%-91s|%n", VerdeSub + "Eladrin" +
-	 * Reseta +
-	 * " é uma espécie de elfo que adquire seus poderes da natureza e os ");
-	 * System.out.printf("|%-80s|%n", "modifca de acordo com as estações do ano.");
-	 * System.out.printf("|%-80s|%n",
-	 * "Todos os seus ataques buscam o poder nas estações"); linhaPontilhada();
-	 * System.out.printf("|%-91s|%n", RoxoSub + "Mago Cinzento" + Reseta +
-	 * " é um personagem místico, ele veio da Lua com o intuito de proteger");
-	 * System.out.printf("|%-80s|%n",
-	 * "o Vilarejo Untirade. Seus ataques são fortes e os ataques especiais irão acabar "
-	 * ); System.out.printf("|%-80s|%n", "seus oponentes."); linhaPontilhada();
-	 * System.out.printf("|%-91s|%n", CianoClaroSub + "Sacerdote" + Reseta +
-	 * " com sua tunica branca e seu cajado adornado em prata e ouro, usa sua ");
-	 * System.out.printf("|%-80s|%n",
-	 * "fé com e o poder divino para subjulgar seus inimigos. Usando orações ele é capaz"
-	 * ); System.out.printf("|%-80s|%n",
-	 * "de causar grande dano ou curar a sí mesmo."); linhaPontilhada();
-	 * System.out.printf("|%-91s|%n", VermelhoSub + "Death Knight" + Reseta +
-	 * ", pipipi popopo"); linhaPontilhada(); }
-	 */
 	
 	//Cores para o Console
 	public static final String Reseta = "\033[0m";
