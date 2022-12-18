@@ -92,7 +92,8 @@ public class LogicaJogo {
 		linhaPontilhada();
 		System.out.printf("|%-80s|%n", "                        Primeiramente, digite seu nome: ");
 		linhaPontilhada();
-		nomeJogador = scanner.next();
+		Scanner scan = new Scanner(System.in);
+		nomeJogador = scan.next();
 		FrameAto101 frame02 = new FrameAto101();
 
 		limparConsole();
