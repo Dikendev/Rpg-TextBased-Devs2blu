@@ -84,7 +84,6 @@ public class LogicaJogo {
 
 		int opcao = 0;
 	// Chama o primeiro frame
-		FrameHerois frame = new FrameHerois();
 		FrameBoasVindas frame00 = new FrameBoasVindas();
 	// Inicia o jogo	
 		linhaPontilhada();
@@ -96,13 +95,15 @@ public class LogicaJogo {
 		nomeJogador = scan.next();
 		FrameAto101 frame02 = new FrameAto101();
 
+		
 		limparConsole();
 		linhaPontilhada();
 		System.out.printf("|%-91s|%n", BrancoSub + nomeJogador + Reseta + ", agora vamos escolher seu herói! Temos diversos heróis");
 		System.out.printf("|%-80s|%n", "disponíveis, confira a história de cada um a seguir e escolha o que você ");
 		System.out.printf("|%-80s|%n", "achar mais interessante!");
 		linhaPontilhada();
-		descricaoPersonagens();
+		FrameHerois frame03 = new FrameHerois();
+		//descricaoPersonagens();
 		
 		
 		do {
@@ -356,24 +357,29 @@ public class LogicaJogo {
 	}
 	
 // Método para impressão das descrições das classes
-	public static void descricaoPersonagens() {
-		System.out.printf("|%-91s|%n", AmareloSub + "Bruxo Caçador" + Reseta + ", pipipi popopo");
-		linhaPontilhada();
-		System.out.printf("|%-91s|%n", VerdeSub + "Eladrin" + Reseta + " é uma espécie de elfo que adquire seus poderes da natureza e os ");
-		System.out.printf("|%-80s|%n", "modifca de acordo com as estações do ano.");
-		System.out.printf("|%-80s|%n", "Todos os seus ataques buscam o poder nas estações");
-		linhaPontilhada();
-		System.out.printf("|%-91s|%n", RoxoSub + "Mago Cinzento" + Reseta + " é um personagem místico, ele veio da Lua com o intuito de proteger");
-		System.out.printf("|%-80s|%n", "o Vilarejo Untirade. Seus ataques são fortes e os ataques especiais irão acabar ");
-		System.out.printf("|%-80s|%n", "seus oponentes.");
-		linhaPontilhada();
-		System.out.printf("|%-91s|%n", CianoClaroSub + "Sacerdote" + Reseta + " com sua tunica branca e seu cajado adornado em prata e ouro, usa sua ");
-		System.out.printf("|%-80s|%n", "fé com e o poder divino para subjulgar seus inimigos. Usando orações ele é capaz");
-		System.out.printf("|%-80s|%n", "de causar grande dano ou curar a sí mesmo.");
-		linhaPontilhada();
-		System.out.printf("|%-91s|%n", VermelhoSub + "Death Knight" + Reseta + ", pipipi popopo");
-		linhaPontilhada();
-	}
+	/*
+	 * public static void descricaoPersonagens() { System.out.printf("|%-91s|%n",
+	 * AmareloSub + "Bruxo Caçador" + Reseta + ", pipipi popopo");
+	 * linhaPontilhada(); System.out.printf("|%-91s|%n", VerdeSub + "Eladrin" +
+	 * Reseta +
+	 * " é uma espécie de elfo que adquire seus poderes da natureza e os ");
+	 * System.out.printf("|%-80s|%n", "modifca de acordo com as estações do ano.");
+	 * System.out.printf("|%-80s|%n",
+	 * "Todos os seus ataques buscam o poder nas estações"); linhaPontilhada();
+	 * System.out.printf("|%-91s|%n", RoxoSub + "Mago Cinzento" + Reseta +
+	 * " é um personagem místico, ele veio da Lua com o intuito de proteger");
+	 * System.out.printf("|%-80s|%n",
+	 * "o Vilarejo Untirade. Seus ataques são fortes e os ataques especiais irão acabar "
+	 * ); System.out.printf("|%-80s|%n", "seus oponentes."); linhaPontilhada();
+	 * System.out.printf("|%-91s|%n", CianoClaroSub + "Sacerdote" + Reseta +
+	 * " com sua tunica branca e seu cajado adornado em prata e ouro, usa sua ");
+	 * System.out.printf("|%-80s|%n",
+	 * "fé com e o poder divino para subjulgar seus inimigos. Usando orações ele é capaz"
+	 * ); System.out.printf("|%-80s|%n",
+	 * "de causar grande dano ou curar a sí mesmo."); linhaPontilhada();
+	 * System.out.printf("|%-91s|%n", VermelhoSub + "Death Knight" + Reseta +
+	 * ", pipipi popopo"); linhaPontilhada(); }
+	 */
 	
 	//Cores para o Console
 	public static final String Reseta = "\033[0m";
