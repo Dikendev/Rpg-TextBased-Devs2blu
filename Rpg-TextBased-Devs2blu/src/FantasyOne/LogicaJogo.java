@@ -216,6 +216,27 @@ public class LogicaJogo {
 					infoPersonagem();
 					menuAtaque();
 					ataque = scanner.nextInt();
+					if(ataque == 1) {
+						limparConsole();
+						inimigos.get(i).recebeDano(personagem.ataqueBasico());
+					} else if(ataque == 2) {
+						limparConsole();
+						inimigos.get(i).recebeDano(personagem.ataqueBasico2());
+					} else if (ataque == 3) {
+						limparConsole();
+						inimigos.get(i).recebeDano(personagem.ataqueEspecial());
+					} else if(ataque == 4) {
+						limparConsole();
+						inimigos.get(i).recebeDano(personagem.ataqueEspecial());
+					} else if(ataque == 5) {
+						limparConsole();
+						personagem.defesa();
+					} else if(ataque == 6) {
+						limparConsole();
+						personagem.usarPocao();
+					} else {
+						break;
+					}
 					break;
 				}
 				
@@ -239,11 +260,9 @@ public class LogicaJogo {
 				if(inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {
 					personagem.ganhoXpChefoes();
 					personagem.subirNivel();
-					personagem.setVida(personagem.getMaxVida());
 				} else {
 				personagem.ganhoXpViloes();
 				personagem.subirNivel();
-				personagem.setVida(personagem.getMaxVida());
 			}}
 			else if(personagem.getVida() <= 0) {	
 			FrameGameOver frameOver = new FrameGameOver();
@@ -265,7 +284,11 @@ public class LogicaJogo {
 			    System.out.printf("|%-80s|%n", "XP: " + personagem.getXp());
 			    System.out.printf("|%-80s|%n", "Mana:" + personagem.getMp());
 			    System.out.printf("|%-80s|%n", "Quantidade de Poções: " + personagem.getPocao());
-			    System.out.printf("|%-80s|%n", "Nível:" + personagem.getNivel());
+			    if(personagem.getNivel() == 7) {
+			    	System.out.printf("|%-89s|%n", CianoSub + "Nível Máximo" + Reseta);
+			    } else {
+			    	System.out.printf("|%-80s|%n", "Nível:" + personagem.getNivel());			    	
+			    }
 			}
 	
 // Método para impressao do menu de ataque
