@@ -20,7 +20,7 @@ public class Sacerdote extends Personagem {
 		if(this.getNivel() == 1) {
 			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ LogicaJogo.VermelhoClaro+"15 de dano!"+ LogicaJogo.Reseta);
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 15"+ LogicaJogo.Reseta);
-			return 15;
+			return 1;
 		}else if(this.getNivel() == 2) {
 			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ LogicaJogo.VermelhoClaro+"20 de dano!"+ LogicaJogo.Reseta);
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 20"+ LogicaJogo.Reseta);

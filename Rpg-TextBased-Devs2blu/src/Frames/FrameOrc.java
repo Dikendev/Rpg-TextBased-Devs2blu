@@ -60,7 +60,11 @@ public class FrameOrc extends JFrame {
 		
 		JTextPane orcTxt = new JTextPane();
 		orcTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+<<<<<<< HEAD
 		orcTxt.setText("Logo no início do seu trajeto, nosso herói ouve um barulho estranho vindo de um arbusto. \nAo se aproximar para verificar, um feio orc salta em sua direção empunhando sua espada e escudo, pronto para batalhar!");
+=======
+		orcTxt.setText("Logo no início do seu trajeto, nosso herói ouve um barulho estranho vindo de um arbusto. \nAo se aproximar para verificar, um gigante Orc salta em sua direção empunhando sua espada e escudo, pronto para batalhar!");
+>>>>>>> a1caeeb2650b9f1a6d42cb980f5777162948e574
 		orcTxt.setBackground(new Color(255, 255, 255));
 		orcTxt.setBounds(106, 70, 522, 70);
 		contentPane.add(orcTxt);
