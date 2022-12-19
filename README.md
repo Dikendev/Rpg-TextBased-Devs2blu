@@ -19,6 +19,7 @@ Esse Projeto foi produzido durante o programa +Devs2Blu, orientado pelo professo
 * __ANSI__
 * __Java AWT__
 * __Java.io__
+* __Sound Effects__
 
 ## 📈 Progressão do desenvolvimento
 
