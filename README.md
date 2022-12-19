@@ -31,7 +31,8 @@ Esse Projeto foi produzido durante o programa +Devs2Blu, orientado pelo professo
 - [x] __Modificações na padronização do console__
 - [x] __Implementação dos Frames com as Histórias__
 - [x] __Balanceamento dos heróis e inimigos__
-- [x] __Lapidações do jogo__    
+- [x] __Lapidações do jogo__  
+- [x] __Adicionar a música tema__   
 
 ## ☺ Expectativa
 
