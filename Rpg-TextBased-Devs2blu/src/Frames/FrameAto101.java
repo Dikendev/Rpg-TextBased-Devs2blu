@@ -75,7 +75,7 @@ public class FrameAto101 extends JFrame implements ActionListener {
 		contentPane.add(btn);
 		
 		JLabel imagem = new JLabel("Vulcao");
-		imagem.setIcon(new ImageIcon(FrameAto101.class.getResource("/Images/vulcao.jpg")));
+		imagem.setIcon(new ImageIcon(FrameAto101.class.getResource("/Images/vulcao.png")));
 		imagem.setBounds(197, 211, 350, 200);
 		contentPane.add(imagem);
 		

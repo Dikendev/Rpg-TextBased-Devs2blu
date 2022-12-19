@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -73,7 +72,7 @@ public class FrameVelhoSaco extends JFrame {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setIcon(new ImageIcon(FrameVelhoSaco.class.getResource("/Images/vilao-velho-saco.png")));
-		lblNewLabel.setBounds(258, 150, 217, 208);
+		lblNewLabel.setBounds(212, 150, 310, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");
