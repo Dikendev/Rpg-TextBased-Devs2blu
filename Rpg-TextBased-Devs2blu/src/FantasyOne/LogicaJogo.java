@@ -154,6 +154,7 @@ public class LogicaJogo {
 			
 		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5);
 		
+		isRunning = true;
 		sistemaCombate();
 			
 	}
@@ -322,8 +323,8 @@ public class LogicaJogo {
 				break;
 				}			
 			} else if(personagem.getVida() <= 0) {	
-				FrameGameOver frameOver = new FrameGameOver();
-
+				//FrameGameOver frameOver = new FrameGameOver();
+				menuJogoContinuar();
 			}
 		}
 	}
@@ -357,7 +358,7 @@ public class LogicaJogo {
 	}
 
 // MENU DO JOGO
-	public static void menuJogo() {
+	public static void menuJogoContinuar() {
 		limparConsole();
 		imprimirCabecalho("Menu", 80);
 		System.out.printf("|%-80s|%n", "Escolha uma opçao");
@@ -369,10 +370,13 @@ public class LogicaJogo {
 // LOOP DO JOGO
 	public static void cicloJogo() {
 		while (isRunning) {
-			menuJogo();
+			menuJogoContinuar();
 			int input = escolhaUsuario("->", 3);
-			if (input == 1)
+			if (input == 1) {
+				comecaJogo();
 				isRunning = true;
+			}
+				
 			else
 				isRunning = false;
 		}
