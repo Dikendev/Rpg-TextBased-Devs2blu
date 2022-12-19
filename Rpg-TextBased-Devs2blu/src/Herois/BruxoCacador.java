@@ -44,9 +44,7 @@ public class BruxoCacador extends Personagem {
 			System.out.printf("|%-80s|%n", "Bruxo caçador aplicou um golpe com sua espada, causando 15 de dano!");
 			System.out.printf("|%-80s|%n", "Dano: 45");
 			return 45;
-		} else
-			return 0;
-
+		} else return 0;
 	}
 
 	@Override
