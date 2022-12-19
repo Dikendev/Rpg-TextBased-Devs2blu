@@ -186,15 +186,15 @@ public class LogicaJogo {
 	public static void sistemaCombate() {
 		
 		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
-		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 100, "Vilao");
-		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 100, "Vilao");
-		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 100, "Vilao");
-		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 100, "Vilao");
-		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 100, "Vilao");
-		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 100, "Vilao");
-		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 100, "Chefe");
-		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 100, "Chefe");
-		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 100, "Chefe");
+		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 175, "Vilao");
+		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 175, "Vilao");
+		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 120, "Vilao");
+		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 155, "Vilao");
+		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 160, "Vilao");
+		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 170, "Vilao");
+		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 150, "Chefe");
+		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 160, "Chefe");
+		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 200, "Chefe");
 				
 //Adicionando os inimigos em ordem num arrayList		
 		ArrayList<Vilao> inimigos = new ArrayList<Vilao>();
