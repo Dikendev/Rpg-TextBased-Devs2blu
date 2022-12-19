@@ -5,6 +5,7 @@ import java.util.Scanner;
 import Frames.FrameAto101;
 import Frames.FrameBoasVindas;
 import Frames.FrameGameOver;
+import Frames.FrameHerois;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
 import Herois.Eladrin;
@@ -96,17 +97,6 @@ public class LogicaJogo {
 
 		
 		limparConsole();
-<<<<<<< HEAD
-		
-		
-		do {
-			System.out.printf("|%-91s|%n", BrancoSub + nomeJogador + Reseta + ", escolha seu herói!" + Reseta);
-			System.out.printf("|%-80s|%n", "1 - Bruxo Caçador");
-			System.out.printf("|%-80s|%n", "2 - Eladrin");
-			System.out.printf("|%-80s|%n", "3 - Mago Cinzento");
-			System.out.printf("|%-80s|%n", "4 - Sacerdote");
-			System.out.printf("|%-80s|%n", "5 - Death Knight");
-=======
 
 		linhaPontilhada();
 		System.out.printf("|%-91s|%n", BrancoSub + nomeJogador + Reseta + ", agora vamos escolher seu herói! Temos diversos heróis");
@@ -124,7 +114,7 @@ public class LogicaJogo {
 			System.out.printf("|%-91s|%n", "4 -"+CianoClaroSub+" Sacerdote"+Reseta);
 			System.out.printf("|%-91s|%n", "5 -"+VermelhoSub+" Death Knight"+Reseta);
 
->>>>>>> f87e221df75c98376edbdaf24821b82dbc59a17f
+
 
 			Scanner sc = new Scanner(System.in);
 			
@@ -228,7 +218,7 @@ public class LogicaJogo {
 				break;
 				case 4: 
 					limparConsole();
-					inimigos.get(i).recebeDano(personagem.ataqueEspecial());
+					inimigos.get(i).recebeDano(personagem.ataqueEspecial2());
 				break;
 				case 5: 
 					limparConsole();
@@ -254,7 +244,7 @@ public class LogicaJogo {
 						inimigos.get(i).recebeDano(personagem.ataqueEspecial());
 					} else if(ataque == 4) {
 						limparConsole();
-						inimigos.get(i).recebeDano(personagem.ataqueEspecial());
+						inimigos.get(i).recebeDano(personagem.ataqueEspecial2());
 					} else if(ataque == 5) {
 						limparConsole();
 						personagem.defesa();
@@ -263,7 +253,7 @@ public class LogicaJogo {
 						personagem.usarPocao();
 					} else {
 						break;
-					}
+					} 
 					break;
 				}
 				

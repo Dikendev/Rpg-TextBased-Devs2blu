@@ -39,7 +39,7 @@ public class VilaoOrcGuerreiro extends Vilao{
 	@Override
 	public int ataqueEspecial2() {
 		System.out.printf("|%-80s|%n", "Tomado por uma furia implacável, o Orc rapidamente puxa seu machado atira em sua");
-		System.out.printf("|%-91s|%n", "direção, acertando sua perna e causando" + LogicaJogo.VermelhoClaro + " 23 de dano!" + LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "direção, acertando sua perna e causando" + LogicaJogo.VermelhoClaro + " 14 de dano!" + LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 14" + LogicaJogo.Reseta);
 		return 14;
 	}

@@ -15,35 +15,35 @@ public class VilaoVelhoDoSaco extends Vilao{
 	@Override
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "Ataque com muita "+ LogicaJogo.VermelhoClaro+"RAIVA"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 40"+ LogicaJogo.Reseta);
-		return 40;
-	}
-
-	@Override
-	public int ataqueBasico2() {
-		System.out.printf("|%-91s|%n", "Ataque "+ LogicaJogo.VermelhoClaro+"FACADA"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 42"+ LogicaJogo.Reseta);
-		return 42;
-	}
-
-	@Override
-	public int ataqueEspecial() {
-		System.out.printf("|%-91s|%n", "Grande "+ LogicaJogo.VermelhoClaro+"SACO DA MORTE!"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 45"+ LogicaJogo.Reseta);
-		return 45;
-	}
-
-	@Override
-	public int ataqueEspecial2() {
-		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"ATAQUE COM FACAO!"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 50"+ LogicaJogo.Reseta);
 		return 50;
 	}
 
 	@Override
+	public int ataqueBasico2() {
+		System.out.printf("|%-91s|%n", "Ataque "+ LogicaJogo.VermelhoClaro+"FACADA"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 52"+ LogicaJogo.Reseta);
+		return 52;
+	}
+
+	@Override
+	public int ataqueEspecial() {
+		System.out.printf("|%-91s|%n", "Grande "+ LogicaJogo.VermelhoClaro+"SACO DA MORTE!"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 60"+ LogicaJogo.Reseta);
+		return 60;
+	}
+
+	@Override
+	public int ataqueEspecial2() {
+		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"ATAQUE COM FACAO!"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 65"+ LogicaJogo.Reseta);
+		return 65;
+	}
+
+	@Override
 	public void defesa() {
-		System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"USA UM ESCUDO, ganhando 20 de vida!"+LogicaJogo.Reseta);
-		this.setVida(this.getVida()+20);
+		System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"USA UM ESCUDO, ganhando 30 de vida!"+LogicaJogo.Reseta);
+		this.setVida(this.getVida()+30);
 	}
 
 	@Override

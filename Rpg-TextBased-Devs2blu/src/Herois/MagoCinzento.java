@@ -54,27 +54,27 @@ public class MagoCinzento extends Personagem{
 			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 18"+ LogicaJogo.Reseta);
 			return 18;
-		}else if(this.getVida() == 2) {
+		}else if(this.getNivel() == 2) {
 			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+ LogicaJogo.Reseta);
 			return 20;
-		}else if(this.getVida() == 3) {
+		}else if(this.getNivel() == 3) {
 			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 28"+ LogicaJogo.Reseta);
 			return 28;
-		}else if(this.getVida() == 4) {
+		}else if(this.getNivel() == 4) {
 			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 30"+ LogicaJogo.Reseta);
 			return 30;
-		}else if(this.getVida() == 5) {
+		}else if(this.getNivel() == 5) {
 			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 38"+ LogicaJogo.Reseta);
 			return 38;
-		}else if(this.getVida() == 6) {
+		}else if(this.getNivel() == 6) {
 			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 42"+ LogicaJogo.Reseta);
 			return 42;
-		}else if(this.getVida() == 7) {
+		}else if(this.getNivel() == 7) {
 			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 50"+ LogicaJogo.Reseta);
 			return 50;

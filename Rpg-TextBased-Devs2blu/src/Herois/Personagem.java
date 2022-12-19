@@ -67,36 +67,42 @@ public class Personagem extends Criatura{
 			this.setVida(getMaxVida());
 			this.setMp(getMp() + 1);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
+			LogicaJogo.infoPersonagem();
 		} else if (this.getXp() == 200) {
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 12);
 			this.setVida(getMaxVida());
 			this.setMp(getMp() + 1);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
+			LogicaJogo.infoPersonagem();
 		} else if (this.getXp() == 300) {
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 15);
 			this.setVida(getMaxVida());
 			this.setMp(getMp() + 2);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
+			LogicaJogo.infoPersonagem();
 		} else if (this.getXp() == 400) {
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 18);
 			this.setVida(getMaxVida());
 			this.setMp(getMp() + 2);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
+			LogicaJogo.infoPersonagem();
 		} else if (this.getXp() == 500) {
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 20);
 			this.setVida(getMaxVida());
 			this.setMp(getMp() + 2);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
+			LogicaJogo.infoPersonagem();
 		} else if(this.getXp() >=600){
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 25);
 			this.setVida(getMaxVida());
 			this.setMp(getMp() + 3);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
+			LogicaJogo.infoPersonagem();
 		} else {
 			LogicaJogo.infoPersonagem();
 		}
