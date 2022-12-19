@@ -96,6 +96,7 @@ public class LogicaJogo {
 
 		
 		limparConsole();
+<<<<<<< HEAD
 		
 		
 		do {
@@ -105,6 +106,25 @@ public class LogicaJogo {
 			System.out.printf("|%-80s|%n", "3 - Mago Cinzento");
 			System.out.printf("|%-80s|%n", "4 - Sacerdote");
 			System.out.printf("|%-80s|%n", "5 - Death Knight");
+=======
+
+		linhaPontilhada();
+		System.out.printf("|%-91s|%n", BrancoSub + nomeJogador + Reseta + ", agora vamos escolher seu herói! Temos diversos heróis");
+		System.out.printf("|%-80s|%n", "disponíveis, confira a história de cada um a seguir e escolha o que você ");
+		System.out.printf("|%-80s|%n", "achar mais interessante!");
+		linhaPontilhada();
+		FrameHerois frame03 = new FrameHerois();
+		
+		
+		do {
+			System.out.printf("|%-91s|%n", BrancoSub + "Escolha seu herói!" + Reseta);
+			System.out.printf("|%-91s|%n", "1 -"+AmareloSub+" Bruxo Caçador"+Reseta);
+			System.out.printf("|%-91s|%n", "2 -"+VerdeSub+" Eladrin"+Reseta);
+			System.out.printf("|%-91s|%n", "3 -"+RoxoSub+" Mago Cinzento"+Reseta);
+			System.out.printf("|%-91s|%n", "4 -"+CianoClaroSub+" Sacerdote"+Reseta);
+			System.out.printf("|%-91s|%n", "5 -"+VermelhoSub+" Death Knight"+Reseta);
+
+>>>>>>> f87e221df75c98376edbdaf24821b82dbc59a17f
 
 			Scanner sc = new Scanner(System.in);
 			

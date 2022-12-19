@@ -14,29 +14,29 @@ public class VilaoCapivaraZumbi extends Vilao{
 	@Override
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "Ataque "+LogicaJogo.VermelhoClaro+"CHUTE"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", "Dano de 21"+ LogicaJogo.Reseta);
-		return 21;
+		System.out.printf("|%-91s|%n", "Dano de 40"+ LogicaJogo.Reseta);
+		return 40;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-91s|%n", "Ataque com "+LogicaJogo.VermelhoClaro+"MORDIDA"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", "Dano de 23"+ LogicaJogo.Reseta);
-		return 23;
+		System.out.printf("|%-91s|%n", "Dano de 45"+ LogicaJogo.Reseta);
+		return 45;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"Grande mordida!"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", "Dano de 32"+ LogicaJogo.Reseta);
-		return 32;
+		System.out.printf("|%-91s|%n", "Dano de 50"+ LogicaJogo.Reseta);
+		return 50;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
 		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"MORDIDA COM O VIRUS DA RAIVA!"+ LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", "Dano de 38"+ LogicaJogo.Reseta);
-		return 38;
+		System.out.printf("|%-91s|%n", "Dano de 52"+ LogicaJogo.Reseta);
+		return 52;
 	}
 
 	@Override

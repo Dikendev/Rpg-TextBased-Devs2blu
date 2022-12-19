@@ -14,30 +14,30 @@ public class VilaoElfo extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-91s|%n", "Elfo utilizou seu arco e flecha, causando "+LogicaJogo.VermelhoClaro+"10 de dano!"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 10"+LogicaJogo.Reseta);
-		return 10;
+		System.out.printf("|%-91s|%n", "Elfo utilizou seu arco e flecha, causando "+LogicaJogo.VermelhoClaro+"40 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 40"+LogicaJogo.Reseta);
+		return 40;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-91s|%n", "Elfo utilizou sua espada, causando "+LogicaJogo.VermelhoClaro+"15 de dano!"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 15"+LogicaJogo.Reseta);
-		return 15;
+		System.out.printf("|%-91s|%n", "Elfo utilizou sua espada, causando "+LogicaJogo.VermelhoClaro+"45 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 45"+LogicaJogo.Reseta);
+		return 45;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-			System.out.printf("|%-91s|%n", "Elfo usou luminocese, causando "+LogicaJogo.VermelhoClaro+"25 de dano!"+LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 25"+LogicaJogo.Reseta);
-			return 25;
+			System.out.printf("|%-91s|%n", "Elfo usou luminocese, causando "+LogicaJogo.VermelhoClaro+"50 de dano!"+LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 50"+LogicaJogo.Reseta);
+			return 50;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-			System.out.printf("|%-91s|%n", "Elfo usou magia de luz, causando "+LogicaJogo.VermelhoClaro+"35 de dano!"+LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 35"+LogicaJogo.Reseta);
-			return 35;
+			System.out.printf("|%-91s|%n", "Elfo usou magia de luz, causando "+LogicaJogo.VermelhoClaro+"55 de dano!"+LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 55"+LogicaJogo.Reseta);
+			return 55;
 	}
 
 	@Override

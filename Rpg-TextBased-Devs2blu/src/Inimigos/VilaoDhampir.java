@@ -14,22 +14,22 @@ public class VilaoDhampir extends Vilao {
 	@Override
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "O Dhampir ataca com "+LogicaJogo.VermelhoClaro+"GOLPE NO ESTÔMAGO"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 15"+LogicaJogo.Reseta);
-		return 15;
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 23"+LogicaJogo.Reseta);
+		return 23;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-91s|%n", "O Dhampir ataca com "+LogicaJogo.VermelhoClaro+"CHUTE FRONTAL DUPLO"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 18"+LogicaJogo.Reseta);
-		return 18;
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 25"+LogicaJogo.Reseta);
+		return 25;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 		System.out.printf("|%-91s|%n", "O Dhampir ataca com "+LogicaJogo.VermelhoClaro+"ADAGA"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 25"+LogicaJogo.Reseta);
-		return 25;
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 30"+LogicaJogo.Reseta);
+		return 30;
 	}
 
 	@Override

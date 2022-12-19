@@ -13,30 +13,30 @@ public class ChefaoQuimera extends Vilao{
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-91s|%n", "Quimera aplicou uma mordida, causando "+LogicaJogo.VermelhoClaro+"18 de dano!"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 18"+LogicaJogo.Reseta);
-		return 18;
+		System.out.printf("|%-91s|%n", "Quimera aplicou uma mordida, causando "+LogicaJogo.VermelhoClaro+"30 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 30"+LogicaJogo.Reseta);
+		return 30;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-91s|%n", "Quimera aplicou um corte com suas garras, causando "+LogicaJogo.VermelhoClaro+"23 de dano!"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 23"+LogicaJogo.Reseta);
-		return 23;
+		System.out.printf("|%-91s|%n", "Quimera aplicou um corte com suas garras, causando "+LogicaJogo.VermelhoClaro+"35 de dano!"+LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 35"+LogicaJogo.Reseta);
+		return 35;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-			System.out.printf("|%-91s|%n", "Quimera usou presas venenosas, causando "+LogicaJogo.VermelhoClaro+"27 de dano!"+LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 27"+LogicaJogo.Reseta);
-			return 27;
+			System.out.printf("|%-91s|%n", "Quimera usou presas venenosas, causando "+LogicaJogo.VermelhoClaro+"42 de dano!"+LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 40"+LogicaJogo.Reseta);
+			return 40;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-			System.out.printf("|%-91s|%n", "Quimera usou sopro de fogo, causando "+LogicaJogo.VermelhoClaro+"33 de dano!"+LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 33"+LogicaJogo.Reseta);
-			return 33;
+			System.out.printf("|%-91s|%n", "Quimera usou sopro de fogo, causando "+LogicaJogo.VermelhoClaro+"45 de dano!"+LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 45"+LogicaJogo.Reseta);
+			return 45;
 	}
 
 	@Override
