@@ -1,6 +1,7 @@
 package Inimigos;
 
 import FantasyOne.LogicaJogo;
+import Frames.FrameElfo;
 
 public class VilaoElfo extends Vilao{
 	
@@ -53,13 +54,6 @@ public class VilaoElfo extends Vilao{
 
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Conforme nosso herói começava a se aproximar da subida do vulcão, ele percebeu ");
-		System.out.printf("|%-89s|%n", "a presença de um capanga " + LogicaJogo.VermelhoFun + "Elfo" + LogicaJogo.Reseta + ", com um longo cabelo negro e orelhas pontudas, ele");
-		System.out.printf("|%-80s|%n", "porta uma espada e um cajado, e em suas costas havia um arco. Nosso herói ");
-		System.out.printf("|%-80s|%n", "aproxima-se furtivamente e inicia o confronto. Ataque!");
-		LogicaJogo.linhaPontilhada();
-
-		LogicaJogo.pressioneUmaTecla();
+		FrameElfo fElfo = new FrameElfo();
 	}
 }

@@ -1,23 +1,24 @@
 package Frames;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
-import javax.swing.JTextPane;
-import java.awt.Color;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import java.awt.SystemColor;
 
-public class FrameOrc extends JFrame {
+public class FrameVelhoSaco extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +29,7 @@ public class FrameOrc extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameOrc frame = new FrameOrc();
+					FrameVelhoSaco frame = new FrameVelhoSaco();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +41,7 @@ public class FrameOrc extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameOrc() {
+	public FrameVelhoSaco() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -51,27 +52,27 @@ public class FrameOrc extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel orcTitle = new JLabel("De repente um Orc Guerreiro aparece!");
-		orcTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		orcTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		orcTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(orcTitle);
+		JLabel velhoSacoTitle = new JLabel("Nosso herói avista o Velho do Saco!");
+		velhoSacoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		velhoSacoTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		velhoSacoTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(velhoSacoTitle);
 		
-		JTextPane orcTxt = new JTextPane();
-		orcTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		orcTxt.setText("Logo no início do seu trajeto, nosso herói ouve um barulho estranho vindo de um arbusto. \nAo se aproximar para verificar, um gigante salta em sua direção empunhando sua espada e escudo, pronto para batalhar!");
-		orcTxt.setBackground(new Color(240, 240, 240));
-		orcTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(orcTxt);
+		JTextPane velhoSacoTxt = new JTextPane();
+		velhoSacoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		velhoSacoTxt.setText("Na entrada do vulcão, nosso herói avista um senhor de idade avançada e corcunda, que carregava nas costas um grande saco preto que parecia muito pesado. Ele balbuciava algumas palavras, parecia uma cantiga de criança. Ao se aproximar, nosso herói notou que o Velho do Saco possuía em seu olhar uma magia vil e poderosa, tomado pela fúria da magia ele parte pra cima do herói. Defenda-se!");
+		velhoSacoTxt.setBackground(new Color(240, 240, 240));
+		velhoSacoTxt.setBounds(66, 70, 602, 70);
+		contentPane.add(velhoSacoTxt);
 		
-		StyledDocument textoDK = orcTxt.getStyledDocument();	
+		StyledDocument textoDK = velhoSacoTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameOrc.class.getResource("/Images/vilao-orc.png")));
-		lblNewLabel.setBounds(258, 146, 217, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameVelhoSaco.class.getResource("/Images/vilao-velho-saco.png")));
+		lblNewLabel.setBounds(258, 150, 217, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");
@@ -96,4 +97,5 @@ public class FrameOrc extends JFrame {
 		
 		setVisible(true);
 	}
+
 }

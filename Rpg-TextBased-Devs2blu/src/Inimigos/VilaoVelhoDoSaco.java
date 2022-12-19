@@ -1,6 +1,7 @@
 package Inimigos;
 
 import FantasyOne.LogicaJogo;
+import Frames.FrameVelhoSaco;
 
 public class VilaoVelhoDoSaco extends Vilao{
 	
@@ -53,15 +54,7 @@ public class VilaoVelhoDoSaco extends Vilao{
 
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Na entrada do vulcão, nosso herói avista um senhor de idade avançada e corcunda,");
-		System.out.printf("|%-80s|%n", "que carregava nas costas um grande saco preto que parecia muito pesado. Ele");
-		System.out.printf("|%-80s|%n", "balbuciava algumas palavras, parecia uma cantiga de criança. Ao se aproximar,");
-		System.out.printf("|%-89s|%n", "nosso herói notou que o "+ LogicaJogo.VermelhoFun + "Velho do Saco" + LogicaJogo.Reseta + " possuía em seu olhar uma magia vil e");
-		System.out.printf("|%-80s|%n", "poderosa, tomado pela fúria da magia ele parte pra cima do herói. Defenda-se!");
-		LogicaJogo.linhaPontilhada();
-
-		LogicaJogo.pressioneUmaTecla();
+		FrameVelhoSaco fVelhoSaco = new FrameVelhoSaco();
 	}
 
 }

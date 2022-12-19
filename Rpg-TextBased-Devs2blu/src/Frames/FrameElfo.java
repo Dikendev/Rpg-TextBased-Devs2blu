@@ -1,23 +1,23 @@
 package Frames;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
-import javax.swing.JTextPane;
-import java.awt.Color;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import java.awt.SystemColor;
 
-public class FrameOrc extends JFrame {
+public class FrameElfo extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +28,7 @@ public class FrameOrc extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameOrc frame = new FrameOrc();
+					FrameElfo frame = new FrameElfo();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class FrameOrc extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameOrc() {
+	public FrameElfo() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -51,27 +51,27 @@ public class FrameOrc extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel orcTitle = new JLabel("De repente um Orc Guerreiro aparece!");
-		orcTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		orcTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		orcTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(orcTitle);
+		JLabel elfoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
+		elfoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		elfoTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		elfoTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(elfoTitle);
 		
-		JTextPane orcTxt = new JTextPane();
-		orcTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		orcTxt.setText("Logo no início do seu trajeto, nosso herói ouve um barulho estranho vindo de um arbusto. \nAo se aproximar para verificar, um gigante salta em sua direção empunhando sua espada e escudo, pronto para batalhar!");
-		orcTxt.setBackground(new Color(240, 240, 240));
-		orcTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(orcTxt);
+		JTextPane elfoTxt = new JTextPane();
+		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
+		elfoTxt.setBackground(new Color(240, 240, 240));
+		elfoTxt.setBounds(106, 70, 522, 70);
+		contentPane.add(elfoTxt);
 		
-		StyledDocument textoDK = orcTxt.getStyledDocument();	
+		StyledDocument textoDK = elfoTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameOrc.class.getResource("/Images/vilao-orc.png")));
-		lblNewLabel.setBounds(258, 146, 217, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
+		lblNewLabel.setBounds(267, 146, 200, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");
@@ -96,4 +96,5 @@ public class FrameOrc extends JFrame {
 		
 		setVisible(true);
 	}
+
 }
