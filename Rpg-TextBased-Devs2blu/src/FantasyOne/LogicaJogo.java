@@ -330,30 +330,17 @@ public class LogicaJogo {
 				}
 
 			}while(personagem.getVida() > 0 && inimigos.get(i).getVida() > 0);
-
-			if(inimigos.get(i).getVida()<=0) {
-				if(inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {
-					personagem.ganhoXpChefoes();
-					personagem.subirNivel();
-				} else {
-				personagem.ganhoXpViloes();
-				personagem.subirNivel();
-				}}
-				else if(personagem.getVida() <= 0) {	
-				FrameGameOver frameOver = new FrameGameOver();
-					System.out.println("Game Over, pressione uma tecla para recomeçar!");
-					comecaJogo();
-				}
-			
 			
 //Pós morte do inimigo
 			if (inimigos.get(i).getVida() <= 0) {
 				if (inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {
+					limparConsole();
 					imprimirCabecalho((CianoSub +"Você derrotou o Chefe!" + Reseta), 91);
 					personagem.ganhoXpChefoes();
 					personagem.subirNivel();
 					personagem.setVida(personagem.getMaxVida());
 				} else {
+					limparConsole();
 					imprimirCabecalho((CianoSub +"Você derrotou o Inimigo!" + Reseta), 91);
 					personagem.ganhoXpViloes();
 					personagem.subirNivel();
@@ -368,10 +355,13 @@ public class LogicaJogo {
 				break;
 				case 4:imprimirCabecalho(("Após sua batalha, você descansou próximo a um altar, " + VerdeClaro + "vida restaurada!" + Reseta), 91);
 				break;
-				}			
+				}
+				pressioneUmaTecla();
 			} else if(personagem.getVida() <= 0) {	
-				//FrameGameOver frameOver = new FrameGameOver();
-				menuJogoContinuar();
+				FrameGameOver frameOver = new FrameGameOver();
+				imprimirCabecalho((CianoSub+"Game Over, pressione uma tecla para recomeçar!"+Reseta), 91);
+				se.stop();
+				comecaJogo();
 			}
 		}
 	}
