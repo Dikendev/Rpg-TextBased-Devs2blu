@@ -53,7 +53,7 @@ public class FrameVelhoSaco extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel velhoSacoTitle = new JLabel("Nosso herói avista o Velho do Saco!");
+		JLabel velhoSacoTitle = new JLabel("Nosso herói encontra o Velho do Saco!");
 		velhoSacoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
 		velhoSacoTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		velhoSacoTitle.setBounds(87, 28, 560, 34);
@@ -61,7 +61,7 @@ public class FrameVelhoSaco extends JFrame {
 		
 		JTextPane velhoSacoTxt = new JTextPane();
 		velhoSacoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		velhoSacoTxt.setText("Na entrada do vulcão, nosso herói avista um senhor de idade avançada e corcunda, que carregava nas costas um grande saco preto que parecia muito pesado. Ele balbuciava algumas palavras, parecia uma cantiga de criança. Ao se aproximar, nosso herói notou que o Velho do Saco possuía em seu olhar uma magia vil e poderosa, tomado pela fúria da magia ele parte pra cima do herói. Defenda-se!");
+		velhoSacoTxt.setText("Na entrada do vulcão, nosso herói avista um senhor de idade avançada e corcunda, que carrega nas costas um grande saco preto que parece muito pesado. Ele balbucia algumas palavras que parecem uma cantiga de criança. Ao se aproximar, nosso herói nota que o Velho do Saco possui em seu olhar uma magia vil e poderosa. Tomado pela fúria da magia, ele parte pra cima do herói. Defenda-se!");
 		velhoSacoTxt.setBackground(new Color(255, 255, 255));
 		velhoSacoTxt.setBounds(66, 70, 602, 70);
 		contentPane.add(velhoSacoTxt);

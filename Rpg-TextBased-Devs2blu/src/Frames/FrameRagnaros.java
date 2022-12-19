@@ -61,7 +61,7 @@ public class FrameRagnaros extends JFrame {
 		
 		JTextPane ragnarosTxt = new JTextPane();
 		ragnarosTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		ragnarosTxt.setText("Ao entrar no covil, nosso herói se depara com uma grande porta de pedra, ao abrir ele avista ao fundo do grande salão um gigantesco Elemental de Fogo, com Armadura e adornos em obsidiana e portando um enorme martelo incandescente. O calor era absurdo, esse é Ragnaros, o Senhor do Fogo. Como quem já esperava a visita ele pede que nosso Herói se aproxime e o reverencie. Em um ato premeditado, o herói se aproxima e no momento de reverenciar ele rapidamente o ataca. Lute!");
+		ragnarosTxt.setText("Ao entrar no covil, nosso herói se depara com uma grande porta de pedra. Ao abrir, ele avista ao fundo do grande salão um gigantesco Elemental de Fogo, com armadura, adornos em obsidiana e portando um enorme martelo incandescente. O calor era absurdo, esse é Ragnaros, o Senhor do Fogo. Como quem já esperava a visita, ele pede que nosso Herói se aproxime e o reverencie. Em um ato premeditado, o herói se aproxima e no momento de reverenciar ele rapidamente o ataca. Lute!");
 		ragnarosTxt.setBackground(new Color(255, 255, 255));
 		ragnarosTxt.setBounds(34, 70, 666, 70);
 		contentPane.add(ragnarosTxt);

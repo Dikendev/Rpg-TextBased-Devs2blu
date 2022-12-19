@@ -61,7 +61,7 @@ public class FrameQuimera extends JFrame {
 		
 		JTextPane quimeraTxt = new JTextPane();
 		quimeraTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		quimeraTxt.setText("Pela manhã, enquanto caçava, nosso herói percebe a movimentação desesperada dos animais da floresta, como se um predador gigante estivesse se aproximando. Então ouve-se um grande rugido de leão e logo nosso herói se prepara para o confronto. Mas o que ele não esperava era que o predador viria de cima. Com asas de dragão, cabeça de leão e calda de serpente, uma Quimera pairava em sua direção, pronto para ter sua refeição. Ataque!");
+		quimeraTxt.setText("Pela manhã, enquanto caçava, nosso herói percebe a movimentação desesperada dos animais da floresta, como se um predador gigante estivesse se aproximando. Ao ouvir um rugido de leão, ele se prepara para o confronto, mas o que ele não esperava era que o predador viria de cima. Com asas de dragão, cabeça de leão e calda de serpente, uma Quimera paira em sua direção, pronto para ter sua refeição. Ataque!");
 		quimeraTxt.setBackground(new Color(255, 255, 255));
 		quimeraTxt.setBounds(61, 70, 611, 70);
 		contentPane.add(quimeraTxt);

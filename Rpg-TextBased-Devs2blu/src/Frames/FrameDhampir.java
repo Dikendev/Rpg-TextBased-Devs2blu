@@ -62,7 +62,7 @@ public class FrameDhampir extends JFrame {
 		
 		JTextPane dhampirTxt = new JTextPane();
 		dhampirTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		dhampirTxt.setText("Ao anoitecer, nosso herói busca abrigo em uma caverna. Ao entrar mais fundo, ele percebe que não está sozinho, ouve alguns passos leves e um vulto em direção a escuridão. Ao se aproximar, surge das sombras um Dhampir, que avança em direção ao nosso herói pronto para provar de seu sangue. Batalhe por sua vida!");
+		dhampirTxt.setText("Ao anoitecer, nosso herói busca abrigo em uma caverna. Ao entrar mais fundo, ele percebe que não está sozinho ao ouvir alguns passos leves e um vulto em direção a escuridão. Ao se aproximar, surge das sombras um Dhampir, que avança em direção ao nosso herói pronto para provar de seu sangue. Batalhe por sua vida!");
 		dhampirTxt.setBackground(new Color(255, 255, 255));
 		dhampirTxt.setBounds(114, 70, 506, 70);
 		contentPane.add(dhampirTxt);

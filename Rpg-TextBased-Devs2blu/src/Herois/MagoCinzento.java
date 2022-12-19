@@ -201,13 +201,30 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public void usarPocao() {
-			if(this.getPocao() > 0) {
-				this.setPocao(this.getPocao() - 1);			
-				this.setVida(this.getVida() + 50);
+		if (this.getNivel() == 1) {
+			if (this.getPocao() > 0) {
+				this.setPocao(this.getPocao() - 1);
+				this.setVida(this.getVida() + 20);
 			} else {
-				System.out.printf("|%-80s|%n", "Você não possui Poções de Cura!");
+				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
 			}
-			System.out.printf("|%-80s|%n", "Você usou uma Poção de Cura, a vida atual do seu personagem passou para: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+		} else if (this.getNivel() >= 2 && this.getNivel() <= 4) {
+			if (this.getPocao() > 0) {
+				this.setPocao(this.getPocao() - 1);
+				this.setVida(this.getVida() + 45);
+			} else {
+				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
+			}
+		} else if (this.getNivel() >= 5 && this.getNivel() <= 7) {
+			if (this.getPocao() > 0) {
+				this.setPocao(this.getPocao() - 1);
+				this.setVida(this.getVida() + 20);
+			} else {
+				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
+			}
+		}
+		System.out.printf("|%-91s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + LogicaJogo.Verde
+				+ this.getVida() + LogicaJogo.Reseta);
 	}
 	
 	@Override

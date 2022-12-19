@@ -26,13 +26,14 @@ import Inimigos.VilaoDuergar;
 import Inimigos.VilaoElfo;
 import Inimigos.VilaoOrcGuerreiro;
 import Inimigos.VilaoVelhoDoSaco;
+import Sounds.SoundEffects;
 
 public class LogicaJogo {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
 	public static Personagem personagem;
 	public static String nomeJogador;
-
+	public static SoundEffects se = new SoundEffects();
 // Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
 	
@@ -92,6 +93,8 @@ public class LogicaJogo {
 		FrameBoasVindas frame00 = new FrameBoasVindas();
 // Inicia o jogo	
 		ascci();
+		se.setFile(".//src//soundBack.wav");
+		se.play();
 		System.out.println("");
 		linhaPontilhada();
 		
@@ -103,7 +106,7 @@ public class LogicaJogo {
 		nomeJogador = scan.next();
 // Chama o segundo frame		
 		FrameAto101 frame02 = new FrameAto101();
-
+		
 		
 		limparConsole();
 		
@@ -172,11 +175,11 @@ public class LogicaJogo {
 	
 	public static void ascci() {
 		try {
-			FileReader reader = new FileReader("./src/art.txt");
+			FileReader reader = new FileReader("./src/images/art.txt");
 			int data = reader.read();
 			while (data != -1) {
 				System.out.print((char)data);
-				data = reader.read();
+				data = reader.read();	
 			}
 			reader.close();
 		} catch (FileNotFoundException e) {
@@ -190,15 +193,15 @@ public class LogicaJogo {
 	public static void sistemaCombate() {
 		
 		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
-		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 100, "Vilao");
-		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 100, "Vilao");
-		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 100, "Vilao");
-		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 100, "Vilao");
-		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 100, "Vilao");
-		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 100, "Vilao");
-		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 100, "Chefe");
-		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 100, "Chefe");
-		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 100, "Chefe");
+		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 175, "Vilao");
+		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 175, "Vilao");
+		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 120, "Vilao");
+		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 155, "Vilao");
+		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 160, "Vilao");
+		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 170, "Vilao");
+		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 150, "Chefe");
+		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 160, "Chefe");
+		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 200, "Chefe");
 				
 //Adicionando os inimigos em ordem num arrayList		
 		ArrayList<Vilao> inimigos = new ArrayList<Vilao>();
@@ -326,7 +329,23 @@ public class LogicaJogo {
 					break;
 				}
 
-			} while (personagem.getVida() > 0 && inimigos.get(i).getVida() > 0);
+				}while(personagem.getVida() > 0 && inimigos.get(i).getVida() > 0);
+				
+			if(inimigos.get(i).getVida()<=0) {
+				if(inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {
+					personagem.ganhoXpChefoes();
+					personagem.subirNivel();
+				} else {
+				personagem.ganhoXpViloes();
+				personagem.subirNivel();
+				}}
+				else if(personagem.getVida() <= 0) {	
+				FrameGameOver frameOver = new FrameGameOver();
+					System.out.println("Game Over, pressione uma tecla para recomeçar!");
+					comecaJogo();
+				}
+			
+			
 //Pós morte do inimigo
 			if (inimigos.get(i).getVida() <= 0) {
 				if (inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {

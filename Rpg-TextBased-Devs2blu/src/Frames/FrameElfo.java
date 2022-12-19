@@ -60,7 +60,7 @@ public class FrameElfo extends JFrame {
 		
 		JTextPane elfoTxt = new JTextPane();
 		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
+		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica.\nEle se aproxima furtivamente e inicia o confronto. Ataque!");
 		elfoTxt.setBackground(new Color(255, 255, 255));
 		elfoTxt.setBounds(106, 70, 522, 70);
 		contentPane.add(elfoTxt);
@@ -72,7 +72,7 @@ public class FrameElfo extends JFrame {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
-		lblNewLabel.setBounds(267, 146, 200, 208);
+		lblNewLabel.setBounds(267, 131, 200, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");
