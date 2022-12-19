@@ -97,17 +97,10 @@ public class LogicaJogo {
 
 		
 		limparConsole();
-
-		linhaPontilhada();
-		System.out.printf("|%-91s|%n", BrancoSub + nomeJogador + Reseta + ", agora vamos escolher seu herói! Temos diversos heróis");
-		System.out.printf("|%-80s|%n", "disponíveis, confira a história de cada um a seguir e escolha o que você ");
-		System.out.printf("|%-80s|%n", "achar mais interessante!");
-		linhaPontilhada();
-		FrameHerois frame03 = new FrameHerois();
 		
 		
 		do {
-			System.out.printf("|%-91s|%n", BrancoSub + "Escolha seu herói!" + Reseta);
+			System.out.printf("|%-91s|%n", BrancoSub + nomeJogador + "Escolha seu herói!\n" + Reseta);
 			System.out.printf("|%-91s|%n", "1 -"+AmareloSub+" Bruxo Caçador"+Reseta);
 			System.out.printf("|%-91s|%n", "2 -"+VerdeSub+" Eladrin"+Reseta);
 			System.out.printf("|%-91s|%n", "3 -"+RoxoSub+" Mago Cinzento"+Reseta);
