@@ -10,7 +10,7 @@ public class Eladrin extends Personagem {
 		this.setXp(xp);
 		this.setVida(vida);
 		this.setPocao(pocao);
-		this.setNivel(0);
+		this.setNivel(nivel);
 		this.setMp(mp);
 	}	
 	
