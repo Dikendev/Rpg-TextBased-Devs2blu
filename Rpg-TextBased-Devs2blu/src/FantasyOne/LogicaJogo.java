@@ -158,6 +158,13 @@ public class LogicaJogo {
 			
 		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5);
 		
+		sistemaCombate();
+		
+		
+	}
+	
+	public static void sistemaCombate() {
+		
 		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
 		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 100, "Vilao");
 		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 100, "Vilao");
@@ -280,13 +287,12 @@ public class LogicaJogo {
 			FrameGameOver frameOver = new FrameGameOver();
 //			System.out.println("Game Over, pressione uma tecla para recomeçar!");
 //			comecaJogo();
+			
 			}
 			
 		}
-		
-		
 	}
-	
+	 
 // Método para mostrar informações do personagem
 	public static void infoPersonagem() {
 			imprimirCabecalho("Informações gerais:", 80);
