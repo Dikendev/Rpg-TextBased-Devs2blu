@@ -52,7 +52,7 @@ public class FrameDragaoDuasCabecas extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel dragaoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
+		JLabel dragaoTitle = new JLabel("Surge o terrível Dragão de Duas Cabeças!");
 		dragaoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
 		dragaoTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		dragaoTitle.setBounds(87, 28, 560, 34);
@@ -60,7 +60,7 @@ public class FrameDragaoDuasCabecas extends JFrame {
 		
 		JTextPane dragaoTxt = new JTextPane();
 		dragaoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		dragaoTxt.setText("Após atravessar uma velha ponte de pedras, dois grandes rugidos tomam conta do cenário e chamam a atenção do nosso herói, que instintivamente olha para cima e se depara com um dragão, mas não um comum, e sim um faminto Dragão de Duas Cabeças!\nNum rasante, ele pousa em frente ao herói pronto para o ataque. Lute por sua vida!");
+		dragaoTxt.setText("Após atravessar uma velha ponte de pedras, dois grandes rugidos tomam conta do cenário e chamam a atenção do nosso herói, que instintivamente olha para cima e se depara com um dragão, mas não um comum, e sim um faminto Dragão de Duas Cabeças! Num rasante, ele pousa em frente ao herói pronto para o ataque. Lute por sua vida!");
 		dragaoTxt.setBackground(new Color(255, 255, 255));
 		dragaoTxt.setBounds(106, 70, 522, 70);
 		contentPane.add(dragaoTxt);

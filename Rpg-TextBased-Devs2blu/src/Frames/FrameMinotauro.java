@@ -61,7 +61,7 @@ public class FrameMinotauro extends JFrame {
 		
 		JTextPane minotauroTxt = new JTextPane();
 		minotauroTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		minotauroTxt.setText("Seguindo seu caminho, nosso herói agora toma um caminho rochoso. Ao parar brevemente para encher seu cantil num pequeno lago, nota na água pequenas ondas compassadas com um som forte de passos. Ao olhar para trás, um furioso Minotauro de chifres imensos se aproxima.\nEm um surto raivoso ele avança em sua direção. Lute!");
+		minotauroTxt.setText("Seguindo viagem, nosso herói agora toma um caminho rochoso. Ao parar brevemente para encher seu cantil num pequeno lago, nota na água pequenas ondas compassadas com um som forte de passos. Ao olhar para trás, um furioso Minotauro de chifres imensos se aproxima.\nEm um surto raivoso, ele avança em sua direção. Lute!");
 		minotauroTxt.setBackground(new Color(255, 255, 255));
 		minotauroTxt.setBounds(106, 70, 522, 70);
 		contentPane.add(minotauroTxt);

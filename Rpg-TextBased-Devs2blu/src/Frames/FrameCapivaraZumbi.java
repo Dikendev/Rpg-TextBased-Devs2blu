@@ -54,7 +54,7 @@ public class FrameCapivaraZumbi extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel capivaraTitle = new JLabel("Meu Deus! Uma capivara zumbi!");
+		JLabel capivaraTitle = new JLabel("O que é isso?! Uma capivara zumbi?");
 		capivaraTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
 		capivaraTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		capivaraTitle.setBounds(87, 28, 560, 34);
@@ -62,7 +62,7 @@ public class FrameCapivaraZumbi extends JFrame {
 		
 		JTextPane capivaraTxt = new JTextPane();
 		capivaraTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		capivaraTxt.setText("Ao passar pela última ponte antes da entrada do vulcão, nosso herói avista um animal comendo que parece muito com uma capivara. Ao se aproximar do supostamente inofensivo animal, ele percebe que na verdade ela estava comenda outra capivara. Em um salto para trás, nosso herói percebe que na verdade se tratava de uma grande Capivara Zumbi que corre em sua direção. Lute por sua vida! ");
+		capivaraTxt.setText("Ao passar pela última ponte antes da entrada do vulcão, nosso herói avista um animal comendo algo que parece uma capivara. Ao se aproximar do supostamente inofensivo animal, ele percebe que na verdade era uma capivara comenda outra. Em um salto para trás, nosso herói reconhece uma grande Capivara Zumbi que corre em sua direção. Lute por sua vida! ");
 		capivaraTxt.setBackground(new Color(255, 255, 255));
 		capivaraTxt.setBounds(74, 70, 585, 70);
 		contentPane.add(capivaraTxt);

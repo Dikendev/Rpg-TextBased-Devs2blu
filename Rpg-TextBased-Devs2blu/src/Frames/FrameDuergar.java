@@ -53,7 +53,7 @@ public class FrameDuergar extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel duergarTitle = new JLabel("Nosso herói avista um Elfo do mal!");
+		JLabel duergarTitle = new JLabel("Nosso herói se depara com um Duergar!");
 		duergarTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
 		duergarTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		duergarTitle.setBounds(87, 28, 560, 34);
@@ -61,7 +61,7 @@ public class FrameDuergar extends JFrame {
 		
 		JTextPane duergarTxt = new JTextPane();
 		duergarTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		duergarTxt.setText("Devido a um deslizamento, nosso herói é obrigado a usar uma velha trilha, mal cuidada e pouco sinalizada. Guiado apenas pela luz do luar, nosso herói avista um vulto junto a um barulho metálico, e surge de trás de uma árvore um Duergar com muita raiva em seu olhar. Não resta outra opção a não ser lutar!");
+		duergarTxt.setText("Devido à um deslizamento, nosso herói é obrigado a usar uma velha trilha mal cuidada e pouco sinalizada. Guiado apenas pela luz do luar, ele avista um vulto junto a um barulho metálico, e surge de trás de uma árvore um Duergar com muita raiva em seu olhar. Não resta outra opção a não ser lutar!");
 		duergarTxt.setBackground(new Color(255, 255, 255));
 		duergarTxt.setBounds(81, 70, 571, 70);
 		contentPane.add(duergarTxt);
@@ -73,7 +73,7 @@ public class FrameDuergar extends JFrame {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setIcon(new ImageIcon(FrameDuergar.class.getResource("/Images/vilao-duergar.png")));
-		lblNewLabel.setBounds(267, 146, 200, 215);
+		lblNewLabel.setBounds(267, 140, 200, 215);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");

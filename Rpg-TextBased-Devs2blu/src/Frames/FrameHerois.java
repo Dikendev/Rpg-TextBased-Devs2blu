@@ -129,7 +129,7 @@ public class FrameHerois extends JFrame {
 		JTextPane txtpnBruxoCacador = new JTextPane();
 		txtpnBruxoCacador.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		txtpnBruxoCacador.setBackground(new Color(255, 255, 255));
-		txtpnBruxoCacador.setText("O implacável caçador usar seus poderes mágicos para destruir seus inimigos.");
+		txtpnBruxoCacador.setText("O implacável caçador usa seus poderes mágicos para destruir seus inimigos.");
 		txtpnBruxoCacador.setBounds(39, 245, 110, 118);
 		contentPane.add(txtpnBruxoCacador);
 		
