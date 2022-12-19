@@ -24,7 +24,15 @@ public class SoundEffects {
 	
 	public void play() {
 		
+		
+			clip.setFramePosition(0);
+			clip.start();
+			
+			
+	}
+	
+	public void stop() {
 		clip.setFramePosition(0);
-		clip.start();
+		clip.stop();
 	}
 }

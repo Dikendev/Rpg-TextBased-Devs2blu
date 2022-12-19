@@ -342,7 +342,9 @@ public class LogicaJogo {
 				else if(personagem.getVida() <= 0) {	
 				FrameGameOver frameOver = new FrameGameOver();
 					System.out.println("Game Over, pressione uma tecla para recomeçar!");
+					se.stop();
 					comecaJogo();
+					
 				}
 			
 			
