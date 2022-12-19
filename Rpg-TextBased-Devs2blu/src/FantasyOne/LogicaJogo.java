@@ -5,7 +5,6 @@ import java.util.Scanner;
 import Frames.FrameAto101;
 import Frames.FrameBoasVindas;
 import Frames.FrameGameOver;
-import Frames.FrameHerois;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
 import Herois.Eladrin;
@@ -30,10 +29,10 @@ public class LogicaJogo {
 	public static Personagem personagem;
 	public static String nomeJogador;
 
-	// Mótodo para gerar um loop no jogo
+// Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
 	
-	// Método para usuário escolher opção
+// Método para usuário escolher opção
 	public static int escolhaUsuario(String prompt, int escolhasUsuario) {
 		int input;
 		
@@ -51,14 +50,14 @@ public class LogicaJogo {
 		return input;
 	}
 
-	// Mótodo para simular nova tela
+// Mótodo para simular nova tela
 	public static void limparConsole() {
 		for (int i = 0; i < 30; i++)
 			System.out.printf("|%-80s|%n", "");
 		
 	}
 
-	// Mótodo pressione qualquer tecla
+// Mótodo pressione qualquer tecla
 	public static void pressioneUmaTecla() {
 		linhaPontilhada();
 		System.out.printf("|%-80s|%n", "Pressione qualquer tecla, em seguida pressione enter para continuar...");
@@ -67,11 +66,12 @@ public class LogicaJogo {
 		limparConsole();
 	}
 	
-	// Exibe apenas a tela do jogo
+// Monta uma linha pontilhada para melhorar a visibilidade no console
 	public static void linhaPontilhada() {
 		System.out.printf("|--------------------------------------------------------------------------------|%n");
 	}
 
+//Monta um cabecalho com um titulo
 	public static void imprimirCabecalho(String titulo, int espacamento) {
 		linhaPontilhada();
 		System.out.printf("|%-"+espacamento+"s|%n",(titulo));
@@ -79,13 +79,13 @@ public class LogicaJogo {
 
 	}
 
-	// Método para comecar o jogo
+// Método para comecar o jogo
 	public static void comecaJogo() {
 
 		int opcao = 0;
-	// Chama o primeiro frame
+// Chama o primeiro frame
 		FrameBoasVindas frame00 = new FrameBoasVindas();
-	// Inicia o jogo	
+// Inicia o jogo	
 		linhaPontilhada();
 		System.out.printf("|%-91s|%n", ("                                  " + CianoSub + "Fantasy-One" + Reseta));
 		linhaPontilhada();
@@ -93,21 +93,22 @@ public class LogicaJogo {
 		linhaPontilhada();
 		Scanner scan = new Scanner(System.in);
 		nomeJogador = scan.next();
+// Chama o segundo frame		
 		FrameAto101 frame02 = new FrameAto101();
 
 		
 		limparConsole();
 		
-		
+// Loop para escolha do personagem		
 		do {
-			System.out.printf("|%-91s|%n", BrancoSub + nomeJogador + "Escolha seu herói!\n" + Reseta);
-			System.out.printf("|%-91s|%n", "1 -"+AmareloSub+" Bruxo Caçador"+Reseta);
-			System.out.printf("|%-91s|%n", "2 -"+VerdeSub+" Eladrin"+Reseta);
-			System.out.printf("|%-91s|%n", "3 -"+RoxoSub+" Mago Cinzento"+Reseta);
-			System.out.printf("|%-91s|%n", "4 -"+CianoClaroSub+" Sacerdote"+Reseta);
-			System.out.printf("|%-91s|%n", "5 -"+VermelhoSub+" Death Knight"+Reseta);
-
-
+			linhaPontilhada();
+			System.out.printf("|%-113s|%n", BrancoSub + "É chegada a hora, " + Reseta + CianoSub + nomeJogador + Reseta + BrancoSub +", escolha seu herói!" + Reseta);
+			System.out.printf("|%-91s|%n", "1 - "+AmareloSub+"Bruxo Caçador"+Reseta);
+			System.out.printf("|%-91s|%n", "2 - "+VerdeSub+"Eladrin"+Reseta);
+			System.out.printf("|%-91s|%n", "3 - "+RoxoSub+"Mago Cinzento"+Reseta);
+			System.out.printf("|%-91s|%n", "4 - "+CianoClaroSub+"Sacerdote"+Reseta);
+			System.out.printf("|%-91s|%n", "5 - "+VermelhoSub+"Death Knight"+Reseta);
+			linhaPontilhada();
 
 			Scanner sc = new Scanner(System.in);
 			
@@ -152,7 +153,8 @@ public class LogicaJogo {
                 }
 			
 		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5);
-		
+
+//Instanciando inimigos
 		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
 		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 100, "Vilao");
 		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 100, "Vilao");
@@ -164,7 +166,7 @@ public class LogicaJogo {
 		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 100, "Chefe");
 		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 100, "Chefe");
 				
-		
+//Adicionando os inimigos em ordem num arrayList		
 		ArrayList<Vilao> inimigos = new ArrayList<Vilao>();
 		inimigos.add(orcGuerreiro);
 		inimigos.add(vilaoDuergar);
@@ -177,13 +179,13 @@ public class LogicaJogo {
 		inimigos.add(velhoDoSaco);
 		inimigos.add(ragnaros);
 
+//Roda o ArrayList para chamar cada inimigo após ser derrotado
 		for (int i = 0; i < inimigos.size(); i++) {
 
 			inimigos.get(i).historia();
-			linhaPontilhada();
-			System.out.printf("|%-80s|%n", "Início do combate!");
-			linhaPontilhada();
+			imprimirCabecalho((Ciano +"Início do combate!"+ Reseta), 91);					
 
+//Loop de combate
 			do {
 				linhaPontilhada();
 				menuAtaque();
@@ -291,20 +293,31 @@ public class LogicaJogo {
 				}
 
 			} while (personagem.getVida() > 0 && inimigos.get(i).getVida() > 0);
+//Pós morte do inimigo
 			if (inimigos.get(i).getVida() <= 0) {
 				if (inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {
+					imprimirCabecalho((CianoSub +"Você derrotou o Chefe!" + Reseta), 91);
 					personagem.ganhoXpChefoes();
 					personagem.subirNivel();
 					personagem.setVida(personagem.getMaxVida());
 				} else {
+					imprimirCabecalho((CianoSub +"Você derrotou o Inimigo!" + Reseta), 91);
 					personagem.ganhoXpViloes();
 					personagem.subirNivel();
 					personagem.setVida(personagem.getMaxVida());
 				}
+				switch ((int) Math.floor(Math.random() * 3) + 1) {
+				case 1:imprimirCabecalho(("Após sua batalha, você descansou em baixo de uma árvore, " + VerdeClaro + "vida restaurada!" + Reseta), 91);
+				break;
+				case 2:imprimirCabecalho(("Após sua batalha, você come algumas frutas que encontrou, " + VerdeClaro + "vida restaurada!" + Reseta), 91);
+				break;
+				case 3:imprimirCabecalho(("Após sua batalha, você cuida de seus ferimentos, " + VerdeClaro + "vida restaurada!" + Reseta), 91);
+				break;
+				case 4:imprimirCabecalho(("Após sua batalha, você descansou próximo a um altar, " + VerdeClaro + "vida restaurada!" + Reseta), 91);
+				break;
+				}
 			} else if (personagem.getVida() <= 0) {
 				FrameGameOver frameOver = new FrameGameOver();
-//			System.out.println("Game Over, pressione uma tecla para recomeçar!");
-//			comecaJogo();
 			}
 
 		}
