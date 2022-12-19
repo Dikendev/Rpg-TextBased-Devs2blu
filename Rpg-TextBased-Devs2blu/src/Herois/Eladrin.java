@@ -282,14 +282,7 @@ public class Eladrin extends Personagem {
 	
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.println("História");
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "A Eladrin é uma espécie de elfo que adquire seus poderes da natureza e os");
-		System.out.printf("|%-80s|%n", "modifca de acordo com as estações do ano. Todos os seus ataques buscam o poder");
-		System.out.printf("|%-80s|%n", "nas estações");
-		
-		LogicaJogo.pressioneUmaTecla();
+
 	}
 	
 }

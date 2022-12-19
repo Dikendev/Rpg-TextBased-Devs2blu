@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,7 +18,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
-public class FrameElfo extends JFrame {
+public class FrameQuimera extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +29,7 @@ public class FrameElfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameElfo frame = new FrameElfo();
+					FrameQuimera frame = new FrameQuimera();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +41,7 @@ public class FrameElfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameElfo() {
+	public FrameQuimera() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -52,27 +53,27 @@ public class FrameElfo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel elfoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
-		elfoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		elfoTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		elfoTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(elfoTitle);
+		JLabel quimeraTitle = new JLabel("Nosso herói está prestes a ser devorado por uma Quimera!");
+		quimeraTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		quimeraTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		quimeraTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(quimeraTitle);
 		
-		JTextPane elfoTxt = new JTextPane();
-		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
-		elfoTxt.setBackground(new Color(255, 255, 255));
-		elfoTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(elfoTxt);
+		JTextPane quimeraTxt = new JTextPane();
+		quimeraTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		quimeraTxt.setText("Pela manhã, enquanto caçava, nosso herói percebe a movimentação desesperada dos animais da floresta, como se um predador gigante estivesse se aproximando. Então ouve-se um grande rugido de leão e logo nosso herói se prepara para o confronto. Mas o que ele não esperava era que o predador viria de cima. Com asas de dragão, cabeça de leão e calda de serpente, uma Quimera pairava em sua direção, pronto para ter sua refeição. Ataque!");
+		quimeraTxt.setBackground(new Color(255, 255, 255));
+		quimeraTxt.setBounds(61, 70, 611, 70);
+		contentPane.add(quimeraTxt);
 		
-		StyledDocument textoDK = elfoTxt.getStyledDocument();	
+		StyledDocument textoDK = quimeraTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
-		lblNewLabel.setBounds(267, 146, 200, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameQuimera.class.getResource("/Images/vilao-quimera.png")));
+		lblNewLabel.setBounds(224, 150, 285, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");

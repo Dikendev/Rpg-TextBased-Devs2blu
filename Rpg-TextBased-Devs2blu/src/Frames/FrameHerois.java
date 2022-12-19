@@ -48,6 +48,7 @@ public class FrameHerois extends JFrame {
 		setLocationRelativeTo(null);
 		setBounds(200, 100, 750, 500);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -127,7 +128,7 @@ public class FrameHerois extends JFrame {
 		
 		JTextPane txtpnBruxoCacador = new JTextPane();
 		txtpnBruxoCacador.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		txtpnBruxoCacador.setBackground(new Color(240, 240, 240));
+		txtpnBruxoCacador.setBackground(new Color(255, 255, 255));
 		txtpnBruxoCacador.setText("O implacável caçador usar seus poderes mágicos para destruir seus inimigos.");
 		txtpnBruxoCacador.setBounds(39, 245, 110, 118);
 		contentPane.add(txtpnBruxoCacador);
@@ -140,7 +141,7 @@ public class FrameHerois extends JFrame {
 		txtpnEladrin.setEditable(false);
 		txtpnEladrin.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		txtpnEladrin.setText("Espécie de elfo que adquire seus poderes da natureza e os modifica de acordo com as estações, causando danos no inimigo ou se curando.");
-		txtpnEladrin.setBackground(SystemColor.menu);
+		txtpnEladrin.setBackground(new Color(255, 255, 255));
 		txtpnEladrin.setBounds(173, 245, 110, 130);
 		contentPane.add(txtpnEladrin);
 
@@ -151,7 +152,7 @@ public class FrameHerois extends JFrame {
 		JTextPane txtpnSacerdote = new JTextPane();
 		txtpnSacerdote.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		txtpnSacerdote.setText("Com sua túnica e seu cajado, usa sua fé e o poder divino para subjulgar seus inimigos. Usando orações ele é capaz de causar grande dano e se curar.");
-		txtpnSacerdote.setBackground(SystemColor.menu);
+		txtpnSacerdote.setBackground(new Color(255, 255, 255));
 		txtpnSacerdote.setBounds(456, 245, 110, 118);
 		contentPane.add(txtpnSacerdote);
 		
@@ -162,7 +163,7 @@ public class FrameHerois extends JFrame {
 		JTextPane txtpnDeathKnight = new JTextPane();
 		txtpnDeathKnight.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		txtpnDeathKnight.setText("O poderoso guerreiro possui uma armadura impenetrável e usa suas habilidades para se defender e destruir seus oponentes.");
-		txtpnDeathKnight.setBackground(SystemColor.menu);
+		txtpnDeathKnight.setBackground(new Color(255, 255, 255));
 		txtpnDeathKnight.setBounds(595, 245, 110, 118);
 		contentPane.add(txtpnDeathKnight);
 		
@@ -187,7 +188,7 @@ public class FrameHerois extends JFrame {
 		txtpnPersonagemMsticoEle_1.setText("Personagem místico, ele veio da Lua com o intuito de proteger Untirade. Seus ataques são fortes e irão acabar seus oponentes.");
 		txtpnPersonagemMsticoEle_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		txtpnPersonagemMsticoEle_1.setEditable(false);
-		txtpnPersonagemMsticoEle_1.setBackground(SystemColor.menu);
+		txtpnPersonagemMsticoEle_1.setBackground(new Color(255, 255, 255));
 		txtpnPersonagemMsticoEle_1.setBounds(312, 245, 110, 130);
 		contentPane.add(txtpnPersonagemMsticoEle_1);
 		
@@ -198,8 +199,8 @@ public class FrameHerois extends JFrame {
 		JTextPane txtpnEscolhaSeuHeroi = new JTextPane();
 		txtpnEscolhaSeuHeroi.setText("Escolha o seu herói no console");
 		txtpnEscolhaSeuHeroi.setFont(new Font("Yu Gothic UI", Font.PLAIN, 10));
-		txtpnEscolhaSeuHeroi.setBackground(SystemColor.menu);
-		txtpnEscolhaSeuHeroi.setBounds(295, 380, 143, 23);
+		txtpnEscolhaSeuHeroi.setBackground(new Color(255, 255, 255));
+		txtpnEscolhaSeuHeroi.setBounds(295, 380, 144, 23);
 		contentPane.add(txtpnEscolhaSeuHeroi);
 		
 		setVisible(true);

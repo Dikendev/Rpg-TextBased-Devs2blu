@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,7 +18,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
-public class FrameElfo extends JFrame {
+public class FrameDuergar extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +29,7 @@ public class FrameElfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameElfo frame = new FrameElfo();
+					FrameDuergar frame = new FrameDuergar();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +41,7 @@ public class FrameElfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameElfo() {
+	public FrameDuergar() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -52,27 +53,27 @@ public class FrameElfo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel elfoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
-		elfoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		elfoTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		elfoTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(elfoTitle);
+		JLabel duergarTitle = new JLabel("Nosso herói avista um Elfo do mal!");
+		duergarTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		duergarTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		duergarTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(duergarTitle);
 		
-		JTextPane elfoTxt = new JTextPane();
-		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
-		elfoTxt.setBackground(new Color(255, 255, 255));
-		elfoTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(elfoTxt);
+		JTextPane duergarTxt = new JTextPane();
+		duergarTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		duergarTxt.setText("Devido a um deslizamento, nosso herói é obrigado a usar uma velha trilha, mal cuidada e pouco sinalizada. Guiado apenas pela luz do luar, nosso herói avista um vulto junto a um barulho metálico, e surge de trás de uma árvore um Duergar com muita raiva em seu olhar. Não resta outra opção a não ser lutar!");
+		duergarTxt.setBackground(new Color(255, 255, 255));
+		duergarTxt.setBounds(81, 70, 571, 70);
+		contentPane.add(duergarTxt);
 		
-		StyledDocument textoDK = elfoTxt.getStyledDocument();	
+		StyledDocument textoDK = duergarTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
-		lblNewLabel.setBounds(267, 146, 200, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameDuergar.class.getResource("/Images/vilao-duergar.png")));
+		lblNewLabel.setBounds(267, 146, 200, 215);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");

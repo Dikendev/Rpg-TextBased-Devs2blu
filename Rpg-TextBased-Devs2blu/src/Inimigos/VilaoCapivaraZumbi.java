@@ -1,6 +1,7 @@
 package Inimigos;
 
 import FantasyOne.LogicaJogo;
+import Frames.FrameCapivaraZumbi;
 
 public class VilaoCapivaraZumbi extends Vilao{
 	
@@ -53,16 +54,7 @@ public class VilaoCapivaraZumbi extends Vilao{
 
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Ao passar pela última ponte antes da entrada do vulcão, nosso herói avista ");
-		System.out.printf("|%-80s|%n", "próximo a um arbusto um animal comendo, parecia muito com uma capivara. Ao se ");
-		System.out.printf("|%-80s|%n", "aproximar do supostamente inofensivo animal, ele percebe que na verdade ela ");
-		System.out.printf("|%-80s|%n", "estava comenda outra capivara. Em um salto para trás, nosso herói percebe que na");
-		System.out.printf("|%-89s|%n", "verdade se tratava de uma grande " + LogicaJogo.VermelhoFun + "Capivara Zumbi" + LogicaJogo.Reseta + "que corre em sua direção. ");
-		System.out.printf("|%-80s|%n", "Lute por sua vida!");
-		LogicaJogo.linhaPontilhada();
-
-		LogicaJogo.pressioneUmaTecla();		
+		FrameCapivaraZumbi fCapivara = new FrameCapivaraZumbi();
 	}
 
 }

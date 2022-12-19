@@ -17,7 +17,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
-public class FrameElfo extends JFrame {
+public class FrameDragaoDuasCabecas extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +28,7 @@ public class FrameElfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameElfo frame = new FrameElfo();
+					FrameDragaoDuasCabecas frame = new FrameDragaoDuasCabecas();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class FrameElfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameElfo() {
+	public FrameDragaoDuasCabecas() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -52,27 +52,27 @@ public class FrameElfo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel elfoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
-		elfoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		elfoTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		elfoTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(elfoTitle);
+		JLabel dragaoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
+		dragaoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		dragaoTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		dragaoTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(dragaoTitle);
 		
-		JTextPane elfoTxt = new JTextPane();
-		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
-		elfoTxt.setBackground(new Color(255, 255, 255));
-		elfoTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(elfoTxt);
+		JTextPane dragaoTxt = new JTextPane();
+		dragaoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		dragaoTxt.setText("Após atravessar uma velha ponte de pedras, dois grandes rugidos tomam conta do cenário e chamam a atenção do nosso herói, que instintivamente olha para cima e se depara com um dragão, mas não um comum, e sim um faminto Dragão de Duas Cabeças!\nNum rasante, ele pousa em frente ao herói pronto para o ataque. Lute por sua vida!");
+		dragaoTxt.setBackground(new Color(255, 255, 255));
+		dragaoTxt.setBounds(106, 70, 522, 70);
+		contentPane.add(dragaoTxt);
 		
-		StyledDocument textoDK = elfoTxt.getStyledDocument();	
+		StyledDocument textoDK = dragaoTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
-		lblNewLabel.setBounds(267, 146, 200, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameDragaoDuasCabecas.class.getResource("/Images/vilao-dragao.png")));
+		lblNewLabel.setBounds(249, 140, 235, 232);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");

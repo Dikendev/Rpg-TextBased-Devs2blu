@@ -1,6 +1,7 @@
 package Inimigos;
 
 import FantasyOne.LogicaJogo;
+import Frames.FrameDhampir;
 
 public class VilaoDhampir extends Vilao {
 	
@@ -56,15 +57,7 @@ public class VilaoDhampir extends Vilao {
 
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Ao anoitecer, nosso herói busca abrigo em uma caverna, ao entrar mais fundo ele ");
-		System.out.printf("|%-80s|%n", "percebe que não está sozinho, ouve alguns passos leves e um vulto em direção a");
-		System.out.printf("|%-89s|%n", "escuridão. Ao se aproximar, surge das sombras um " + LogicaJogo.VermelhoFun + "Dhampir" + LogicaJogo.Reseta + ", com sua pele pálida e");
-		System.out.printf("|%-80s|%n", "capa preta ele avança em direção ao nosso herói pronto para provar de seu sangue.");
-		System.out.printf("|%-80s|%n", "Batalhe por sua vida!");
-		LogicaJogo.linhaPontilhada();
-
-		LogicaJogo.pressioneUmaTecla();		
+		FrameDhampir fDhampir = new FrameDhampir();
 	}
 
 
