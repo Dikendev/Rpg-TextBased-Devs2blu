@@ -14,28 +14,28 @@ public class VilaoDragaoDuasCabecas extends Vilao {
 	@Override
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças ataca com "+LogicaJogo.VermelhoClaro+"Bola de Fogo:"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+LogicaJogo.Reseta);
-		return 15;
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 25"+LogicaJogo.Reseta);
+		return 25;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças ataca com "+LogicaJogo.VermelhoClaro+"Lança Chamas:"+LogicaJogo.Reseta);
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 18"+LogicaJogo.Reseta);
-		return 18;
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 27"+LogicaJogo.Reseta);
+		return 27;
 	}
 
 	public int ataqueEspecial() {
 			System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças usa o ataque especial "+LogicaJogo.VermelhoClaro+"Insinerar!"+LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 25"+LogicaJogo.Reseta);
-			return 25;
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 32"+LogicaJogo.Reseta);
+			return 32;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
 			System.out.printf("|%-91s|%n", "Dragão de Duas Cabeças usa o ataque especial "+LogicaJogo.VermelhoClaro+"Chamas do Sol!"+LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 23"+LogicaJogo.Reseta);
-			return 23;
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 40"+LogicaJogo.Reseta);
+			return 40;
 	}
 	
 	@Override

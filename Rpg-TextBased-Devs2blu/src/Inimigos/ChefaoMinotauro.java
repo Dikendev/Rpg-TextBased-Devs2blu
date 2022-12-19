@@ -14,29 +14,29 @@ public class ChefaoMinotauro extends Vilao {
 	@Override
 	public int ataqueBasico() {
 		System.out.printf("|%-91s|%n", "Minotauro ataca com "+LogicaJogo.VermelhoClaro+"Chifres!"+LogicaJogo.Reseta );
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+LogicaJogo.Reseta);
-		return 15;
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 12"+LogicaJogo.Reseta);
+		return 12;
 	}
 
 	@Override
 	public int ataqueBasico2() {
 		System.out.printf("|%-91s|%n", "Minotauro ataca com "+LogicaJogo.VermelhoClaro+"Golpe Rápido!"+LogicaJogo.Reseta );
-		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 16"+LogicaJogo.Reseta);
-		return 16;
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+LogicaJogo.Reseta);
+		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
 			System.out.printf("|%-91s|%n", "Minotauro usa o ataque especial"+LogicaJogo.VermelhoClaro+" Relâmpago!"+LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+LogicaJogo.Reseta);
-			return 20;
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 18"+LogicaJogo.Reseta);
+			return 18;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
 			System.out.printf("|%-91s|%n", "Minotauro usa o ataque especial "+LogicaJogo.VermelhoClaro+"Fúria do Submundo!"+LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 22"+LogicaJogo.Reseta);
-			return 22;
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+LogicaJogo.Reseta);
+			return 20;
 	}
 
 	@Override
