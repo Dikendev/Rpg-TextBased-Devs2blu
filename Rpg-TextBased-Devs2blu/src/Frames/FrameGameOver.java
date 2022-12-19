@@ -20,6 +20,7 @@ public class FrameGameOver extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	JButton btn = new JButton("REINICIAR");
+	boolean isRunning;
 
 	
 	/**
@@ -91,7 +92,7 @@ public class FrameGameOver extends JFrame implements ActionListener{
 public void actionPerformed(ActionEvent evt) {
 	if(evt.getSource()==btn) {
 		LogicaJogo.limparConsole();
-		LogicaJogo.comecaJogo();
+		isRunning = true;
 		dispose();
 	}
  }
