@@ -7,6 +7,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import Frames.FrameAto101;
 import Frames.FrameBoasVindas;
+import Frames.FrameCreditoss;
 import Frames.FrameGameOver;
 import Herois.BruxoCacador;
 import Herois.DeathKnight;
@@ -163,12 +164,15 @@ public class LogicaJogo {
 		
 		isRunning = true;
 		sistemaCombate();
-			
+		
+		//Chama a tela de creditos após os combates terminarem.
+		FrameCreditoss fc= new FrameCreditoss();
+		fc.setVisible(true);
 	}
 	
 	public static void ascci() {
 		try {
-			FileReader reader = new FileReader("src/art.txt");
+			FileReader reader = new FileReader("./src/art.txt");
 			int data = reader.read();
 			while (data != -1) {
 				System.out.print((char)data);
