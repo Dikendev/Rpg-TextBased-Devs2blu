@@ -3,8 +3,8 @@ package Frames;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,9 +13,10 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class FrameAto102 extends JFrame {
+public class FrameAto102 extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
+	JButton btn = new JButton("CONTINUAR");
 
 	/**
 	 * Launch the application.
@@ -64,18 +65,13 @@ public class FrameAto102 extends JFrame {
 		lblNewLabel_1_1.setBounds(58, 105, 618, 20);
 		contentPane.add(lblNewLabel_1_1);
 		
-		JButton btnNewButton = new JButton("CONTINUAR PARA O JOGO");
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(255, 0, 128));
-		btnNewButton.setVerticalAlignment(SwingConstants.TOP);
-		btnNewButton.setFont(new Font("Yu Gothic Medium", Font.BOLD, 12));
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				dispose();
-			}
-		});
-		btnNewButton.setBounds(269, 169, 196, 23);
-		contentPane.add(btnNewButton);
+		btn.setForeground(new Color(255, 255, 255));
+		btn.setBackground(new Color(255, 0, 128));
+		btn.setVerticalAlignment(SwingConstants.TOP);
+		btn.setFont(new Font("Yu Gothic Medium", Font.BOLD, 12));
+		btn.addActionListener(this);
+		btn.setBounds(269, 169, 196, 23);
+		contentPane.add(btn);
 		
 		JLabel lblNewLabel_1_1_1 = new JLabel("heróis agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado do Senhor de Fogo.");
 		lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -89,6 +85,14 @@ public class FrameAto102 extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		setVisible(true);
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent evt) {
+		if(evt.getSource()==btn) {
+			dispose();
+			FrameHerois fHerois = new FrameHerois();
+		}
 	}
 
 }

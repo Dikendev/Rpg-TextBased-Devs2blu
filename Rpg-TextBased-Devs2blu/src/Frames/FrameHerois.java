@@ -194,5 +194,14 @@ public class FrameHerois extends JFrame {
 		StyledDocument textoMago = txtpnPersonagemMsticoEle_1.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoMago.setParagraphAttributes(0, textoMago.getLength(), center, false);
+		
+		JTextPane txtpnEscolhaSeuHeroi = new JTextPane();
+		txtpnEscolhaSeuHeroi.setText("Escolha o seu herói no console");
+		txtpnEscolhaSeuHeroi.setFont(new Font("Yu Gothic UI", Font.PLAIN, 10));
+		txtpnEscolhaSeuHeroi.setBackground(SystemColor.menu);
+		txtpnEscolhaSeuHeroi.setBounds(295, 380, 143, 23);
+		contentPane.add(txtpnEscolhaSeuHeroi);
+		
+		setVisible(true);
 	}
 }

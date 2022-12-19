@@ -1,6 +1,8 @@
 package Inimigos;
 
 import FantasyOne.LogicaJogo;
+import Frames.FrameBoasVindas;
+import Frames.FrameOrc;
 
 public class VilaoOrcGuerreiro extends Vilao{
 	
@@ -56,13 +58,7 @@ public class VilaoOrcGuerreiro extends Vilao{
 
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Logo no inicio do seu longo trajeto, nosso herói ouve um barulho estranho vindo");
-		System.out.printf("|%-89s|%n", "de um arbusto. Ao se aproximar para verificar, um gigante " + LogicaJogo.VermelhoFun + "Orc Guerreiro" + LogicaJogo.Reseta + " salta");
-		System.out.printf("|%-80s|%n", "em sua direção empunhando sua espada e escudo, pronto para batalhar!");
-		LogicaJogo.linhaPontilhada();
-
-		LogicaJogo.pressioneUmaTecla();
+		FrameOrc fOrc = new FrameOrc();
 	}
 
 }

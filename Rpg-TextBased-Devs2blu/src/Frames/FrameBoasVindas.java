@@ -29,7 +29,6 @@ import javax.imageio.ImageIO;
 public class FrameBoasVindas extends JFrame {
 	
 	private JPanel contentPane;
-	private JTextField textField;
 	
 	/**
 	 * Launch the application.
@@ -71,17 +70,6 @@ public class FrameBoasVindas extends JFrame {
 		msgInstrucoes.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 12));
 		msgInstrucoes.setBounds(203, 85, 328, 23);
 		contentPane.add(msgInstrucoes);
-		
-//      Text field que pede o nome do jogador
-//		textField = new JTextField();
-//		contentPane.add(textField);
-//		textField.setColumns(10);
-//		textField.setBounds(200, 138, 136, 23);
-//		textField.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent evt) {
-//				setNome(textField.getText());
-//			}
-//		});
 		
 		JLabel msgVamosLa = new JLabel("Está preparado? Então vamos lá!");
 		msgVamosLa.setHorizontalAlignment(SwingConstants.CENTER);

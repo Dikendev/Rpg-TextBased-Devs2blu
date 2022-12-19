@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.CloseAction;
+
 import FantasyOne.LogicaJogo;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -87,8 +89,9 @@ public class FrameGameOver extends JFrame implements ActionListener{
 @Override
 public void actionPerformed(ActionEvent evt) {
 	if(evt.getSource()==btn) {
-		dispose();
+		LogicaJogo.limparConsole();
 		LogicaJogo.comecaJogo();
+		dispose();
 	}
  }
 }
