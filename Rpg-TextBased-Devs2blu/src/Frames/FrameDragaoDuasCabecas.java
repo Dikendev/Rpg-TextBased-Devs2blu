@@ -52,11 +52,7 @@ public class FrameDragaoDuasCabecas extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-<<<<<<< HEAD
 		JLabel dragaoTitle = new JLabel("Surge o terrível Dragão de Duas Cabeças!");
-=======
-		JLabel dragaoTitle = new JLabel("Nosso herói avista um Dragão de Duas Cabeças!");
->>>>>>> a1caeeb2650b9f1a6d42cb980f5777162948e574
 		dragaoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
 		dragaoTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		dragaoTitle.setBounds(87, 28, 560, 34);
