@@ -153,8 +153,13 @@ public class LogicaJogo {
                 }
 			
 		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5);
-
-//Instanciando inimigos
+		
+		sistemaCombate();
+			
+	}
+	
+	public static void sistemaCombate() {
+		
 		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
 		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 100, "Vilao");
 		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 100, "Vilao");
@@ -315,15 +320,14 @@ public class LogicaJogo {
 				break;
 				case 4:imprimirCabecalho(("Após sua batalha, você descansou próximo a um altar, " + VerdeClaro + "vida restaurada!" + Reseta), 91);
 				break;
-				}
-			} else if (personagem.getVida() <= 0) {
+				}			
+			} else if(personagem.getVida() <= 0) {	
 				FrameGameOver frameOver = new FrameGameOver();
+
 			}
-
 		}
-
 	}
-	
+	 
 // Método para mostrar informações do personagem
 	public static void infoPersonagem() {
 			imprimirCabecalho("Informações gerais:", 80);
