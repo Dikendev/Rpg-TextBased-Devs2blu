@@ -168,9 +168,8 @@ public class LogicaJogo {
 		isRunning = true;
 		sistemaCombate();
 		
-		//Chama a tela de creditos após os combates terminarem.
-		FrameCreditoss fc= new FrameCreditoss();
-		fc.setVisible(true);
+		
+		
 	}
 	
 	public static void ascci() {
@@ -193,14 +192,14 @@ public class LogicaJogo {
 	public static void sistemaCombate() {
 		
 		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
-		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 175, "Vilao");
+		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 170, "Vilao");
 		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 175, "Vilao");
 		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 120, "Vilao");
 		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 155, "Vilao");
 		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 160, "Vilao");
 		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 170, "Vilao");
-		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 150, "Chefe");
-		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 160, "Chefe");
+		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 155, "Chefe");
+		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 150, "Chefe");
 		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 200, "Chefe");
 				
 //Adicionando os inimigos em ordem num arrayList		
@@ -217,7 +216,10 @@ public class LogicaJogo {
 		inimigos.add(ragnaros);
 
 //Roda o ArrayList para chamar cada inimigo após ser derrotado
+		
 		for (int i = 0; i < inimigos.size(); i++) {
+			
+			if (personagem.getVida() > 0) {
 
 			inimigos.get(i).historia();
 			imprimirCabecalho((Ciano +"Início do combate!"+ Reseta), 91);					
@@ -359,12 +361,21 @@ public class LogicaJogo {
 				pressioneUmaTecla();
 			} else if(personagem.getVida() <= 0) {	
 				FrameGameOver frameOver = new FrameGameOver();
-				imprimirCabecalho((CianoSub+"Game Over, pressione uma tecla para recomeçar!"+Reseta), 91);
+				imprimirCabecalho((CianoSub+"Game Over!"+Reseta), 91);
 				se.stop();
-				comecaJogo();
+				
+			} 
+			} 
 			}
-		}
+			int i =0;
+			if (personagem.getVida() > 0 && inimigos.get(i).getVida() <= 0) {
+				//Chama a tela de creditos após os combates terminarem.
+				
+				FrameCreditoss fc= new FrameCreditoss();
+				fc.setVisible(true);
+	} 
 	}
+	
 	 
 // Método para mostrar informações do personagem
 	public static void infoPersonagem() {
