@@ -68,7 +68,11 @@ public class FrameGameOver extends JFrame implements ActionListener{
 		btn.setBackground(new Color(0, 128, 0));
 		btn.setVerticalAlignment(SwingConstants.TOP);
 		btn.setFont(new Font("Yu Gothic Medium", Font.BOLD, 12));
-		btn.addActionListener(this);
+		btn.addActionListener(new ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				LogicaJogo.comecaJogo();
+			}
+		});
 		btn.setBounds(226, 389, 136, 23);
 		contentPane.add(btn);
 		

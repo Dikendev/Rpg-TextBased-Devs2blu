@@ -28,7 +28,7 @@ public class ChefaoQuimera extends Vilao{
 
 	@Override
 	public int ataqueEspecial() {
-			System.out.printf("|%-91s|%n", "Quimera usou presas venenosas, causando "+LogicaJogo.VermelhoClaro+"42 de dano!"+LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", "Quimera usou presas venenosas, causando "+LogicaJogo.VermelhoClaro+"40 de dano!"+LogicaJogo.Reseta);
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 40"+LogicaJogo.Reseta);
 			return 40;
 	}
