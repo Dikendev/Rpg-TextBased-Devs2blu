@@ -1,83 +1,62 @@
 package Inimigos;
 
-import FantasyOne.GameLogic;
+import FantasyOne.LogicaJogo;
+import Frames.FrameMinotauro;
 
 public class ChefaoMinotauro extends Vilao {
 
-	public ChefaoMinotauro(String nome, int vida) {
-		super(nome, vida);
+	public ChefaoMinotauro(String nome, int vida, String tipo) {
+		super(nome, vida, tipo);
 		this.setNome(nome);
 		this.setVida(vida);
+		this.setTipo(tipo);
 	}
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Minotauro ataca com Chifres! " );
-		System.out.printf("|%-80s|%n", "Dano de 20");
-		return 20;
+		System.out.printf("|%-91s|%n", "Minotauro ataca com "+LogicaJogo.VermelhoClaro+"Chifres!"+LogicaJogo.Reseta );
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 12"+LogicaJogo.Reseta);
+		return 12;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Minotauro ataca com Golpe Rápido! " );
-		System.out.printf("|%-80s|%n", "Dano de 23");
-		return 23;
+		System.out.printf("|%-91s|%n", "Minotauro ataca com "+LogicaJogo.VermelhoClaro+"Golpe Rápido!"+LogicaJogo.Reseta );
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+LogicaJogo.Reseta);
+		return 15;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		if(this.getMp() > 0) {
-			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-80s|%n", "Minotauro usa o ataque especial Relâmpago! " );
-			System.out.printf("|%-80s|%n", "Dano de 30");
-			return 30;
-		} else {
-			System.out.printf("|%-80s|%n", "O Ataque falhou, o Minotauro não possui mana suficiente para utilizar o");
-			System.out.printf("|%-80s|%n", "ataque especial.");
-			return 0;
-		}
+			System.out.printf("|%-91s|%n", "Minotauro usa o ataque especial"+LogicaJogo.VermelhoClaro+" Relâmpago!"+LogicaJogo.Reseta );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 18"+LogicaJogo.Reseta);
+			return 18;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		if(this.getMp() > 0) {
-			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-80s|%n", "Minotauro usa o ataque especial Fúria do Submundo!");
-			System.out.printf("|%-80s|%n", "Dano de 40");
-			return 40;
-		} else {
-			System.out.printf("|%-80s|%n", "O Ataque falhou, o Minotauro não possui mana suficiente para utilizar o ");
-			System.out.printf("|%-80s|%n", "ataque especial.");
-			return 0;
-		}
+			System.out.printf("|%-91s|%n", "Minotauro usa o ataque especial "+LogicaJogo.VermelhoClaro+"Fúria do Submundo!"+LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+LogicaJogo.Reseta);
+			return 20;
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", "Minotauro usou Defesa do Submundo.");
-		System.out.printf("|%-80s|%n", "Aumenta sua própria vida em 20.");
+		System.out.printf("|%-91s|%n", "Minotauro usou "+LogicaJogo.VerdeClaro+"Defesa do Submundo."+LogicaJogo.Reseta);
+		System.out.printf("|%-80s|%n", "Aumenta sua própria vida em "+LogicaJogo.Verde+"20."+LogicaJogo.Reseta);
 		this.setVida(this.getVida()+20);
-		System.out.printf("|%-80s|%n", "Minotauro possui: " + this.getVida() + "de vida");
+		System.out.printf("|%-80s|%n", "Minotauro possui: " +LogicaJogo.Verde+ this.getVida()+ "de vida"+LogicaJogo.Reseta);
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Minotauro recebeu dano, a vida dele é: " + this.getVida());
+		System.out.printf("|%-80s|%n", "Minotauro recebeu dano, a vida dele é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 	}
 	
 	@Override
 	public void historia() {
-		GameLogic.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Seguindo seu caminho, nosso herói agora toma um caminho rochoso, ao parar ");
-		System.out.printf("|%-80s|%n", "brevemente para encher seu cantil num pequeno lago, nosso herói nota na água ");
-		System.out.printf("|%-80s|%n", "pequenas ondas, compassadas com um som forte de passos. Ao olhar para trás, um");
-		System.out.printf("|%-89s|%n", "furioso "+ GameLogic.VermelhoFun + "Minotauro" + GameLogic.Reseta + " se aproxima, com chifres imensos e grandes correntes em seus");
-		System.out.printf("|%-80s|%n", "braços ele parece mais forte que o normal, em um surto raivoso ele avança em");
-		System.out.printf("|%-80s|%n", "sua direção. Lute!");
-		GameLogic.linhaPontilhada();
-
-		GameLogic.pressioneUmaTecla();
+		FrameMinotauro fMinotauro = new FrameMinotauro();
 	}
 
 }

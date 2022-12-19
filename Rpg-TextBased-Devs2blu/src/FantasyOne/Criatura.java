@@ -2,12 +2,13 @@ package FantasyOne;
 
 public abstract class Criatura {
 	
-	private String nome;
+	private String nome, tipo;
 	private int maxVida, vida, xp, pocao, nivel, mp;
 	
-	public Criatura(String nome, int vida) {
+	public Criatura(String nome, int vida, String tipo) {
 		this.nome = nome;	
 		this.vida = vida;
+		this.tipo = tipo;
 	}
 
 	public Criatura(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
@@ -85,6 +86,14 @@ public abstract class Criatura {
 
 	public void setMp(int mp) {
 		this.mp = mp;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 	
 }

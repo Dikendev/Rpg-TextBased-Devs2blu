@@ -1,6 +1,6 @@
 package Herois;
 
-import FantasyOne.GameLogic;
+import FantasyOne.LogicaJogo;
 
 public class DeathKnight extends Personagem{
 		public DeathKnight(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
@@ -17,32 +17,32 @@ public class DeathKnight extends Personagem{
 		@Override
 		public int ataqueBasico() {
 			if(this.getNivel() == 1) {
-				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 10 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 10");
+				System.out.printf("|%-91s|%n", "Dk aplicou o soco da morte, causando "+ LogicaJogo.VermelhoClaro +"10 de dano!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 10" + LogicaJogo.Reseta);
 				return 10;
 			}else if(this.getNivel() == 2) {
-				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 15 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 15");
+				System.out.printf("|%-91s|%n", "Dk aplicou o soco da morte, causando"+ LogicaJogo.VermelhoClaro +" 15 de dano!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 15" + LogicaJogo.Reseta);
 				return 15;
 			}else if(this.getNivel() == 3) {
-				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 20 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 20");
+				System.out.printf("|%-91s|%n", "Dk aplicou o soco da morte, causando"+ LogicaJogo.VermelhoClaro +" 20 de dano!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 20" + LogicaJogo.Reseta);
 				return 20;
 			}else if(this.getNivel() == 4) {
-				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 25 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 25");
+				System.out.printf("|%-91s|%n", "Dk aplicou o soco da morte, causando"+ LogicaJogo.VermelhoClaro +" 25 de dano!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 25" + LogicaJogo.Reseta);
 				return 25;
 			}else if(this.getNivel() == 5) {
-				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 30 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 30");
+				System.out.printf("|%-91s|%n", "Dk aplicou o soco da morte, causando"+ LogicaJogo.VermelhoClaro +" 30 de dano!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 30" + LogicaJogo.Reseta);
 				return 30;
 			}else if(this.getNivel() == 6) {
-				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 35");
+				System.out.printf("|%-91s|%n", "Dk aplicou o soco da morte, causando"+ LogicaJogo.VermelhoClaro +" 35 de dano!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 35" + LogicaJogo.Reseta);
 				return 35;
 			}else if(this.getNivel() == 7) {
-				System.out.printf("|%-80s|%n", "Dk aplicou o soco da morte, causando 40 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 40");
+				System.out.printf("|%-91s|%n", "Dk aplicou o soco da morte, causando"+ LogicaJogo.VermelhoClaro +" 40 de dano!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: 40" + LogicaJogo.Reseta);
 				return 40;
 			}else return 0;
 		}
@@ -50,32 +50,32 @@ public class DeathKnight extends Personagem{
 		@Override
 		public int ataqueBasico2() {
 			if(this.getNivel() == 1) {
-				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 15 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 15");
+				System.out.printf("|%-91s|%n", "Dk usou a espada do rei , causando "+ LogicaJogo.VermelhoClaro +"15 de dano!"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 15"+ LogicaJogo.Reseta);
 				return 15;
 			}else if(this.getNivel() == 2) {
-				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 20 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 20");
+				System.out.printf("|%-91s|%n", "Dk usou a espada do rei , causando "+ LogicaJogo.VermelhoClaro +"20 de dano!"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 20"+ LogicaJogo.Reseta);
 				return 20;
 			}else if(this.getNivel() == 3) {
-				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 25 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 25");
+				System.out.printf("|%-91s|%n", "Dk usou a espada do rei , causando "+ LogicaJogo.VermelhoClaro +"25 de dano!"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 25"+ LogicaJogo.Reseta);
 				return 25;
 			}else if(this.getNivel() == 4) {
-				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 30 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 30");
+				System.out.printf("|%-91s|%n", "Dk usou a espada do rei , causando "+ LogicaJogo.VermelhoClaro +"30 de dano!"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 30"+ LogicaJogo.Reseta);
 				return 30;
 			}else if(this.getNivel() == 5) {
-				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 35 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 35");
+				System.out.printf("|%-91s|%n", "Dk usou a espada do rei , causando "+ LogicaJogo.VermelhoClaro +"35 de dano!"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 35"+ LogicaJogo.Reseta);
 				return 35;
 			}else if(this.getNivel() == 6) {
-				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 40 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 40");
+				System.out.printf("|%-91s|%n", "Dk usou a espada do rei , causando "+ LogicaJogo.VermelhoClaro +"40 de dano!"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 40"+ LogicaJogo.Reseta);
 				return 40;
 			}else if(this.getNivel() == 7) {
-				System.out.printf("|%-80s|%n", "Dk usou a espada do rei , causando 45 de dano!");
-				System.out.printf("|%-80s|%n", "Dano: 45");
+				System.out.printf("|%-91s|%n", "Dk usou a espada do rei , causando "+ LogicaJogo.VermelhoClaro +"45 de dano!"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 45"+ LogicaJogo.Reseta);
 				return 45;
 			}else return 0;
 		}
@@ -84,8 +84,8 @@ public class DeathKnight extends Personagem{
 		public int ataqueEspecial() {
 			if(this.getNivel() == 1) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 30 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 30");
+					System.out.printf("|%-91s|%n", "Invocou os servos das trevas, causando "+ LogicaJogo.VermelhoClaro+"30 de dano!" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 30" + LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);
 					return 30;			
 				} else {
@@ -94,8 +94,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 2) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 35 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 35");
+					System.out.printf("|%-91s|%n", "Invocou os servos das trevas, causando "+ LogicaJogo.VermelhoClaro+"35 de dano!" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 35" + LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);
 					return 35;			
 				} else {
@@ -104,8 +104,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 3) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 40 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 40");
+					System.out.printf("|%-91s|%n", "Invocou os servos das trevas, causando "+ LogicaJogo.VermelhoClaro+"40 de dano!" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 40" + LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);
 					return 40;			
 				} else {
@@ -114,8 +114,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 4) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 45 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 45");
+					System.out.printf("|%-91s|%n", "Invocou os servos das trevas, causando "+ LogicaJogo.VermelhoClaro+"45 de dano!" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 45" + LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);
 					return 45;			
 				} else {
@@ -124,8 +124,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 5) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 50 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 50");
+					System.out.printf("|%-91s|%n", "Invocou os servos das trevas, causando "+ LogicaJogo.VermelhoClaro+"50 de dano!" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 50" + LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);
 					return 50;			
 				} else {
@@ -134,8 +134,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 6) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 55 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 55");
+					System.out.printf("|%-91s|%n", "Invocou os servos das trevas, causando "+ LogicaJogo.VermelhoClaro+"55 de dano!" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 55" + LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);
 					return 55;			
 				} else {
@@ -144,8 +144,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 7) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Invocou os servos das trevas, causando 60 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 60");
+					System.out.printf("|%-91s|%n", "Invocou os servos das trevas, causando "+ LogicaJogo.VermelhoClaro+"60 de dano!" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 60" + LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);
 					return 60;			
 				} else {
@@ -159,8 +159,8 @@ public class DeathKnight extends Personagem{
 		public int ataqueEspecial2() {
 			if(this.getNivel() == 1) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 30 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 30");
+					System.out.printf("|%-91s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+"30 de dano!"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 30"+ LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);			
 					return 30;			
 				} else {
@@ -169,8 +169,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 2) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 35 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 35");
+					System.out.printf("|%-91s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+"35 de dano!"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 35"+ LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);			
 					return 35;		
 				} else {
@@ -179,8 +179,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 3) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 40 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 40");
+					System.out.printf("|%-91s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+"40 de dano!"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 40"+ LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);			
 					return 40;		
 				} else {
@@ -189,8 +189,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 4) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 45 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 45");
+					System.out.printf("|%-91s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+"45 de dano!"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 45"+ LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);			
 					return 45;		
 				} else {
@@ -199,8 +199,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 5) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 50 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 50");
+					System.out.printf("|%-91s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+"50 de dano!"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 50"+ LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);			
 					return 50;		
 				} else {
@@ -209,8 +209,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 6) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 55 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 55");
+					System.out.printf("|%-91s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+"55 de dano!"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 55"+ LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);			
 					return 55;		
 				} else {
@@ -219,8 +219,8 @@ public class DeathKnight extends Personagem{
 				}
 			}else if(this.getNivel() == 7) {
 				if(this.getMp() > 0) {
-					System.out.printf("|%-80s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando 60 de dano!");
-					System.out.printf("|%-80s|%n", "Dano: 60");
+					System.out.printf("|%-91s|%n", "Você usou Exorcizar para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+"60 de dano!"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: 60"+ LogicaJogo.Reseta);
 					this.setMp(this.getMp() - 1);			
 					return 60;		
 				} else {
@@ -232,14 +232,25 @@ public class DeathKnight extends Personagem{
 
 		@Override
 		public void defesa() {
-			System.out.printf("|%-80s|%n", "Você usa a Troca sanguinea e cura 10 pontos de vida!");
-			this.setVida(this.getVida() + 20);
+			if(this.getNivel() == 1) {
+				System.out.printf("|%-91s|%n", "Você usa a Troca sanguinea e "+ LogicaJogo.VerdeClaro +"cura 15 pontos de vida!"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 15);	
+				System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+			} else if(this.getNivel() >= 2 && this.getNivel() <= 4) {
+				System.out.printf("|%-91s|%n", "Você usa a Troca sanguinea e "+ LogicaJogo.VerdeClaro +"cura 20 pontos de vida!"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 20);				
+				System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+			}else if(this.getNivel() >= 5 && this.getNivel() <= 7) {
+				System.out.printf("|%-91s|%n", "Você usa a Troca sanguinea e "+ LogicaJogo.VerdeClaro +"cura 30 pontos de vida!"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 30);		
+				System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+			}
 		}
 
 		@Override
 		public void recebeDano(int dano) {
 			this.setVida(this.getVida() - dano);
-			System.out.printf("|%-80s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + this.getVida());
+			System.out.printf("|%-91s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 		}
 		
 		@Override
@@ -250,17 +261,17 @@ public class DeathKnight extends Personagem{
 			} else {
 				System.out.printf("|%-80s|%n", "Você não possui Poções de Cura!");
 			}
-			System.out.printf("|%-80s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + this.getVida());
+			System.out.printf("|%-91s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 		}
 		
 		@Override
 		public void historia() {
-			GameLogic.linhaPontilhada();
+			LogicaJogo.linhaPontilhada();
 			System.out.println("Historia");
-			GameLogic.linhaPontilhada();
+			LogicaJogo.linhaPontilhada();
 			System.out.printf("|%-80s|%n", "Criem suas historias");
 
-			GameLogic.pressioneUmaTecla();
+			LogicaJogo.pressioneUmaTecla();
 		}
 
 	}

@@ -1,64 +1,60 @@
 package Inimigos;
 
-import FantasyOne.GameLogic;
+import FantasyOne.LogicaJogo;
+import Frames.FrameCapivaraZumbi;
 
 public class VilaoCapivaraZumbi extends Vilao{
 	
-	public VilaoCapivaraZumbi(String nome, int vida) {
-		super(nome, vida);
+	public VilaoCapivaraZumbi(String nome, int vida, String tipo) {
+		super(nome, vida, tipo);
 		this.setNome(nome);
 		this.setVida(vida);
+		this.setTipo(tipo);
 	}
 
 	@Override
 	public int ataqueBasico() {
-		System.out.printf("|%-80s|%n", "Ataque CHUTE");
-		System.out.printf("|%-80s|%n", "Dano de 8");
-		return 8;
+		System.out.printf("|%-91s|%n", "Ataque "+LogicaJogo.VermelhoClaro+"CHUTE"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "Dano de 45"+ LogicaJogo.Reseta);
+		return 45;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		System.out.printf("|%-80s|%n", "Ataque com MORDIDA");
-		System.out.printf("|%-80s|%n", "Dano de 12");
-		return 12;
+		System.out.printf("|%-91s|%n", "Ataque com "+LogicaJogo.VermelhoClaro+"MORDIDA"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "Dano de 50"+ LogicaJogo.Reseta);
+		return 50;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		System.out.printf("|%-80s|%n", "Grande mordida!");
-		return 15;
+		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"Grande mordida!"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "Dano de 60"+ LogicaJogo.Reseta);
+		return 60;
 	}
 
 	@Override
 	public int ataqueEspecial2() {
-		System.out.printf("|%-80s|%n", "MORDIDA COM O VIRUS DA RAIVA!");
-		return 12;
+		System.out.printf("|%-91s|%n", LogicaJogo.VermelhoClaro+"MORDIDA COM O VIRUS DA RAIVA!"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", "Dano de 65"+ LogicaJogo.Reseta);
+		return 65;
 	}
 
 	@Override
 	public void defesa() {
-		System.out.printf("|%-80s|%n", "SE esconde e recebe apenas!");
+		System.out.printf("|%-91s|%n", "Capivara Zumbi come um cadáver e recupera "+LogicaJogo.VerdeClaro+"30 de vida!"+LogicaJogo.Reseta);
+		this.setVida(this.getVida()+30);
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Capivara recebeu dano, a vida dela é: " + this.getVida());
+		System.out.printf("|%-91s|%n", "Capivara recebeu dano, a vida dela é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 	}
 
 	@Override
 	public void historia() {
-		GameLogic.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Ao passar pela última ponte antes da entrada do vulcão, nosso herói avista ");
-		System.out.printf("|%-80s|%n", "próximo a um arbusto um animal comendo, parecia muito com uma capivara. Ao se ");
-		System.out.printf("|%-80s|%n", "aproximar do supostamente inofensivo animal, ele percebe que na verdade ela ");
-		System.out.printf("|%-80s|%n", "estava comenda outra capivara. Em um salto para trás, nosso herói percebe que na");
-		System.out.printf("|%-89s|%n", "verdade se tratava de uma grande " + GameLogic.VermelhoFun + "Capivara Zumbi" + GameLogic.Reseta + "que corre em sua direção. ");
-		System.out.printf("|%-80s|%n", "Lute por sua vida!");
-		GameLogic.linhaPontilhada();
-
-		GameLogic.pressioneUmaTecla();		
+		FrameCapivaraZumbi fCapivara = new FrameCapivaraZumbi();
 	}
 
 }

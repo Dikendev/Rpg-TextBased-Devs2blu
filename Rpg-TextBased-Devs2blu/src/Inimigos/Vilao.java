@@ -3,8 +3,9 @@ package Inimigos;
 import FantasyOne.Criatura;
 
 public class Vilao extends Criatura{
-	public Vilao(String nome, int vida) {
-		super(nome, vida);
+	public Vilao(String nome, int vida, String tipo) {
+		super(nome, vida, tipo);
+		
 		// TODO Auto-generated constructor stub
 	}
 		@Override
