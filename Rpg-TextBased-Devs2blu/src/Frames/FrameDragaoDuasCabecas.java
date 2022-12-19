@@ -52,7 +52,7 @@ public class FrameDragaoDuasCabecas extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel dragaoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
+		JLabel dragaoTitle = new JLabel("Nosso herói avista um Dragão de Duas Cabeças!");
 		dragaoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
 		dragaoTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		dragaoTitle.setBounds(87, 28, 560, 34);

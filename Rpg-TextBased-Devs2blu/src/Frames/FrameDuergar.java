@@ -53,7 +53,7 @@ public class FrameDuergar extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel duergarTitle = new JLabel("Nosso herói avista um Elfo do mal!");
+		JLabel duergarTitle = new JLabel("Nosso herói se depara com um Duergar!");
 		duergarTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
 		duergarTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		duergarTitle.setBounds(87, 28, 560, 34);
