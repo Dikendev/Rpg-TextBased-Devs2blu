@@ -82,14 +82,91 @@ public class Eladrin extends Personagem {
 
 	@Override
 	public int ataqueEspecial() {
-		if(getMp() > 0) {
-			this.setMp(this.getMp() - 1);
-			System.out.printf("|%-91s|%n", "Eladrin usa "+ LogicaJogo.VerdeClaro +"SEIVA DE VIDA"+ LogicaJogo.Reseta);
-			this.setVida(this.getVida() + 20);
-			System.out.printf("|%-91s|%n", "Seu personagem usou poder de cura, sua vida agora é de: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
-			return this.getVida();
+		if (this.getNivel() == 1) {
+			if (getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-91s|%n","Eladrin usa " + LogicaJogo.VermelhoClaro + "SEIVA DE VIDA E DA MORTE" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 35"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"Cura de 10"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 10);
+				return 35;
+			} else {
+				System.out.printf("|%-80s|%n", "Você não possui mana suficiente para usar SEIVA DE VIDA E DA MORTE.");
+				return 0;
+			}
+		} else if (this.getNivel() == 2) {
+			if (getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-91s|%n","Eladrin usa " + LogicaJogo.VermelhoClaro + "SEIVA DE VIDA E DA MORTE" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 40"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"Cura de 13"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 13);
+				return 40;
+			} else {
+				System.out.printf("|%-80s|%n", "Você não possui mana suficiente para usar SEIVA DE VIDA E DA MORTE.");
+				return 0;
+			}
+		} else if (this.getNivel() == 3) {
+				if (getMp() > 0) {
+					this.setMp(this.getMp() - 1);
+					System.out.printf("|%-91s|%n","Eladrin usa " + LogicaJogo.VermelhoClaro + "SEIVA DE VIDA E DA MORTE" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 45"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"Cura de 17"+ LogicaJogo.Reseta);
+					this.setVida(this.getVida() + 17);
+					return 45;
+				} else {
+					System.out.printf("|%-80s|%n", "Você não possui mana suficiente para usar SEIVA DE VIDA E DA MORTE.");
+					return 0;
+			}
+		} else if (this.getNivel() == 4) {
+				if (getMp() > 0) {
+					this.setMp(this.getMp() - 1);
+					System.out.printf("|%-91s|%n","Eladrin usa " + LogicaJogo.VermelhoClaro + "SEIVA DE VIDA E DA MORTE" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 50"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"Cura de 22"+ LogicaJogo.Reseta);
+					this.setVida(this.getVida() + 22);	
+					return 50;
+				} else {
+					System.out.printf("|%-80s|%n", "Você não possui mana suficiente para usar SEIVA DE VIDA E DA MORTE.");
+					return 0;
+			}
+		} else if (this.getNivel() == 5) {
+				if (getMp() > 0) {
+					this.setMp(this.getMp() - 1);
+					System.out.printf("|%-91s|%n","Eladrin usa " + LogicaJogo.VermelhoClaro + "SEIVA DE VIDA E DA MORTE" + LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 55"+ LogicaJogo.Reseta);
+					System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"Cura de 25"+ LogicaJogo.Reseta);
+					this.setVida(this.getVida() + 25);
+					return 55;
+				} else {
+					System.out.printf("|%-80s|%n", "Você não possui mana suficiente para usar SEIVA DE VIDA E DA MORTE.");
+					return 0;
+			}
+		} else if (this.getNivel() == 6) {
+			if (getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-91s|%n","Eladrin usa " + LogicaJogo.VermelhoClaro + "SEIVA DE VIDA E DA MORTE" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 60"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"Cura de 28"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 28);
+				return 60;
+			} else {
+				System.out.printf("|%-80s|%n", "Você não possui mana suficiente para usar SEIVA DE VIDA E DA MORTE.");
+				return 0;
+			}
+		} else if (this.getNivel() == 7) {
+			if (getMp() > 0) {
+				this.setMp(this.getMp() - 1);
+				System.out.printf("|%-91s|%n","Eladrin usa " + LogicaJogo.VermelhoClaro + "SEIVA DE VIDA E DA MORTE" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 65"+ LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n", LogicaJogo.VerdeClaro+"Cura de 30"+ LogicaJogo.Reseta);
+				this.setVida(this.getVida() + 30);
+				return 65;
+			} else {
+				System.out.printf("|%-80s|%n", "Você não possui mana suficiente para usar SEIVA DE VIDA E DA MORTE.");
+				return 0;
+			}
 		} else {
-			System.out.printf("|%-80s|%n", "Você não possui mana suficiente para usar SEIVA DE VIDA.");
 			return 0;
 		}
 	}
@@ -171,7 +248,19 @@ public class Eladrin extends Personagem {
 
 	@Override
 	public void defesa() {
-		// TODO Auto-generated method stub
+		if (this.getNivel() == 1) {
+			System.out.printf("|%-91s|%n", "Você usa a RAIZES DE CURA e" + LogicaJogo.VerdeClaro +" recuperando 15 pontos de vida!" + LogicaJogo.Reseta);
+			this.setVida(getVida() + 15);
+			System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+		} else if(this.getNivel() >= 2 && this.getNivel() <= 4){
+			System.out.printf("|%-91s|%n", "Você usa a RAIZES DE CURA e" + LogicaJogo.VerdeClaro +" recuperando 20 pontos de vida!" + LogicaJogo.Reseta);
+			this.setVida(getVida() + 20);
+			System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+		} else if(this.getNivel() >= 5 && this.getNivel() <= 7) {
+			System.out.printf("|%-91s|%n", "Você usa a RAIZES DE CURA e" + LogicaJogo.VerdeClaro +" recuperando 30 pontos de vida!" + LogicaJogo.Reseta);
+			this.setVida(getVida() + 30);
+			System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+		}
 	}
 
 	@Override
