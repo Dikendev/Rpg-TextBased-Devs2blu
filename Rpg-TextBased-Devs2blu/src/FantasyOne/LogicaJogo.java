@@ -173,7 +173,7 @@ public class LogicaJogo {
 		fc.setVisible(true);
 	}
 	
-	public static void ascci() {
+	public static void ascci() {	
 		try {
 			FileReader reader = new FileReader("./src/images/art.txt");
 			int data = reader.read();
