@@ -25,13 +25,14 @@ import Inimigos.VilaoDuergar;
 import Inimigos.VilaoElfo;
 import Inimigos.VilaoOrcGuerreiro;
 import Inimigos.VilaoVelhoDoSaco;
+import Sounds.SoundEffects;
 
 public class LogicaJogo {
 	static Scanner scanner = new Scanner(System.in);
 	public static String jogador;
 	public static Personagem personagem;
 	public static String nomeJogador;
-
+	public static SoundEffects se = new SoundEffects();
 // Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
 	
@@ -91,6 +92,8 @@ public class LogicaJogo {
 		FrameBoasVindas frame00 = new FrameBoasVindas();
 // Inicia o jogo	
 		ascci();
+		se.setFile(".//src//soundBack.wav");
+		se.play();
 		System.out.println("");
 		linhaPontilhada();
 		
@@ -102,7 +105,7 @@ public class LogicaJogo {
 		nomeJogador = scan.next();
 // Chama o segundo frame		
 		FrameAto101 frame02 = new FrameAto101();
-
+		
 		
 		limparConsole();
 		
@@ -168,11 +171,11 @@ public class LogicaJogo {
 	
 	public static void ascci() {
 		try {
-			FileReader reader = new FileReader("src/art.txt");
+			FileReader reader = new FileReader("./src/images/art.txt");
 			int data = reader.read();
 			while (data != -1) {
 				System.out.print((char)data);
-				data = reader.read();
+				data = reader.read();	
 			}
 			reader.close();
 		} catch (FileNotFoundException e) {
