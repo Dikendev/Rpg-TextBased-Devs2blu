@@ -1,4 +1,7 @@
 package FantasyOne;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -78,7 +81,8 @@ public class LogicaJogo {
 		linhaPontilhada();
 
 	}
-
+	
+	
 // Método para comecar o jogo
 	public static void comecaJogo() {
 
@@ -86,7 +90,10 @@ public class LogicaJogo {
 // Chama o primeiro frame
 		FrameBoasVindas frame00 = new FrameBoasVindas();
 // Inicia o jogo	
+		ascci();
+		System.out.println("");
 		linhaPontilhada();
+		
 		System.out.printf("|%-91s|%n", ("                                  " + CianoSub + "Fantasy-One" + Reseta));
 		linhaPontilhada();
 		System.out.printf("|%-80s|%n", "                        Primeiramente, digite seu nome: ");
@@ -158,6 +165,23 @@ public class LogicaJogo {
 		sistemaCombate();
 			
 	}
+	
+	public static void ascci() {
+		try {
+			FileReader reader = new FileReader("src/art.txt");
+			int data = reader.read();
+			while (data != -1) {
+				System.out.print((char)data);
+				data = reader.read();
+			}
+			reader.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	public static void sistemaCombate() {
 		
