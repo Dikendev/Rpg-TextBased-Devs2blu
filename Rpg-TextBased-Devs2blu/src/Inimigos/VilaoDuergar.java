@@ -1,6 +1,7 @@
 package Inimigos;
 
 import FantasyOne.LogicaJogo;
+import Frames.FrameDuergar;
 
 public class VilaoDuergar extends Vilao{
 	
@@ -54,15 +55,7 @@ public class VilaoDuergar extends Vilao{
 
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Devido a um deslizamento, nosso herói é obrigado a usar uma velha trilha, mal ");
-		System.out.printf("|%-80s|%n", "cuidada e pouco sinalizada. Guiado apenas pela luz do luar nosso herói avista um");
-		System.out.printf("|%-89s|%n", "vulto junto a um barulho metálico, e surge de trás de uma árvore um " + LogicaJogo.VermelhoFun + "Duergar," + LogicaJogo.Reseta);
-		System.out.printf("|%-80s|%n", "vestindo uma pesada armadura de metal e empunhando seu grande Martelo, com muita");
-		System.out.printf("|%-80s|%n", "raiva em seu olhar, não resta outra opção a não ser lutar!");
-		LogicaJogo.linhaPontilhada();
-
-		LogicaJogo.pressioneUmaTecla();
+		FrameDuergar fDuergar = new FrameDuergar();
 	}
 
 }

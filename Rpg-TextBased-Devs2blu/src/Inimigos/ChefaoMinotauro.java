@@ -1,6 +1,7 @@
 package Inimigos;
 
 import FantasyOne.LogicaJogo;
+import Frames.FrameMinotauro;
 
 public class ChefaoMinotauro extends Vilao {
 
@@ -55,16 +56,7 @@ public class ChefaoMinotauro extends Vilao {
 	
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Seguindo seu caminho, nosso herói agora toma um caminho rochoso, ao parar ");
-		System.out.printf("|%-80s|%n", "brevemente para encher seu cantil num pequeno lago, nosso herói nota na água ");
-		System.out.printf("|%-80s|%n", "pequenas ondas, compassadas com um som forte de passos. Ao olhar para trás, um");
-		System.out.printf("|%-89s|%n", "furioso "+ LogicaJogo.VermelhoFun + "Minotauro" + LogicaJogo.Reseta + " se aproxima, com chifres imensos e grandes correntes em seus");
-		System.out.printf("|%-80s|%n", "braços ele parece mais forte que o normal, em um surto raivoso ele avança em");
-		System.out.printf("|%-80s|%n", "sua direção. Lute!");
-		LogicaJogo.linhaPontilhada();
-
-		LogicaJogo.pressioneUmaTecla();
+		FrameMinotauro fMinotauro = new FrameMinotauro();
 	}
 
 }

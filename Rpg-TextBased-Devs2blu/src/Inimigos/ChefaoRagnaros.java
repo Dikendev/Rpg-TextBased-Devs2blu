@@ -1,6 +1,7 @@
 package Inimigos;
 
 import FantasyOne.LogicaJogo;
+import Frames.FrameRagnaros;
 
 public class ChefaoRagnaros extends Vilao{
 
@@ -54,17 +55,7 @@ public class ChefaoRagnaros extends Vilao{
 
 	@Override
 	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Ao entrar no covil, nosso herói se depara com uma grande porta de pedra, ao ");
-		System.out.printf("|%-80s|%n", "abrir ele avista ao fundo do grande salão um gigantesco Elemental de fogo, com");
-		System.out.printf("|%-80s|%n", "Armadura e adornos em obsidiana e portando um enorme martelo incandescente. O ");
-		System.out.printf("|%-80s|%n", "calor era absurdo, esse é "+ LogicaJogo.VermelhoFun + "Ragnaros" + LogicaJogo.Reseta + ", o Senhor do Fogo. Como quem já esperava a");
-		System.out.printf("|%-80s|%n", "visita ele pede que nosso Herói se aproxime e o reverencie.  Em um ato");
-		System.out.printf("|%-80s|%n", "premeditado, o herói se aproxima e no momento de reverenciar ele rapidamente");
-		System.out.printf("|%-80s|%n", "o ataca. Lute!");
-		LogicaJogo.linhaPontilhada();
-
-		LogicaJogo.pressioneUmaTecla();		
+		FrameRagnaros fRagnaros = new FrameRagnaros();
 	}
 
 }

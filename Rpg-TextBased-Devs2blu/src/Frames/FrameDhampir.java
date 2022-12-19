@@ -17,7 +17,9 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
-public class FrameElfo extends JFrame {
+import FantasyOne.LogicaJogo;
+
+public class FrameDhampir extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +30,7 @@ public class FrameElfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameElfo frame = new FrameElfo();
+					FrameDhampir frame = new FrameDhampir();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +42,7 @@ public class FrameElfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameElfo() {
+	public FrameDhampir() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -52,27 +54,27 @@ public class FrameElfo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel elfoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
-		elfoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		elfoTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		elfoTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(elfoTitle);
+		JLabel dhampirTitle = new JLabel("A noite é a hora do Dhampir!");
+		dhampirTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		dhampirTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		dhampirTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(dhampirTitle);
 		
-		JTextPane elfoTxt = new JTextPane();
-		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
-		elfoTxt.setBackground(new Color(255, 255, 255));
-		elfoTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(elfoTxt);
+		JTextPane dhampirTxt = new JTextPane();
+		dhampirTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		dhampirTxt.setText("Ao anoitecer, nosso herói busca abrigo em uma caverna. Ao entrar mais fundo, ele percebe que não está sozinho, ouve alguns passos leves e um vulto em direção a escuridão. Ao se aproximar, surge das sombras um Dhampir, que avança em direção ao nosso herói pronto para provar de seu sangue. Batalhe por sua vida!");
+		dhampirTxt.setBackground(new Color(255, 255, 255));
+		dhampirTxt.setBounds(114, 70, 506, 70);
+		contentPane.add(dhampirTxt);
 		
-		StyledDocument textoDK = elfoTxt.getStyledDocument();	
+		StyledDocument textoDK = dhampirTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
-		lblNewLabel.setBounds(267, 146, 200, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameDhampir.class.getResource("/Images/vilao-dhampir.png")));
+		lblNewLabel.setBounds(255, 150, 224, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");

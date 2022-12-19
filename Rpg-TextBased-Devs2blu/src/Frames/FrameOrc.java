@@ -46,6 +46,7 @@ public class FrameOrc extends JFrame {
 		setLocationRelativeTo(null);
 		setBounds(200, 100, 750, 500);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -60,7 +61,7 @@ public class FrameOrc extends JFrame {
 		JTextPane orcTxt = new JTextPane();
 		orcTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
 		orcTxt.setText("Logo no início do seu trajeto, nosso herói ouve um barulho estranho vindo de um arbusto. \nAo se aproximar para verificar, um gigante salta em sua direção empunhando sua espada e escudo, pronto para batalhar!");
-		orcTxt.setBackground(new Color(240, 240, 240));
+		orcTxt.setBackground(new Color(255, 255, 255));
 		orcTxt.setBounds(106, 70, 522, 70);
 		contentPane.add(orcTxt);
 		
@@ -90,7 +91,7 @@ public class FrameOrc extends JFrame {
 		JTextPane txtpnEscolhaSeuAtaque = new JTextPane();
 		txtpnEscolhaSeuAtaque.setText("Escolha seu ataque no console");
 		txtpnEscolhaSeuAtaque.setFont(new Font("Yu Gothic UI", Font.PLAIN, 10));
-		txtpnEscolhaSeuAtaque.setBackground(SystemColor.menu);
+		txtpnEscolhaSeuAtaque.setBackground(new Color(255, 255, 255));
 		txtpnEscolhaSeuAtaque.setBounds(295, 365, 143, 23);
 		contentPane.add(txtpnEscolhaSeuAtaque);
 		

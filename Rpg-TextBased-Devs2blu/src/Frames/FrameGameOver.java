@@ -46,6 +46,7 @@ public class FrameGameOver extends JFrame implements ActionListener{
 		setLocationRelativeTo(null);
 		setBounds(200, 100, 750, 500);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);

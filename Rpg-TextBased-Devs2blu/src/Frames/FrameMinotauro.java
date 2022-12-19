@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,7 +18,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
-public class FrameElfo extends JFrame {
+public class FrameMinotauro extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +29,7 @@ public class FrameElfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameElfo frame = new FrameElfo();
+					FrameMinotauro frame = new FrameMinotauro();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +41,7 @@ public class FrameElfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameElfo() {
+	public FrameMinotauro() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -52,27 +53,28 @@ public class FrameElfo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel elfoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
-		elfoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		elfoTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		elfoTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(elfoTitle);
+		JLabel minotauroTitle = new JLabel("Nosso herói avista um Minotauro!");
+		minotauroTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		minotauroTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		minotauroTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(minotauroTitle);
 		
-		JTextPane elfoTxt = new JTextPane();
-		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
-		elfoTxt.setBackground(new Color(255, 255, 255));
-		elfoTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(elfoTxt);
+		JTextPane minotauroTxt = new JTextPane();
+		minotauroTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		minotauroTxt.setText("Seguindo seu caminho, nosso herói agora toma um caminho rochoso. Ao parar brevemente para encher seu cantil num pequeno lago, nota na água pequenas ondas compassadas com um som forte de passos. Ao olhar para trás, um furioso Minotauro de chifres imensos se aproxima.\nEm um surto raivoso ele avança em sua direção. Lute!");
+		minotauroTxt.setBackground(new Color(255, 255, 255));
+		minotauroTxt.setBounds(106, 70, 522, 70);
+		contentPane.add(minotauroTxt);
 		
-		StyledDocument textoDK = elfoTxt.getStyledDocument();	
+		StyledDocument textoDK = minotauroTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBackground(new Color(255, 255, 255));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
-		lblNewLabel.setBounds(267, 146, 200, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameMinotauro.class.getResource("/Images/vilao-minotauro.png")));
+		lblNewLabel.setBounds(263, 150, 208, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");

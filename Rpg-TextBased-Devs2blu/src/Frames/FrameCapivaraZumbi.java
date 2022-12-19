@@ -17,7 +17,9 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
-public class FrameElfo extends JFrame {
+import FantasyOne.LogicaJogo;
+
+public class FrameCapivaraZumbi extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +30,7 @@ public class FrameElfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameElfo frame = new FrameElfo();
+					FrameCapivaraZumbi frame = new FrameCapivaraZumbi();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +42,7 @@ public class FrameElfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameElfo() {
+	public FrameCapivaraZumbi() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -52,27 +54,27 @@ public class FrameElfo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel elfoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
-		elfoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		elfoTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		elfoTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(elfoTitle);
+		JLabel capivaraTitle = new JLabel("Meu Deus! Uma capivara zumbi!");
+		capivaraTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		capivaraTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		capivaraTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(capivaraTitle);
 		
-		JTextPane elfoTxt = new JTextPane();
-		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
-		elfoTxt.setBackground(new Color(255, 255, 255));
-		elfoTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(elfoTxt);
+		JTextPane capivaraTxt = new JTextPane();
+		capivaraTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		capivaraTxt.setText("Ao passar pela última ponte antes da entrada do vulcão, nosso herói avista um animal comendo que parece muito com uma capivara. Ao se aproximar do supostamente inofensivo animal, ele percebe que na verdade ela estava comenda outra capivara. Em um salto para trás, nosso herói percebe que na verdade se tratava de uma grande Capivara Zumbi que corre em sua direção. Lute por sua vida! ");
+		capivaraTxt.setBackground(new Color(255, 255, 255));
+		capivaraTxt.setBounds(74, 70, 585, 70);
+		contentPane.add(capivaraTxt);
 		
-		StyledDocument textoDK = elfoTxt.getStyledDocument();	
+		StyledDocument textoDK = capivaraTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
-		lblNewLabel.setBounds(267, 146, 200, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameCapivaraZumbi.class.getResource("/Images/vilao-capivara.png")));
+		lblNewLabel.setBounds(267, 150, 200, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");

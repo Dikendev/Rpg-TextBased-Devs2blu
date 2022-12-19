@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,7 +18,7 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
-public class FrameElfo extends JFrame {
+public class FrameRagnaros extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +29,7 @@ public class FrameElfo extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FrameElfo frame = new FrameElfo();
+					FrameRagnaros frame = new FrameRagnaros();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +41,7 @@ public class FrameElfo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public FrameElfo() {
+	public FrameRagnaros() {
 		SimpleAttributeSet center = new SimpleAttributeSet();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -52,27 +53,27 @@ public class FrameElfo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel elfoTitle = new JLabel("Nosso herói avista um Elfo do mal!");
-		elfoTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
-		elfoTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		elfoTitle.setBounds(87, 28, 560, 34);
-		contentPane.add(elfoTitle);
+		JLabel ragnarosTitle = new JLabel("Chegou a hora da batalha final!");
+		ragnarosTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
+		ragnarosTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		ragnarosTitle.setBounds(87, 28, 560, 34);
+		contentPane.add(ragnarosTitle);
 		
-		JTextPane elfoTxt = new JTextPane();
-		elfoTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
-		elfoTxt.setText("Quando se aproximava da subida do vulcão, ele percebeu a presença de uma capanga élfica. Ele se aproxima furtivamente e inicia o confronto. Ataque!");
-		elfoTxt.setBackground(new Color(255, 255, 255));
-		elfoTxt.setBounds(106, 70, 522, 70);
-		contentPane.add(elfoTxt);
+		JTextPane ragnarosTxt = new JTextPane();
+		ragnarosTxt.setFont(new Font("Yu Gothic UI", Font.PLAIN, 12));
+		ragnarosTxt.setText("Ao entrar no covil, nosso herói se depara com uma grande porta de pedra, ao abrir ele avista ao fundo do grande salão um gigantesco Elemental de Fogo, com Armadura e adornos em obsidiana e portando um enorme martelo incandescente. O calor era absurdo, esse é Ragnaros, o Senhor do Fogo. Como quem já esperava a visita ele pede que nosso Herói se aproxime e o reverencie. Em um ato premeditado, o herói se aproxima e no momento de reverenciar ele rapidamente o ataca. Lute!");
+		ragnarosTxt.setBackground(new Color(255, 255, 255));
+		ragnarosTxt.setBounds(34, 70, 666, 70);
+		contentPane.add(ragnarosTxt);
 		
-		StyledDocument textoDK = elfoTxt.getStyledDocument();	
+		StyledDocument textoDK = ragnarosTxt.getStyledDocument();	
 		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
 		textoDK.setParagraphAttributes(0, textoDK.getLength(), center, false);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(FrameElfo.class.getResource("/Images/vilao-elfo.png")));
-		lblNewLabel.setBounds(267, 146, 200, 208);
+		lblNewLabel.setIcon(new ImageIcon(FrameRagnaros.class.getResource("/Images/ragnaros.png")));
+		lblNewLabel.setBounds(249, 150, 235, 208);
 		contentPane.add(lblNewLabel);
 		
 		JButton btn = new JButton("ATACAR");
