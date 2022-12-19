@@ -329,8 +329,8 @@ public class LogicaJogo {
 					break;
 				}
 
-				}while(personagem.getVida() > 0 && inimigos.get(i).getVida() > 0);
-				
+			}while(personagem.getVida() > 0 && inimigos.get(i).getVida() > 0);
+
 			if(inimigos.get(i).getVida()<=0) {
 				if(inimigos.get(i).getTipo().equalsIgnoreCase("Chefe")) {
 					personagem.ganhoXpChefoes();
@@ -342,9 +342,7 @@ public class LogicaJogo {
 				else if(personagem.getVida() <= 0) {	
 				FrameGameOver frameOver = new FrameGameOver();
 					System.out.println("Game Over, pressione uma tecla para recomeçar!");
-					se.stop();
 					comecaJogo();
-					
 				}
 			
 			
