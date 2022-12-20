@@ -51,7 +51,11 @@ public class ChefaoMinotauro extends Vilao {
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
-		System.out.printf("|%-80s|%n", "Minotauro recebeu dano, a vida dele é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
+		if(this.getVida() <= 0) {
+			System.out.printf("|%-91s|%n", "Você deferiu um golpe fatal,"+LogicaJogo.VermelhoFun+" Minotauro morreu!"+LogicaJogo.Reseta);
+		}else {
+			System.out.printf("|%-91s|%n", "Minotauro recebeu dano, a vida dele é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);			
+		}
 	}
 	
 	@Override
