@@ -17,154 +17,44 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public int ataqueBasico() {
-		if(this.getNivel() == 1) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 15"+ LogicaJogo.Reseta);
-			return 15;
-		}else if(this.getNivel() == 2) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+ LogicaJogo.Reseta);
-			return 20;
-		}else if(this.getNivel() == 3) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 25"+ LogicaJogo.Reseta);
-			return 25;
-		}else if(this.getNivel() == 4) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 30"+ LogicaJogo.Reseta);
-			return 30;
-		}else if(this.getNivel() == 5) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 35"+ LogicaJogo.Reseta);
-			return 35;
-		}else if(this.getNivel() == 6) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 40"+ LogicaJogo.Reseta);
-			return 40;
-		}else if(this.getNivel() == 7) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 45"+ LogicaJogo.Reseta);
-			return 45;
-		}else return 0;
+		int dano = 10 + (5*this.getVida());
+		System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de " + dano+ LogicaJogo.Reseta);
+		return dano;
 	}
 
 	@Override
 	public int ataqueBasico2() {
-		if(this.getNivel() == 1) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 18"+ LogicaJogo.Reseta);
-			return 18;
-		}else if(this.getNivel() == 2) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+ LogicaJogo.Reseta);
-			return 20;
-		}else if(this.getNivel() == 3) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 28"+ LogicaJogo.Reseta);
-			return 28;
-		}else if(this.getNivel() == 4) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 30"+ LogicaJogo.Reseta);
-			return 30;
-		}else if(this.getNivel() == 5) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 38"+ LogicaJogo.Reseta);
-			return 38;
-		}else if(this.getNivel() == 6) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 42"+ LogicaJogo.Reseta);
-			return 42;
-		}else if(this.getNivel() == 7) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 50"+ LogicaJogo.Reseta);
-			return 50;
-		}else return 0;
+		int dano = 13 + (5*this.getVida());
+		System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 18"+ LogicaJogo.Reseta);
+		return dano;
 	}
 
 	@Override
 	public int ataqueEspecial() {
-		if(this.getNivel() == 1) {
-			if(this.getMp() > 0) {
-				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 20"+ LogicaJogo.Reseta);
-				return 20;
-			} else {
-				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
-				return 0;
-			}
-		}else if(this.getNivel() == 2) {
-			if(this.getMp() > 0) {
-				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 22"+ LogicaJogo.Reseta);
-				return 22;
-			} else {
-				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
-				return 0;
-			}
-		}else if(this.getNivel() == 3) {
-			if(this.getMp() > 0) {
-				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 25"+ LogicaJogo.Reseta);
-				return 25;
-			} else {
-				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
-				return 0;
-			}
-		}else if(this.getNivel() == 4) {
-			if(this.getMp() > 0) {
-				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 30"+ LogicaJogo.Reseta);
-				return 30;
-			} else {
-				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
-				return 0;
-			}
-		}else if(this.getNivel() == 5) {
-			if(this.getMp() > 0) {
-				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 35"+ LogicaJogo.Reseta);
-				return 35;
-			} else {
-				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
-				return 0;
-			}
-		}else if(this.getNivel() == 6) {
-			if(this.getMp() > 0) {
-				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 40"+ LogicaJogo.Reseta);
-				return 40;
-			} else {
-				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
-				return 0;
-			}
-		}else if(this.getNivel() == 7) {
-			if(this.getMp() > 0) {
-				this.setMp(this.getMp() - 1);
-				System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
-				System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 45"+ LogicaJogo.Reseta);
-				return 45;
-			} else {
-				System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
-				return 0;
-			}
-		}else return 0;
+		int dano = 15 + (5*this.getVida());
+		if(this.getMp() > 0) {
+			this.setMp(this.getMp() - 1);
+			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
+			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de " + dano+ LogicaJogo.Reseta);
+			return dano;
+		} else {
+			System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para utilizar o ataque especial!");
+			return 0;
+		}
 	}
 		
 
 	@Override
 	public int ataqueEspecial2() {
+		int vidaRec = 15 + (5*this.getVida());
 		if(this.getMp() > 0) {
 			this.setMp(this.getMp() - 1);
 			System.out.printf("|%-91s|%n", "Mago Cinzento utiliza a "+ LogicaJogo.VerdeClaro+"Magia da Cura!"+ LogicaJogo.Reseta );
-			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 30."+ LogicaJogo.Reseta);
-			this.setVida(this.getVida()+30);
-			return this.getVida();
+			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em " + vidaRec + LogicaJogo.Reseta);
+			this.setVida(this.getVida()+vidaRec);
+			return 0;
 		} else {
 			System.out.printf("|%-80s|%n", "O Ataque falhou, você não possui mana suficiente para o ataque especial.");
 			return 0;
@@ -173,21 +63,12 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public void defesa() {
+		int vidaRec = 10 + (5*this.getVida());
 		if(this.getNivel() == 1) {
 			System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 15."+ LogicaJogo.Reseta);
+			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em " + vidaRec + LogicaJogo.Reseta);
 			this.setVida(this.getVida()+15);
 			System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta + "de vida");
-		} else if(this.getNivel() >= 2 && this.getNivel() <= 4) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 20."+ LogicaJogo.Reseta);
-			this.setVida(this.getVida()+20);
-			System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta + "de vida");
-		} else if(this.getNivel() >= 5 && this.getNivel() <= 7) {
-			System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em 30."+ LogicaJogo.Reseta);
-			this.setVida(this.getVida()+30);
-			System.out.printf("|%-80s|%n", "Mago Cinzento possui: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta + "de vida");			
 		}
 	}
 	
