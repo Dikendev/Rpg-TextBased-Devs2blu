@@ -17,7 +17,7 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public int ataqueBasico() {
-		int dano = 10 + (5*this.getVida());
+		int dano = 10 + (5*this.getNivel());
 		System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.VermelhoClaro+"Magia da Noite!"+ LogicaJogo.Reseta );
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de " + dano+ LogicaJogo.Reseta);
 		return dano;
@@ -25,7 +25,7 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public int ataqueBasico2() {
-		int dano = 13 + (5*this.getVida());
+		int dano = 13 + (5*this.getNivel());
 		System.out.printf("|%-91s|%n", "Mago Cinzento ataca com a "+ LogicaJogo.Vermelho +"Magia dos Druidas!"+ LogicaJogo.Reseta );
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de 18"+ LogicaJogo.Reseta);
 		return dano;
@@ -33,7 +33,7 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public int ataqueEspecial() {
-		int dano = 15 + (5*this.getVida());
+		int dano = 15 + (5*this.getNivel());
 		if(this.getMp() > 0) {
 			this.setMp(this.getMp() - 1);
 			System.out.printf("|%-80s|%n", "Mago Cinzento ataca com Magia celestial! " );
@@ -48,7 +48,7 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public int ataqueEspecial2() {
-		int vidaRec = 15 + (5*this.getVida());
+		int vidaRec = 15 + (5*this.getNivel());
 		if(this.getMp() > 0) {
 			this.setMp(this.getMp() - 1);
 			System.out.printf("|%-91s|%n", "Mago Cinzento utiliza a "+ LogicaJogo.VerdeClaro+"Magia da Cura!"+ LogicaJogo.Reseta );
@@ -63,7 +63,7 @@ public class MagoCinzento extends Personagem{
 
 	@Override
 	public void defesa() {
-		int vidaRec = 10 + (5*this.getVida());
+		int vidaRec = 10 + (5*this.getNivel());
 		if(this.getNivel() == 1) {
 			System.out.printf("|%-91s|%n", "Mago Cinzento usou "+ LogicaJogo.VerdeClaro+"Defesa da Lua."+ LogicaJogo.Reseta);
 			System.out.printf("|%-91s|%n", "Aumenta sua própria "+ LogicaJogo.Verde+"vida em " + vidaRec + LogicaJogo.Reseta);

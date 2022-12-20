@@ -17,7 +17,7 @@ public class Sacerdote extends Personagem {
 
 	@Override
 	public int ataqueBasico() {
-		int dano = 10 + (5*this.getVida());
+		int dano = 10 + (5*this.getNivel());
 		if(this.getNivel() == 1) {
 			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ LogicaJogo.VermelhoClaro+ dano +" de dano!"+ LogicaJogo.Reseta);
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: " + dano + LogicaJogo.Reseta);
@@ -27,7 +27,7 @@ public class Sacerdote extends Personagem {
 
 	@Override
 	public int ataqueBasico2() {
-		int dano = 20 + (5*this.getVida());
+		int dano = 20 + (5*this.getNivel());
 		System.out.printf("|%-80s|%n", "Você canaliza um raio de luz ofuscante diretamente ao seu inimigo,");
 		System.out.printf("|%-91s|%n", "causando "+ LogicaJogo.VermelhoClaro+ dano +" de dano!"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: " + dano + LogicaJogo.Reseta);
@@ -36,7 +36,7 @@ public class Sacerdote extends Personagem {
 
 	@Override
 	public int ataqueEspecial() {
-		int dano = 25 + (5*this.getVida());
+		int dano = 25 + (5*this.getNivel());
 		if (this.getMp() > 0) {
 			System.out.printf("|%-80s|%n", "Você invoca com uma oração o Fogo Penitencial para subjulgar seu inimigo,");
 			System.out.printf("|%-91s|%n", "causando "+ LogicaJogo.VermelhoClaro+ dano +" de dano!"+ LogicaJogo.Reseta);
@@ -51,7 +51,7 @@ public class Sacerdote extends Personagem {
 
 	@Override
 	public int ataqueEspecial2() {
-		int dano = 30 + (5*this.getVida());
+		int dano = 30 + (5*this.getNivel());
 		if (this.getMp() > 0) {
 			System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+ dano +" de dano!"+ LogicaJogo.Reseta);
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: " + dano +LogicaJogo.Reseta);
@@ -65,7 +65,7 @@ public class Sacerdote extends Personagem {
 
 	@Override
 	public void defesa() {
-		int vidaRec = 10 + (5*this.getVida());
+		int vidaRec = 10 + (5*this.getNivel());
 		if (this.getNivel() == 1) {
 			System.out.printf("|%-91s|%n", "Você usa a oração celestial e" + LogicaJogo.VerdeClaro +" cura " + vidaRec +" pontos de vida!" + LogicaJogo.Reseta);
 			this.setVida(getVida() + vidaRec);

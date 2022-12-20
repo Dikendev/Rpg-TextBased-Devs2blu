@@ -16,7 +16,7 @@ public class BruxoCacador extends Personagem {
 
 	@Override
 	public int ataqueBasico() {
-		int dano = 15 + (5*this.getVida());
+		int dano = 15 + (5*this.getNivel());
 		
 		System.out.printf("|%-91s|%n", "Bruxo caçador aplicou um golpe com sua espada, causando "+ LogicaJogo.VermelhoClaro + dano + " de dano!"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: " + dano + LogicaJogo.Reseta);
@@ -25,7 +25,7 @@ public class BruxoCacador extends Personagem {
 
 	@Override
 	public int ataqueBasico2() {
-		int dano = 20 + (5*this.getVida());
+		int dano = 20 + (5*this.getNivel());
 		
 		System.out.printf("|%-91s|%n", "Bruxo caçador utilizou seu arco e flecha com veneno, causando " + LogicaJogo.VermelhoClaro + dano + " de dano!" + LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho + "Dano: " + dano + LogicaJogo.Reseta);
@@ -34,7 +34,7 @@ public class BruxoCacador extends Personagem {
 
 	@Override
 	public int ataqueEspecial() {
-		int dano = 30 + (5*this.getVida());
+		int dano = 30 + (5*this.getNivel());
 		
 		if (this.getMp() > 0) {
 			System.out.printf("|%-91s|%n", "Bruxo caçador utilizou bola de fogo, causando "+ LogicaJogo.VermelhoClaro + dano + " de dano!" + LogicaJogo.Reseta);
@@ -49,7 +49,7 @@ public class BruxoCacador extends Personagem {
 
 	@Override
 	public int ataqueEspecial2() {
-		int dano = 35 + (5*this.getVida());
+		int dano = 35 + (5*this.getNivel());
 		
 		if (this.getMp() > 0) {
 			System.out.printf("|%-91s|%n", "Bruxo caçador utilizou relâmpago, causando "+ LogicaJogo.VermelhoClaro + dano +" de dano!" + LogicaJogo.Reseta);
@@ -64,7 +64,7 @@ public class BruxoCacador extends Personagem {
 
 	@Override
 	public void defesa() {
-		int vidaRec = 15 + (5*this.getVida());
+		int vidaRec = 15 + (5*this.getNivel());
 		System.out.printf("|%-91s|%n", "Bruxo caçador se regenerou, aumentando sua "+ LogicaJogo.VerdeClaro +"Vida em " + vidaRec + LogicaJogo.Reseta);
 		this.setVida(this.getVida() + vidaRec);
 		System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);

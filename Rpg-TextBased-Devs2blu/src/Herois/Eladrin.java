@@ -16,7 +16,7 @@ public class Eladrin extends Personagem {
 	
 	@Override
 	public int ataqueBasico() {
-		int dano = 5 + (5*this.getVida());
+		int dano = 5 + (5*this.getNivel());
 		
 		System.out.printf("|%-91s|%n", "Eladrin ataca com "+ LogicaJogo.VermelhoClaro+"SOPRO DE GELO"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de " + dano + LogicaJogo.Reseta);
@@ -25,7 +25,7 @@ public class Eladrin extends Personagem {
 
 	@Override
 	public int ataqueBasico2() {
-		int dano = 10 + (5*this.getVida());
+		int dano = 10 + (5*this.getNivel());
 		System.out.printf("|%-91s|%n", "Eladrin ataca com "+ LogicaJogo.VermelhoClaro+"BOLA DE FOGO"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de " + dano + LogicaJogo.Reseta);
 		return dano;
@@ -33,8 +33,8 @@ public class Eladrin extends Personagem {
 
 	@Override
 	public int ataqueEspecial() {
-		int dano = 30 + (5*this.getVida());
-		int vidaRec = 5 + (5*this.getVida());
+		int dano = 30 + (5*this.getNivel());
+		int vidaRec = 5 + (5*this.getNivel());
 		if (getMp() > 0) {
 			this.setMp(this.getMp() - 1);
 			System.out.printf("|%-91s|%n","Eladrin usa " + LogicaJogo.VermelhoClaro + "SEIVA DE VIDA E DA MORTE" + LogicaJogo.Reseta);
@@ -50,7 +50,7 @@ public class Eladrin extends Personagem {
 
 	@Override
 	public int ataqueEspecial2() {
-		int dano = 30 + (5*this.getVida());
+		int dano = 30 + (5*this.getNivel());
 		if(this.getMp() > 0) {
 			System.out.printf("|%-91s|%n", "Eladrin usa "+ LogicaJogo.VermelhoClaro+"DRENO DE VIDA"+ LogicaJogo.Reseta);
 			this.setMp(this.getMp() - 1);
@@ -64,7 +64,7 @@ public class Eladrin extends Personagem {
 
 	@Override
 	public void defesa() {
-		int vidaRec = 15 + (5*this.getVida());
+		int vidaRec = 15 + (5*this.getNivel());
 		System.out.printf("|%-91s|%n", "Você usa a RAIZES DE CURA e" + LogicaJogo.VerdeClaro +" recuperando "+ vidaRec + " pontos de vida!" + LogicaJogo.Reseta);
 		this.setVida(getVida() + 15);
 		System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
