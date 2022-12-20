@@ -18,11 +18,9 @@ public class Sacerdote extends Personagem {
 	@Override
 	public int ataqueBasico() {
 		int dano = 10 + (5*this.getNivel());
-		if(this.getNivel() == 1) {
-			System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ LogicaJogo.VermelhoClaro+ dano +" de dano!"+ LogicaJogo.Reseta);
-			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: " + dano + LogicaJogo.Reseta);
-			return dano;
-		}else return 0;
+		System.out.printf("|%-91s|%n", "Você lança três arcos de luz, causando "+ LogicaJogo.VermelhoClaro+ dano +" de dano!"+ LogicaJogo.Reseta);
+		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: " + dano + LogicaJogo.Reseta);
+		return dano;
 	}
 
 	@Override
@@ -56,7 +54,7 @@ public class Sacerdote extends Personagem {
 			System.out.printf("|%-91s|%n", "Você usa a Penitência Divína para expurgar seu inimigo, causando "+ LogicaJogo.VermelhoClaro+ dano +" de dano!"+ LogicaJogo.Reseta);
 			System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano: " + dano +LogicaJogo.Reseta);
 			this.setMp(this.getMp() - 1);
-			return 35;
+			return dano;
 		} else {
 			System.out.printf("|%-80s|%n", "Você tenta, mas não possui mana suficiente para Penitência Divína!");
 			return 0;
@@ -66,18 +64,16 @@ public class Sacerdote extends Personagem {
 	@Override
 	public void defesa() {
 		int vidaRec = 10 + (5*this.getNivel());
-		if (this.getNivel() == 1) {
 			System.out.printf("|%-91s|%n", "Você usa a oração celestial e" + LogicaJogo.VerdeClaro +" cura " + vidaRec +" pontos de vida!" + LogicaJogo.Reseta);
 			this.setVida(getVida() + vidaRec);
 			System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
-		}
 	}
 
 	@Override
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
 		if(this.getVida() <= 0) {
-			System.out.printf("|%-91s|%n", "Seu personagem recebeu dano fatal,"+LogicaJogo.VermelhoFun+" você morreu!"+LogicaJogo.Reseta);
+			System.out.printf("|%-89s|%n", "Seu personagem recebeu dano fatal,"+LogicaJogo.VermelhoFun+" você morreu!"+LogicaJogo.Reseta);
 		}else {
 			System.out.printf("|%-91s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);			
 		}
@@ -90,21 +86,21 @@ public class Sacerdote extends Personagem {
 				this.setPocao(this.getPocao() - 1);
 				this.setVida(this.getVida() + 20);
 			} else {
-				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
 			}
 		} else if (this.getNivel() >= 2 && this.getNivel() <= 5) {
 			if (this.getPocao() > 0) {
 				this.setPocao(this.getPocao() - 1);
 				this.setVida(this.getVida() + 50);
 			} else {
-				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
 			}
 		} else if (this.getNivel() >= 6 && this.getNivel() <= 7) {
 			if (this.getPocao() > 0) {
 				this.setPocao(this.getPocao() - 1);
 				this.setVida(this.getVida() + 100);
 			} else {
-				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
 			}
 		}
 		System.out.printf("|%-91s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + LogicaJogo.Verde

@@ -203,7 +203,7 @@ public class LogicaJogo {
 		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 175, "Vilao");
 		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 120, "Vilao");
 		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 155, "Vilao");
-		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 160, "Vilao");
+		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 150, "Vilao");
 		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 170, "Vilao");
 		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 155, "Chefe");
 		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 150, "Chefe");

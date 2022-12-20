@@ -17,7 +17,6 @@ public class Eladrin extends Personagem {
 	@Override
 	public int ataqueBasico() {
 		int dano = 5 + (5*this.getNivel());
-		
 		System.out.printf("|%-91s|%n", "Eladrin ataca com "+ LogicaJogo.VermelhoClaro+"SOPRO DE GELO"+ LogicaJogo.Reseta);
 		System.out.printf("|%-91s|%n", LogicaJogo.Vermelho+"Dano de " + dano + LogicaJogo.Reseta);
 		return dano;
@@ -66,7 +65,7 @@ public class Eladrin extends Personagem {
 	public void defesa() {
 		int vidaRec = 15 + (5*this.getNivel());
 		System.out.printf("|%-91s|%n", "Você usa a RAIZES DE CURA e" + LogicaJogo.VerdeClaro +" recuperando "+ vidaRec + " pontos de vida!" + LogicaJogo.Reseta);
-		this.setVida(getVida() + 15);
+		this.setVida(getVida() + vidaRec);
 		System.out.printf("|%-91s|%n", "Sua vida atual é: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);
 	}
 
@@ -74,7 +73,7 @@ public class Eladrin extends Personagem {
 	public void recebeDano(int dano) {
 		this.setVida(this.getVida() - dano);
 		if(this.getVida() <= 0) {
-			System.out.printf("|%-91s|%n", "Seu personagem recebeu dano fatal,"+LogicaJogo.VermelhoFun+" você morreu!"+LogicaJogo.Reseta);
+			System.out.printf("|%-89s|%n", "Seu personagem recebeu dano fatal,"+LogicaJogo.VermelhoFun+" você morreu!"+LogicaJogo.Reseta);
 		}else {
 			System.out.printf("|%-91s|%n", "Seu personagem recebeu dano, sua vida agora é de: " + LogicaJogo.Verde + this.getVida() + LogicaJogo.Reseta);			
 		}
@@ -87,21 +86,21 @@ public class Eladrin extends Personagem {
 				this.setPocao(this.getPocao() - 1);
 				this.setVida(this.getVida() + 20);
 			} else {
-				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
 			}
 		} else if (this.getNivel() >= 2 && this.getNivel() <= 5) {
 			if (this.getPocao() > 0) {
 				this.setPocao(this.getPocao() - 1);
 				this.setVida(this.getVida() + 50);
 			} else {
-				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
 			}
 		} else if (this.getNivel() >= 6 && this.getNivel() <= 7) {
 			if (this.getPocao() > 0) {
 				this.setPocao(this.getPocao() - 1);
 				this.setVida(this.getVida() + 100);
 			} else {
-				System.out.printf("|%-80s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
+				System.out.printf("|%-91s|%n","Você não possui " + LogicaJogo.VerdeClaro + "Poções de Cura!" + LogicaJogo.Reseta);
 			}
 		}
 		System.out.printf("|%-91s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + LogicaJogo.Verde

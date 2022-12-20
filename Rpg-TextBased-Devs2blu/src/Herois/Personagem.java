@@ -89,6 +89,7 @@ public class Personagem extends Criatura{
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 10);
 			this.setVida(getMaxVida());
+			this.setPocao(getPocao() + 1);
 			this.setMp(getMp() + 1);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
@@ -97,6 +98,7 @@ public class Personagem extends Criatura{
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 12);
 			this.setVida(getMaxVida());
+			this.setPocao(getPocao() + 1);
 			this.setMp(getMp() + 1);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
@@ -105,6 +107,7 @@ public class Personagem extends Criatura{
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 15);
 			this.setVida(getMaxVida());
+			this.setPocao(getPocao() + 1);
 			this.setMp(getMp() + 2);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
@@ -113,6 +116,7 @@ public class Personagem extends Criatura{
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 18);
 			this.setVida(getMaxVida());
+			this.setPocao(getPocao() + 2);
 			this.setMp(getMp() + 2);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
@@ -121,6 +125,7 @@ public class Personagem extends Criatura{
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 20);
 			this.setVida(getMaxVida());
+			this.setPocao(getPocao() + 2);
 			this.setMp(getMp() + 2);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
@@ -129,6 +134,7 @@ public class Personagem extends Criatura{
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 25);
 			this.setVida(getMaxVida());
+			this.setPocao(getPocao() + 2);
 			this.setMp(getMp() + 3);
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
