@@ -301,9 +301,4 @@ public class Eladrin extends Personagem {
 				+ this.getVida() + LogicaJogo.Reseta);
 	}
 	
-	@Override
-	public void historia() {
-
-	}
-	
 }

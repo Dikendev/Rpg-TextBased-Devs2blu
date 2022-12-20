@@ -286,20 +286,4 @@ public class BruxoCacador extends Personagem {
 				+ this.getVida() + LogicaJogo.Reseta);
 	}
 
-	@Override
-	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Historia");
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Nosso Herói começa sua jornada na pacata vila de Untirade, um pequeno povoado");
-		System.out.printf("|%-80s|%n", "numa clareira não muito próxima ao Boca do Diabo, um grande vulcão adormecido,");
-		System.out.printf("|%-80s|%n", "lar do maligno Senhor do Fogo Ragnaros que recentemente despertou de seu");
-		System.out.printf("|%-80s|%n", "aprisionamento e agora jura vingança a todos os povos e raças.");
-		System.out.printf("|%-80s|%n", "Com a ameaça iminente a vida de todos, e guiado por sua honrosa índole, nosso");
-		System.out.printf("|%-80s|%n", "Herói agora caminha em direção a Boca do Diabo para dar fim ao impiedoso legado");
-		System.out.printf("|%-80s|%n", "de Ragnaros.");
-
-		LogicaJogo.pressioneUmaTecla();
-	}
-
 }

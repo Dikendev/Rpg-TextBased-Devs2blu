@@ -299,17 +299,5 @@ public class Sacerdote extends Personagem {
 		System.out.printf("|%-91s|%n", "Você usou uma Poção de Cura, sua vida atual é: " + LogicaJogo.Verde
 				+ this.getVida() + LogicaJogo.Reseta);
 	}	
-	
-	@Override
-	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.println("Historia");
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "Com sua tunica branca e seu cajado adornado em prata e ouro, o Sacerdote usa sua");
-		System.out.printf("|%-80s|%n", "fé e o poder divino para subjulgar seus inimigos. \nUsando orações ele é capaz");
-		System.out.printf("|%-80s|%n", "de causar grande dano ou curar a sí mesmo.");
-
-		LogicaJogo.pressioneUmaTecla();
-	}
 
 }

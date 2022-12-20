@@ -49,7 +49,7 @@ public class Vilao extends Criatura{
 			// TODO Auto-generated method stub
 			
 		}
-		@Override
+		
 		public void historia() {
 			// TODO Auto-generated method stub
 			

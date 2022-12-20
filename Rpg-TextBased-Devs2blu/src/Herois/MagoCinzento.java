@@ -230,19 +230,6 @@ public class MagoCinzento extends Personagem{
 				+ this.getVida() + LogicaJogo.Reseta);
 	}
 	
-	@Override
-	public void historia() {
-		LogicaJogo.linhaPontilhada();
-		System.out.println("Historia");
-		LogicaJogo.linhaPontilhada();
-		System.out.printf("|%-80s|%n", "É um personagem místico, ele veio da Lua com o intuito de proteger o");
-		System.out.printf("|%-80s|%n", "Vilarejo Untirade.");
-		System.out.printf("|%-80s|%n", "Seus ataques são fortes e os ataques especiais irão acabar com seus oponentes.");
-		
-		LogicaJogo.pressioneUmaTecla();
-	}
-	
-
 }
 
 

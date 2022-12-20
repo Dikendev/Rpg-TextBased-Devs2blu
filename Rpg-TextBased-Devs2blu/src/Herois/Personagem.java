@@ -107,12 +107,5 @@ public class Personagem extends Criatura{
 			LogicaJogo.infoPersonagem();
 		}
 	}
-	
-		
-	@Override
-	public void historia() {
-		// TODO Auto-generated method stub
-		
-	}
 }
 
