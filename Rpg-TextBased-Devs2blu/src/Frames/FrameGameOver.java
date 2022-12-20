@@ -95,6 +95,8 @@ public class FrameGameOver extends JFrame implements ActionListener{
 		contentPane.add(btn_1);
 		
 		setVisible(true);
+		gameSound.setFile(".//src//Sounds//assets//gameOver.wav");
+		gameSound.playEffectButton();
 	}
 
 @Override
