@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
+import Sounds.SoundEffects;
 import javax.swing.JTextPane;
 import java.awt.Color;
 import javax.swing.ImageIcon;
@@ -20,7 +21,7 @@ import java.awt.SystemColor;
 public class FrameOrc extends JFrame {
 
 	private JPanel contentPane;
-
+	SoundEffects introSound = new SoundEffects();
 	/**
 	 * Launch the application.
 	 */
@@ -74,6 +75,7 @@ public class FrameOrc extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(FrameOrc.class.getResource("/Images/vilao-orc.png")));
 		lblNewLabel.setBounds(258, 146, 217, 208);
 		contentPane.add(lblNewLabel);
+
 		
 		JButton btn = new JButton("ATACAR");
 		btn.setForeground(new Color(255, 255, 255));
@@ -96,5 +98,9 @@ public class FrameOrc extends JFrame {
 		contentPane.add(txtpnEscolhaSeuAtaque);
 		
 		setVisible(true);
+		
+		
+		introSound.setFile(".//src//Sounds//assets//ogre.wav");
+		introSound.playEffectButton();
 	}
 }

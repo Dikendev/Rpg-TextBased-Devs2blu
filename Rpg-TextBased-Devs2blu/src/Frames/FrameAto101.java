@@ -85,7 +85,7 @@ public class FrameAto101 extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent evt) {
 		if(evt.getSource()==btn) {
-			dispose();
+			setVisible(false);
 			FrameAto102 frame102 = new FrameAto102();
 		}
 	}

@@ -18,9 +18,13 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
+import Sounds.SoundEffects;
+
 public class FrameDuergar extends JFrame {
 
 	private JPanel contentPane;
+	SoundEffects introSound = new SoundEffects();
+	
 
 	/**
 	 * Launch the application.
@@ -97,6 +101,9 @@ public class FrameDuergar extends JFrame {
 		contentPane.add(txtpnEscolhaSeuAtaque);
 		
 		setVisible(true);
+		
+		introSound.setFile(".//src//Sounds//assets//duergar.wav");
+		introSound.playEffectButton();
 	}
 
 }

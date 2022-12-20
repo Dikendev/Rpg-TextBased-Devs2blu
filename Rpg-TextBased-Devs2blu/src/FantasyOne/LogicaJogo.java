@@ -93,7 +93,7 @@ public class LogicaJogo {
 		FrameBoasVindas frame00 = new FrameBoasVindas();
 // Inicia o jogo	
 		ascci();
-		se.setFile(".//src//soundBack.wav");
+		se.setFile(".//src//Sounds//assets//soundBack.wav");
 		se.play();
 		System.out.println("");
 		linhaPontilhada();
@@ -120,6 +120,7 @@ public class LogicaJogo {
 			System.out.printf("|%-91s|%n", "4 - "+CianoClaroSub+"Sacerdote"+Reseta);
 			System.out.printf("|%-91s|%n", "5 - "+VermelhoSub+"Death Knight"+Reseta);
 			linhaPontilhada();
+			se.setFile(".//src//Sounds//assets//escolhaHeroi.wav");
 
 			Scanner sc = new Scanner(System.in);
 			
@@ -127,36 +128,42 @@ public class LogicaJogo {
 				opcao = sc.nextInt();	
 			
 			if (opcao == 1) {
+				se.playEffectButton();
 				limparConsole();
 				personagem = new BruxoCacador("Bruxo Caçador", 100, 0, 100, 2, 1, 3);
 				jogador = "Bruxo Caçador";
 				imprimirCabecalho("Você escolheu o " + AmareloSub + "Bruxo Caçador!" + Reseta, 91);
 				pressioneUmaTecla();
 			} else if (opcao == 2) {
+				se.playEffectButton();
 				limparConsole();
 				personagem = new Eladrin("Eladrin", 80, 0, 100, 2, 1, 3);
 				jogador = "Eladrin";
 				imprimirCabecalho("Você escolheu a" + VerdeSub + "Eladrin!" + Reseta, 91);
 				pressioneUmaTecla();
 			} else if (opcao == 3) {
+				se.playEffectButton();
 				limparConsole();
 				personagem = new MagoCinzento("Mago Cinzento", 100, 0, 100, 2, 1, 3);
 				jogador = "Mago Cinzento";
 				imprimirCabecalho("Você escolheu o " + RoxoSub + "MagoCinzento!" + Reseta, 91);
 				pressioneUmaTecla();
 			} else if (opcao == 4) {
+				se.playEffectButton();
 				limparConsole();
 				personagem = new Sacerdote("Sacerdote", 100, 0, 100, 2, 1, 3);
 				jogador = "Sacerdote";
 				imprimirCabecalho("Você escolheu o " + CianoClaroSub + "Sacerdote!" + Reseta, 91);
 				pressioneUmaTecla();
 			} else if (opcao == 5) {
+				se.playEffectButton();
 				limparConsole();
 				personagem = new DeathKnight("Death Knight", 100, 0, 100, 2, 1, 3);
 				jogador = "Death Knight";
 				imprimirCabecalho("Você escolheu o " + VermelhoSub + "DeathKnight!" + Reseta, 91);
 				pressioneUmaTecla();
 			} else {
+				// erro sound
 				imprimirCabecalho("Escolha uma classe válida!", 80);
 			}
 			}catch(InputMismatchException e) {
@@ -231,21 +238,31 @@ public class LogicaJogo {
 				linhaPontilhada();
 				int ataque;
 				ataque = scanner.nextInt();
+				
 
+				
 				switch (ataque) {
 				case 1:
+					se.setFile(".//src//Sounds//assets//ataqueBasico.wav");
+					se.playEffectButton();
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueBasico());
 					break;
 				case 2:
+					se.setFile(".//src//Sounds//assets//ataqueRapido.wav");
+					se.playEffectButton();
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueBasico2());
 					break;
 				case 3:
+					se.setFile(".//src//Sounds//assets//ataqueEspecial.wav");
+					se.playEffectButton();
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueEspecial());
 					break;
 				case 4:
+					se.setFile(".//src//Sounds//assets//ataqueEspecial2.wav");
+					se.playEffectButton();
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueEspecial2());
 					break;
@@ -254,6 +271,8 @@ public class LogicaJogo {
 					personagem.defesa();
 					break;
 				case 6:
+					se.setFile(".//src//Sounds//assets//heal.wav");
+					se.playEffectButton();
 					limparConsole();
 					personagem.usarPocao();
 					break;
@@ -380,7 +399,6 @@ public class LogicaJogo {
 // Método para mostrar informações do personagem
 	public static void infoPersonagem() {
 			imprimirCabecalho("Informações gerais:", 80);
-			
 			    System.out.printf("|%-80s|%n", "Nome: " + personagem.getNome());
 			    System.out.printf("|%-80s|%n", "Vida: " + personagem.getVida() + "/" + personagem.getMaxVida());
 			    System.out.printf("|%-80s|%n", "XP: " + personagem.getXp());

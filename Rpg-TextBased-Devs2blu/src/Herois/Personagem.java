@@ -2,11 +2,16 @@ package Herois;
 
 import FantasyOne.Criatura;
 import FantasyOne.LogicaJogo;
+import Sounds.SoundEffects;
+
+
 
 public class Personagem extends Criatura{
 	public Personagem(String nome, int maxVida, int xp, int vida, int pocao, int nivel, int mp) {
 		super(nome, maxVida, xp, vida, pocao, nivel, mp);
 	}
+	
+	static SoundEffects introSound = new SoundEffects();
 	@Override
 	public int ataqueBasico() {
 		// TODO Auto-generated method stub
@@ -59,9 +64,28 @@ public class Personagem extends Criatura{
         return this.getXp();
 	}
 	
-	public void subirNivel() {
+	public static void playXpSound() {
+		
+		try {
+			introSound.setFile(".//src//Sounds//assets//levelUp.wav");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			introSound.playEffectButton();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	}
 
+
+	
+	public void subirNivel() {
 		if (this.getXp() == 100) {
+			playXpSound();
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 10);
 			this.setVida(getMaxVida());
@@ -69,6 +93,7 @@ public class Personagem extends Criatura{
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
 		} else if (this.getXp() == 200) {
+			playXpSound();
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 12);
 			this.setVida(getMaxVida());
@@ -76,6 +101,7 @@ public class Personagem extends Criatura{
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível " + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
 		} else if (this.getXp() == 300) {
+			playXpSound();
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 15);
 			this.setVida(getMaxVida());
@@ -83,6 +109,7 @@ public class Personagem extends Criatura{
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
 		} else if (this.getXp() == 400) {
+			playXpSound();
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 18);
 			this.setVida(getMaxVida());
@@ -90,6 +117,7 @@ public class Personagem extends Criatura{
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
 		} else if (this.getXp() == 500) {
+			playXpSound();
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 20);
 			this.setVida(getMaxVida());
@@ -97,6 +125,7 @@ public class Personagem extends Criatura{
 			LogicaJogo.imprimirCabecalho("Parabéns você chegou no nível "  + LogicaJogo.CianoSub + this.getNivel() +LogicaJogo.Reseta, 91);
 			LogicaJogo.infoPersonagem();
 		} else if(this.getXp() >=600){
+			playXpSound();
 			this.setNivel(this.getNivel() + 1);
 			this.setMaxVida(getMaxVida() + 25);
 			this.setVida(getMaxVida());

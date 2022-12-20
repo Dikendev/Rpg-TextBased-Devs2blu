@@ -50,7 +50,8 @@ public class FrameBoasVindas extends JFrame {
 	 * Create the frame.
 	 */
 	public FrameBoasVindas() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setBounds(200, 100, 750, 500);
 		contentPane = new JPanel();
@@ -85,7 +86,7 @@ public class FrameBoasVindas extends JFrame {
 		btn.setFont(new Font("Yu Gothic Medium", Font.BOLD, 12));
 		btn.addActionListener(new ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				dispose();
+				setVisible(false);
 			}
 		});
 		btn.setBounds(299, 138, 136, 23);

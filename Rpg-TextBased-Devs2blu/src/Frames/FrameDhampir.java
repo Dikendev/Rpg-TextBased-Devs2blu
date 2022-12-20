@@ -18,11 +18,15 @@ import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
 import FantasyOne.LogicaJogo;
+import Sounds.SoundEffects;
 
 public class FrameDhampir extends JFrame {
 
 	private JPanel contentPane;
-
+	SoundEffects introSound = new SoundEffects();
+	
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -98,6 +102,9 @@ public class FrameDhampir extends JFrame {
 		contentPane.add(txtpnEscolhaSeuAtaque);
 		
 		setVisible(true);
+		
+		introSound.setFile(".//src//Sounds//assets//vampiro.wav");
+		introSound.playEffectButton();
 	}
 
 }

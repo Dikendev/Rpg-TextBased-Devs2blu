@@ -23,16 +23,18 @@ public class SoundEffects {
 	}
 	
 	public void play() {
-		
-		
 			clip.setFramePosition(0);
 			clip.start();
-			
-			
+			clip.loop(Clip.LOOP_CONTINUOUSLY);
 	}
 	
 	public void stop() {
 		clip.setFramePosition(0);
 		clip.stop();
+	}
+
+	public void playEffectButton() {
+		clip.setFramePosition(0);
+		clip.start();
 	}
 }

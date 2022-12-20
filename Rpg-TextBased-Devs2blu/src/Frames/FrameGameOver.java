@@ -13,6 +13,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane.CloseAction;
 
 import FantasyOne.LogicaJogo;
+import Sounds.SoundEffects;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -21,7 +23,8 @@ public class FrameGameOver extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	JButton btn = new JButton("REINICIAR");
 	boolean isRunning;
-
+	SoundEffects gameSound = new SoundEffects();
+	
 	
 	/**
 	 * Launch the application.
@@ -70,6 +73,8 @@ public class FrameGameOver extends JFrame implements ActionListener{
 		btn.setFont(new Font("Yu Gothic Medium", Font.BOLD, 12));
 		btn.addActionListener(new ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				gameSound.setFile(".//src//Sounds//assets//soundBack.wav");
+				gameSound.stop();
 				LogicaJogo.comecaJogo();
 			}
 		});
