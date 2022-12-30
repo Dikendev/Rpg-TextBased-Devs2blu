@@ -19,15 +19,34 @@ public class LogicaJogo {
 	public static String jogador;
 	public static Personagem personagem;
 	public static String nomeJogador;
+	public static boolean isRunning;
 	public static SoundEffects se = new SoundEffects();
-// Efeitos do combate
+	
+	// Efeitos especiais do combate
 	private static final String SOM_ATAQUE_BASICO = ".//src//Sounds//assets//ataqueBasico.wav";
 	private static final String SOUND_FAST_ATTACK = ".//src//Sounds//assets//ataqueRapido.wav";
 	private static final String SOUND_SPECIAL_ATTACK = ".//src//Sounds//assets//ataqueEspecial.wav";
 	private static final String SOUND_SPECIAL_ATTACK_2 = ".//src//Sounds//assets//ataqueEspecial2.wav";
 	private static final String SOUND_HEAL = ".//src//Sounds//assets//heal.wav";
-// Mótodo para gerar um loop no jogo
-	public static boolean isRunning;
+	
+	public static final String Reseta = "\033[0m";
+	public static final String Ciano = "\033[0;36m";
+	public static final String CianoSub = "\033[4;36m";
+	public static final String BrancoSub = "\033[4;37m";
+	public static final String Roxo = "\033[0;35m";
+	public static final String RoxoSub = "\033[4;35m";
+	public static final String Verde = "\033[0;32m";
+	public static final String VerdeSub = "\033[4;32m";
+	public static final String VerdeClaro = "\033[0;92m";
+	public static final String Amarelo = "\033[0;33m";
+	public static final String AmareloSub = "\033[4;33m";
+	public static final String CianoClaro = "\033[0;96m";
+	public static final String CianoClaroSub = "\033[4;96m";
+	public static final String Vermelho = "\033[0;31m";
+	public static final String VermelhoSub = "\033[4;31m";
+	public static final String VermelhoFun= "\033[41m";
+	public static final String VermelhoClaro = "\033[0;91m";
+
 	
 // Método para usuário escolher opção
 	public static int escolhaUsuario(String prompt, int escolhasUsuario) {
@@ -94,14 +113,13 @@ public class LogicaJogo {
 		linhaPontilhada();
 		System.out.printf("|%-80s|%n", "                        Primeiramente, digite seu nome: ");
 		linhaPontilhada();
-		Scanner scan = new Scanner(System.in);
-		nomeJogador = scan.next();
+
+		nomeJogador = scanner.next();
+	
 // Chama o segundo frame		
 		FrameAto101 frame02 = new FrameAto101();
-		
-		
 		limparConsole();
-		
+
 // Loop para escolha do personagem		
 		do {
 			linhaPontilhada();
@@ -114,10 +132,8 @@ public class LogicaJogo {
 			linhaPontilhada();
 			se.setFile(".//src//Sounds//assets//escolhaHeroi.wav");
 
-			Scanner sc = new Scanner(System.in);
-			
 			try {
-				opcao = sc.nextInt();	
+				opcao = scanner.nextInt();	
 			
 			if (opcao == 1) {
 				se.playEffectButton();
@@ -162,7 +178,7 @@ public class LogicaJogo {
                 System.out.println("Por favor digite um número");
                 }
 			
-		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5);
+		}while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 & opcao != 5); 
 		
 		isRunning = true;
 		sistemaCombate();
@@ -356,10 +372,14 @@ public class LogicaJogo {
 				break;
 				case 4:imprimirCabecalho(("Após sua batalha, você descansou próximo a um altar, " + VerdeClaro + "vida restaurada!" + Reseta), 91);
 				break;
+				default:
+					imprimirCabecalho((""), 91);
+					break;
 				}
 				pressioneUmaTecla();
 			} else if(personagem.getVida() <= 0) {	
-				FrameGameOver frameOver = new FrameGameOver();
+				FrameGameOver frameGameOver = new FrameGameOver();
+				frameGameOver.setVisible(true);
 				imprimirCabecalho((CianoSub+"Game Over!"+Reseta), 91);
 				se.stop();
 				
@@ -427,25 +447,5 @@ public class LogicaJogo {
 				isRunning = false;
 		}
 	}
-	
-	
-	//Cores para o Console
-	public static final String Reseta = "\033[0m";
-	public static final String Ciano = "\033[0;36m";
-	public static final String CianoSub = "\033[4;36m";
-	public static final String BrancoSub = "\033[4;37m";
-	public static final String Roxo = "\033[0;35m";
-	public static final String RoxoSub = "\033[4;35m";
-	public static final String Verde = "\033[0;32m";
-	public static final String VerdeSub = "\033[4;32m";
-	public static final String VerdeClaro = "\033[0;92m";
-	public static final String Amarelo = "\033[0;33m";
-	public static final String AmareloSub = "\033[4;33m";
-	public static final String CianoClaro = "\033[0;96m";
-	public static final String CianoClaroSub = "\033[4;96m";
-	public static final String Vermelho = "\033[0;31m";
-	public static final String VermelhoSub = "\033[4;31m";
-	public static final String VermelhoFun= "\033[41m";
-	public static final String VermelhoClaro = "\033[0;91m";
-	
+
 	}	
