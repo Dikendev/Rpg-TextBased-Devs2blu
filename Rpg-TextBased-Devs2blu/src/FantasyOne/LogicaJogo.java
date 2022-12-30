@@ -4,28 +4,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 import Frames.FrameAto101;
 import Frames.FrameBoasVindas;
 import Frames.FrameCreditoss;
 import Frames.FrameGameOver;
-import Herois.BruxoCacador;
-import Herois.DeathKnight;
-import Herois.Eladrin;
-import Herois.MagoCinzento;
-import Herois.Personagem;
-import Herois.Sacerdote;
-import Inimigos.ChefaoMinotauro;
-import Inimigos.ChefaoQuimera;
-import Inimigos.ChefaoRagnaros;
-import Inimigos.Vilao;
-import Inimigos.VilaoCapivaraZumbi;
-import Inimigos.VilaoDhampir;
-import Inimigos.VilaoDragaoDuasCabecas;
-import Inimigos.VilaoDuergar;
-import Inimigos.VilaoElfo;
-import Inimigos.VilaoOrcGuerreiro;
-import Inimigos.VilaoVelhoDoSaco;
+import Herois.*;
+import Inimigos.*;
 import Sounds.SoundEffects;
 
 public class LogicaJogo {
@@ -34,6 +20,12 @@ public class LogicaJogo {
 	public static Personagem personagem;
 	public static String nomeJogador;
 	public static SoundEffects se = new SoundEffects();
+// Efeitos do combate
+	private static final String SOM_ATAQUE_BASICO = ".//src//Sounds//assets//ataqueBasico.wav";
+	private static final String SOUND_FAST_ATTACK = ".//src//Sounds//assets//ataqueRapido.wav";
+	private static final String SOUND_SPECIAL_ATTACK = ".//src//Sounds//assets//ataqueEspecial.wav";
+	private static final String SOUND_SPECIAL_ATTACK_2 = ".//src//Sounds//assets//ataqueEspecial2.wav";
+	private static final String SOUND_HEAL = ".//src//Sounds//assets//heal.wav";
 // Mótodo para gerar um loop no jogo
 	public static boolean isRunning;
 	
@@ -195,34 +187,25 @@ public class LogicaJogo {
 		}
 	}
 	
-	
-	public static void sistemaCombate() {
+	//Adicionando os inimigos em ordem numa List
+	public static List<Vilao> criarInimigos() {
+		List<Vilao> inimigos = new ArrayList<>();
 		
-		VilaoOrcGuerreiro orcGuerreiro = new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao");
-		VilaoElfo vilaoElfo = new VilaoElfo("Elfo", 170, "Vilao");
-		VilaoVelhoDoSaco velhoDoSaco = new VilaoVelhoDoSaco("Velho do Saco", 175, "Vilao");
-		VilaoDuergar vilaoDuergar = new VilaoDuergar("Duergar", 120, "Vilao");
-		VilaoDragaoDuasCabecas dragaoCabeca = new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 155, "Vilao");
-		VilaoDhampir dhampir = new VilaoDhampir("Dhampir", 150, "Vilao");
-		VilaoCapivaraZumbi capivaraZumbi = new VilaoCapivaraZumbi("Capivara Zumbi", 170, "Vilao");
-		ChefaoMinotauro minotauro = new ChefaoMinotauro("Minotauro", 155, "Chefe");
-		ChefaoQuimera quimera = new ChefaoQuimera("Quimera", 150, "Chefe");
-		ChefaoRagnaros ragnaros = new ChefaoRagnaros("Ragnaros", 200, "Chefe");
-				
-//Adicionando os inimigos em ordem num arrayList		
-		ArrayList<Vilao> inimigos = new ArrayList<Vilao>();
-		inimigos.add(orcGuerreiro);
-		inimigos.add(vilaoDuergar);
-		inimigos.add(minotauro);
-		inimigos.add(dragaoCabeca);
-		inimigos.add(dhampir);
-		inimigos.add(quimera);
-		inimigos.add(vilaoElfo);
-		inimigos.add(capivaraZumbi);
-		inimigos.add(velhoDoSaco);
-		inimigos.add(ragnaros);
+		inimigos.add(new VilaoOrcGuerreiro("Orc Guerreiro", 100, "Vilao"));
+		inimigos.add(new VilaoVelhoDoSaco("Velho do Saco", 175, "Vilao"));
+		inimigos.add(new VilaoElfo("Elfo", 170, "Vilao"));
+		inimigos.add(new VilaoDuergar("Duergar", 120, "Vilao"));
+		inimigos.add(new ChefaoMinotauro("Minotauro", 155, "Chefe"));
+		inimigos.add(new VilaoDragaoDuasCabecas("Dragão de duas Cabeças", 155, "Vilao"));
+		inimigos.add(new VilaoDhampir("Dhampir", 150, "Vilao"));
+		inimigos.add(new VilaoCapivaraZumbi("Capivara Zumbi", 170, "Vilao"));
+		inimigos.add(new ChefaoQuimera("Quimera", 150, "Chefe"));
+		inimigos.add(new ChefaoRagnaros("Ragnaros", 200, "Chefe"));
+		return inimigos;		
+	}
 
-//Roda o ArrayList para chamar cada inimigo após ser derrotado
+	public static void sistemaCombate() {
+		List<Vilao> inimigos = criarInimigos();
 		
 		for (int i = 0; i < inimigos.size(); i++) {
 			
@@ -231,7 +214,6 @@ public class LogicaJogo {
 			inimigos.get(i).historia();
 			imprimirCabecalho((Ciano +"Início do combate!"+ Reseta), 91);					
 
-//Loop de combate
 			do {
 				linhaPontilhada();
 				menuAtaque();
@@ -239,29 +221,27 @@ public class LogicaJogo {
 				int ataque;
 				ataque = scanner.nextInt();
 				
-
-				
 				switch (ataque) {
 				case 1:
-					se.setFile(".//src//Sounds//assets//ataqueBasico.wav");
+					se.setFile(SOM_ATAQUE_BASICO);
 					se.playEffectButton();
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueBasico());
 					break;
 				case 2:
-					se.setFile(".//src//Sounds//assets//ataqueRapido.wav");
+					se.setFile(SOUND_FAST_ATTACK);
 					se.playEffectButton();
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueBasico2());
 					break;
 				case 3:
-					se.setFile(".//src//Sounds//assets//ataqueEspecial.wav");
+					se.setFile(SOUND_SPECIAL_ATTACK);
 					se.playEffectButton();
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueEspecial());
 					break;
 				case 4:
-					se.setFile(".//src//Sounds//assets//ataqueEspecial2.wav");
+					se.setFile(SOUND_SPECIAL_ATTACK_2);
 					se.playEffectButton();
 					limparConsole();
 					inimigos.get(i).recebeDano(personagem.ataqueEspecial2());
@@ -271,7 +251,7 @@ public class LogicaJogo {
 					personagem.defesa();
 					break;
 				case 6:
-					se.setFile(".//src//Sounds//assets//heal.wav");
+					se.setFile(SOUND_HEAL);
 					se.playEffectButton();
 					limparConsole();
 					personagem.usarPocao();
