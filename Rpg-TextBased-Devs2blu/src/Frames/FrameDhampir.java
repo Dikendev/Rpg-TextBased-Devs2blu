@@ -59,6 +59,7 @@ public class FrameDhampir extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel dhampirTitle = new JLabel("A noite é a hora do Dhampir!");
+		dhampirTitle.setEnabled(false);
 		dhampirTitle.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 18));
 		dhampirTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		dhampirTitle.setBounds(87, 28, 560, 34);
@@ -69,6 +70,7 @@ public class FrameDhampir extends JFrame {
 		dhampirTxt.setText("Ao anoitecer, nosso herói busca abrigo em uma caverna. Ao entrar mais fundo, ele percebe que não está sozinho ao ouvir alguns passos leves e um vulto em direção a escuridão. Ao se aproximar, surge das sombras um Dhampir, que avança em direção ao nosso herói pronto para provar de seu sangue. Batalhe por sua vida!");
 		dhampirTxt.setBackground(new Color(255, 255, 255));
 		dhampirTxt.setBounds(114, 70, 506, 70);
+		dhampirTxt.setEditable(false);
 		contentPane.add(dhampirTxt);
 		
 		StyledDocument textoDK = dhampirTxt.getStyledDocument();	
@@ -99,6 +101,7 @@ public class FrameDhampir extends JFrame {
 		txtpnEscolhaSeuAtaque.setFont(new Font("Yu Gothic UI", Font.PLAIN, 10));
 		txtpnEscolhaSeuAtaque.setBackground(new Color(255, 255, 255));
 		txtpnEscolhaSeuAtaque.setBounds(295, 365, 143, 23);
+		txtpnEscolhaSeuAtaque.setEditable(false);
 		contentPane.add(txtpnEscolhaSeuAtaque);
 		
 		setVisible(true);

@@ -39,11 +39,8 @@ public class FrameAto101 extends JFrame implements ActionListener {
 	 */
 	public FrameAto101() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocationRelativeTo(null);
 		setBounds(200, 100, 750, 500);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 255, 255));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -65,12 +62,11 @@ public class FrameAto101 extends JFrame implements ActionListener {
 		texto3.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 12));
 		texto3.setBounds(75, 105, 618, 20);
 		contentPane.add(texto3);
-		
+
 		btn.setForeground(new Color(255, 255, 255));
 		btn.setBackground(new Color(255, 0, 128));
 		btn.setVerticalAlignment(SwingConstants.TOP);
 		btn.setFont(new Font("Yu Gothic Medium", Font.BOLD, 12));
-		btn.addActionListener(this);
 		btn.setBounds(299, 138, 136, 23);
 		contentPane.add(btn);
 		
@@ -79,7 +75,6 @@ public class FrameAto101 extends JFrame implements ActionListener {
 		imagem.setBounds(197, 211, 350, 200);
 		contentPane.add(imagem);
 		
-		setVisible(true);
 	}
 	
 	@Override

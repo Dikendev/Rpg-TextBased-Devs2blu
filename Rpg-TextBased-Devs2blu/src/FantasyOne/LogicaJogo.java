@@ -392,6 +392,7 @@ public class LogicaJogo {
 				
 				FrameCreditoss fc= new FrameCreditoss();
 				fc.setVisible(true);
+				
 	} 
 	}
 	
